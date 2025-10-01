@@ -1,0 +1,57 @@
+{
+  "marca": {
+    "id": "citroen",
+    "nombre": "CITROEN",
+    "slug": "citroen",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "c3",
+      "nombre": "C3",
+      "slug": "c3",
+      "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true
+    },
+    {
+      "id": "c4",
+      "nombre": "C4",
+      "slug": "c4",
+      "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true
+    },
+    {
+      "id": "c5",
+      "nombre": "C5",
+      "slug": "c5",
+      "años": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true
+    },
+    {
+      "id": "berlingo",
+      "nombre": "Berlingo",
+      "slug": "berlingo",
+      "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true
+    },
+    {
+      "id": "jumper",
+      "nombre": "Jumper",
+      "slug": "jumper",
+      "años": [1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true
+    }
+  ]
+}
+

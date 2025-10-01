@@ -1,0 +1,92 @@
+{
+  "marca": {
+    "id": "changan",
+    "nombre": "CHANGAN",
+    "slug": "changan",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "cs35",
+      "nombre": "CS35",
+      "slug": "cs35",
+      "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2012-2017)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 1.6L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "SUV subcompacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.6L/1.5L Turbo", "Transmisión automática 6 velocidades/CVT", "Tracción delantera", "SUV subcompacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true
+    },
+    {
+      "id": "cs55",
+      "nombre": "CS55",
+      "slug": "cs55",
+      "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2017-2021)",
+          "años": [2017, 2018, 2019, 2020, 2021],
+          "caracteristicas": ["Motor 1.5L Turbo", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "SUV compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2021-presente)",
+          "años": [2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L Turbo", "Transmisión automática 7DCT", "Tracción delantera", "SUV compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true
+    },
+    {
+      "id": "alsvin",
+      "nombre": "Alsvin",
+      "slug": "alsvin",
+      "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2010-2018)",
+          "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 1.4L/1.5L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán subcompacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán subcompacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true
+    },
+    {
+      "id": "cs75",
+      "nombre": "CS75",
+      "slug": "cs75",
+      "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2013-2019)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 1.8L/2.0L", "Transmisión manual/automática 6 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        },
+        {
+          "nombre": "Segunda Generación (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L Turbo/2.0L", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true
+    }
+  ]
+}
+

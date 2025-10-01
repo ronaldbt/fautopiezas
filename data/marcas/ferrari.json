@@ -1,0 +1,469 @@
+{
+  "marca": {
+    "id": "ferrari",
+    "nombre": "FERRARI",
+    "slug": "ferrari",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "f8-tributo",
+      "nombre": "F8 Tributo",
+      "slug": "f8-tributo",
+      "años": [2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.9L V8 Turbo", "Transmisión automática 7 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "sf90-stradale",
+      "nombre": "SF90 Stradale",
+      "slug": "sf90-stradale",
+      "años": [2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 4.0L V8 Turbo Híbrido", "Transmisión automática 8 velocidades", "Tracción AWD", "Superdeportivo híbrido"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "488-gtb",
+      "nombre": "488 GTB",
+      "slug": "488-gtb",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2015-2019)",
+          "años": [2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 3.9L V8 Turbo", "Transmisión automática 7 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "f12-berlinetta",
+      "nombre": "F12 Berlinetta",
+      "slug": "f12-berlinetta",
+      "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2012-2017)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 6.3L V12", "Transmisión manual 6 velocidades/automática 7 velocidades", "Tracción trasera", "Gran Turismo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "laferrari",
+      "nombre": "LaFerrari",
+      "slug": "laferrari",
+      "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2013-2018)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 6.3L V12 Híbrido", "Transmisión automática 7 velocidades", "Tracción trasera", "Hypercar híbrido"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "portofino",
+      "nombre": "Portofino",
+      "slug": "portofino",
+      "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.9L V8 Turbo", "Transmisión automática 7 velocidades", "Tracción trasera", "Convertible GT"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "roma",
+      "nombre": "Roma",
+      "slug": "roma",
+      "años": [2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.9L V8 Turbo", "Transmisión automática 8 velocidades", "Tracción trasera", "Gran Turismo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "sf90-spider",
+      "nombre": "SF90 Spider",
+      "slug": "sf90-spider",
+      "años": [2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 4.0L V8 Turbo Híbrido", "Transmisión automática 8 velocidades", "Tracción AWD", "Convertible híbrido"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "296-gtb",
+      "nombre": "296 GTB",
+      "slug": "296-gtb",
+      "años": [2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2022-presente)",
+          "años": [2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.0L V6 Turbo Híbrido", "Transmisión automática 8 velocidades", "Tracción trasera", "Superdeportivo híbrido"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "purosangue",
+      "nombre": "Purosangue",
+      "slug": "purosangue",
+      "años": [2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2022-presente)",
+          "años": [2022, 2023, 2024],
+          "caracteristicas": ["Motor 6.5L V12", "Transmisión automática 8 velocidades", "Tracción AWD", "SUV de lujo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "f8-spider",
+      "nombre": "F8 Spider",
+      "slug": "f8-spider",
+      "años": [2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.9L V8 Turbo", "Transmisión automática 7 velocidades", "Tracción trasera", "Convertible superdeportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "488-pista",
+      "nombre": "488 Pista",
+      "slug": "488-pista",
+      "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.9L V8 Turbo", "Transmisión automática 7 velocidades", "Tracción trasera", "Superdeportivo de pista"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "812-superfast",
+      "nombre": "812 Superfast",
+      "slug": "812-superfast",
+      "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 6.5L V12", "Transmisión automática 7 velocidades", "Tracción trasera", "Gran Turismo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "gtc4lusso",
+      "nombre": "GTC4Lusso",
+      "slug": "gtc4lusso",
+      "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2016-2020)",
+          "años": [2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 6.3L V12/3.9L V8 Turbo", "Transmisión automática 7 velocidades", "Tracción AWD", "Gran Turismo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "california-t",
+      "nombre": "California T",
+      "slug": "california-t",
+      "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2014-2017)",
+          "años": [2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 3.9L V8 Turbo", "Transmisión manual 6 velocidades/automática 7 velocidades", "Tracción trasera", "Convertible GT"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "458-italia",
+      "nombre": "458 Italia",
+      "slug": "458-italia",
+      "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2009-2015)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 4.5L V8", "Transmisión manual 6 velocidades/automática 7 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "599-gtb",
+      "nombre": "599 GTB",
+      "slug": "599-gtb",
+      "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2006-2012)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 6.0L V12", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción trasera", "Gran Turismo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "f430",
+      "nombre": "F430",
+      "slug": "f430",
+      "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2004-2009)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009],
+          "caracteristicas": ["Motor 4.3L V8", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "612-scaglietti",
+      "nombre": "612 Scaglietti",
+      "slug": "612-scaglietti",
+      "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2004-2010)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010],
+          "caracteristicas": ["Motor 5.7L V12", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción trasera", "Gran Turismo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "575m-maranello",
+      "nombre": "575M Maranello",
+      "slug": "575m-maranello",
+      "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2002-2006)",
+          "años": [2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 5.7L V12", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción trasera", "Gran Turismo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "360-modena",
+      "nombre": "360 Modena",
+      "slug": "360-modena",
+      "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1999-2005)",
+          "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 3.6L V8", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "550-maranello",
+      "nombre": "550 Maranello",
+      "slug": "550-maranello",
+      "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1996-2001)",
+          "años": [1996, 1997, 1998, 1999, 2000, 2001],
+          "caracteristicas": ["Motor 5.5L V12", "Transmisión manual 6 velocidades", "Tracción trasera", "Gran Turismo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "f355",
+      "nombre": "F355",
+      "slug": "f355",
+      "años": [1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1994-1999)",
+          "años": [1994, 1995, 1996, 1997, 1998, 1999],
+          "caracteristicas": ["Motor 3.5L V8", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "f50",
+      "nombre": "F50",
+      "slug": "f50",
+      "años": [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1995-1997)",
+          "años": [1995, 1996, 1997],
+          "caracteristicas": ["Motor 4.7L V12", "Transmisión manual 6 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "f40",
+      "nombre": "F40",
+      "slug": "f40",
+      "años": [1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1987-1992)",
+          "años": [1987, 1988, 1989, 1990, 1991, 1992],
+          "caracteristicas": ["Motor 2.9L V8 Turbo", "Transmisión manual 5 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "testarossa",
+      "nombre": "Testarossa",
+      "slug": "testarossa",
+      "años": [1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1984-1991)",
+          "años": [1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991],
+          "caracteristicas": ["Motor 4.9L V12", "Transmisión manual 5 velocidades", "Tracción trasera", "Superdeportivo"]
+        },
+        {
+          "nombre": "Segunda Generación (1991-1996)",
+          "años": [1991, 1992, 1993, 1994, 1995, 1996],
+          "caracteristicas": ["Motor 4.9L V12", "Transmisión manual 5 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "308-gtb",
+      "nombre": "308 GTB",
+      "slug": "308-gtb",
+      "años": [1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1975-1980)",
+          "años": [1975, 1976, 1977, 1978, 1979, 1980],
+          "caracteristicas": ["Motor 2.9L V8", "Transmisión manual 5 velocidades", "Tracción trasera", "Superdeportivo"]
+        },
+        {
+          "nombre": "Segunda Generación (1980-1985)",
+          "años": [1980, 1981, 1982, 1983, 1984, 1985],
+          "caracteristicas": ["Motor 2.9L V8", "Transmisión manual 5 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "dino-246",
+      "nombre": "Dino 246",
+      "slug": "dino-246",
+      "años": [1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1969-1974)",
+          "años": [1969, 1970, 1971, 1972, 1973, 1974],
+          "caracteristicas": ["Motor 2.4L V6", "Transmisión manual 5 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    }
+  ]
+}

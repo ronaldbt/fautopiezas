@@ -1,0 +1,169 @@
+{
+  "marca": {
+    "id": "cadillac",
+    "nombre": "CADILLAC",
+    "slug": "cadillac",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "cts",
+      "nombre": "CTS",
+      "slug": "cts",
+      "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2003-2007)",
+          "años": [2003, 2004, 2005, 2006, 2007],
+          "caracteristicas": ["Motor 2.8L V6/3.2L V6/3.6L V6/5.7L V8", "Transmisión manual/automática 5 velocidades", "Tracción trasera/AWD", "Sedán deportivo"]
+        },
+        {
+          "nombre": "Segunda Generación (2008-2014)",
+          "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 2.0L Turbo/3.0L V6/3.6L V6/6.2L V8", "Transmisión manual/automática 6 velocidades", "Tracción trasera/AWD", "Sedán deportivo"]
+        },
+        {
+          "nombre": "Tercera Generación (2014-2019)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 2.0L Turbo/3.6L V6/6.2L V8", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "Sedán deportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "ats",
+      "nombre": "ATS",
+      "slug": "ats",
+      "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2013-2019)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 2.0L Turbo/2.5L/3.6L V6", "Transmisión manual/automática 6 velocidades", "Tracción trasera/AWD", "Sedán compacto deportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "xts",
+      "nombre": "XTS",
+      "slug": "xts",
+      "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2013-2019)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 3.6L V6", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "Sedán de lujo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "xt5",
+      "nombre": "XT5",
+      "slug": "xt5",
+      "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo/3.6L V6", "Transmisión automática 9 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "xt6",
+      "nombre": "XT6",
+      "slug": "xt6",
+      "años": [2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo/3.6L V6", "Transmisión automática 9 velocidades", "Tracción delantera/AWD", "SUV grande"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "escalade",
+      "nombre": "Escalade",
+      "slug": "escalade",
+      "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1999-2006)",
+          "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 5.3L V8/6.0L V8", "Transmisión automática 4 velocidades", "Tracción AWD", "SUV de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2007-2014)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 6.2L V8", "Transmisión automática 6 velocidades", "Tracción AWD", "SUV de lujo"]
+        },
+        {
+          "nombre": "Tercera Generación (2015-2020)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 6.2L V8", "Transmisión automática 8 velocidades", "Tracción AWD", "SUV de lujo"]
+        },
+        {
+          "nombre": "Cuarta Generación (2021-presente)",
+          "años": [2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 6.2L V8/3.0L Turbo", "Transmisión automática 10 velocidades", "Tracción AWD", "SUV de lujo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "ct6",
+      "nombre": "CT6",
+      "slug": "ct6",
+      "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2016-2020)",
+          "años": [2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 2.0L Turbo/3.6L V6/4.2L V8", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2021-presente)",
+          "años": [2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo/3.6L V6", "Transmisión automática 10 velocidades", "Tracción delantera/AWD", "Sedán de lujo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "xt4",
+      "nombre": "XT4",
+      "slug": "xt4",
+      "años": [2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo", "Transmisión automática 9 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

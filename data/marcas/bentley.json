@@ -1,0 +1,95 @@
+{
+  "marca": {
+    "id": "bentley",
+    "nombre": "BENTLEY",
+    "slug": "bentley",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "continental-gt",
+      "nombre": "Continental GT",
+      "slug": "continental-gt",
+      "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2003-2010)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010],
+          "caracteristicas": ["Motor 6.0L W12", "Transmisión automática 6 velocidades", "Tracción AWD", "Coupé de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2011-2018)",
+          "años": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 6.0L W12/4.0L V8", "Transmisión automática 8 velocidades", "Tracción AWD", "Coupé de lujo"]
+        },
+        {
+          "nombre": "Tercera Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 6.0L W12/4.0L V8", "Transmisión automática 8 velocidades", "Tracción AWD", "Coupé de lujo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "flying-spur",
+      "nombre": "Flying Spur",
+      "slug": "flying-spur",
+      "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2005-2012)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 6.0L W12", "Transmisión automática 6 velocidades", "Tracción AWD", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2013-2019)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 6.0L W12/4.0L V8", "Transmisión automática 8 velocidades", "Tracción AWD", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Tercera Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 6.0L W12/4.0L V8", "Transmisión automática 8 velocidades", "Tracción AWD", "Sedán de lujo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "bentayga",
+      "nombre": "Bentayga",
+      "slug": "bentayga",
+      "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 6.0L W12/4.0L V8", "Transmisión automática 8 velocidades", "Tracción AWD", "SUV de lujo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "mulsanne",
+      "nombre": "Mulsanne",
+      "slug": "mulsanne",
+      "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2010-2020)",
+          "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 6.75L V8", "Transmisión automática 8 velocidades", "Tracción trasera", "Sedán de lujo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

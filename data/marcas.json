@@ -1,0 +1,742 @@
+[
+  {
+    "id": "abarth",
+    "nombre": "ABARTH",
+    "slug": "abarth",
+    "modelos": 4,
+    "precioMin": 45000,
+    "activa": true,
+    "popular": false,
+    "orden": 1
+  },
+  {
+    "id": "acura",
+    "nombre": "ACURA",
+    "slug": "acura",
+    "modelos": 8,
+    "precioMin": 40000,
+    "activa": true,
+    "popular": false,
+    "orden": 2
+  },
+  {
+    "id": "alfa-romeo",
+    "nombre": "ALFA-ROMEO",
+    "slug": "alfa-romeo",
+    "modelos": 6,
+    "precioMin": 42000,
+    "activa": true,
+    "popular": false,
+    "orden": 3
+  },
+  {
+    "id": "aston-martin",
+    "nombre": "ASTON-MARTIN",
+    "slug": "aston-martin",
+    "modelos": 3,
+    "precioMin": 120000,
+    "activa": true,
+    "popular": false,
+    "orden": 4
+  },
+  {
+    "id": "audi",
+    "nombre": "AUDI",
+    "slug": "audi",
+    "modelos": 16,
+    "precioMin": 38000,
+    "activa": true,
+    "popular": true,
+    "orden": 5
+  },
+  {
+    "id": "bentley",
+    "nombre": "BENTLEY",
+    "slug": "bentley",
+    "modelos": 4,
+    "precioMin": 150000,
+    "activa": true,
+    "popular": false,
+    "orden": 6
+  },
+  {
+    "id": "bmw",
+    "nombre": "BMW",
+    "slug": "bmw",
+    "modelos": 12,
+    "precioMin": 35000,
+    "activa": true,
+    "popular": true,
+    "orden": 7
+  },
+  {
+    "id": "buick",
+    "nombre": "BUICK",
+    "slug": "buick",
+    "modelos": 6,
+    "precioMin": 32000,
+    "activa": true,
+    "popular": false,
+    "orden": 8
+  },
+  {
+    "id": "byd",
+    "nombre": "BYD",
+    "slug": "byd",
+    "modelos": 5,
+    "precioMin": 28000,
+    "activa": true,
+    "popular": false,
+    "orden": 9
+  },
+  {
+    "id": "cadillac",
+    "nombre": "CADILLAC",
+    "slug": "cadillac",
+    "modelos": 8,
+    "precioMin": 45000,
+    "activa": true,
+    "popular": false,
+    "orden": 10
+  },
+  {
+    "id": "changan",
+    "nombre": "CHANGAN",
+    "slug": "changan",
+    "modelos": 4,
+    "precioMin": 22000,
+    "activa": true,
+    "popular": false,
+    "orden": 11
+  },
+  {
+    "id": "chevrolet",
+    "nombre": "CHEVROLET",
+    "slug": "chevrolet",
+    "modelos": 22,
+    "precioMin": 12000,
+    "activa": true,
+    "popular": true,
+    "orden": 12
+  },
+  {
+    "id": "chrysler",
+    "nombre": "CHRYSLER",
+    "slug": "chrysler",
+    "modelos": 7,
+    "precioMin": 35000,
+    "activa": true,
+    "popular": false,
+    "orden": 13
+  },
+  {
+    "id": "citroen",
+    "nombre": "CITROEN",
+    "slug": "citroen",
+    "modelos": 9,
+    "precioMin": 25000,
+    "activa": true,
+    "popular": false,
+    "orden": 14
+  },
+  {
+    "id": "daewoo",
+    "nombre": "DAEWOO",
+    "slug": "daewoo",
+    "modelos": 5,
+    "precioMin": 18000,
+    "activa": true,
+    "popular": false,
+    "orden": 15
+  },
+  {
+    "id": "daihatsu",
+    "nombre": "DAIHATSU",
+    "slug": "daihatsu",
+    "modelos": 6,
+    "precioMin": 16000,
+    "activa": true,
+    "popular": false,
+    "orden": 16
+  },
+  {
+    "id": "dodge",
+    "nombre": "DODGE",
+    "slug": "dodge",
+    "modelos": 10,
+    "precioMin": 30000,
+    "activa": true,
+    "popular": false,
+    "orden": 17
+  },
+  {
+    "id": "ferrari",
+    "nombre": "FERRARI",
+    "slug": "ferrari",
+    "modelos": 2,
+    "precioMin": 200000,
+    "activa": true,
+    "popular": false,
+    "orden": 18
+  },
+  {
+    "id": "fiat",
+    "nombre": "FIAT",
+    "slug": "fiat",
+    "modelos": 8,
+    "precioMin": 20000,
+    "activa": true,
+    "popular": false,
+    "orden": 19
+  },
+  {
+    "id": "ford",
+    "nombre": "FORD",
+    "slug": "ford",
+    "modelos": 20,
+    "precioMin": 16000,
+    "activa": true,
+    "popular": true,
+    "orden": 20
+  },
+  {
+    "id": "foton",
+    "nombre": "FOTON",
+    "slug": "foton",
+    "modelos": 3,
+    "precioMin": 35000,
+    "activa": true,
+    "popular": false,
+    "orden": 21
+  },
+  {
+    "id": "geely",
+    "nombre": "GEELY",
+    "slug": "geely",
+    "modelos": 4,
+    "precioMin": 24000,
+    "activa": true,
+    "popular": false,
+    "orden": 22
+  },
+  {
+    "id": "gmc",
+    "nombre": "GMC",
+    "slug": "gmc",
+    "modelos": 8,
+    "precioMin": 40000,
+    "activa": true,
+    "popular": false,
+    "orden": 23
+  },
+  {
+    "id": "honda",
+    "nombre": "HONDA",
+    "slug": "honda",
+    "modelos": 16,
+    "precioMin": 17000,
+    "activa": true,
+    "popular": true,
+    "orden": 24
+  },
+  {
+    "id": "hummer",
+    "nombre": "HUMMER",
+    "slug": "hummer",
+    "modelos": 3,
+    "precioMin": 80000,
+    "activa": true,
+    "popular": false,
+    "orden": 25
+  },
+  {
+    "id": "hyundai",
+    "nombre": "HYUNDAI",
+    "slug": "hyundai",
+    "modelos": 15,
+    "precioMin": 14000,
+    "activa": true,
+    "popular": true,
+    "orden": 26
+  },
+  {
+    "id": "infiniti",
+    "nombre": "INFINITI",
+    "slug": "infiniti",
+    "modelos": 7,
+    "precioMin": 42000,
+    "activa": true,
+    "popular": false,
+    "orden": 27
+  },
+  {
+    "id": "isuzu",
+    "nombre": "ISUZU",
+    "slug": "isuzu",
+    "modelos": 5,
+    "precioMin": 38000,
+    "activa": true,
+    "popular": false,
+    "orden": 28
+  },
+  {
+    "id": "iveco",
+    "nombre": "IVECO",
+    "slug": "iveco",
+    "modelos": 4,
+    "precioMin": 45000,
+    "activa": true,
+    "popular": false,
+    "orden": 29
+  },
+  {
+    "id": "jac",
+    "nombre": "JAC",
+    "slug": "jac",
+    "modelos": 4,
+    "precioMin": 26000,
+    "activa": true,
+    "popular": false,
+    "orden": 30
+  },
+  {
+    "id": "jaguar",
+    "nombre": "JAGUAR",
+    "slug": "jaguar",
+    "modelos": 6,
+    "precioMin": 65000,
+    "activa": true,
+    "popular": false,
+    "orden": 31
+  },
+  {
+    "id": "jeep",
+    "nombre": "JEEP",
+    "slug": "jeep",
+    "modelos": 8,
+    "precioMin": 45000,
+    "activa": true,
+    "popular": false,
+    "orden": 32
+  },
+  {
+    "id": "kia",
+    "nombre": "KIA",
+    "slug": "kia",
+    "modelos": 13,
+    "precioMin": 13000,
+    "activa": true,
+    "popular": true,
+    "orden": 33
+  },
+  {
+    "id": "lada",
+    "nombre": "LADA",
+    "slug": "lada",
+    "modelos": 4,
+    "precioMin": 15000,
+    "activa": true,
+    "popular": false,
+    "orden": 34
+  },
+  {
+    "id": "lamborghini",
+    "nombre": "LAMBORGHINI",
+    "slug": "lamborghini",
+    "modelos": 2,
+    "precioMin": 250000,
+    "activa": true,
+    "popular": false,
+    "orden": 35
+  },
+  {
+    "id": "land-rover",
+    "nombre": "LAND-ROVER",
+    "slug": "land-rover",
+    "modelos": 6,
+    "precioMin": 75000,
+    "activa": true,
+    "popular": false,
+    "orden": 36
+  },
+  {
+    "id": "lexus",
+    "nombre": "LEXUS",
+    "slug": "lexus",
+    "modelos": 10,
+    "precioMin": 55000,
+    "activa": true,
+    "popular": false,
+    "orden": 37
+  },
+  {
+    "id": "lincoln",
+    "nombre": "LINCOLN",
+    "slug": "lincoln",
+    "modelos": 6,
+    "precioMin": 48000,
+    "activa": true,
+    "popular": false,
+    "orden": 38
+  },
+  {
+    "id": "lotus",
+    "nombre": "LOTUS",
+    "slug": "lotus",
+    "modelos": 3,
+    "precioMin": 90000,
+    "activa": true,
+    "popular": false,
+    "orden": 39
+  },
+  {
+    "id": "maserati",
+    "nombre": "MASERATI",
+    "slug": "maserati",
+    "modelos": 4,
+    "precioMin": 110000,
+    "activa": true,
+    "popular": false,
+    "orden": 40
+  },
+  {
+    "id": "maybach",
+    "nombre": "MAYBACH",
+    "slug": "maybach",
+    "modelos": 2,
+    "precioMin": 180000,
+    "activa": true,
+    "popular": false,
+    "orden": 41
+  },
+  {
+    "id": "mazda",
+    "nombre": "MAZDA",
+    "slug": "mazda",
+    "modelos": 10,
+    "precioMin": 19000,
+    "activa": true,
+    "popular": true,
+    "orden": 42
+  },
+  {
+    "id": "mclaren",
+    "nombre": "MCLAREN",
+    "slug": "mclaren",
+    "modelos": 2,
+    "precioMin": 300000,
+    "activa": true,
+    "popular": false,
+    "orden": 43
+  },
+  {
+    "id": "mercedes-benz",
+    "nombre": "MERCEDES-BENZ",
+    "slug": "mercedes-benz",
+    "modelos": 18,
+    "precioMin": 50000,
+    "activa": true,
+    "popular": true,
+    "orden": 44
+  },
+  {
+    "id": "mg",
+    "nombre": "MG",
+    "slug": "mg",
+    "modelos": 5,
+    "precioMin": 29000,
+    "activa": true,
+    "popular": false,
+    "orden": 45
+  },
+  {
+    "id": "mini",
+    "nombre": "MINI",
+    "slug": "mini",
+    "modelos": 6,
+    "precioMin": 32000,
+    "activa": true,
+    "popular": false,
+    "orden": 46
+  },
+  {
+    "id": "mitsubishi",
+    "nombre": "MITSUBISHI",
+    "slug": "mitsubishi",
+    "modelos": 12,
+    "precioMin": 28000,
+    "activa": true,
+    "popular": false,
+    "orden": 47
+  },
+  {
+    "id": "nissan",
+    "nombre": "NISSAN",
+    "slug": "nissan",
+    "modelos": 18,
+    "precioMin": 18000,
+    "activa": true,
+    "popular": true,
+    "orden": 48
+  },
+  {
+    "id": "oldsmobile",
+    "nombre": "OLDSMOBILE",
+    "slug": "oldsmobile",
+    "modelos": 4,
+    "precioMin": 25000,
+    "activa": true,
+    "popular": false,
+    "orden": 49
+  },
+  {
+    "id": "opel",
+    "nombre": "OPEL",
+    "slug": "opel",
+    "modelos": 9,
+    "precioMin": 26000,
+    "activa": true,
+    "popular": false,
+    "orden": 50
+  },
+  {
+    "id": "peugeot",
+    "nombre": "PEUGEOT",
+    "slug": "peugeot",
+    "modelos": 11,
+    "precioMin": 27000,
+    "activa": true,
+    "popular": false,
+    "orden": 51
+  },
+  {
+    "id": "plymouth",
+    "nombre": "PLYMOUTH",
+    "slug": "plymouth",
+    "modelos": 3,
+    "precioMin": 22000,
+    "activa": true,
+    "popular": false,
+    "orden": 52
+  },
+  {
+    "id": "pontiac",
+    "nombre": "PONTIAC",
+    "slug": "pontiac",
+    "modelos": 5,
+    "precioMin": 24000,
+    "activa": true,
+    "popular": false,
+    "orden": 53
+  },
+  {
+    "id": "porsche",
+    "nombre": "PORSCHE",
+    "slug": "porsche",
+    "modelos": 8,
+    "precioMin": 85000,
+    "activa": true,
+    "popular": false,
+    "orden": 54
+  },
+  {
+    "id": "renault",
+    "nombre": "RENAULT",
+    "slug": "renault",
+    "modelos": 10,
+    "precioMin": 23000,
+    "activa": true,
+    "popular": false,
+    "orden": 55
+  },
+  {
+    "id": "rolls-royce",
+    "nombre": "ROLLS-ROYCE",
+    "slug": "rolls-royce",
+    "modelos": 3,
+    "precioMin": 300000,
+    "activa": true,
+    "popular": false,
+    "orden": 56
+  },
+  {
+    "id": "rover",
+    "nombre": "ROVER",
+    "slug": "rover",
+    "modelos": 4,
+    "precioMin": 30000,
+    "activa": true,
+    "popular": false,
+    "orden": 57
+  },
+  {
+    "id": "saab",
+    "nombre": "SAAB",
+    "slug": "saab",
+    "modelos": 4,
+    "precioMin": 35000,
+    "activa": true,
+    "popular": false,
+    "orden": 58
+  },
+  {
+    "id": "saturn",
+    "nombre": "SATURN",
+    "slug": "saturn",
+    "modelos": 3,
+    "precioMin": 20000,
+    "activa": true,
+    "popular": false,
+    "orden": 59
+  },
+  {
+    "id": "scion",
+    "nombre": "SCION",
+    "slug": "scion",
+    "modelos": 4,
+    "precioMin": 25000,
+    "activa": true,
+    "popular": false,
+    "orden": 60
+  },
+  {
+    "id": "seat",
+    "nombre": "SEAT",
+    "slug": "seat",
+    "modelos": 8,
+    "precioMin": 24000,
+    "activa": true,
+    "popular": false,
+    "orden": 61
+  },
+  {
+    "id": "shelby",
+    "nombre": "SHELBY",
+    "slug": "shelby",
+    "modelos": 2,
+    "precioMin": 120000,
+    "activa": true,
+    "popular": false,
+    "orden": 62
+  },
+  {
+    "id": "skoda",
+    "nombre": "SKODA",
+    "slug": "skoda",
+    "modelos": 9,
+    "precioMin": 26000,
+    "activa": true,
+    "popular": false,
+    "orden": 63
+  },
+  {
+    "id": "smart",
+    "nombre": "SMART",
+    "slug": "smart",
+    "modelos": 4,
+    "precioMin": 28000,
+    "activa": true,
+    "popular": false,
+    "orden": 64
+  },
+  {
+    "id": "ssangyong",
+    "nombre": "SSANGYONG",
+    "slug": "ssangyong",
+    "modelos": 5,
+    "precioMin": 32000,
+    "activa": true,
+    "popular": false,
+    "orden": 65
+  },
+  {
+    "id": "subaru",
+    "nombre": "SUBARU",
+    "slug": "subaru",
+    "modelos": 6,
+    "precioMin": 25000,
+    "activa": true,
+    "popular": false,
+    "orden": 66
+  },
+  {
+    "id": "suzuki",
+    "nombre": "SUZUKI",
+    "slug": "suzuki",
+    "modelos": 8,
+    "precioMin": 11000,
+    "activa": true,
+    "popular": false,
+    "orden": 67
+  },
+  {
+    "id": "tesla",
+    "nombre": "TESLA",
+    "slug": "tesla",
+    "modelos": 6,
+    "precioMin": 65000,
+    "activa": true,
+    "popular": false,
+    "orden": 68
+  },
+  {
+    "id": "toyota",
+    "nombre": "TOYOTA",
+    "slug": "toyota",
+    "modelos": 25,
+    "precioMin": 15000,
+    "activa": true,
+    "popular": true,
+    "orden": 69
+  },
+  {
+    "id": "triumph",
+    "nombre": "TRIUMPH",
+    "slug": "triumph",
+    "modelos": 3,
+    "precioMin": 45000,
+    "activa": true,
+    "popular": false,
+    "orden": 70
+  },
+  {
+    "id": "uaz",
+    "nombre": "UAZ",
+    "slug": "uaz",
+    "modelos": 3,
+    "precioMin": 38000,
+    "activa": true,
+    "popular": false,
+    "orden": 71
+  },
+  {
+    "id": "vespa",
+    "nombre": "VESPA",
+    "slug": "vespa",
+    "modelos": 4,
+    "precioMin": 12000,
+    "activa": true,
+    "popular": false,
+    "orden": 72
+  },
+  {
+    "id": "volkswagen",
+    "nombre": "VOLKSWAGEN",
+    "slug": "volkswagen",
+    "modelos": 14,
+    "precioMin": 20000,
+    "activa": true,
+    "popular": true,
+    "orden": 73
+  },
+  {
+    "id": "volvo",
+    "nombre": "VOLVO",
+    "slug": "volvo",
+    "modelos": 11,
+    "precioMin": 42000,
+    "activa": true,
+    "popular": false,
+    "orden": 74
+  }
+]

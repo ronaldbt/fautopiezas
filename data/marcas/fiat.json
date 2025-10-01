@@ -1,0 +1,411 @@
+{
+  "marca": {
+    "id": "fiat",
+    "nombre": "FIAT",
+    "slug": "fiat",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "punto",
+      "nombre": "Punto",
+      "slug": "punto",
+      "años": [1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1993-1999)",
+          "años": [1993, 1994, 1995, 1996, 1997, 1998, 1999],
+          "caracteristicas": ["Motor 1.1L/1.2L/1.4L/1.6L", "Transmisión manual 5 velocidades", "Tracción delantera", "Hatchback compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (1999-2005)",
+          "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 1.2L/1.4L/1.6L/1.8L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Hatchback compacto"]
+        },
+        {
+          "nombre": "Tercera Generación (2005-2018)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 1.2L/1.4L/1.6L/1.4L Turbo", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera", "Hatchback compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "panda",
+      "nombre": "Panda",
+      "slug": "panda",
+      "años": [1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1980-2003)",
+          "años": [1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003],
+          "caracteristicas": ["Motor 0.6L/0.8L/1.0L/1.1L", "Transmisión manual 4 velocidades", "Tracción delantera", "Hatchback subcompacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2003-2012)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 1.1L/1.2L/1.3L Multijet", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera/AWD", "Hatchback subcompacto"]
+        },
+        {
+          "nombre": "Tercera Generación (2012-presente)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.0L/1.2L/0.9L TwinAir", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera/AWD", "Hatchback subcompacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "500",
+      "nombre": "500",
+      "slug": "500",
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2007-presente)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.2L/1.4L/0.9L TwinAir/1.3L Multijet", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera", "Hatchback subcompacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "bravo",
+      "nombre": "Bravo",
+      "slug": "bravo",
+      "años": [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1995-2001)",
+          "años": [1995, 1996, 1997, 1998, 1999, 2000, 2001],
+          "caracteristicas": ["Motor 1.4L/1.6L/1.8L/2.0L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Hatchback compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2007-2014)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 1.4L/1.4L Turbo/1.6L Multijet/2.0L Multijet", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción delantera", "Hatchback compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "stilo",
+      "nombre": "Stilo",
+      "slug": "stilo",
+      "años": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2001-2007)",
+          "años": [2001, 2002, 2003, 2004, 2005, 2006, 2007],
+          "caracteristicas": ["Motor 1.2L/1.4L/1.6L/1.8L/2.4L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Hatchback compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "tipo",
+      "nombre": "Tipo",
+      "slug": "tipo",
+      "años": [1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1988-1995)",
+          "años": [1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995],
+          "caracteristicas": ["Motor 1.1L/1.4L/1.6L/1.8L/2.0L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.4L/1.6L/1.3L Multijet/1.6L Multijet", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera", "Sedán compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "doblo",
+      "nombre": "Doblo",
+      "slug": "doblo",
+      "años": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2000-2010)",
+          "años": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010],
+          "caracteristicas": ["Motor 1.2L/1.4L/1.6L/1.9L Multijet", "Transmisión manual 5 velocidades", "Tracción delantera", "Van compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2010-presente)",
+          "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.4L/1.6L/1.3L Multijet/1.6L Multijet", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera", "Van compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "ducato",
+      "nombre": "Ducato",
+      "slug": "ducato",
+      "años": [1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1981-1990)",
+          "años": [1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990],
+          "caracteristicas": ["Motor 2.0L/2.5L/2.8L", "Transmisión manual 5 velocidades", "Tracción delantera", "Van comercial"]
+        },
+        {
+          "nombre": "Segunda Generación (1990-1994)",
+          "años": [1990, 1991, 1992, 1993, 1994],
+          "caracteristicas": ["Motor 2.0L/2.5L/2.8L", "Transmisión manual 5 velocidades", "Tracción delantera", "Van comercial"]
+        },
+        {
+          "nombre": "Tercera Generación (1994-2006)",
+          "años": [1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 2.0L/2.3L/2.8L/2.8L JTD", "Transmisión manual 5 velocidades", "Tracción delantera", "Van comercial"]
+        },
+        {
+          "nombre": "Cuarta Generación (2006-2014)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 2.3L/3.0L Multijet", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción delantera", "Van comercial"]
+        },
+        {
+          "nombre": "Quinta Generación (2014-presente)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.3L/3.0L Multijet", "Transmisión manual 6 velocidades/automática 9 velocidades", "Tracción delantera", "Van comercial"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "linea",
+      "nombre": "Linea",
+      "slug": "linea",
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2007-2018)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 1.4L/1.6L/1.3L Multijet/1.6L Multijet", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera", "Sedán compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "croma",
+      "nombre": "Croma",
+      "slug": "croma",
+      "años": [1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1985-1996)",
+          "años": [1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996],
+          "caracteristicas": ["Motor 1.6L/2.0L/2.5L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Segunda Generación (2005-2010)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010],
+          "caracteristicas": ["Motor 1.8L/2.2L/1.9L Multijet/2.4L Multijet", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción delantera", "Sedán mediano"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "marea",
+      "nombre": "Marea",
+      "slug": "marea",
+      "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1996-2007)",
+          "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007],
+          "caracteristicas": ["Motor 1.6L/1.8L/2.0L/1.9L Multijet/2.4L Multijet", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Sedán mediano"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "uno",
+      "nombre": "Uno",
+      "slug": "uno",
+      "años": [1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1983-1995)",
+          "años": [1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995],
+          "caracteristicas": ["Motor 0.9L/1.0L/1.1L/1.3L/1.4L", "Transmisión manual 4 velocidades/5 velocidades", "Tracción delantera", "Hatchback subcompacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2010-presente)",
+          "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.0L/1.3L Multijet", "Transmisión manual 5 velocidades", "Tracción delantera", "Hatchback subcompacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "palio",
+      "nombre": "Palio",
+      "slug": "palio",
+      "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1996-2005)",
+          "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 1.0L/1.2L/1.4L/1.6L/1.8L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Hatchback compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2005-2017)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 1.0L/1.4L/1.6L/1.8L/1.3L Multijet", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera", "Hatchback compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "siena",
+      "nombre": "Siena",
+      "slug": "siena",
+      "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1996-2005)",
+          "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 1.0L/1.2L/1.4L/1.6L/1.8L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2005-2017)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 1.0L/1.4L/1.6L/1.8L/1.3L Multijet", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera", "Sedán compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "strada",
+      "nombre": "Strada",
+      "slug": "strada",
+      "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1996-2005)",
+          "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 1.0L/1.2L/1.4L/1.6L/1.8L", "Transmisión manual 5 velocidades", "Tracción delantera", "Pickup compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2005-presente)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.0L/1.4L/1.6L/1.8L/1.3L Multijet", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera", "Pickup compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "idea",
+      "nombre": "Idea",
+      "slug": "idea",
+      "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2003-2012)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 1.2L/1.4L/1.6L/1.3L Multijet", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera", "MPV compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "sedici",
+      "nombre": "Sedici",
+      "slug": "sedici",
+      "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2005-2014)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 1.6L/1.9L Multijet", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "freemont",
+      "nombre": "Freemont",
+      "slug": "freemont",
+      "años": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2011-2016)",
+          "años": [2011, 2012, 2013, 2014, 2015, 2016],
+          "caracteristicas": ["Motor 2.0L/2.4L/3.6L V6/2.0L Multijet", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "500l",
+      "nombre": "500L",
+      "slug": "500l",
+      "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2012-presente)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 0.9L TwinAir/1.4L/1.6L Multijet", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción delantera", "MPV compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "500x",
+      "nombre": "500X",
+      "slug": "500x",
+      "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2014-presente)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 0.9L TwinAir/1.4L/1.6L Multijet/2.0L Multijet", "Transmisión manual 6 velocidades/automática 9 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

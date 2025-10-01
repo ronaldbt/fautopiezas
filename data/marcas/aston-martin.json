@@ -1,0 +1,69 @@
+{
+  "marca": {
+    "id": "aston-martin",
+    "nombre": "ASTON-MARTIN",
+    "slug": "aston-martin",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "db11",
+      "nombre": "DB11",
+      "slug": "db11",
+      "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 5.2L V12/4.0L V8 Turbo", "Transmisión automática 8 velocidades", "Tracción trasera", "Gran Turismo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "vantage",
+      "nombre": "Vantage",
+      "slug": "vantage",
+      "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2005-2017)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 4.3L/4.7L V8", "Transmisión manual/automática 6 velocidades", "Tracción trasera", "Coupé deportivo"]
+        },
+        {
+          "nombre": "Segunda Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 4.0L V8 Turbo", "Transmisión manual/automática 8 velocidades", "Tracción trasera", "Coupé deportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "dbs",
+      "nombre": "DBS",
+      "slug": "dbs",
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2007-2012)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 6.0L V12", "Transmisión manual/automática 6 velocidades", "Tracción trasera", "Superdeportivo"]
+        },
+        {
+          "nombre": "Segunda Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 5.2L V12", "Transmisión automática 8 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

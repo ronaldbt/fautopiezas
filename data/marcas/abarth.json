@@ -1,0 +1,80 @@
+{
+  "marca": {
+    "id": "abarth",
+    "nombre": "ABARTH",
+    "slug": "abarth",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "500",
+      "nombre": "500",
+      "slug": "500",
+      "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2008-2019)",
+          "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 1.4L Turbo", "Transmisión manual 5 velocidades", "Tracción delantera"]
+        },
+        {
+          "nombre": "Segunda Generación (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.3L Turbo", "Transmisión automática CVT", "Sistema híbrido"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "124-spider",
+      "nombre": "124 Spider",
+      "slug": "124-spider",
+      "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.4L Turbo", "Transmisión manual 6 velocidades", "Tracción trasera", "Descapotable"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "punto",
+      "nombre": "Punto",
+      "slug": "punto",
+      "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+      "generaciones": [
+        {
+          "nombre": "Tercera Generación (2005-2018)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 1.4L Turbo", "Transmisión manual 5 velocidades", "Tracción delantera"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "grande-punto",
+      "nombre": "Grande Punto",
+      "slug": "grande-punto",
+      "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2005-2018)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 1.4L Turbo", "Transmisión manual 5 velocidades", "Tracción delantera", "Hatchback 5 puertas"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

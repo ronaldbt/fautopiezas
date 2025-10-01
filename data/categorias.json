@@ -1,0 +1,288 @@
+[
+  {
+    "id": "calefaccion-aire-acondicionado",
+    "nombre": "Calefacción y Aire Acondicionado",
+    "slug": "calefaccion-aire-acondicionado",
+    "icono": "❄️",
+    "descripcion": "Sistema de calefacción y aire acondicionado",
+    "activa": true,
+    "orden": 1,
+    "subcategorias": [
+      "compresor-aire-acondicionado",
+      "condensador",
+      "evaporador",
+      "filtro-cabina",
+      "motor-ventilador",
+      "termostato",
+      "radiador-calefaccion"
+    ]
+  },
+  {
+    "id": "carroceria-ensamblaje-lampara",
+    "nombre": "Carrocería y Ensamblaje de Lámpara",
+    "slug": "carroceria-ensamblaje-lampara",
+    "icono": "🚗",
+    "descripcion": "Piezas de carrocería y ensamblajes de lámparas",
+    "activa": true,
+    "orden": 2,
+    "subcategorias": [
+      "parachoques",
+      "guardafangos",
+      "puertas",
+      "capot",
+      "maletero",
+      "faros",
+      "luces-traseras",
+      "espejos"
+    ]
+  },
+  {
+    "id": "combustible-aire",
+    "nombre": "Combustible y Aire",
+    "slug": "combustible-aire",
+    "icono": "⛽",
+    "descripcion": "Sistema de combustible y aire",
+    "activa": true,
+    "orden": 3,
+    "subcategorias": [
+      "filtro-aire",
+      "filtro-combustible",
+      "bomba-combustible",
+      "inyectores",
+      "carburador",
+      "sensor-oxigeno",
+      "sonda-lambda"
+    ]
+  },
+  {
+    "id": "direccion",
+    "nombre": "Dirección",
+    "slug": "direccion",
+    "icono": "🎯",
+    "descripcion": "Sistema de dirección",
+    "activa": true,
+    "orden": 4,
+    "subcategorias": [
+      "cremallera-direccion",
+      "bomba-direccion",
+      "terminales-direccion",
+      "mangueras-direccion",
+      "liquido-direccion",
+      "columna-direccion"
+    ]
+  },
+  {
+    "id": "electrico",
+    "nombre": "Eléctrico",
+    "slug": "electrico",
+    "icono": "⚡",
+    "descripcion": "Sistema eléctrico general",
+    "activa": true,
+    "orden": 5,
+    "subcategorias": [
+      "alternador",
+      "motor-arranque",
+      "bateria",
+      "cables",
+      "fusibles",
+      "relays",
+      "sensor-abs"
+    ]
+  },
+  {
+    "id": "electrico-bombilla-casquillo",
+    "nombre": "Eléctrico-Bombilla y Casquillo",
+    "slug": "electrico-bombilla-casquillo",
+    "icono": "💡",
+    "descripcion": "Bombillas y casquillos eléctricos",
+    "activa": true,
+    "orden": 6,
+    "subcategorias": [
+      "bombillas-faros",
+      "bombillas-intermitentes",
+      "bombillas-traseras",
+      "bombillas-interior",
+      "casquillos",
+      "portabombillas"
+    ]
+  },
+  {
+    "id": "electrico-interruptor-rele",
+    "nombre": "Eléctrico-Interruptor y Relé",
+    "slug": "electrico-interruptor-rele",
+    "icono": "🔌",
+    "descripcion": "Interruptores y relés eléctricos",
+    "activa": true,
+    "orden": 7,
+    "subcategorias": [
+      "interruptor-encendido",
+      "interruptor-luces",
+      "interruptor-frenos",
+      "reles",
+      "fusibles",
+      "caja-fusibles"
+    ]
+  },
+  {
+    "id": "encendido",
+    "nombre": "Encendido",
+    "slug": "encendido",
+    "icono": "🔥",
+    "descripcion": "Sistema de encendido",
+    "activa": true,
+    "orden": 8,
+    "subcategorias": [
+      "bujias",
+      "cables-bujias",
+      "distribuidor",
+      "bobina-encendido",
+      "sensor-posicion-arbol",
+      "modulo-encendido"
+    ]
+  },
+  {
+    "id": "escapes-emisiones",
+    "nombre": "Escapes y Emisiones",
+    "slug": "escapes-emisiones",
+    "icono": "💨",
+    "descripcion": "Sistema de escape y control de emisiones",
+    "activa": true,
+    "orden": 9,
+    "subcategorias": [
+      "catalizador",
+      "silenciador",
+      "tubo-escape",
+      "sensor-oxigeno",
+      "sonda-lambda",
+      "valvula-egr",
+      "canister"
+    ]
+  },
+  {
+    "id": "freno-maza-rueda",
+    "nombre": "Freno y Maza de Rueda",
+    "slug": "freno-maza-rueda",
+    "icono": "🛑",
+    "descripcion": "Sistema de frenos y mazas de rueda",
+    "activa": true,
+    "orden": 10,
+    "subcategorias": [
+      "pastillas-freno",
+      "discos-freno",
+      "tambores",
+      "liquido-freno",
+      "mangueras-freno",
+      "cilindros-freno",
+      "zapatas",
+      "maza-rueda"
+    ]
+  },
+  {
+    "id": "limpiaparabrisas",
+    "nombre": "Limpiaparabrisas",
+    "slug": "limpiaparabrisas",
+    "icono": "🌧️",
+    "descripcion": "Sistema de limpiaparabrisas",
+    "activa": true,
+    "orden": 11,
+    "subcategorias": [
+      "brazos-limpiaparabrisas",
+      "hojas-limpiaparabrisas",
+      "motor-limpiaparabrisas",
+      "bomba-agua-lavaparabrisas",
+      "mangueras-lavaparabrisas"
+    ]
+  },
+  {
+    "id": "motor",
+    "nombre": "Motor",
+    "slug": "motor",
+    "icono": "🔧",
+    "descripcion": "Componentes del motor",
+    "activa": true,
+    "orden": 12,
+    "subcategorias": [
+      "cigueñal",
+      "pistones",
+      "valvulas",
+      "juntas",
+      "anillos",
+      "bielas",
+      "culata",
+      "bloque-motor",
+      "arbol-levas"
+    ]
+  },
+  {
+    "id": "sistema-enfriamiento",
+    "nombre": "Sistema de Enfriamiento",
+    "slug": "sistema-enfriamiento",
+    "icono": "❄️",
+    "descripcion": "Sistema de refrigeración del motor",
+    "activa": true,
+    "orden": 13,
+    "subcategorias": [
+      "radiador",
+      "termostato",
+      "bomba-agua",
+      "mangueras-refrigeracion",
+      "anticongelante",
+      "ventilador",
+      "sensor-temperatura"
+    ]
+  },
+  {
+    "id": "suspension",
+    "nombre": "Suspensión",
+    "slug": "suspension",
+    "icono": "⚡",
+    "descripcion": "Sistema de suspensión",
+    "activa": true,
+    "orden": 14,
+    "subcategorias": [
+      "amortiguadores",
+      "muelles",
+      "rotulas",
+      "terminales",
+      "bujes",
+      "brazos-suspension",
+      "estabilizadores",
+      "soporte-motor"
+    ]
+  },
+  {
+    "id": "transmision-automatica",
+    "nombre": "Transmisión-Automática",
+    "slug": "transmision-automatica",
+    "icono": "⚙️",
+    "descripcion": "Transmisión automática",
+    "activa": true,
+    "orden": 15,
+    "subcategorias": [
+      "caja-cambios-automatica",
+      "aceite-transmision",
+      "filtro-transmision",
+      "convertidor-par",
+      "solenoides",
+      "sensor-velocidad"
+    ]
+  },
+  {
+    "id": "tren-transmision",
+    "nombre": "Tren de Transmisión",
+    "slug": "tren-transmision",
+    "icono": "🔗",
+    "descripcion": "Tren de transmisión y tracción",
+    "activa": true,
+    "orden": 16,
+    "subcategorias": [
+      "embrague",
+      "caja-cambios-manual",
+      "diferencial",
+      "crucetas",
+      "juntas-homocineticas",
+      "cardan",
+      "soporte-motor"
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://fautopiezas.cl/sitemap.xml
+
+# Crawl-delay para bots agresivos
+User-agent: Baiduspider
+Crawl-delay: 10
+
+User-agent: YandexBot
+Crawl-delay: 5
+
+# Bloquear directorios administrativos
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /_nuxt/
+Disallow: /api/
+
+# Permitir específicamente para SEO
+Allow: /repuestos/
+Allow: /categoria/
+Allow: /repuestos-*-chile
+
+# Host
+Host: fautopiezas.cl

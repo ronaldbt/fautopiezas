@@ -1,0 +1,252 @@
+{
+  "toyota": [
+    {
+      "id": "corolla",
+      "nombre": "Corolla",
+      "slug": "corolla",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "camry",
+      "nombre": "Camry",
+      "slug": "camry",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "rav4",
+      "nombre": "RAV4",
+      "slug": "rav4",
+      "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "prius",
+      "nombre": "Prius",
+      "slug": "prius",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "yaris",
+      "nombre": "Yaris",
+      "slug": "yaris",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "hilux",
+      "nombre": "Hilux",
+      "slug": "hilux",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    }
+  ],
+  "nissan": [
+    {
+      "id": "sentra",
+      "nombre": "Sentra",
+      "slug": "sentra",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "altima",
+      "nombre": "Altima",
+      "slug": "altima",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "x-trail",
+      "nombre": "X-Trail",
+      "slug": "x-trail",
+      "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "qashqai",
+      "nombre": "Qashqai",
+      "slug": "qashqai",
+      "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "versa",
+      "nombre": "Versa",
+      "slug": "versa",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "navara",
+      "nombre": "Navara",
+      "slug": "navara",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    }
+  ],
+  "chevrolet": [
+    {
+      "id": "spark",
+      "nombre": "Spark",
+      "slug": "spark",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "sail",
+      "nombre": "Sail",
+      "slug": "sail",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "cruze",
+      "nombre": "Cruze",
+      "slug": "cruze",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "tracker",
+      "nombre": "Tracker",
+      "slug": "tracker",
+      "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "captiva",
+      "nombre": "Captiva",
+      "slug": "captiva",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "s10",
+      "nombre": "S10",
+      "slug": "s10",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    }
+  ],
+  "bmw": [
+    {
+      "id": "serie-1",
+      "nombre": "Serie 1",
+      "slug": "serie-1",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "serie-3",
+      "nombre": "Serie 3",
+      "slug": "serie-3",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "serie-5",
+      "nombre": "Serie 5",
+      "slug": "serie-5",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "x1",
+      "nombre": "X1",
+      "slug": "x1",
+      "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "x3",
+      "nombre": "X3",
+      "slug": "x3",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "x5",
+      "nombre": "X5",
+      "slug": "x5",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    }
+  ],
+  "hyundai": [
+    {
+      "id": "accent",
+      "nombre": "Accent",
+      "slug": "accent",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "elantra",
+      "nombre": "Elantra",
+      "slug": "elantra",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "tucson",
+      "nombre": "Tucson",
+      "slug": "tucson",
+      "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "santa-fe",
+      "nombre": "Santa Fe",
+      "slug": "santa-fe",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "i20",
+      "nombre": "i20",
+      "slug": "i20",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    },
+    {
+      "id": "creta",
+      "nombre": "Creta",
+      "slug": "creta",
+      "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "categorias": ["motor", "frenos", "suspension", "electrico", "filtros"],
+      "activa": true
+    }
+  ]
+}

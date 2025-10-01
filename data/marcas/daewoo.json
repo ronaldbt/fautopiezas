@@ -1,0 +1,101 @@
+{
+  "marca": {
+    "id": "daewoo",
+    "nombre": "DAEWOO",
+    "slug": "daewoo",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "matiz",
+      "nombre": "Matiz",
+      "slug": "matiz",
+      "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1998-2005)",
+          "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 0.8L/1.0L", "Transmisión manual 5 velocidades", "Tracción delantera", "Hatchback subcompacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2005-2011)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011],
+          "caracteristicas": ["Motor 0.8L/1.0L", "Transmisión manual 5 velocidades", "Tracción delantera", "Hatchback subcompacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "lanos",
+      "nombre": "Lanos",
+      "slug": "lanos",
+      "años": [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1997-2008)",
+          "años": [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008],
+          "caracteristicas": ["Motor 1.4L/1.5L/1.6L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "nubira",
+      "nombre": "Nubira",
+      "slug": "nubira",
+      "años": [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1997-2003)",
+          "años": [1997, 1998, 1999, 2000, 2001, 2002, 2003],
+          "caracteristicas": ["Motor 1.6L/1.8L/2.0L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Segunda Generación (2003-2008)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008],
+          "caracteristicas": ["Motor 1.6L/1.8L/2.0L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán mediano"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "leganza",
+      "nombre": "Leganza",
+      "slug": "leganza",
+      "años": [1997, 1998, 1999, 2000, 2001, 2002],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1997-2002)",
+          "años": [1997, 1998, 1999, 2000, 2001, 2002],
+          "caracteristicas": ["Motor 2.0L/2.2L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán mediano"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "tico",
+      "nombre": "Tico",
+      "slug": "tico",
+      "años": [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1991-2001)",
+          "años": [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001],
+          "caracteristicas": ["Motor 0.8L", "Transmisión manual 4 velocidades", "Tracción delantera", "Hatchback subcompacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

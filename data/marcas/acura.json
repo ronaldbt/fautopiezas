@@ -1,0 +1,184 @@
+{
+  "marca": {
+    "id": "acura",
+    "nombre": "ACURA",
+    "slug": "acura",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "ilx",
+      "nombre": "ILX",
+      "slug": "ilx",
+      "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2013-2024)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.4L", "Transmisión automática CVT", "Tracción delantera", "Sedán compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "tlx",
+      "nombre": "TLX",
+      "slug": "tlx",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2015-2020)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 2.4L/3.5L V6", "Transmisión automática 9 velocidades", "Tracción delantera/AWD", "Sedán mediano"]
+        },
+        {
+          "nombre": "Segunda Generación (2021-presente)",
+          "años": [2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo/3.0L V6", "Transmisión automática 10 velocidades", "Tracción delantera/AWD", "Sedán mediano"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "rdx",
+      "nombre": "RDX",
+      "slug": "rdx",
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2007-2012)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 2.3L Turbo", "Transmisión automática 5 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2013-2018)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Tercera Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo", "Transmisión automática 10 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "mdx",
+      "nombre": "MDX",
+      "slug": "mdx",
+      "años": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2001-2006)",
+          "años": [2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 5 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        },
+        {
+          "nombre": "Segunda Generación (2007-2013)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013],
+          "caracteristicas": ["Motor 3.7L V6", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        },
+        {
+          "nombre": "Tercera Generación (2014-2020)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 9 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        },
+        {
+          "nombre": "Cuarta Generación (2021-presente)",
+          "años": [2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.5L V6/3.0L Turbo", "Transmisión automática 10 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "nsx",
+      "nombre": "NSX",
+      "slug": "nsx",
+      "años": [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1991-2005)",
+          "años": [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 3.0L V6", "Transmisión manual 5 velocidades", "Tracción trasera", "Superdeportivo"]
+        },
+        {
+          "nombre": "Segunda Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.5L V6 Híbrido", "Transmisión automática 9 velocidades", "Tracción trasera", "Superdeportivo híbrido"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "rl",
+      "nombre": "RL",
+      "slug": "rl",
+      "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1996-2004)",
+          "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 4 velocidades", "Tracción delantera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2005-2012)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 3.7L V6", "Transmisión automática 5 velocidades", "Tracción delantera/AWD", "Sedán de lujo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "tsx",
+      "nombre": "TSX",
+      "slug": "tsx",
+      "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2004-2008)",
+          "años": [2004, 2005, 2006, 2007, 2008],
+          "caracteristicas": ["Motor 2.4L 4 cilindros", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2009-2014)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 2.4L 4 cilindros/3.5L V6", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Sedán compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "rsx",
+      "nombre": "RSX",
+      "slug": "rsx",
+      "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2002-2006)",
+          "años": [2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 2.0L 4 cilindros", "Transmisión manual 5 velocidades", "Tracción delantera", "Coupé deportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}
