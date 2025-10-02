@@ -33,7 +33,6 @@
 
           <!-- Navegación central -->
           <div class="hidden md:flex items-center space-x-8">
-            <NuxtLink to="/" class="text-gray-700 hover:text-blue-600 font-medium">Inicio</NuxtLink>
             <NuxtLink to="/repuestos" class="text-gray-700 hover:text-blue-600 font-medium">Repuestos</NuxtLink>
             
             <!-- Dropdown de Marcas -->
@@ -111,6 +110,7 @@
             </div>
             
             <NuxtLink to="/categorias" class="text-gray-700 hover:text-blue-600 font-medium">Categorías</NuxtLink>
+            <NuxtLink to="/guias" class="text-gray-700 hover:text-blue-600 font-medium">Guías</NuxtLink>
             <NuxtLink to="/contacto" class="text-gray-700 hover:text-blue-600 font-medium">Contacto</NuxtLink>
           </div>
 
@@ -155,7 +155,6 @@
         <!-- Menú móvil desplegable -->
         <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t">
           <div class="px-4 py-2 space-y-2">
-            <NuxtLink to="/" class="block py-2 text-gray-700 hover:text-blue-600">Inicio</NuxtLink>
             <NuxtLink to="/repuestos" class="block py-2 text-gray-700 hover:text-blue-600">Repuestos</NuxtLink>
             
             <!-- Marcas móvil -->
@@ -200,6 +199,7 @@
             </div>
             
             <NuxtLink to="/categorias" class="block py-2 text-gray-700 hover:text-blue-600">Categorías</NuxtLink>
+            <NuxtLink to="/guias" class="block py-2 text-gray-700 hover:text-blue-600">Guías</NuxtLink>
             <NuxtLink to="/contacto" class="block py-2 text-gray-700 hover:text-blue-600">Contacto</NuxtLink>
             <div class="pt-4 border-t">
               <NuxtLink to="/login" class="block py-2 text-gray-700 hover:text-blue-600">Iniciar Sesión</NuxtLink>

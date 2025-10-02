@@ -1,5 +1,8 @@
 <template>
   <div class="min-h-screen bg-gray-50">
+    <!-- Header fijo -->
+    <Header />
+    
     <!-- Main content -->
     <main>
       <slot />

@@ -1,8 +1,5 @@
 <template>
   <div class="pt-32">
-    <!-- Header fijo -->
-    <Header />
-
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24">
       <div class="max-w-6xl mx-auto px-4 text-center">

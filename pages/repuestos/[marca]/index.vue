@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50">
+  <div class="min-h-screen bg-gray-50 pt-32">
     <!-- Header con breadcrumb -->
     <div class="bg-white shadow-sm border-b">
       <div class="max-w-6xl mx-auto px-4 py-4">
