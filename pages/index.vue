@@ -68,37 +68,31 @@
           Los conseguimos aunque no los tenga nadie más en Chile.
         </p>
         
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
-            <div class="text-2xl mb-2">🏆</div>
-            <h3 class="font-bold text-sm text-blue-600 mb-1">Audi</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <NuxtLink to="/repuestos/audi" class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow hover:bg-blue-50">
+            <h3 class="font-bold text-lg text-blue-600 mb-1">AUDI</h3>
             <p class="text-xs text-gray-600">Repuestos premium</p>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
-            <div class="text-2xl mb-2">⭐</div>
-            <h3 class="font-bold text-sm text-blue-600 mb-1">BMW</h3>
-            <p class="text-xs text-gray-600">Piezas originales</p>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
-            <div class="text-2xl mb-2">💎</div>
-            <h3 class="font-bold text-sm text-blue-600 mb-1">Mercedes-Benz</h3>
+          </NuxtLink>
+          <NuxtLink to="/repuestos/bmw" class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow hover:bg-blue-50">
+            <h3 class="font-bold text-lg text-blue-600 mb-1">BMW</h3>
+            <p class="text-xs text-gray-600">Piezas importadas</p>
+          </NuxtLink>
+          <NuxtLink to="/repuestos/mercedes-benz" class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow hover:bg-blue-50">
+            <h3 class="font-bold text-lg text-blue-600 mb-1">MERCEDES-BENZ</h3>
             <p class="text-xs text-gray-600">Alta calidad</p>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
-            <div class="text-2xl mb-2">🚙</div>
-            <h3 class="font-bold text-sm text-blue-600 mb-1">Ford Raptor</h3>
+          </NuxtLink>
+          <NuxtLink to="/repuestos/ford" class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow hover:bg-blue-50">
+            <h3 class="font-bold text-lg text-blue-600 mb-1">FORD RAPTOR</h3>
             <p class="text-xs text-gray-600">Piezas especiales</p>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
-            <div class="text-2xl mb-2">🛡️</div>
-            <h3 class="font-bold text-sm text-blue-600 mb-1">Volvo</h3>
+          </NuxtLink>
+          <NuxtLink to="/repuestos/volvo" class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow hover:bg-blue-50">
+            <h3 class="font-bold text-lg text-blue-600 mb-1">VOLVO</h3>
             <p class="text-xs text-gray-600">Seguridad sueca</p>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
-            <div class="text-2xl mb-2">🏎️</div>
-            <h3 class="font-bold text-sm text-blue-600 mb-1">Porsche</h3>
-            <p class="text-xs text-gray-600">Rendimiento</p>
-          </div>
+          </NuxtLink>
+          <NuxtLink to="/repuestos/porsche" class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow hover:bg-blue-50">
+            <h3 class="font-bold text-lg text-blue-600 mb-1">PORSCHE</h3>
+            <p class="text-xs text-gray-600">Alto rendimiento</p>
+          </NuxtLink>
         </div>
 
         <div class="text-center mt-8">
