@@ -1,0 +1,248 @@
+{
+  "marca": {
+    "id": "hyundai",
+    "nombre": "HYUNDAI",
+    "slug": "hyundai",
+    "activa": true,
+    "popular": true
+  },
+  "modelos": [
+    {
+      "id": "accent",
+      "nombre": "Accent",
+      "slug": "accent",
+      "años": [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1995-1999)",
+          "años": [1995, 1996, 1997, 1998, 1999],
+          "caracteristicas": ["Motor 1.3L/1.5L", "Transmisión manual 5 velocidades", "Tracción delantera", "Sedán subcompacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2000-2005)",
+          "años": [2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 1.5L/1.6L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán subcompacto"]
+        },
+        {
+          "nombre": "Tercera Generación (2006-2011)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011],
+          "caracteristicas": ["Motor 1.6L", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Sedán subcompacto"]
+        },
+        {
+          "nombre": "Cuarta Generación (2012-2017)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 1.6L", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Sedán subcompacto"]
+        },
+        {
+          "nombre": "Quinta Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.6L", "Transmisión manual/CVT", "Tracción delantera", "Sedán subcompacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "elantra",
+      "nombre": "Elantra",
+      "slug": "elantra",
+      "años": [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1991-1995)",
+          "años": [1991, 1992, 1993, 1994, 1995],
+          "caracteristicas": ["Motor 1.6L/1.8L", "Transmisión manual 5 velocidades", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (1996-2000)",
+          "años": [1996, 1997, 1998, 1999, 2000],
+          "caracteristicas": ["Motor 1.6L/1.8L/2.0L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Tercera Generación (2001-2006)",
+          "años": [2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 2.0L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación (2007-2010)",
+          "años": [2007, 2008, 2009, 2010],
+          "caracteristicas": ["Motor 2.0L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Quinta Generación (2011-2016)",
+          "años": [2011, 2012, 2013, 2014, 2015, 2016],
+          "caracteristicas": ["Motor 1.8L/2.0L", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Sexta Generación (2017-2020)",
+          "años": [2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 2.0L", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Séptima Generación (2021-presente)",
+          "años": [2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/1.6L Turbo", "Transmisión manual/CVT", "Tracción delantera", "Sedán compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "tucson",
+      "nombre": "Tucson",
+      "slug": "tucson",
+      "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2004-2009)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009],
+          "caracteristicas": ["Motor 2.0L/2.7L V6", "Transmisión manual/automática 5 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2010-2015)",
+          "años": [2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 2.0L/2.4L", "Transmisión manual/automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Tercera Generación (2016-2020)",
+          "años": [2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 2.0L/1.6L Turbo", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación (2021-presente)",
+          "años": [2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.5L/1.6L Turbo", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "santa-fe",
+      "nombre": "Santa Fe",
+      "slug": "santa-fe",
+      "años": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2001-2006)",
+          "años": [2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 2.4L/2.7L V6/3.5L V6", "Transmisión automática 4-5 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        },
+        {
+          "nombre": "Segunda Generación (2007-2012)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 2.4L/3.3L V6", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        },
+        {
+          "nombre": "Tercera Generación (2013-2018)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 2.4L/3.3L V6/2.0L Turbo", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        },
+        {
+          "nombre": "Cuarta Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.5L/2.5L Turbo", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "sonata",
+      "nombre": "Sonata",
+      "slug": "sonata",
+      "años": [1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1989-1993)",
+          "años": [1989, 1990, 1991, 1992, 1993],
+          "caracteristicas": ["Motor 2.0L/3.0L V6", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Segunda Generación (1994-1998)",
+          "años": [1994, 1995, 1996, 1997, 1998],
+          "caracteristicas": ["Motor 2.0L/3.0L V6", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Tercera Generación (1999-2005)",
+          "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 2.4L/2.7L V6", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Cuarta Generación (2006-2010)",
+          "años": [2006, 2007, 2008, 2009, 2010],
+          "caracteristicas": ["Motor 2.4L/3.3L V6", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Quinta Generación (2011-2014)",
+          "años": [2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 2.4L/2.0L Turbo", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Sexta Generación (2015-2019)",
+          "años": [2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 2.4L/2.0L Turbo", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Séptima Generación (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.5L/1.6L Turbo", "Transmisión automática 8 velocidades", "Tracción delantera", "Sedán mediano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "i30",
+      "nombre": "i30",
+      "slug": "i30",
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2007-2012)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 1.4L/1.6L/2.0L", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Hatchback compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2012-2017)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 1.4L/1.6L/1.8L", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Hatchback compacto"]
+        },
+        {
+          "nombre": "Tercera Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.0L Turbo/1.4L Turbo/1.6L/2.0L Turbo", "Transmisión manual/automática 6-7 velocidades", "Tracción delantera", "Hatchback compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "veloster",
+      "nombre": "Veloster",
+      "slug": "veloster",
+      "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2012-2017)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 1.6L/1.6L Turbo", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Coupé deportivo"]
+        },
+        {
+          "nombre": "Segunda Generación (2018-2022)",
+          "años": [2018, 2019, 2020, 2021, 2022],
+          "caracteristicas": ["Motor 2.0L/1.6L Turbo", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Coupé deportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "marca": {
+    "id": "jaguar",
+    "nombre": "JAGUAR",
+    "slug": "jaguar",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "xe",
+      "nombre": "XE",
+      "slug": "xe",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo/3.0L V6 Supercharged", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "Sedán deportivo de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "xf",
+      "nombre": "XF",
+      "slug": "xf",
+      "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2008-2015)",
+          "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 2.0L Turbo/2.7L V6/3.0L V6/5.0L V8", "Transmisión automática 6-8 velocidades", "Tracción trasera/AWD", "Sedán ejecutivo de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo/3.0L V6 Supercharged/5.0L V8", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "Sedán ejecutivo de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "xj",
+      "nombre": "XJ",
+      "slug": "xj",
+      "años": [1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1968-1986)",
+          "años": [1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986],
+          "caracteristicas": ["Motor 2.8L/3.4L/4.2L/5.3L V12", "Transmisión manual/automática 3-4 velocidades", "Tracción trasera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (1986-1994)",
+          "años": [1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994],
+          "caracteristicas": ["Motor 3.2L/4.0L/6.0L V12", "Transmisión automática 4 velocidades", "Tracción trasera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Tercera Generación (1994-2003)",
+          "años": [1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003],
+          "caracteristicas": ["Motor 3.2L/4.0L/4.2L V8", "Transmisión automática 5 velocidades", "Tracción trasera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Cuarta Generación (2003-2009)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009],
+          "caracteristicas": ["Motor 3.5L/4.2L V8", "Transmisión automática 6 velocidades", "Tracción trasera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Quinta Generación (2009-2019)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 3.0L V6/5.0L V8", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "Sedán de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "f-pace",
+      "nombre": "F-PACE",
+      "slug": "f-pace",
+      "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo/3.0L V6 Supercharged/5.0L V8", "Transmisión automática 8 velocidades", "Tracción AWD", "SUV deportivo de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "e-pace",
+      "nombre": "E-PACE",
+      "slug": "e-pace",
+      "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo", "Transmisión automática 9 velocidades", "Tracción delantera/AWD", "SUV compacto de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "i-pace",
+      "nombre": "I-PACE",
+      "slug": "i-pace",
+      "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor eléctrico", "Transmisión automática", "Tracción AWD", "SUV eléctrico de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

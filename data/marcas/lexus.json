@@ -1,0 +1,223 @@
+{
+  "marca": {
+    "id": "lexus",
+    "nombre": "LEXUS",
+    "slug": "lexus",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "es",
+      "nombre": "ES",
+      "slug": "es",
+      "años": [1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1989-1991)",
+          "años": [1989, 1990, 1991],
+          "caracteristicas": ["Motor 2.5L V6", "Transmisión automática 4 velocidades", "Tracción delantera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (1991-1996)",
+          "años": [1991, 1992, 1993, 1994, 1995, 1996],
+          "caracteristicas": ["Motor 3.0L V6", "Transmisión automática 4 velocidades", "Tracción delantera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Tercera Generación (1996-2001)",
+          "años": [1996, 1997, 1998, 1999, 2000, 2001],
+          "caracteristicas": ["Motor 3.0L V6", "Transmisión automática 4 velocidades", "Tracción delantera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Cuarta Generación (2001-2006)",
+          "años": [2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 3.0L/3.3L V6", "Transmisión automática 5 velocidades", "Tracción delantera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Quinta Generación (2006-2012)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 6 velocidades", "Tracción delantera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Sexta Generación (2012-2018)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 2.5L/3.5L V6", "Transmisión automática 6 velocidades", "Tracción delantera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Séptima Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.5L/3.5L V6", "Transmisión automática 8 velocidades", "Tracción delantera", "Sedán de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "rx",
+      "nombre": "RX",
+      "slug": "rx",
+      "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1998-2003)",
+          "años": [1998, 1999, 2000, 2001, 2002, 2003],
+          "caracteristicas": ["Motor 3.0L V6", "Transmisión automática 4 velocidades", "Tracción delantera/AWD", "SUV de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2003-2009)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009],
+          "caracteristicas": ["Motor 3.3L/3.5L V6", "Transmisión automática 5 velocidades", "Tracción delantera/AWD", "SUV de lujo"]
+        },
+        {
+          "nombre": "Tercera Generación (2009-2015)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV de lujo"]
+        },
+        {
+          "nombre": "Cuarta Generación (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "SUV de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "is",
+      "nombre": "IS",
+      "slug": "is",
+      "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1999-2005)",
+          "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 2.0L/3.0L V6", "Transmisión manual/automática 5-6 velocidades", "Tracción trasera", "Sedán deportivo de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2005-2013)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
+          "caracteristicas": ["Motor 2.5L V6/3.5L V6/5.0L V8", "Transmisión manual/automática 6 velocidades", "Tracción trasera/AWD", "Sedán deportivo de lujo"]
+        },
+        {
+          "nombre": "Tercera Generación (2013-2020)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 2.0L Turbo/2.5L V6/3.5L V6/5.0L V8", "Transmisión automática 6-8 velocidades", "Tracción trasera/AWD", "Sedán deportivo de lujo"]
+        },
+        {
+          "nombre": "Cuarta Generación (2021-presente)",
+          "años": [2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo/3.5L V6", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "Sedán deportivo de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "ls",
+      "nombre": "LS",
+      "slug": "ls",
+      "años": [1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1989-1994)",
+          "años": [1989, 1990, 1991, 1992, 1993, 1994],
+          "caracteristicas": ["Motor 4.0L V8", "Transmisión automática 4 velocidades", "Tracción trasera", "Sedán de lujo full-size"]
+        },
+        {
+          "nombre": "Segunda Generación (1994-2000)",
+          "años": [1994, 1995, 1996, 1997, 1998, 1999, 2000],
+          "caracteristicas": ["Motor 4.0L V8", "Transmisión automática 4-5 velocidades", "Tracción trasera", "Sedán de lujo full-size"]
+        },
+        {
+          "nombre": "Tercera Generación (2000-2006)",
+          "años": [2000, 2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 4.3L V8", "Transmisión automática 6 velocidades", "Tracción trasera/AWD", "Sedán de lujo full-size"]
+        },
+        {
+          "nombre": "Cuarta Generación (2006-2017)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 4.6L V8/5.0L V8", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "Sedán de lujo full-size"]
+        },
+        {
+          "nombre": "Quinta Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.5L V6/5.0L V8", "Transmisión automática 10 velocidades", "Tracción trasera/AWD", "Sedán de lujo full-size"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "gx",
+      "nombre": "GX",
+      "slug": "gx",
+      "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2003-2009)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009],
+          "caracteristicas": ["Motor 4.7L V8", "Transmisión automática 5 velocidades", "Tracción 4x4", "SUV off-road de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2009-presente)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 4.6L V8", "Transmisión automática 6 velocidades", "Tracción 4x4", "SUV off-road de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "lx",
+      "nombre": "LX",
+      "slug": "lx",
+      "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1996-2007)",
+          "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007],
+          "caracteristicas": ["Motor 4.7L V8", "Transmisión automática 4-5 velocidades", "Tracción 4x4", "SUV full-size de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2007-2021)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+          "caracteristicas": ["Motor 5.7L V8", "Transmisión automática 6 velocidades", "Tracción 4x4", "SUV full-size de lujo"]
+        },
+        {
+          "nombre": "Tercera Generación (2022-presente)",
+          "años": [2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.5L V6 Turbo", "Transmisión automática 10 velocidades", "Tracción 4x4", "SUV full-size de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "nx",
+      "nombre": "NX",
+      "slug": "nx",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2015-2021)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+          "caracteristicas": ["Motor 2.0L Turbo/2.5L", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2022-presente)",
+          "años": [2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.4L Turbo/2.5L", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "SUV compacto de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

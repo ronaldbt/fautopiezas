@@ -7,12 +7,12 @@
 </template>
 
 <script setup>
-// Meta tags globales para FAutopiezas
+// Meta tags globales para AutoPiezas360
 useHead({
-  title: 'FAutopiezas Chile - Repuestos para Autos',
+  title: 'AutoPiezas360 Chile - Repuestos Importados con Descuento',
   meta: [
-    { name: 'description', content: 'Los mejores repuestos para autos en Chile. Stock inmediato, envío gratis, garantía extendida.' },
-    { name: 'keywords', content: 'repuestos autos chile, autopartes chile, repuestos toyota chile, repuestos nissan chile' }
+    { name: 'description', content: 'Repuestos importados para autos con 50% de descuento. Importación directa desde fábrica. Envío a todo Chile en 7 días.' },
+    { name: 'keywords', content: 'repuestos importados chile, autopartes descuento, repuestos toyota baratos, repuestos nissan importados, autopiezas360' }
   ]
 })
 </script>

@@ -29,7 +29,7 @@
           "caracteristicas": ["Motor 2.0L Turbo/3.6L V6/6.2L V8", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "Sedán deportivo"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": true
     },
@@ -45,7 +45,7 @@
           "caracteristicas": ["Motor 2.0L Turbo/2.5L/3.6L V6", "Transmisión manual/automática 6 velocidades", "Tracción trasera/AWD", "Sedán compacto deportivo"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": true
     },
@@ -61,7 +61,7 @@
           "caracteristicas": ["Motor 3.6L V6", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "Sedán de lujo"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": false
     },
@@ -77,7 +77,7 @@
           "caracteristicas": ["Motor 2.0L Turbo/3.6L V6", "Transmisión automática 9 velocidades", "Tracción delantera/AWD", "SUV mediano"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": true
     },
@@ -93,7 +93,7 @@
           "caracteristicas": ["Motor 2.0L Turbo/3.6L V6", "Transmisión automática 9 velocidades", "Tracción delantera/AWD", "SUV grande"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": false
     },
@@ -124,7 +124,7 @@
           "caracteristicas": ["Motor 6.2L V8/3.0L Turbo", "Transmisión automática 10 velocidades", "Tracción AWD", "SUV de lujo"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": true
     },
@@ -145,7 +145,7 @@
           "caracteristicas": ["Motor 2.0L Turbo/3.6L V6", "Transmisión automática 10 velocidades", "Tracción delantera/AWD", "Sedán de lujo"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": false
     },
@@ -161,7 +161,7 @@
           "caracteristicas": ["Motor 2.0L Turbo", "Transmisión automática 9 velocidades", "Tracción delantera/AWD", "SUV compacto"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": false
     }

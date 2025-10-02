@@ -24,7 +24,7 @@
           "caracteristicas": ["Motor 1.3L Turbo", "Transmisión automática CVT", "Sistema híbrido"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": true
     },
@@ -40,7 +40,7 @@
           "caracteristicas": ["Motor 1.4L Turbo", "Transmisión manual 6 velocidades", "Tracción trasera", "Descapotable"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": false
     },
@@ -56,7 +56,7 @@
           "caracteristicas": ["Motor 1.4L Turbo", "Transmisión manual 5 velocidades", "Tracción delantera"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": false
     },
@@ -72,7 +72,7 @@
           "caracteristicas": ["Motor 1.4L Turbo", "Transmisión manual 5 velocidades", "Tracción delantera", "Hatchback 5 puertas"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": false
     }

@@ -1,0 +1,128 @@
+{
+  "marca": {
+    "id": "geely",
+    "nombre": "GEELY",
+    "slug": "geely",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "coolray",
+      "nombre": "Coolray",
+      "slug": "coolray",
+      "años": [2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L Turbo", "Transmisión CVT/manual", "Tracción delantera", "SUV subcompacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "emgrand",
+      "nombre": "Emgrand",
+      "slug": "emgrand",
+      "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2014-2018)",
+          "años": [2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 1.5L/1.8L", "Transmisión manual/CVT", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L", "Transmisión manual/CVT", "Tracción delantera", "Sedán compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "atlas",
+      "nombre": "Atlas",
+      "slug": "atlas",
+      "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.8L Turbo", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "okavango",
+      "nombre": "Okavango",
+      "slug": "okavango",
+      "años": [2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2021-presente)",
+          "años": [2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L Turbo", "Transmisión CVT", "Tracción delantera", "SUV de 7 plazas"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "geometry-a",
+      "nombre": "Geometry A",
+      "slug": "geometry-a",
+      "años": [2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2022-presente)",
+          "años": [2022, 2023, 2024],
+          "caracteristicas": ["Motor eléctrico", "Transmisión automática", "Tracción delantera", "Sedán eléctrico"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "tugella",
+      "nombre": "Tugella",
+      "slug": "tugella",
+      "años": [2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "SUV coupé"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "boyue",
+      "nombre": "Boyue",
+      "slug": "boyue",
+      "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.8L/2.0L", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

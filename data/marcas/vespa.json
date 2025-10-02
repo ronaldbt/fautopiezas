@@ -1,0 +1,112 @@
+{
+  "marca": {
+    "id": "vespa",
+    "nombre": "VESPA",
+    "slug": "vespa",
+    "activa": true,
+    "popular": true
+  },
+  "modelos": [
+    {
+      "id": "primavera",
+      "nombre": "Primavera",
+      "slug": "primavera",
+      "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2013-presente)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 125cc/150cc", "Transmisión CVT automática", "Arranque eléctrico", "Scooter clásico"]
+        }
+      ],
+      "categorias": ["motor", "transmision-automatica", "freno-maza-rueda", "electrico", "carroceria-ensamblaje-lampara", "combustible-aire", "suspension", "rueda"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "sprint",
+      "nombre": "Sprint",
+      "slug": "sprint",
+      "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2014-presente)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 125cc/150cc", "Transmisión CVT automática", "Arranque eléctrico", "Scooter deportivo"]
+        }
+      ],
+      "categorias": ["motor", "transmision-automatica", "freno-maza-rueda", "electrico", "carroceria-ensamblaje-lampara", "combustible-aire", "suspension", "rueda"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "gts",
+      "nombre": "GTS",
+      "slug": "gts",
+      "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2005-2013)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
+          "caracteristicas": ["Motor 250cc/300cc", "Transmisión CVT automática", "Arranque eléctrico", "Scooter touring"]
+        },
+        {
+          "nombre": "Segunda Generación (2014-presente)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 250cc/300cc", "Transmisión CVT automática", "Arranque eléctrico/pedal", "Scooter touring"]
+        }
+      ],
+      "categorias": ["motor", "transmision-automatica", "freno-maza-rueda", "electrico", "carroceria-ensamblaje-lampara", "combustible-aire", "suspension", "rueda"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "lx",
+      "nombre": "LX",
+      "slug": "lx",
+      "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2005-2014)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 50cc/125cc/150cc", "Transmisión CVT automática", "Arranque eléctrico/pedal", "Scooter clásico"]
+        }
+      ],
+      "categorias": ["motor", "transmision-automatica", "freno-maza-rueda", "electrico", "carroceria-ensamblaje-lampara", "combustible-aire", "suspension", "rueda"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "s",
+      "nombre": "S",
+      "slug": "s",
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2007-2014)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 50cc/125cc/150cc", "Transmisión CVT automática", "Arranque eléctrico/pedal", "Scooter deportivo"]
+        }
+      ],
+      "categorias": ["motor", "transmision-automatica", "freno-maza-rueda", "electrico", "carroceria-ensamblaje-lampara", "combustible-aire", "suspension", "rueda"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "elettrica",
+      "nombre": "Elettrica",
+      "slug": "elettrica",
+      "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor eléctrico", "Batería litio", "Arranque eléctrico", "Scooter eléctrico"]
+        }
+      ],
+      "categorias": ["electrico", "freno-maza-rueda", "carroceria-ensamblaje-lampara", "suspension", "rueda"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

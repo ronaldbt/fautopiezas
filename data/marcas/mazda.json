@@ -1,0 +1,173 @@
+{
+  "marca": {
+    "id": "mazda",
+    "nombre": "MAZDA",
+    "slug": "mazda",
+    "activa": true,
+    "popular": true
+  },
+  "modelos": [
+    {
+      "id": "mazda3",
+      "nombre": "Mazda3",
+      "slug": "mazda3",
+      "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2003-2009)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009],
+          "caracteristicas": ["Motor 1.4L/1.6L/2.0L/2.3L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2009-2013)",
+          "años": [2009, 2010, 2011, 2012, 2013],
+          "caracteristicas": ["Motor 1.6L/2.0L/2.5L", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera", "Compacto"]
+        },
+        {
+          "nombre": "Tercera Generación (2013-2019)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 1.5L/2.0L/2.5L SkyActiv", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.5L SkyActiv", "Transmisión manual/automática 6 velocidades", "Tracción delantera/AWD", "Compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "mazda6",
+      "nombre": "Mazda6",
+      "slug": "mazda6",
+      "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2002-2008)",
+          "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008],
+          "caracteristicas": ["Motor 1.8L/2.0L/2.3L", "Transmisión manual/automática 4-6 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Segunda Generación (2008-2012)",
+          "años": [2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 2.0L/2.5L", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Tercera Generación (2012-2021)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+          "caracteristicas": ["Motor 2.0L/2.5L SkyActiv", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Sedán mediano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "cx-5",
+      "nombre": "CX-5",
+      "slug": "cx-5",
+      "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2012-2017)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 2.0L/2.5L SkyActiv", "Transmisión manual/automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.5L SkyActiv", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "cx-3",
+      "nombre": "CX-3",
+      "slug": "cx-3",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2015-2021)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+          "caracteristicas": ["Motor 1.5L/2.0L SkyActiv", "Transmisión manual/automática 6 velocidades", "Tracción delantera/AWD", "SUV subcompacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "cx-9",
+      "nombre": "CX-9",
+      "slug": "cx-9",
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2007-2015)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 3.5L/3.7L V6", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV grande"]
+        },
+        {
+          "nombre": "Segunda Generación (2016-2023)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+          "caracteristicas": ["Motor 2.5L Turbo SkyActiv", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV grande"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "miata",
+      "nombre": "MX-5 Miata",
+      "slug": "miata",
+      "años": [1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación NA (1989-1997)",
+          "años": [1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997],
+          "caracteristicas": ["Motor 1.6L/1.8L", "Transmisión manual 5 velocidades", "Tracción trasera", "Roadster deportivo"]
+        },
+        {
+          "nombre": "Segunda Generación NB (1998-2005)",
+          "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 1.6L/1.8L", "Transmisión manual 5-6 velocidades", "Tracción trasera", "Roadster deportivo"]
+        },
+        {
+          "nombre": "Tercera Generación NC (2006-2015)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 1.8L/2.0L", "Transmisión manual/automática 5-6 velocidades", "Tracción trasera", "Roadster deportivo"]
+        },
+        {
+          "nombre": "Cuarta Generación ND (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L/2.0L SkyActiv", "Transmisión manual/automática 6 velocidades", "Tracción trasera", "Roadster deportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "cx-30",
+      "nombre": "CX-30",
+      "slug": "cx-30",
+      "años": [2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.5L SkyActiv", "Transmisión manual/automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

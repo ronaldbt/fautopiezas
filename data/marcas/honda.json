@@ -1,0 +1,289 @@
+{
+  "marca": {
+    "id": "honda",
+    "nombre": "HONDA",
+    "slug": "honda",
+    "activa": true,
+    "popular": true
+  },
+  "modelos": [
+    {
+      "id": "civic",
+      "nombre": "Civic",
+      "slug": "civic",
+      "años": [1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1972-1979)",
+          "años": [1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979],
+          "caracteristicas": ["Motor 1.2L/1.5L", "Transmisión manual 4 velocidades", "Tracción delantera", "Hatchback compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (1980-1983)",
+          "años": [1980, 1981, 1982, 1983],
+          "caracteristicas": ["Motor 1.3L/1.5L", "Transmisión manual 5 velocidades", "Tracción delantera", "Hatchback compacto"]
+        },
+        {
+          "nombre": "Tercera Generación (1984-1987)",
+          "años": [1984, 1985, 1986, 1987],
+          "caracteristicas": ["Motor 1.3L/1.5L", "Transmisión manual 5 velocidades", "Tracción delantera", "Hatchback/Sedán compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación (1988-1991)",
+          "años": [1988, 1989, 1990, 1991],
+          "caracteristicas": ["Motor 1.5L/1.6L", "Transmisión manual 5 velocidades", "Tracción delantera", "Hatchback/Sedán compacto"]
+        },
+        {
+          "nombre": "Quinta Generación (1992-1995)",
+          "años": [1992, 1993, 1994, 1995],
+          "caracteristicas": ["Motor 1.5L/1.6L", "Transmisión manual 5 velocidades", "Tracción delantera", "Hatchback/Sedán compacto"]
+        },
+        {
+          "nombre": "Sexta Generación (1996-2000)",
+          "años": [1996, 1997, 1998, 1999, 2000],
+          "caracteristicas": ["Motor 1.6L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Hatchback/Sedán compacto"]
+        },
+        {
+          "nombre": "Séptima Generación (2001-2005)",
+          "años": [2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 1.7L/2.0L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Octava Generación (2006-2011)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011],
+          "caracteristicas": ["Motor 1.8L/2.0L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Novena Generación (2012-2015)",
+          "años": [2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 1.8L/2.4L", "Transmisión manual/automática/CVT", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Décima Generación (2016-2021)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021],
+          "caracteristicas": ["Motor 1.5L Turbo/2.0L", "Transmisión manual/CVT", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Décima Primera Generación (2022-presente)",
+          "años": [2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L Turbo/2.0L", "Transmisión manual/CVT", "Tracción delantera", "Sedán compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "accord",
+      "nombre": "Accord",
+      "slug": "accord",
+      "años": [1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1976-1981)",
+          "años": [1976, 1977, 1978, 1979, 1980, 1981],
+          "caracteristicas": ["Motor 1.6L/1.8L", "Transmisión manual 5 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Segunda Generación (1982-1985)",
+          "años": [1982, 1983, 1984, 1985],
+          "caracteristicas": ["Motor 1.8L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Tercera Generación (1986-1989)",
+          "años": [1986, 1987, 1988, 1989],
+          "caracteristicas": ["Motor 2.0L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Cuarta Generación (1990-1993)",
+          "años": [1990, 1991, 1992, 1993],
+          "caracteristicas": ["Motor 2.2L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Quinta Generación (1994-1997)",
+          "años": [1994, 1995, 1996, 1997],
+          "caracteristicas": ["Motor 2.2L/2.7L V6", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Sexta Generación (1998-2002)",
+          "años": [1998, 1999, 2000, 2001, 2002],
+          "caracteristicas": ["Motor 2.3L/3.0L V6", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Séptima Generación (2003-2007)",
+          "años": [2003, 2004, 2005, 2006, 2007],
+          "caracteristicas": ["Motor 2.4L/3.0L V6", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Octava Generación (2008-2012)",
+          "años": [2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 2.4L/3.5L V6", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Novena Generación (2013-2017)",
+          "años": [2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 2.4L/3.5L V6", "Transmisión manual/automática/CVT", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Décima Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L Turbo/2.0L Turbo", "Transmisión manual/automática/CVT", "Tracción delantera", "Sedán mediano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "cr-v",
+      "nombre": "CR-V",
+      "slug": "cr-v",
+      "años": [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1995-2001)",
+          "años": [1995, 1996, 1997, 1998, 1999, 2000, 2001],
+          "caracteristicas": ["Motor 2.0L", "Transmisión manual/automática 5 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2002-2006)",
+          "años": [2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 2.4L", "Transmisión manual/automática 5 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Tercera Generación (2007-2011)",
+          "años": [2007, 2008, 2009, 2010, 2011],
+          "caracteristicas": ["Motor 2.4L", "Transmisión automática 5 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación (2012-2016)",
+          "años": [2012, 2013, 2014, 2015, 2016],
+          "caracteristicas": ["Motor 2.4L", "Transmisión automática/CVT", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Quinta Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L Turbo/2.4L", "Transmisión CVT", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "pilot",
+      "nombre": "Pilot",
+      "slug": "pilot",
+      "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2003-2008)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 5 velocidades", "Tracción delantera/AWD", "SUV de 8 plazas"]
+        },
+        {
+          "nombre": "Segunda Generación (2009-2015)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV de 8 plazas"]
+        },
+        {
+          "nombre": "Tercera Generación (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 6-9 velocidades", "Tracción delantera/AWD", "SUV de 8 plazas"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "fit",
+      "nombre": "Fit",
+      "slug": "fit",
+      "años": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2001-2008)",
+          "años": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008],
+          "caracteristicas": ["Motor 1.3L/1.5L", "Transmisión manual/CVT", "Tracción delantera", "Hatchback subcompacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2009-2014)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 1.5L", "Transmisión manual/automática", "Tracción delantera", "Hatchback subcompacto"]
+        },
+        {
+          "nombre": "Tercera Generación (2015-2020)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 1.5L", "Transmisión manual/CVT", "Tracción delantera", "Hatchback subcompacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "hr-v",
+      "nombre": "HR-V",
+      "slug": "hr-v",
+      "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1999-2006)",
+          "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 1.6L", "Transmisión manual/CVT", "Tracción delantera/AWD", "SUV subcompacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.8L", "Transmisión manual/CVT", "Tracción delantera/AWD", "SUV subcompacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "ridgeline",
+      "nombre": "Ridgeline",
+      "slug": "ridgeline",
+      "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2006-2014)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 5 velocidades", "Tracción delantera/AWD", "Pick-up mediana"]
+        },
+        {
+          "nombre": "Segunda Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 6-9 velocidades", "Tracción delantera/AWD", "Pick-up mediana"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "passport",
+      "nombre": "Passport",
+      "slug": "passport",
+      "años": [1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1994-2002)",
+          "años": [1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002],
+          "caracteristicas": ["Motor 3.2L V6", "Transmisión manual/automática", "Tracción trasera/4x4", "SUV mediano"]
+        },
+        {
+          "nombre": "Segunda Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 9 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

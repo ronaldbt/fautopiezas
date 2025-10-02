@@ -1,0 +1,122 @@
+{
+  "marca": {
+    "id": "maserati",
+    "nombre": "MASERATI",
+    "slug": "maserati",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "ghibli",
+      "nombre": "Ghibli",
+      "slug": "ghibli",
+      "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Tercera Generación (2014-presente)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.0L V6 Turbo/3.8L V8 Turbo", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "Sedán deportivo de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "quattroporte",
+      "nombre": "Quattroporte",
+      "slug": "quattroporte",
+      "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Quinta Generación (2004-2012)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 4.2L V8/4.7L V8", "Transmisión automática 6 velocidades", "Tracción trasera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Sexta Generación (2013-presente)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.0L V6 Turbo/3.8L V8 Turbo", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "Sedán de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "levante",
+      "nombre": "Levante",
+      "slug": "levante",
+      "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.0L V6 Turbo/3.8L V8 Turbo", "Transmisión automática 8 velocidades", "Tracción AWD", "SUV deportivo de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "granturismo",
+      "nombre": "GranTurismo",
+      "slug": "granturismo",
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2007-2019)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 4.2L V8/4.7L V8", "Transmisión automática 6 velocidades", "Tracción trasera", "Gran turismo deportivo"]
+        },
+        {
+          "nombre": "Segunda Generación (2022-presente)",
+          "años": [2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.0L V6 Turbo", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "Gran turismo deportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "grancabrio",
+      "nombre": "GranCabrio",
+      "slug": "grancabrio",
+      "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2009-2019)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 4.2L V8/4.7L V8", "Transmisión automática 6 velocidades", "Tracción trasera", "Convertible deportivo"]
+        },
+        {
+          "nombre": "Segunda Generación (2023-presente)",
+          "años": [2023, 2024],
+          "caracteristicas": ["Motor 3.0L V6 Turbo", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "Convertible deportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "mc20",
+      "nombre": "MC20",
+      "slug": "mc20",
+      "años": [2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2021-presente)",
+          "años": [2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.0L V6 Turbo", "Transmisión automática 8 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

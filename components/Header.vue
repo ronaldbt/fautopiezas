@@ -35,7 +35,81 @@
           <div class="hidden md:flex items-center space-x-8">
             <NuxtLink to="/" class="text-gray-700 hover:text-blue-600 font-medium">Inicio</NuxtLink>
             <NuxtLink to="/repuestos" class="text-gray-700 hover:text-blue-600 font-medium">Repuestos</NuxtLink>
-            <NuxtLink to="/marcas" class="text-gray-700 hover:text-blue-600 font-medium">Marcas</NuxtLink>
+            
+            <!-- Dropdown de Marcas -->
+            <div class="relative" @mouseleave="marcasDropdownOpen = false">
+              <button 
+                @mouseenter="marcasDropdownOpen = true"
+                @click="marcasDropdownOpen = !marcasDropdownOpen"
+                class="text-gray-700 hover:text-blue-600 font-medium flex items-center space-x-1"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Menu de marcas de vehículos"
+              >
+                <span>Marcas</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              
+              <!-- Dropdown menu -->
+              <div 
+                v-if="marcasDropdownOpen"
+                class="absolute top-full left-0 mt-1 w-80 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+              >
+                <!-- Header del dropdown -->
+                <div class="p-4 border-b border-gray-100">
+                  <h3 class="font-semibold text-gray-800">Todas las Marcas</h3>
+                  <p class="text-sm text-gray-600">{{ marcas.length }}+ marcas disponibles</p>
+                  
+                  <!-- Marcas destacadas / Alta gama -->
+                  <div class="mt-3">
+                    <p class="text-xs font-medium text-blue-600 mb-2">ALTA GAMA:</p>
+                    <div class="flex flex-wrap gap-2">
+                      <NuxtLink 
+                        v-for="marca in marcasDestacadas" 
+                        :key="marca.slug"
+                        :to="`/repuestos/${marca.slug}`"
+                        class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-md hover:bg-blue-200 transition-colors"
+                        @click="marcasDropdownOpen = false"
+                      >
+                        {{ marca.nombre }}
+                      </NuxtLink>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Lista de marcas con scroll -->
+                <div class="max-h-96 overflow-y-auto">
+                  <div class="grid grid-cols-2 gap-1 p-2">
+                    <NuxtLink 
+                      v-for="marca in marcas" 
+                      :key="marca.slug"
+                      :to="`/repuestos/${marca.slug}`"
+                      class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
+                      @click="marcasDropdownOpen = false"
+                    >
+                      <div class="flex items-center justify-between">
+                        <span class="font-medium">{{ marca.nombre }}</span>
+                        <span class="text-xs text-gray-500">{{ marca.modelos }}+</span>
+                      </div>
+                    </NuxtLink>
+                  </div>
+                </div>
+                
+                <!-- Footer del dropdown -->
+                <div class="p-3 border-t border-gray-100 bg-gray-50">
+                  <NuxtLink 
+                    to="/repuestos" 
+                    class="block text-center text-sm text-blue-600 hover:text-blue-700 font-medium"
+                    @click="marcasDropdownOpen = false"
+                  >
+                    Ver todas las marcas →
+                  </NuxtLink>
+                </div>
+              </div>
+            </div>
+            
             <NuxtLink to="/categorias" class="text-gray-700 hover:text-blue-600 font-medium">Categorías</NuxtLink>
             <NuxtLink to="/contacto" class="text-gray-700 hover:text-blue-600 font-medium">Contacto</NuxtLink>
           </div>
@@ -83,7 +157,48 @@
           <div class="px-4 py-2 space-y-2">
             <NuxtLink to="/" class="block py-2 text-gray-700 hover:text-blue-600">Inicio</NuxtLink>
             <NuxtLink to="/repuestos" class="block py-2 text-gray-700 hover:text-blue-600">Repuestos</NuxtLink>
-            <NuxtLink to="/marcas" class="block py-2 text-gray-700 hover:text-blue-600">Marcas</NuxtLink>
+            
+            <!-- Marcas móvil -->
+            <div>
+              <button 
+                @click="marcasMobileOpen = !marcasMobileOpen"
+                class="flex items-center justify-between w-full py-2 text-gray-700 hover:text-blue-600"
+              >
+                <span>Marcas</span>
+                <svg 
+                  :class="{ 'transform rotate-180': marcasMobileOpen }"
+                  class="w-4 h-4 transition-transform" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              
+              <!-- Submenu de marcas -->
+              <div v-if="marcasMobileOpen" class="pl-4 mt-2 max-h-64 overflow-y-auto bg-gray-50 rounded-md">
+                <div class="py-2 space-y-1">
+                  <NuxtLink 
+                    v-for="marca in marcas.slice(0, 20)" 
+                    :key="marca.slug"
+                    :to="`/repuestos/${marca.slug}`"
+                    class="block px-3 py-1 text-sm text-gray-600 hover:text-blue-600"
+                    @click="mobileMenuOpen = false"
+                  >
+                    {{ marca.nombre }}
+                  </NuxtLink>
+                  <NuxtLink 
+                    to="/repuestos" 
+                    class="block px-3 py-2 text-sm text-blue-600 font-medium border-t border-gray-200 mt-2 pt-2"
+                    @click="mobileMenuOpen = false"
+                  >
+                    Ver todas las marcas →
+                  </NuxtLink>
+                </div>
+              </div>
+            </div>
+            
             <NuxtLink to="/categorias" class="block py-2 text-gray-700 hover:text-blue-600">Categorías</NuxtLink>
             <NuxtLink to="/contacto" class="block py-2 text-gray-700 hover:text-blue-600">Contacto</NuxtLink>
             <div class="pt-4 border-t">
@@ -102,6 +217,21 @@ import { ref } from 'vue'
 
 // Estado del menú móvil
 const mobileMenuOpen = ref(false)
+
+// Estado del dropdown de marcas
+const marcasDropdownOpen = ref(false)
+
+// Estado del menú móvil de marcas
+const marcasMobileOpen = ref(false)
+
+// Obtener marcas desde el composable
+const { getMarcas } = useVehiculos()
+const marcas = getMarcas()
+
+// Marcas destacadas de alta gama para SEO
+const marcasDestacadas = marcas.filter(marca => 
+  ['audi', 'bmw', 'mercedes-benz', 'porsche', 'volvo', 'ford'].includes(marca.slug)
+)
 
 // Función para abrir WhatsApp
 const openWhatsApp = () => {

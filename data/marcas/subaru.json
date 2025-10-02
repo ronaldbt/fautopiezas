@@ -1,0 +1,212 @@
+{
+  "marca": {
+    "id": "subaru",
+    "nombre": "SUBARU",
+    "slug": "subaru",
+    "activa": true,
+    "popular": true
+  },
+  "modelos": [
+    {
+      "id": "impreza",
+      "nombre": "Impreza",
+      "slug": "impreza",
+      "años": [1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación GC/GF (1992-2000)",
+          "años": [1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000],
+          "caracteristicas": ["Motor 1.6L/1.8L/2.0L/2.2L Boxer", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera/AWD", "Compacto"]
+        },
+        {
+          "nombre": "Segunda Generación GD/GG (2000-2007)",
+          "años": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007],
+          "caracteristicas": ["Motor 1.5L/2.0L/2.5L Boxer", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera/AWD", "Compacto"]
+        },
+        {
+          "nombre": "Tercera Generación GE/GH/GR/GV (2007-2011)",
+          "años": [2007, 2008, 2009, 2010, 2011],
+          "caracteristicas": ["Motor 1.5L/2.0L/2.5L Boxer", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera/AWD", "Compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación GP/GJ (2011-2016)",
+          "años": [2011, 2012, 2013, 2014, 2015, 2016],
+          "caracteristicas": ["Motor 1.6L/2.0L Boxer", "Transmisión manual/automática CVT", "Tracción delantera/AWD", "Compacto"]
+        },
+        {
+          "nombre": "Quinta Generación GT (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.6L/2.0L Boxer", "Transmisión manual/automática CVT", "Tracción delantera/AWD", "Compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "outback",
+      "nombre": "Outback",
+      "slug": "outback",
+      "años": [1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación BG (1994-1999)",
+          "años": [1994, 1995, 1996, 1997, 1998, 1999],
+          "caracteristicas": ["Motor 2.2L/2.5L Boxer", "Transmisión manual/automática 4-5 velocidades", "Tracción AWD", "Station wagon off-road"]
+        },
+        {
+          "nombre": "Segunda Generación BH (1999-2003)",
+          "años": [1999, 2000, 2001, 2002, 2003],
+          "caracteristicas": ["Motor 2.5L/3.0L Boxer", "Transmisión manual/automática 4-5 velocidades", "Tracción AWD", "Station wagon off-road"]
+        },
+        {
+          "nombre": "Tercera Generación BP (2003-2009)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009],
+          "caracteristicas": ["Motor 2.5L/3.0L Boxer", "Transmisión manual/automática 5 velocidades", "Tracción AWD", "Station wagon off-road"]
+        },
+        {
+          "nombre": "Cuarta Generación BR (2009-2014)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 2.5L/3.6L Boxer", "Transmisión manual/automática CVT", "Tracción AWD", "Station wagon off-road"]
+        },
+        {
+          "nombre": "Quinta Generación BS (2014-2019)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 2.5L/3.6L Boxer", "Transmisión manual/automática CVT", "Tracción AWD", "Station wagon off-road"]
+        },
+        {
+          "nombre": "Sexta Generación BT (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.4L/2.5L Boxer Turbo", "Transmisión automática CVT", "Tracción AWD", "Station wagon off-road"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "forester",
+      "nombre": "Forester",
+      "slug": "forester",
+      "años": [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación SF (1997-2002)",
+          "años": [1997, 1998, 1999, 2000, 2001, 2002],
+          "caracteristicas": ["Motor 2.0L/2.5L Boxer", "Transmisión manual/automática 4-5 velocidades", "Tracción AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Segunda Generación SG (2002-2008)",
+          "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008],
+          "caracteristicas": ["Motor 2.0L/2.5L Boxer", "Transmisión manual/automática 4-5 velocidades", "Tracción AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Tercera Generación SH (2008-2012)",
+          "años": [2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 2.0L/2.5L Boxer", "Transmisión manual/automática 4-5 velocidades", "Tracción AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación SJ (2012-2018)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 2.0L/2.5L Boxer", "Transmisión manual/automática CVT", "Tracción AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Quinta Generación SK (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.5L Boxer", "Transmisión automática CVT", "Tracción AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "wrx",
+      "nombre": "WRX",
+      "slug": "wrx",
+      "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación VA (2014-2021)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+          "caracteristicas": ["Motor 2.0L Boxer Turbo", "Transmisión manual/automática CVT", "Tracción AWD", "Sedán deportivo"]
+        },
+        {
+          "nombre": "Segunda Generación VB (2022-presente)",
+          "años": [2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.4L Boxer Turbo", "Transmisión manual/automática CVT", "Tracción AWD", "Sedán deportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "legacy",
+      "nombre": "Legacy",
+      "slug": "legacy",
+      "años": [1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación BC/BF (1989-1994)",
+          "años": [1989, 1990, 1991, 1992, 1993, 1994],
+          "caracteristicas": ["Motor 1.8L/2.0L/2.2L Boxer", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera/AWD", "Sedán mediano"]
+        },
+        {
+          "nombre": "Segunda Generación BD/BG (1994-1999)",
+          "años": [1994, 1995, 1996, 1997, 1998, 1999],
+          "caracteristicas": ["Motor 2.0L/2.2L/2.5L Boxer", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera/AWD", "Sedán mediano"]
+        },
+        {
+          "nombre": "Tercera Generación BE/BH (1999-2003)",
+          "años": [1999, 2000, 2001, 2002, 2003],
+          "caracteristicas": ["Motor 2.0L/2.5L/3.0L Boxer", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera/AWD", "Sedán mediano"]
+        },
+        {
+          "nombre": "Cuarta Generación BL/BP (2003-2009)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009],
+          "caracteristicas": ["Motor 2.0L/2.5L/3.0L Boxer", "Transmisión manual/automática 5 velocidades", "Tracción delantera/AWD", "Sedán mediano"]
+        },
+        {
+          "nombre": "Quinta Generación BM/BR (2009-2014)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 2.5L/3.6L Boxer", "Transmisión manual/automática CVT", "Tracción delantera/AWD", "Sedán mediano"]
+        },
+        {
+          "nombre": "Sexta Generación BN (2014-2019)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 2.5L/3.6L Boxer", "Transmisión manual/automática CVT", "Tracción delantera/AWD", "Sedán mediano"]
+        },
+        {
+          "nombre": "Séptima Generación BW (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.4L/2.5L Boxer Turbo", "Transmisión automática CVT", "Tracción AWD", "Sedán mediano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "crosstrek",
+      "nombre": "Crosstrek",
+      "slug": "crosstrek",
+      "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación GP (2012-2017)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 2.0L Boxer", "Transmisión manual/automática CVT", "Tracción AWD", "SUV crossover"]
+        },
+        {
+          "nombre": "Segunda Generación GT (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.5L Boxer", "Transmisión manual/automática CVT", "Tracción AWD", "SUV crossover"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

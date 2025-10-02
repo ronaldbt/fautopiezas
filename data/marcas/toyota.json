@@ -1,0 +1,223 @@
+{
+  "marca": {
+    "id": "toyota",
+    "nombre": "TOYOTA",
+    "slug": "toyota",
+    "activa": true,
+    "popular": true
+  },
+  "modelos": [
+    {
+      "id": "corolla",
+      "nombre": "Corolla",
+      "slug": "corolla",
+      "años": [1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Décima Generación E140/E150 (2006-2013)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
+          "caracteristicas": ["Motor 1.3L/1.4L/1.6L/1.8L/2.0L", "Transmisión manual/automática 4-6 velocidades", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Undécima Generación E160/E170 (2013-2019)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 1.3L/1.4L/1.6L/1.8L", "Transmisión manual/automática CVT", "Tracción delantera", "Sedán compacto"]
+        },
+        {
+          "nombre": "Duodécima Generación E210 (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.2L/1.8L/2.0L Híbrido", "Transmisión manual/automática CVT", "Tracción delantera", "Sedán compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "camry",
+      "nombre": "Camry",
+      "slug": "camry",
+      "años": [1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Sexta Generación XV40 (2006-2011)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011],
+          "caracteristicas": ["Motor 2.4L/3.5L V6", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Séptima Generación XV50 (2011-2017)",
+          "años": [2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 2.5L/3.5L V6", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Octava Generación XV70 (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.5L/3.5L V6 Híbrido", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "Sedán mediano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "rav4",
+      "nombre": "RAV4",
+      "slug": "rav4",
+      "años": [1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación XA10 (1994-2000)",
+          "años": [1994, 1995, 1996, 1997, 1998, 1999, 2000],
+          "caracteristicas": ["Motor 2.0L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Segunda Generación XA20 (2000-2005)",
+          "años": [2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 2.0L/2.4L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Tercera Generación XA30 (2005-2012)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 2.4L/3.5L V6", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación XA40 (2012-2018)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 2.5L", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Quinta Generación XA50 (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.5L/2.5L Híbrido", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "prius",
+      "nombre": "Prius",
+      "slug": "prius",
+      "años": [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación NHW10 (1997-2003)",
+          "años": [1997, 1998, 1999, 2000, 2001, 2002, 2003],
+          "caracteristicas": ["Motor 1.5L Híbrido", "Transmisión CVT", "Tracción delantera", "Híbrido compacto"]
+        },
+        {
+          "nombre": "Segunda Generación NHW20 (2003-2009)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009],
+          "caracteristicas": ["Motor 1.5L Híbrido", "Transmisión CVT", "Tracción delantera", "Híbrido compacto"]
+        },
+        {
+          "nombre": "Tercera Generación XW30 (2009-2015)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 1.8L Híbrido", "Transmisión CVT", "Tracción delantera", "Híbrido compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación XW50 (2015-2023)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+          "caracteristicas": ["Motor 1.8L Híbrido", "Transmisión CVT", "Tracción delantera", "Híbrido compacto"]
+        },
+        {
+          "nombre": "Quinta Generación XW60 (2023-presente)",
+          "años": [2023, 2024],
+          "caracteristicas": ["Motor 2.0L Híbrido", "Transmisión CVT", "Tracción delantera/AWD", "Híbrido compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "highlander",
+      "nombre": "Highlander",
+      "slug": "highlander",
+      "años": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación XU20 (2000-2007)",
+          "años": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007],
+          "caracteristicas": ["Motor 2.4L/3.0L V6", "Transmisión automática 4-5 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        },
+        {
+          "nombre": "Segunda Generación XU40 (2007-2013)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013],
+          "caracteristicas": ["Motor 2.7L/3.5L V6 Híbrido", "Transmisión automática 5-6 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        },
+        {
+          "nombre": "Tercera Generación XU50 (2013-2019)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 2.7L/3.5L V6 Híbrido", "Transmisión automática 6-8 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        },
+        {
+          "nombre": "Cuarta Generación XU70 (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.5L V6/3.5L V6 Híbrido", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "SUV mediano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "tacoma",
+      "nombre": "Tacoma",
+      "slug": "tacoma",
+      "años": [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación N140/N150/N160/N170 (1995-2004)",
+          "años": [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004],
+          "caracteristicas": ["Motor 2.4L/2.7L/3.4L V6", "Transmisión manual/automática 4-5 velocidades", "Tracción 4x2/4x4", "Pickup mediana"]
+        },
+        {
+          "nombre": "Segunda Generación N200 (2004-2015)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 2.7L/4.0L V6", "Transmisión manual/automática 5-6 velocidades", "Tracción 4x2/4x4", "Pickup mediana"]
+        },
+        {
+          "nombre": "Tercera Generación N300 (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.7L/3.5L V6", "Transmisión manual/automática 6 velocidades", "Tracción 4x2/4x4", "Pickup mediana"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "yaris",
+      "nombre": "Yaris",
+      "slug": "yaris",
+      "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación XP10 (1999-2005)",
+          "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 1.0L/1.3L/1.5L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Segunda Generación XP90 (2005-2011)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011],
+          "caracteristicas": ["Motor 1.0L/1.3L/1.5L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Tercera Generación XP130 (2011-2020)",
+          "años": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 1.0L/1.3L/1.5L", "Transmisión manual/automática CVT", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Cuarta Generación XP210 (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.0L/1.5L/1.5L Híbrido", "Transmisión manual/automática CVT", "Tracción delantera", "Subcompacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

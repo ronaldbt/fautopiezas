@@ -29,7 +29,7 @@
           "caracteristicas": ["Motor 2.4L/3.6L V6", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "Sedán mediano"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": true
     },
@@ -50,7 +50,7 @@
           "caracteristicas": ["Motor 3.6L V6", "Transmisión automática 9 velocidades", "Tracción delantera/AWD", "SUV grande"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": true
     },
@@ -71,7 +71,7 @@
           "caracteristicas": ["Motor 1.2L Turbo", "Transmisión automática CVT", "Tracción delantera/AWD", "SUV subcompacto"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": false
     },
@@ -107,7 +107,7 @@
           "caracteristicas": ["Motor 2.0L/2.4L/2.0L Turbo", "Transmisión manual/automática 6 velocidades", "Tracción delantera/AWD", "Sedán mediano"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": false
     },
@@ -123,7 +123,7 @@
           "caracteristicas": ["Motor 2.4L", "Transmisión automática 6 velocidades", "Tracción delantera", "Sedán compacto"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": false
     },
@@ -139,7 +139,7 @@
           "caracteristicas": ["Motor 1.6L Turbo/2.0L Turbo", "Transmisión manual/automática 6 velocidades", "Tracción delantera", "Convertible"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true,
       "popular": false
     }

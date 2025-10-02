@@ -1,0 +1,100 @@
+{
+  "marca": {
+    "id": "iveco",
+    "nombre": "IVECO",
+    "slug": "iveco",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "daily",
+      "nombre": "Daily",
+      "slug": "daily",
+      "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Tercera Generación (1999-2006)",
+          "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 2.3L/2.8L/3.0L Diesel", "Transmisión manual 5-6 velocidades", "Tracción trasera", "Van comercial"]
+        },
+        {
+          "nombre": "Cuarta Generación (2006-2014)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 2.3L/3.0L Diesel", "Transmisión manual 6 velocidades", "Tracción trasera", "Van comercial"]
+        },
+        {
+          "nombre": "Quinta Generación (2014-presente)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.3L/3.0L Diesel", "Transmisión manual/automática 6-8 velocidades", "Tracción trasera", "Van comercial"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "eurocargo",
+      "nombre": "Eurocargo",
+      "slug": "eurocargo",
+      "años": [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1991-2003)",
+          "años": [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003],
+          "caracteristicas": ["Motor 3.9L/5.9L/7.8L Diesel", "Transmisión manual 5-9 velocidades", "Tracción trasera/4x4", "Camión mediano"]
+        },
+        {
+          "nombre": "Segunda Generación (2003-2015)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 3.9L/5.9L/7.8L Diesel", "Transmisión manual/automática 6-12 velocidades", "Tracción trasera/4x4", "Camión mediano"]
+        },
+        {
+          "nombre": "Tercera Generación (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.9L/5.9L/7.8L Diesel", "Transmisión manual/automática 6-12 velocidades", "Tracción trasera/4x4", "Camión mediano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "stralis",
+      "nombre": "Stralis",
+      "slug": "stralis",
+      "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2002-2013)",
+          "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
+          "caracteristicas": ["Motor 7.8L/10.3L/12.9L Diesel", "Transmisión manual/automática 12-16 velocidades", "Tracción trasera/4x4", "Camión pesado"]
+        },
+        {
+          "nombre": "Segunda Generación (2013-presente)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 7.8L/10.3L/12.9L Diesel", "Transmisión manual/automática 12-16 velocidades", "Tracción trasera/4x4", "Camión pesado"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "trakker",
+      "nombre": "Trakker",
+      "slug": "trakker",
+      "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2004-presente)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 7.8L/10.3L/12.9L Diesel", "Transmisión manual/automática 9-16 velocidades", "Tracción 4x4/6x4/8x4", "Camión off-road"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

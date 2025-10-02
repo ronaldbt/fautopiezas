@@ -1,0 +1,75 @@
+{
+  "marca": {
+    "id": "hummer",
+    "nombre": "HUMMER",
+    "slug": "hummer",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "h1",
+      "nombre": "H1",
+      "slug": "h1",
+      "años": [1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1992-2006)",
+          "años": [1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 6.2L V8/6.5L V8 Diesel", "Transmisión manual/automática 4 velocidades", "Tracción 4x4", "SUV militar pesado"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "h2",
+      "nombre": "H2",
+      "slug": "h2",
+      "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2003-2009)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009],
+          "caracteristicas": ["Motor 6.0L V8", "Transmisión automática 4 velocidades", "Tracción 4x4", "SUV pesado"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "h3",
+      "nombre": "H3",
+      "slug": "h3",
+      "años": [2006, 2007, 2008, 2009, 2010],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2006-2010)",
+          "años": [2006, 2007, 2008, 2009, 2010],
+          "caracteristicas": ["Motor 3.5L 5 cilindros/5.3L V8", "Transmisión manual/automática 4-5 velocidades", "Tracción trasera/4x4", "SUV mediano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "ev",
+      "nombre": "EV",
+      "slug": "ev",
+      "años": [2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2022-presente)",
+          "años": [2022, 2023, 2024],
+          "caracteristicas": ["Motor eléctrico", "Transmisión automática", "Tracción 4x4", "Pick-up eléctrica"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

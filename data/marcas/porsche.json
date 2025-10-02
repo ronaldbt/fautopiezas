@@ -1,0 +1,177 @@
+{
+  "marca": {
+    "id": "porsche",
+    "nombre": "PORSCHE",
+    "slug": "porsche",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "911",
+      "nombre": "911",
+      "slug": "911",
+      "años": [1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1963-1989)",
+          "años": [1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989],
+          "caracteristicas": ["Motor 2.0L/2.7L/3.0L/3.3L Boxer", "Transmisión manual 4-5 velocidades", "Tracción trasera", "Deportivo icónico"]
+        },
+        {
+          "nombre": "Segunda Generación 964 (1989-1994)",
+          "años": [1989, 1990, 1991, 1992, 1993, 1994],
+          "caracteristicas": ["Motor 3.3L/3.6L Boxer", "Transmisión manual/automática 4-5 velocidades", "Tracción trasera/AWD", "Deportivo"]
+        },
+        {
+          "nombre": "Tercera Generación 993 (1994-1998)",
+          "años": [1994, 1995, 1996, 1997, 1998],
+          "caracteristicas": ["Motor 3.6L/3.8L Boxer", "Transmisión manual/automática 6 velocidades", "Tracción trasera/AWD", "Deportivo"]
+        },
+        {
+          "nombre": "Cuarta Generación 996 (1997-2005)",
+          "años": [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 3.4L/3.6L Boxer", "Transmisión manual/automática 5-6 velocidades", "Tracción trasera/AWD", "Deportivo"]
+        },
+        {
+          "nombre": "Quinta Generación 997 (2004-2012)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 3.6L/3.8L Boxer", "Transmisión manual/automática 6-7 velocidades", "Tracción trasera/AWD", "Deportivo"]
+        },
+        {
+          "nombre": "Sexta Generación 991 (2011-2019)",
+          "años": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 3.0L/3.8L Boxer Turbo", "Transmisión manual/automática 7 velocidades", "Tracción trasera/AWD", "Deportivo"]
+        },
+        {
+          "nombre": "Séptima Generación 992 (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.0L Boxer Turbo", "Transmisión manual/automática 7-8 velocidades", "Tracción trasera/AWD", "Deportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "cayenne",
+      "nombre": "Cayenne",
+      "slug": "cayenne",
+      "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación 955/957 (2002-2010)",
+          "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010],
+          "caracteristicas": ["Motor 3.2L V6/4.5L V8/4.8L V8", "Transmisión automática 6 velocidades", "Tracción AWD", "SUV deportivo de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación 958 (2010-2018)",
+          "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 3.0L V6/3.6L V6/4.8L V8", "Transmisión automática 8 velocidades", "Tracción AWD", "SUV deportivo de lujo"]
+        },
+        {
+          "nombre": "Tercera Generación 9YA (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.0L V6 Turbo/4.0L V8 Turbo", "Transmisión automática 8 velocidades", "Tracción AWD", "SUV deportivo de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "macan",
+      "nombre": "Macan",
+      "slug": "macan",
+      "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación 95B (2014-presente)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.9L/3.0L V6 Turbo", "Transmisión automática 7 velocidades", "Tracción AWD", "SUV compacto deportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "panamera",
+      "nombre": "Panamera",
+      "slug": "panamera",
+      "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación 970 (2009-2016)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+          "caracteristicas": ["Motor 3.0L V6/3.6L V6/4.8L V8", "Transmisión automática 7 velocidades", "Tracción trasera/AWD", "Sedán deportivo de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación 971 (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.9L/4.0L V8 Turbo", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "Sedán deportivo de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "boxster",
+      "nombre": "Boxster",
+      "slug": "boxster",
+      "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación 986 (1996-2004)",
+          "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004],
+          "caracteristicas": ["Motor 2.5L/2.7L/3.2L Boxer", "Transmisión manual/automática 5-6 velocidades", "Tracción trasera", "Roadster deportivo"]
+        },
+        {
+          "nombre": "Segunda Generación 987 (2004-2012)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 2.7L/3.4L Boxer", "Transmisión manual/automática 5-7 velocidades", "Tracción trasera", "Roadster deportivo"]
+        },
+        {
+          "nombre": "Tercera Generación 981 (2012-2016)",
+          "años": [2012, 2013, 2014, 2015, 2016],
+          "caracteristicas": ["Motor 2.7L/3.4L Boxer", "Transmisión manual/automática 6-7 velocidades", "Tracción trasera", "Roadster deportivo"]
+        },
+        {
+          "nombre": "Cuarta Generación 718 (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.5L Turbo", "Transmisión manual/automática 6-7 velocidades", "Tracción trasera", "Roadster deportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "cayman",
+      "nombre": "Cayman",
+      "slug": "cayman",
+      "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación 987 (2005-2013)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
+          "caracteristicas": ["Motor 2.7L/3.4L Boxer", "Transmisión manual/automática 5-7 velocidades", "Tracción trasera", "Coupé deportivo"]
+        },
+        {
+          "nombre": "Segunda Generación 981 (2013-2016)",
+          "años": [2013, 2014, 2015, 2016],
+          "caracteristicas": ["Motor 2.7L/3.4L Boxer", "Transmisión manual/automática 6-7 velocidades", "Tracción trasera", "Coupé deportivo"]
+        },
+        {
+          "nombre": "Tercera Generación 718 (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.5L Turbo", "Transmisión manual/automática 6-7 velocidades", "Tracción trasera", "Coupé deportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

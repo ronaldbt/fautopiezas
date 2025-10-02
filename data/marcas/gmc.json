@@ -1,0 +1,157 @@
+{
+  "marca": {
+    "id": "gmc",
+    "nombre": "GMC",
+    "slug": "gmc",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "sierra",
+      "nombre": "Sierra",
+      "slug": "sierra",
+      "años": [1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1988-1998)",
+          "años": [1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
+          "caracteristicas": ["Motor 4.3L V6/5.0L V8/5.7L V8", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción trasera/4x4", "Pick-up full-size"]
+        },
+        {
+          "nombre": "Segunda Generación (1999-2006)",
+          "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 4.3L V6/4.8L V8/5.3L V8/6.0L V8", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción trasera/4x4", "Pick-up full-size"]
+        },
+        {
+          "nombre": "Tercera Generación (2007-2013)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013],
+          "caracteristicas": ["Motor 4.3L V6/4.8L V8/5.3L V8/6.0L V8/6.2L V8", "Transmisión manual 6 velocidades/automática 4-6 velocidades", "Tracción trasera/4x4", "Pick-up full-size"]
+        },
+        {
+          "nombre": "Cuarta Generación (2014-presente)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 4.3L V6/5.3L V8/6.2L V8", "Transmisión manual 6 velocidades/automática 6-8 velocidades", "Tracción trasera/4x4", "Pick-up full-size"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "acadia",
+      "nombre": "Acadia",
+      "slug": "acadia",
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2007-2016)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+          "caracteristicas": ["Motor 3.6L V6", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV de lujo de 7-8 plazas"]
+        },
+        {
+          "nombre": "Segunda Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.5L 4 cilindros/3.6L V6", "Transmisión automática 6-9 velocidades", "Tracción delantera/AWD", "SUV de lujo de 7 plazas"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "yukon",
+      "nombre": "Yukon",
+      "slug": "yukon",
+      "años": [1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1992-1999)",
+          "años": [1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
+          "caracteristicas": ["Motor 5.7L V8/6.5L V8 Diesel", "Transmisión automática 4 velocidades", "Tracción trasera/4x4", "SUV full-size"]
+        },
+        {
+          "nombre": "Segunda Generación (2000-2006)",
+          "años": [2000, 2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 4.8L V8/5.3L V8/6.0L V8", "Transmisión automática 4 velocidades", "Tracción trasera/4x4", "SUV full-size"]
+        },
+        {
+          "nombre": "Tercera Generación (2007-2014)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 5.3L V8/6.0L V8/6.2L V8", "Transmisión automática 6 velocidades", "Tracción trasera/4x4", "SUV full-size"]
+        },
+        {
+          "nombre": "Cuarta Generación (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 5.3L V8/6.2L V8", "Transmisión automática 6-8 velocidades", "Tracción trasera/4x4", "SUV full-size"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "savana",
+      "nombre": "Savana",
+      "slug": "savana",
+      "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1996-2002)",
+          "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002],
+          "caracteristicas": ["Motor 4.3L V6/5.0L V8/5.7L V8", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción trasera", "Van comercial"]
+        },
+        {
+          "nombre": "Segunda Generación (2003-presente)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 4.3L V6/4.8L V8/6.0L V8/6.6L V8 Diesel", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción trasera", "Van comercial"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "canyon",
+      "nombre": "Canyon",
+      "slug": "canyon",
+      "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2004-2012)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 2.9L 4 cilindros/3.7L 5 cilindros/5.3L V8", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción trasera/4x4", "Pick-up mediana"]
+        },
+        {
+          "nombre": "Segunda Generación (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.5L 4 cilindros/3.6L V6/2.8L Diesel", "Transmisión manual 6 velocidades/automática 6-8 velocidades", "Tracción trasera/4x4", "Pick-up mediana"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "terrain",
+      "nombre": "Terrain",
+      "slug": "terrain",
+      "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2010-2017)",
+          "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 2.4L 4 cilindros/3.0L V6/3.6L V6", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L Turbo/2.0L Turbo", "Transmisión automática 9 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

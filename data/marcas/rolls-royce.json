@@ -1,0 +1,101 @@
+{
+  "marca": {
+    "id": "rolls-royce",
+    "nombre": "ROLLS-ROYCE",
+    "slug": "rolls-royce",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "phantom",
+      "nombre": "Phantom",
+      "slug": "phantom",
+      "años": [1925, 1926, 1927, 1928, 1929, 1930, 1931, 1932, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Séptima Generación (2003-2017)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 6.7L V12", "Transmisión automática 6 velocidades", "Tracción trasera", "Sedán de ultra lujo"]
+        },
+        {
+          "nombre": "Octava Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 6.7L V12 Twin-Turbo", "Transmisión automática 8 velocidades", "Tracción trasera", "Sedán de ultra lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "ghost",
+      "nombre": "Ghost",
+      "slug": "ghost",
+      "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2009-2020)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 6.6L V12 Twin-Turbo", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 6.7L V12 Twin-Turbo", "Transmisión automática 8 velocidades", "Tracción AWD", "Sedán de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "wraith",
+      "nombre": "Wraith",
+      "slug": "wraith",
+      "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+      "generaciones": [
+        {
+          "nombre": "Segunda Generación (2013-2023)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+          "caracteristicas": ["Motor 6.6L V12 Twin-Turbo", "Transmisión automática 8 velocidades", "Tracción trasera", "Coupé de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "dawn",
+      "nombre": "Dawn",
+      "slug": "dawn",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+      "generaciones": [
+        {
+          "nombre": "Segunda Generación (2015-2023)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+          "caracteristicas": ["Motor 6.6L V12 Twin-Turbo", "Transmisión automática 8 velocidades", "Tracción trasera", "Convertible de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "cullinan",
+      "nombre": "Cullinan",
+      "slug": "cullinan",
+      "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 6.7L V12 Twin-Turbo", "Transmisión automática 8 velocidades", "Tracción AWD", "SUV de ultra lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

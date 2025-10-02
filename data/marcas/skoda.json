@@ -1,0 +1,147 @@
+{
+  "marca": {
+    "id": "skoda",
+    "nombre": "SKODA",
+    "slug": "skoda",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "octavia",
+      "nombre": "Octavia",
+      "slug": "octavia",
+      "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1996-2004)",
+          "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004],
+          "caracteristicas": ["Motor 1.4L/1.6L/1.8L/1.9L/2.0L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2004-2013)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
+          "caracteristicas": ["Motor 1.2L/1.4L/1.6L/1.8L/1.9L/2.0L", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera", "Compacto"]
+        },
+        {
+          "nombre": "Tercera Generación (2013-2020)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 1.0L/1.2L/1.4L/1.6L/1.8L/2.0L", "Transmisión manual/automática 5-7 velocidades", "Tracción delantera", "Compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.0L/1.5L/2.0L Turbo", "Transmisión manual/automática 6-7 velocidades", "Tracción delantera", "Compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "fabia",
+      "nombre": "Fabia",
+      "slug": "fabia",
+      "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1999-2007)",
+          "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007],
+          "caracteristicas": ["Motor 1.0L/1.2L/1.4L/1.9L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2007-2014)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 1.2L/1.4L/1.6L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Tercera Generación (2014-2021)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+          "caracteristicas": ["Motor 1.0L/1.2L/1.4L", "Transmisión manual/automática 5-7 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Cuarta Generación (2021-presente)",
+          "años": [2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.0L Turbo", "Transmisión manual/automática 5-7 velocidades", "Tracción delantera", "Subcompacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "superb",
+      "nombre": "Superb",
+      "slug": "superb",
+      "años": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2001-2008)",
+          "años": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008],
+          "caracteristicas": ["Motor 1.8L/1.9L/2.0L/2.5L/2.8L", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera", "Sedán grande"]
+        },
+        {
+          "nombre": "Segunda Generación (2008-2015)",
+          "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 1.4L/1.6L/1.8L/2.0L/3.6L V6", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera/AWD", "Sedán grande"]
+        },
+        {
+          "nombre": "Tercera Generación (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.4L/1.5L/1.8L/2.0L Turbo", "Transmisión manual/automática 6-7 velocidades", "Tracción delantera/AWD", "Sedán grande"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "karoq",
+      "nombre": "Karoq",
+      "slug": "karoq",
+      "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.0L/1.5L/2.0L Turbo", "Transmisión manual/automática 6-7 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "kodiaq",
+      "nombre": "Kodiaq",
+      "slug": "kodiaq",
+      "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.4L/2.0L Turbo", "Transmisión manual/automática 6-7 velocidades", "Tracción delantera/AWD", "SUV grande"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "scala",
+      "nombre": "Scala",
+      "slug": "scala",
+      "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.0L/1.5L Turbo", "Transmisión manual/automática 5-7 velocidades", "Tracción delantera", "Sedán compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

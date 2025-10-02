@@ -1,0 +1,90 @@
+{
+  "marca": {
+    "id": "smart",
+    "nombre": "SMART",
+    "slug": "smart",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "fortwo",
+      "nombre": "Fortwo",
+      "slug": "fortwo",
+      "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación C450 (1998-2007)",
+          "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007],
+          "caracteristicas": ["Motor 0.6L/0.7L Turbo", "Transmisión automática 6 velocidades", "Tracción trasera", "Microcar urbano"]
+        },
+        {
+          "nombre": "Segunda Generación C451 (2007-2014)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 1.0L", "Transmisión manual/automática 5 velocidades", "Tracción trasera", "Microcar urbano"]
+        },
+        {
+          "nombre": "Tercera Generación C453 (2014-presente)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 0.9L Turbo/1.0L", "Transmisión manual/automática 5-6 velocidades", "Tracción trasera", "Microcar urbano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "forfour",
+      "nombre": "Forfour",
+      "slug": "forfour",
+      "años": [2004, 2005, 2006, 2007, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación W454 (2004-2006)",
+          "años": [2004, 2005, 2006],
+          "caracteristicas": ["Motor 1.1L/1.3L/1.5L", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera", "Microcar urbano"]
+        },
+        {
+          "nombre": "Segunda Generación W453 (2014-presente)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 0.9L/1.0L Turbo", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera", "Microcar urbano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "roadster",
+      "nombre": "Roadster",
+      "slug": "roadster",
+      "años": [2003, 2004, 2005, 2006],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación C452 (2003-2006)",
+          "años": [2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 0.7L Turbo", "Transmisión manual 6 velocidades", "Tracción trasera", "Roadster compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "crossblade",
+      "nombre": "Crossblade",
+      "slug": "crossblade",
+      "años": [2002],
+      "generaciones": [
+        {
+          "nombre": "Edición Limitada (2002)",
+          "años": [2002],
+          "caracteristicas": ["Motor 0.6L Turbo", "Transmisión automática 6 velocidades", "Tracción trasera", "Concept car limitado"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "marca": {
+    "id": "jeep",
+    "nombre": "JEEP",
+    "slug": "jeep",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "wrangler",
+      "nombre": "Wrangler",
+      "slug": "wrangler",
+      "años": [1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación YJ (1987-1995)",
+          "años": [1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995],
+          "caracteristicas": ["Motor 2.5L 4 cilindros/4.0L 6 cilindros", "Transmisión manual 5 velocidades", "Tracción 4x4", "SUV off-road"]
+        },
+        {
+          "nombre": "Segunda Generación TJ (1997-2006)",
+          "años": [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 2.5L 4 cilindros/4.0L 6 cilindros", "Transmisión manual/automática 3-5 velocidades", "Tracción 4x4", "SUV off-road"]
+        },
+        {
+          "nombre": "Tercera Generación JK (2007-2018)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 3.6L V6/3.8L V6", "Transmisión manual/automática 5-6 velocidades", "Tracción 4x4", "SUV off-road"]
+        },
+        {
+          "nombre": "Cuarta Generación JL (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo/3.6L V6", "Transmisión manual/automática 6-8 velocidades", "Tracción 4x4", "SUV off-road"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "grand-cherokee",
+      "nombre": "Grand Cherokee",
+      "slug": "grand-cherokee",
+      "años": [1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación ZJ (1993-1998)",
+          "años": [1993, 1994, 1995, 1996, 1997, 1998],
+          "caracteristicas": ["Motor 4.0L 6 cilindros/5.2L V8/5.9L V8", "Transmisión automática 4 velocidades", "Tracción 4x2/4x4", "SUV mediano"]
+        },
+        {
+          "nombre": "Segunda Generación WJ (1999-2004)",
+          "años": [1999, 2000, 2001, 2002, 2003, 2004],
+          "caracteristicas": ["Motor 4.0L 6 cilindros/4.7L V8", "Transmisión automática 4-5 velocidades", "Tracción 4x2/4x4", "SUV mediano"]
+        },
+        {
+          "nombre": "Tercera Generación WK (2005-2010)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010],
+          "caracteristicas": ["Motor 3.7L V6/4.7L V8/5.7L V8/6.1L V8", "Transmisión automática 5 velocidades", "Tracción 4x2/4x4", "SUV mediano"]
+        },
+        {
+          "nombre": "Cuarta Generación WK2 (2011-presente)",
+          "años": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.6L V6/5.7L V8/6.4L V8", "Transmisión automática 8 velocidades", "Tracción 4x2/4x4", "SUV mediano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "cherokee",
+      "nombre": "Cherokee",
+      "slug": "cherokee",
+      "años": [1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación XJ (1984-2001)",
+          "años": [1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001],
+          "caracteristicas": ["Motor 2.5L 4 cilindros/4.0L 6 cilindros", "Transmisión manual/automática 3-5 velocidades", "Tracción 4x2/4x4", "SUV compacto"]
+        },
+        {
+          "nombre": "Segunda Generación KL (2014-presente)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.4L 4 cilindros/3.2L V6", "Transmisión automática 9 velocidades", "Tracción delantera/4x4", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "compass",
+      "nombre": "Compass",
+      "slug": "compass",
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación MK (2007-2017)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 2.0L/2.4L 4 cilindros", "Transmisión manual/automática/CVT", "Tracción delantera/4x4", "SUV compacto"]
+        },
+        {
+          "nombre": "Segunda Generación MP (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.4L Turbo/2.0L/2.4L", "Transmisión manual/automática 6-9 velocidades", "Tracción delantera/4x4", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "renegade",
+      "nombre": "Renegade",
+      "slug": "renegade",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación BU (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.4L Turbo/2.4L", "Transmisión manual/automática 6-9 velocidades", "Tracción delantera/4x4", "SUV subcompacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "gladiator",
+      "nombre": "Gladiator",
+      "slug": "gladiator",
+      "años": [2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación JT (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.6L V6", "Transmisión manual/automática 6-8 velocidades", "Tracción 4x4", "Pick-up mediana"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "patriot",
+      "nombre": "Patriot",
+      "slug": "patriot",
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación MK (2007-2017)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 2.0L/2.4L", "Transmisión manual/automática/CVT", "Tracción delantera/4x4", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "commander",
+      "nombre": "Commander",
+      "slug": "commander",
+      "años": [2006, 2007, 2008, 2009, 2010],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación XK (2006-2010)",
+          "años": [2006, 2007, 2008, 2009, 2010],
+          "caracteristicas": ["Motor 3.7L V6/4.7L V8/5.7L V8", "Transmisión automática 5 velocidades", "Tracción 4x2/4x4", "SUV de 7 plazas"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://fautopiezas.cl/sitemap.xml
+Sitemap: https://autopiezas360.cl/sitemap.xml
 
 # Crawl-delay para bots agresivos
 User-agent: Baiduspider
@@ -23,4 +23,4 @@ Allow: /categoria/
 Allow: /repuestos-*-chile
 
 # Host
-Host: fautopiezas.cl
+Host: autopiezas360.cl

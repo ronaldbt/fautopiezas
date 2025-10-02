@@ -1,0 +1,95 @@
+{
+  "marca": {
+    "id": "lotus",
+    "nombre": "LOTUS",
+    "slug": "lotus",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "elise",
+      "nombre": "Elise",
+      "slug": "elise",
+      "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1996-2001)",
+          "años": [1996, 1997, 1998, 1999, 2000, 2001],
+          "caracteristicas": ["Motor 1.8L K-Series", "Transmisión manual 5 velocidades", "Tracción trasera", "Deportivo ligero"]
+        },
+        {
+          "nombre": "Segunda Generación (2001-2011)",
+          "años": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011],
+          "caracteristicas": ["Motor 1.8L K-Series", "Transmisión manual 5-6 velocidades", "Tracción trasera", "Deportivo ligero"]
+        },
+        {
+          "nombre": "Tercera Generación (2011-2021)",
+          "años": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+          "caracteristicas": ["Motor 1.6L/1.8L", "Transmisión manual 6 velocidades", "Tracción trasera", "Deportivo ligero"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "exige",
+      "nombre": "Exige",
+      "slug": "exige",
+      "años": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2000-2004)",
+          "años": [2000, 2001, 2002, 2003, 2004],
+          "caracteristicas": ["Motor 1.8L K-Series", "Transmisión manual 5 velocidades", "Tracción trasera", "Deportivo de pista"]
+        },
+        {
+          "nombre": "Segunda Generación (2004-2011)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011],
+          "caracteristicas": ["Motor 1.8L K-Series", "Transmisión manual 6 velocidades", "Tracción trasera", "Deportivo de pista"]
+        },
+        {
+          "nombre": "Tercera Generación (2012-2021)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión manual 6 velocidades", "Tracción trasera", "Deportivo de pista"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "evora",
+      "nombre": "Evora",
+      "slug": "evora",
+      "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2009-2021)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión manual/automática 6 velocidades", "Tracción trasera", "Gran turismo deportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "emira",
+      "nombre": "Emira",
+      "slug": "emira",
+      "años": [2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2022-presente)",
+          "años": [2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo/3.5L V6", "Transmisión manual/automática 6-8 velocidades", "Tracción trasera", "Deportivo de última generación"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

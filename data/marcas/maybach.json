@@ -1,0 +1,64 @@
+{
+  "marca": {
+    "id": "maybach",
+    "nombre": "MAYBACH",
+    "slug": "maybach",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "s-class",
+      "nombre": "S-Class",
+      "slug": "s-class",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Sexta Generación (2015-2020)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 4.7L V8/6.0L V12", "Transmisión automática 7 velocidades", "Tracción trasera/AWD", "Sedán de ultra lujo"]
+        },
+        {
+          "nombre": "Séptima Generación (2021-presente)",
+          "años": [2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 4.0L V8/6.0L V12", "Transmisión automática 9 velocidades", "Tracción trasera/AWD", "Sedán de ultra lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "gls",
+      "nombre": "GLS",
+      "slug": "gls",
+      "años": [2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 4.0L V8", "Transmisión automática 9 velocidades", "Tracción AWD", "SUV de ultra lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "eqs",
+      "nombre": "EQS",
+      "slug": "eqs",
+      "años": [2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2022-presente)",
+          "años": [2022, 2023, 2024],
+          "caracteristicas": ["Motor eléctrico dual", "Transmisión directa", "Tracción trasera/AWD", "Sedán eléctrico de ultra lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

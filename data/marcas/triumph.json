@@ -1,0 +1,79 @@
+{
+  "marca": {
+    "id": "triumph",
+    "nombre": "TRIUMPH",
+    "slug": "triumph",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "tr6",
+      "nombre": "TR6",
+      "slug": "tr6",
+      "años": [1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1968-1976)",
+          "años": [1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976],
+          "caracteristicas": ["Motor 2.5L I6", "Transmisión manual 4 velocidades", "Tracción trasera", "Roadster clásico"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "spitfire",
+      "nombre": "Spitfire",
+      "slug": "spitfire",
+      "años": [1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980],
+      "generaciones": [
+        {
+          "nombre": "Mark I (1962-1965)",
+          "años": [1962, 1963, 1964, 1965],
+          "caracteristicas": ["Motor 1.1L I4", "Transmisión manual 4 velocidades", "Tracción trasera", "Roadster deportivo"]
+        },
+        {
+          "nombre": "Mark II (1965-1967)",
+          "años": [1965, 1966, 1967],
+          "caracteristicas": ["Motor 1.1L I4", "Transmisión manual 4 velocidades", "Tracción trasera", "Roadster deportivo"]
+        },
+        {
+          "nombre": "Mark III (1967-1970)",
+          "años": [1967, 1968, 1969, 1970],
+          "caracteristicas": ["Motor 1.3L I4", "Transmisión manual 4 velocidades", "Tracción trasera", "Roadster deportivo"]
+        },
+        {
+          "nombre": "Mark IV (1970-1974)",
+          "años": [1970, 1971, 1972, 1973, 1974],
+          "caracteristicas": ["Motor 1.3L I4", "Transmisión manual 4 velocidades", "Tracción trasera", "Roadster deportivo"]
+        },
+        {
+          "nombre": "1500 (1974-1980)",
+          "años": [1974, 1975, 1976, 1977, 1978, 1979, 1980],
+          "caracteristicas": ["Motor 1.5L I4", "Transmisión manual 4 velocidades", "Tracción trasera", "Roadster deportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "stag",
+      "nombre": "Stag",
+      "slug": "stag",
+      "años": [1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1970-1977)",
+          "años": [1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977],
+          "caracteristicas": ["Motor 3.0L V8", "Transmisión manual/automática 3-4 velocidades", "Tracción trasera", "Convertible de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

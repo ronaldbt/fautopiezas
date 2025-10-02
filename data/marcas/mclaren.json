@@ -1,0 +1,107 @@
+{
+  "marca": {
+    "id": "mclaren",
+    "nombre": "MCLAREN",
+    "slug": "mclaren",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "720s",
+      "nombre": "720S",
+      "slug": "720s",
+      "años": [2017, 2018, 2019, 2020, 2021, 2022],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2017-2022)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022],
+          "caracteristicas": ["Motor 4.0L V8 Turbo", "Transmisión automática 7 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "650s",
+      "nombre": "650S",
+      "slug": "650s",
+      "años": [2014, 2015, 2016, 2017],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2014-2017)",
+          "años": [2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 3.8L V8 Turbo", "Transmisión automática 7 velocidades", "Tracción trasera", "Superdeportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "570s",
+      "nombre": "570S",
+      "slug": "570s",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2015-2021)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+          "caracteristicas": ["Motor 3.8L V8 Turbo", "Transmisión automática 7 velocidades", "Tracción trasera", "Deportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "p1",
+      "nombre": "P1",
+      "slug": "p1",
+      "años": [2013, 2014, 2015],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2013-2015)",
+          "años": [2013, 2014, 2015],
+          "caracteristicas": ["Motor 3.8L V8 Turbo híbrido", "Transmisión automática 7 velocidades", "Tracción trasera", "Hypercar"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "artura",
+      "nombre": "Artura",
+      "slug": "artura",
+      "años": [2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2022-presente)",
+          "años": [2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.0L V6 Turbo híbrido", "Transmisión automática 8 velocidades", "Tracción trasera", "Superdeportivo híbrido"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "gt",
+      "nombre": "GT",
+      "slug": "gt",
+      "años": [2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 4.0L V8 Turbo", "Transmisión automática 7 velocidades", "Tracción trasera", "Gran turismo deportivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

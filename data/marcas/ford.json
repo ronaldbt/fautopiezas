@@ -1,0 +1,364 @@
+{
+  "marca": {
+    "id": "ford",
+    "nombre": "FORD",
+    "slug": "ford",
+    "activa": true,
+    "popular": true
+  },
+  "modelos": [
+    {
+      "id": "focus",
+      "nombre": "Focus",
+      "slug": "focus",
+      "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1998-2004)",
+          "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004],
+          "caracteristicas": ["Motor 1.4L/1.6L/1.8L/2.0L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Hatchback compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2004-2011)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011],
+          "caracteristicas": ["Motor 1.4L/1.6L/1.8L/2.0L/2.5L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Hatchback compacto"]
+        },
+        {
+          "nombre": "Tercera Generación (2011-2018)",
+          "años": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 1.0L EcoBoost/1.5L EcoBoost/1.6L/2.0L", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera", "Hatchback compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.0L EcoBoost/1.5L EcoBoost/2.3L EcoBoost", "Transmisión manual 6 velocidades/automática 8 velocidades", "Tracción delantera/AWD", "Hatchback compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "fiesta",
+      "nombre": "Fiesta",
+      "slug": "fiesta",
+      "años": [1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1976-1983)",
+          "años": [1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983],
+          "caracteristicas": ["Motor 0.9L/1.0L/1.1L/1.3L", "Transmisión manual 4 velocidades", "Tracción delantera", "Hatchback subcompacto"]
+        },
+        {
+          "nombre": "Segunda Generación (1983-1989)",
+          "años": [1983, 1984, 1985, 1986, 1987, 1988, 1989],
+          "caracteristicas": ["Motor 1.0L/1.1L/1.3L/1.4L", "Transmisión manual 4 velocidades/5 velocidades", "Tracción delantera", "Hatchback subcompacto"]
+        },
+        {
+          "nombre": "Tercera Generación (1989-1996)",
+          "años": [1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996],
+          "caracteristicas": ["Motor 1.1L/1.3L/1.4L/1.6L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Hatchback subcompacto"]
+        },
+        {
+          "nombre": "Cuarta Generación (1996-2002)",
+          "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002],
+          "caracteristicas": ["Motor 1.2L/1.3L/1.4L/1.6L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Hatchback subcompacto"]
+        },
+        {
+          "nombre": "Quinta Generación (2002-2008)",
+          "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008],
+          "caracteristicas": ["Motor 1.2L/1.4L/1.6L/2.0L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Hatchback subcompacto"]
+        },
+        {
+          "nombre": "Sexta Generación (2008-2017)",
+          "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 1.0L EcoBoost/1.25L/1.4L/1.6L", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera", "Hatchback subcompacto"]
+        },
+        {
+          "nombre": "Séptima Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.0L EcoBoost/1.1L/1.5L EcoBoost", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera", "Hatchback subcompacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "mondeo",
+      "nombre": "Mondeo",
+      "slug": "mondeo",
+      "años": [1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1993-2000)",
+          "años": [1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000],
+          "caracteristicas": ["Motor 1.6L/1.8L/2.0L/2.5L V6", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Segunda Generación (2000-2007)",
+          "años": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007],
+          "caracteristicas": ["Motor 1.8L/2.0L/2.5L V6/3.0L V6", "Transmisión manual 5 velocidades/automática 5 velocidades", "Tracción delantera/AWD", "Sedán mediano"]
+        },
+        {
+          "nombre": "Tercera Generación (2007-2014)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 1.6L/2.0L/2.3L/2.0L EcoBoost", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera/AWD", "Sedán mediano"]
+        },
+        {
+          "nombre": "Cuarta Generación (2014-2022)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+          "caracteristicas": ["Motor 1.5L EcoBoost/2.0L EcoBoost/2.0L TDCi", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción delantera/AWD", "Sedán mediano"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "kuga",
+      "nombre": "Kuga",
+      "slug": "kuga",
+      "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2008-2012)",
+          "años": [2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 2.0L/2.5L/2.0L TDCi", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2012-2019)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 1.5L EcoBoost/2.0L EcoBoost/2.0L TDCi", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Tercera Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L EcoBoost/2.0L EcoBoost/2.5L Hybrid", "Transmisión manual 6 velocidades/automática 8 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "ecosport",
+      "nombre": "EcoSport",
+      "slug": "ecosport",
+      "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2003-2012)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 1.0L/1.4L/1.6L/2.0L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera/AWD", "SUV subcompacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2012-2022)",
+          "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+          "caracteristicas": ["Motor 1.0L EcoBoost/1.5L/1.6L/2.0L", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción delantera/AWD", "SUV subcompacto"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "ranger",
+      "nombre": "Ranger",
+      "slug": "ranger",
+      "años": [1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1983-1988)",
+          "años": [1983, 1984, 1985, 1986, 1987, 1988],
+          "caracteristicas": ["Motor 2.0L/2.2L/2.3L/2.8L", "Transmisión manual 4 velocidades/5 velocidades", "Tracción trasera/4WD", "Pickup compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (1989-1992)",
+          "años": [1989, 1990, 1991, 1992],
+          "caracteristicas": ["Motor 2.0L/2.3L/2.8L/4.0L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción trasera/4WD", "Pickup compacto"]
+        },
+        {
+          "nombre": "Tercera Generación (1993-1997)",
+          "años": [1993, 1994, 1995, 1996, 1997],
+          "caracteristicas": ["Motor 2.3L/2.8L/4.0L", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción trasera/4WD", "Pickup compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación (1998-2006)",
+          "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 2.3L/3.0L V6/4.0L V6", "Transmisión manual 5 velocidades/automática 5 velocidades", "Tracción trasera/4WD", "Pickup compacto"]
+        },
+        {
+          "nombre": "Quinta Generación (2006-2011)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011],
+          "caracteristicas": ["Motor 2.3L/3.0L V6/4.0L V6", "Transmisión manual 5 velocidades/automática 5 velocidades", "Tracción trasera/4WD", "Pickup compacto"]
+        },
+        {
+          "nombre": "Sexta Generación (2011-2019)",
+          "años": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 2.2L TDCi/3.2L TDCi/2.0L EcoBoost", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción trasera/4WD", "Pickup mediano"]
+        },
+        {
+          "nombre": "Séptima Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L EcoBlue/3.0L V6 EcoBoost", "Transmisión manual 6 velocidades/automática 10 velocidades", "Tracción trasera/4WD", "Pickup mediano"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "explorer",
+      "nombre": "Explorer",
+      "slug": "explorer",
+      "años": [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1991-1994)",
+          "años": [1991, 1992, 1993, 1994],
+          "caracteristicas": ["Motor 4.0L V6", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción trasera/4WD", "SUV mediano"]
+        },
+        {
+          "nombre": "Segunda Generación (1995-2001)",
+          "años": [1995, 1996, 1997, 1998, 1999, 2000, 2001],
+          "caracteristicas": ["Motor 4.0L V6/5.0L V8", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción trasera/4WD", "SUV mediano"]
+        },
+        {
+          "nombre": "Tercera Generación (2002-2005)",
+          "años": [2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 4.0L V6/4.6L V8", "Transmisión manual 5 velocidades/automática 5 velocidades", "Tracción trasera/4WD", "SUV mediano"]
+        },
+        {
+          "nombre": "Cuarta Generación (2006-2010)",
+          "años": [2006, 2007, 2008, 2009, 2010],
+          "caracteristicas": ["Motor 4.0L V6/4.6L V8", "Transmisión automática 5 velocidades/6 velocidades", "Tracción trasera/4WD", "SUV mediano"]
+        },
+        {
+          "nombre": "Quinta Generación (2011-2019)",
+          "años": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 2.0L EcoBoost/3.5L V6/3.5L V6 EcoBoost", "Transmisión automática 6 velocidades", "Tracción trasera/4WD", "SUV mediano"]
+        },
+        {
+          "nombre": "Sexta Generación (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.3L EcoBoost/3.0L V6 EcoBoost/3.3L V6 Hybrid", "Transmisión automática 10 velocidades", "Tracción trasera/4WD", "SUV mediano"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "transit",
+      "nombre": "Transit",
+      "slug": "transit",
+      "años": [1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1965-1978)",
+          "años": [1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978],
+          "caracteristicas": ["Motor 1.7L/2.0L/2.3L", "Transmisión manual 4 velocidades", "Tracción trasera", "Van comercial"]
+        },
+        {
+          "nombre": "Segunda Generación (1978-1986)",
+          "años": [1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986],
+          "caracteristicas": ["Motor 1.6L/2.0L/2.3L", "Transmisión manual 4 velocidades", "Tracción trasera", "Van comercial"]
+        },
+        {
+          "nombre": "Tercera Generación (1986-1991)",
+          "años": [1986, 1987, 1988, 1989, 1990, 1991],
+          "caracteristicas": ["Motor 1.8L/2.0L/2.3L/2.5L", "Transmisión manual 4 velocidades/5 velocidades", "Tracción trasera", "Van comercial"]
+        },
+        {
+          "nombre": "Cuarta Generación (1991-2000)",
+          "años": [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000],
+          "caracteristicas": ["Motor 2.0L/2.3L/2.5L/2.8L", "Transmisión manual 5 velocidades", "Tracción trasera", "Van comercial"]
+        },
+        {
+          "nombre": "Quinta Generación (2000-2006)",
+          "años": [2000, 2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 2.0L/2.3L/2.8L TDCi", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción trasera", "Van comercial"]
+        },
+        {
+          "nombre": "Sexta Generación (2006-2013)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
+          "caracteristicas": ["Motor 2.2L/2.4L TDCi", "Transmisión manual 5 velocidades/automática 6 velocidades", "Tracción trasera", "Van comercial"]
+        },
+        {
+          "nombre": "Séptima Generación (2013-2019)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 2.0L/2.2L EcoBlue", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción trasera", "Van comercial"]
+        },
+        {
+          "nombre": "Octava Generación (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L EcoBlue/2.0L EcoBlue Hybrid", "Transmisión manual 6 velocidades/automática 10 velocidades", "Tracción trasera", "Van comercial"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "mustang",
+      "nombre": "Mustang",
+      "slug": "mustang",
+      "años": [1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1964-1973)",
+          "años": [1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973],
+          "caracteristicas": ["Motor 2.8L/3.3L/4.7L/5.0L V8/6.4L V8", "Transmisión manual 3 velocidades/automática 3 velocidades", "Tracción trasera", "Coupé deportivo"]
+        },
+        {
+          "nombre": "Segunda Generación (1974-1978)",
+          "años": [1974, 1975, 1976, 1977, 1978],
+          "caracteristicas": ["Motor 2.3L/2.8L V6/4.9L V8", "Transmisión manual 4 velocidades/automática 3 velocidades", "Tracción trasera", "Coupé deportivo"]
+        },
+        {
+          "nombre": "Tercera Generación (1979-1993)",
+          "años": [1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993],
+          "caracteristicas": ["Motor 2.3L/2.8L V6/3.8L V6/5.0L V8", "Transmisión manual 4 velocidades/5 velocidades/automática 4 velocidades", "Tracción trasera", "Coupé deportivo"]
+        },
+        {
+          "nombre": "Cuarta Generación (1994-2004)",
+          "años": [1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004],
+          "caracteristicas": ["Motor 3.8L V6/4.6L V8", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción trasera", "Coupé deportivo"]
+        },
+        {
+          "nombre": "Quinta Generación (2005-2014)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 4.0L V6/4.6L V8/5.0L V8", "Transmisión manual 5 velocidades/6 velocidades/automática 5 velocidades", "Tracción trasera", "Coupé deportivo"]
+        },
+        {
+          "nombre": "Sexta Generación (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.3L EcoBoost/5.0L V8/5.2L V8", "Transmisión manual 6 velocidades/automática 10 velocidades", "Tracción trasera", "Coupé deportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "territory",
+      "nombre": "Territory",
+      "slug": "territory",
+      "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2004-2016)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+          "caracteristicas": ["Motor 4.0L V6/4.0L V6 Turbo", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción trasera/AWD", "SUV mediano"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}
+
+
+

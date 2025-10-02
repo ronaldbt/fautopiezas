@@ -5,14 +5,17 @@
       <slot />
     </main>
     
-    <!-- Footer FAutopiezas -->
+    <!-- Botón flotante de WhatsApp -->
+    <WhatsAppFloating />
+    
+    <!-- Footer AutoPiezas360 -->
     <footer class="bg-gray-800 text-white py-12">
       <div class="max-w-7xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 class="text-xl font-bold mb-4">🚗 FAutopiezas Chile</h3>
+            <h3 class="text-xl font-bold mb-4">🚗 AutoPiezas360 Chile</h3>
             <p class="text-gray-300 text-sm">
-              Los mejores repuestos para autos en Chile. Stock inmediato, envío gratis, garantía extendida.
+              Importación de repuestos para autos con 50% de descuento. Entrega en 7 días, garantía extendida.
             </p>
           </div>
           <div>
@@ -36,15 +39,15 @@
           <div>
             <h4 class="font-semibold mb-4">Contacto</h4>
             <ul class="space-y-2 text-sm text-gray-300">
-              <li>📞 +56 2 2345 6789</li>
-              <li>✉️ info@fautopiezas.cl</li>
+              <li>📞 +56 9 7979 6841</li>
+              <li>✉️ info@autopiezas360.cl</li>
               <li>📍 Santiago, Chile</li>
               <li>🕒 Lun-Vie: 9:00-18:00</li>
             </ul>
           </div>
         </div>
         <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-300">
-          <p>&copy; {{ new Date().getFullYear() }} FAutopiezas Chile. Todos los derechos reservados.</p>
+          <p>&copy; {{ new Date().getFullYear() }} AutoPiezas360 Chile. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

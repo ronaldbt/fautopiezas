@@ -29,7 +29,7 @@
           "caracteristicas": ["Motor 3.6L V6/5.7L V8/6.1L V8/6.2L V8/6.4L V8", "Transmisión manual 6 velocidades/automática 8 velocidades", "Tracción trasera/AWD", "Coupé deportivo"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true
     },
     {
@@ -69,7 +69,7 @@
           "caracteristicas": ["Motor 2.7L V6/3.5L V6/3.6L V6/5.7L V8/6.1L V8/6.2L V8/6.4L V8", "Transmisión manual 6 velocidades/automática 8 velocidades", "Tracción trasera/AWD", "Sedán deportivo"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true
     },
     {
@@ -99,7 +99,7 @@
           "caracteristicas": ["Motor 3.6L V6/5.7L V8", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "SUV grande"]
         }
       ],
-      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
       "activa": true
     }
   ]

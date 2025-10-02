@@ -1,0 +1,191 @@
+{
+  "marca": {
+    "id": "suzuki",
+    "nombre": "SUZUKI",
+    "slug": "suzuki",
+    "activa": true,
+    "popular": true
+  },
+  "modelos": [
+    {
+      "id": "swift",
+      "nombre": "Swift",
+      "slug": "swift",
+      "años": [1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación AA (1983-1989)",
+          "años": [1983, 1984, 1985, 1986, 1987, 1988, 1989],
+          "caracteristicas": ["Motor 1.0L/1.3L", "Transmisión manual 4-5 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Segunda Generación AF/SF (1989-1994)",
+          "años": [1989, 1990, 1991, 1992, 1993, 1994],
+          "caracteristicas": ["Motor 1.0L/1.3L", "Transmisión manual/automática 3-5 velocidades", "Tracción delantera/AWD", "Subcompacto"]
+        },
+        {
+          "nombre": "Tercera Generación EA/MA (1995-1999)",
+          "años": [1995, 1996, 1997, 1998, 1999],
+          "caracteristicas": ["Motor 1.0L/1.3L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Cuarta Generación HT (2000-2004)",
+          "años": [2000, 2001, 2002, 2003, 2004],
+          "caracteristicas": ["Motor 1.3L/1.5L/1.6L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Quinta Generación RS (2004-2010)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010],
+          "caracteristicas": ["Motor 1.3L/1.5L/1.6L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Sexta Generación FZ/NZ (2010-2017)",
+          "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 1.2L/1.4L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Séptima Generación AZ (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.0L/1.2L Turbo", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera", "Subcompacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "vitara",
+      "nombre": "Vitara",
+      "slug": "vitara",
+      "años": [1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación ET/TA (1988-1998)",
+          "años": [1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
+          "caracteristicas": ["Motor 1.6L/2.0L", "Transmisión manual/automática 4-5 velocidades", "Tracción 4x4", "SUV compacto"]
+        },
+        {
+          "nombre": "Segunda Generación FT/GT (1998-2005)",
+          "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005],
+          "caracteristicas": ["Motor 1.6L/2.0L/2.5L V6", "Transmisión manual/automática 4-5 velocidades", "Tracción 4x2/4x4", "SUV compacto"]
+        },
+        {
+          "nombre": "Tercera Generación JT (2005-2015)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 1.6L/2.0L/2.4L/2.7L V6", "Transmisión manual/automática 5 velocidades", "Tracción 4x2/4x4", "SUV compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación LY (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.0L/1.4L Turbo", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "jimny",
+      "nombre": "Jimny",
+      "slug": "jimny",
+      "años": [1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación LJ10/20 (1970-1981)",
+          "años": [1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981],
+          "caracteristicas": ["Motor 0.4L/0.5L", "Transmisión manual 4 velocidades", "Tracción 4x4", "Off-road compacto"]
+        },
+        {
+          "nombre": "Segunda Generación SJ (1981-1998)",
+          "años": [1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
+          "caracteristicas": ["Motor 0.5L/1.0L/1.3L", "Transmisión manual/automática 3-5 velocidades", "Tracción 4x4", "Off-road compacto"]
+        },
+        {
+          "nombre": "Tercera Generación JB23/33/43 (1998-2018)",
+          "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 0.7L/1.3L", "Transmisión manual/automática 4-5 velocidades", "Tracción 4x4", "Off-road compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación JB64/74 (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 0.7L Turbo", "Transmisión manual/automática 4-5 velocidades", "Tracción 4x4", "Off-road compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "sx4",
+      "nombre": "SX4",
+      "slug": "sx4",
+      "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación EY/GY (2006-2014)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 1.5L/1.6L/2.0L", "Transmisión manual/automática CVT", "Tracción delantera/AWD", "Crossover compacto"]
+        },
+        {
+          "nombre": "Segunda Generación AKK (2013-2021)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+          "caracteristicas": ["Motor 1.0L/1.6L", "Transmisión manual/automática 5 velocidades", "Tracción delantera/AWD", "Crossover compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "alto",
+      "nombre": "Alto",
+      "slug": "alto",
+      "años": [1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación SS30/40 (1979-1984)",
+          "años": [1979, 1980, 1981, 1982, 1983, 1984],
+          "caracteristicas": ["Motor 0.5L/0.8L", "Transmisión manual 4-5 velocidades", "Tracción delantera/AWD", "Microcar"]
+        },
+        {
+          "nombre": "Segunda Generación CA71/CA72 (1984-1988)",
+          "años": [1984, 1985, 1986, 1987, 1988],
+          "caracteristicas": ["Motor 0.5L/0.8L", "Transmisión manual/automática 3-5 velocidades", "Tracción delantera/AWD", "Microcar"]
+        },
+        {
+          "nombre": "Tercera Generación CL/CM/CN/CR/CS (1988-1994)",
+          "años": [1988, 1989, 1990, 1991, 1992, 1993, 1994],
+          "caracteristicas": ["Motor 0.5L/0.8L", "Transmisión manual/automática 3-5 velocidades", "Tracción delantera/AWD", "Microcar"]
+        },
+        {
+          "nombre": "Cuarta Generación HA/HB (1994-1998)",
+          "años": [1994, 1995, 1996, 1997, 1998],
+          "caracteristicas": ["Motor 0.7L", "Transmisión manual/automática 3-5 velocidades", "Tracción delantera/AWD", "Microcar"]
+        },
+        {
+          "nombre": "Quinta Generación HC/HD (1998-2004)",
+          "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004],
+          "caracteristicas": ["Motor 0.7L", "Transmisión manual/automática 3-5 velocidades", "Tracción delantera/AWD", "Microcar"]
+        },
+        {
+          "nombre": "Sexta Generación HE (2004-2009)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009],
+          "caracteristicas": ["Motor 0.7L/1.1L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera/AWD", "Microcar"]
+        },
+        {
+          "nombre": "Séptima Generación HF (2009-2014)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 0.7L/1.0L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera/AWD", "Microcar"]
+        },
+        {
+          "nombre": "Octava Generación HA36 (2014-presente)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 0.7L/1.0L", "Transmisión manual/automática CVT", "Tracción delantera/AWD", "Microcar"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

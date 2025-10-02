@@ -48,23 +48,26 @@ export default defineNuxtConfig({
   // Configuración de SEO y Google
   app: {
     head: {
-      title: 'FAutopiezas - Repuestos Originales para Vehículos en Chile',
+      htmlAttrs: {
+        lang: 'es-CL'
+      },
+      title: 'AutoPiezas360 - Repuestos Importados para Vehículos en Chile',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'format-detection', content: 'telephone=no' },
-        { name: 'description', content: 'Encuentra repuestos originales para tu vehículo en Chile. Toyota, Nissan, Chevrolet, BMW y más marcas. Envío a todo el país.' },
-        { name: 'keywords', content: 'repuestos, autopartes, toyota, nissan, chevrolet, bmw, chile, originales' },
-        { name: 'author', content: 'FAutopiezas' },
+        { name: 'description', content: 'Repuestos importados para tu vehículo con 50% de descuento. Importación directa desde fábrica. Toyota, Nissan, Chevrolet, BMW y más marcas. Envío a todo Chile en 7 días.' },
+        { name: 'keywords', content: 'repuestos importados, autopartes chile, toyota, nissan, chevrolet, bmw, repuestos baratos, descuento 50%, importación directa, audi chile, mercedes benz chile, ford raptor chile, volvo chile, repuestos alta gama, repuestos premium, difíciles de encontrar' },
+        { name: 'author', content: 'AutoPiezas360' },
         { name: 'robots', content: 'index, follow' },
-        { property: 'og:title', content: 'FAutopiezas - Repuestos Originales para Vehículos' },
-        { property: 'og:description', content: 'Encuentra repuestos originales para tu vehículo en Chile' },
+        { property: 'og:title', content: 'AutoPiezas360 - Repuestos Importados con 50% Descuento' },
+        { property: 'og:description', content: 'Repuestos importados directamente desde fábrica con 50% de descuento. Envío a todo Chile en 7 días.' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://autopiezas360.cl' },
         { property: 'og:image', content: 'https://autopiezas360.cl/og-image.jpg' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'FAutopiezas - Repuestos Originales' },
-        { name: 'twitter:description', content: 'Encuentra repuestos originales para tu vehículo en Chile' },
+        { name: 'twitter:title', content: 'AutoPiezas360 - Repuestos Importados 50% Descuento' },
+        { name: 'twitter:description', content: 'Repuestos importados con 50% descuento. Envío Chile en 7 días.' },
         { name: 'google-site-verification', content: 'TU_CODIGO_DE_VERIFICACION_AQUI' }
       ],
       link: [

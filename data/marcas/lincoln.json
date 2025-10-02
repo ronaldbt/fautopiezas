@@ -1,0 +1,168 @@
+{
+  "marca": {
+    "id": "lincoln",
+    "nombre": "LINCOLN",
+    "slug": "lincoln",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "navigator",
+      "nombre": "Navigator",
+      "slug": "navigator",
+      "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1998-2002)",
+          "años": [1998, 1999, 2000, 2001, 2002],
+          "caracteristicas": ["Motor 5.4L V8", "Transmisión automática 4 velocidades", "Tracción 4x2/4x4", "SUV de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2003-2006)",
+          "años": [2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 5.4L V8", "Transmisión automática 4 velocidades", "Tracción 4x2/4x4", "SUV de lujo"]
+        },
+        {
+          "nombre": "Tercera Generación (2007-2014)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 5.4L V8", "Transmisión automática 6 velocidades", "Tracción 4x2/4x4", "SUV de lujo"]
+        },
+        {
+          "nombre": "Cuarta Generación (2015-2017)",
+          "años": [2015, 2016, 2017],
+          "caracteristicas": ["Motor 3.5L V6 EcoBoost", "Transmisión automática 6 velocidades", "Tracción 4x2/4x4", "SUV de lujo"]
+        },
+        {
+          "nombre": "Quinta Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.5L V6 EcoBoost", "Transmisión automática 10 velocidades", "Tracción 4x2/4x4", "SUV de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "continental",
+      "nombre": "Continental",
+      "slug": "continental",
+      "años": [1982, 1983, 1984, 1985, 1986, 1987, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2017, 2018, 2019, 2020],
+      "generaciones": [
+        {
+          "nombre": "Octava Generación (1982-1987)",
+          "años": [1982, 1983, 1984, 1985, 1986, 1987],
+          "caracteristicas": ["Motor 3.8L V6/5.0L V8", "Transmisión automática 4 velocidades", "Tracción trasera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Novena Generación (1995-2002)",
+          "años": [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002],
+          "caracteristicas": ["Motor 4.6L V8", "Transmisión automática 4 velocidades", "Tracción trasera/delantera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Décima Generación (2017-2020)",
+          "años": [2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 3.7L V6/2.7L V6 EcoBoost", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "Sedán de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "mkz",
+      "nombre": "MKZ",
+      "slug": "mkz",
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2007-2012)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2013-2020)",
+          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 2.0L Turbo/3.7L V6", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "Sedán de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "mkc",
+      "nombre": "MKC",
+      "slug": "mkc",
+      "años": [2015, 2016, 2017, 2018, 2019],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2015-2019)",
+          "años": [2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 2.0L Turbo/2.3L Turbo", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "mkx",
+      "nombre": "MKX",
+      "slug": "mkx",
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2007-2015)",
+          "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 3.5L V6", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV mediano de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2016-2018)",
+          "años": [2016, 2017, 2018],
+          "caracteristicas": ["Motor 3.7L V6/2.7L V6 EcoBoost", "Transmisión automática 6 velocidades", "Tracción delantera/AWD", "SUV mediano de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "corsair",
+      "nombre": "Corsair",
+      "slug": "corsair",
+      "años": [2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L Turbo/2.3L Turbo", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "SUV compacto de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "aviator",
+      "nombre": "Aviator",
+      "slug": "aviator",
+      "años": [2003, 2004, 2005, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2003-2005)",
+          "años": [2003, 2004, 2005],
+          "caracteristicas": ["Motor 4.6L V8", "Transmisión automática 5 velocidades", "Tracción 4x2/4x4", "SUV mediano de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2020-presente)",
+          "años": [2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.0L V6 EcoBoost", "Transmisión automática 10 velocidades", "Tracción 4x2/4x4", "SUV mediano de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

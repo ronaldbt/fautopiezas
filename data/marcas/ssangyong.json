@@ -1,0 +1,121 @@
+{
+  "marca": {
+    "id": "ssangyong",
+    "nombre": "SSANGYONG",
+    "slug": "ssangyong",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "korando",
+      "nombre": "Korando",
+      "slug": "korando",
+      "años": [1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1983-1996)",
+          "años": [1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996],
+          "caracteristicas": ["Motor 2.3L/2.9L", "Transmisión manual 4-5 velocidades", "Tracción 4x4", "SUV off-road"]
+        },
+        {
+          "nombre": "Segunda Generación (1996-2006)",
+          "años": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 2.3L/2.9L/3.2L", "Transmisión manual/automática 4-5 velocidades", "Tracción 4x4", "SUV off-road"]
+        },
+        {
+          "nombre": "Tercera Generación C200 (2010-2019)",
+          "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 2.0L Turbo/2.0L Diesel", "Transmisión manual/automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación C300 (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L Turbo", "Transmisión automática CVT", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "rexton",
+      "nombre": "Rexton",
+      "slug": "rexton",
+      "años": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación Y200 (2001-2006)",
+          "años": [2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 2.9L/3.2L Diesel", "Transmisión manual/automática 5 velocidades", "Tracción 4x4", "SUV grande"]
+        },
+        {
+          "nombre": "Segunda Generación Y250 (2006-2017)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 2.7L/3.2L Diesel", "Transmisión manual/automática 5-7 velocidades", "Tracción 4x4", "SUV grande"]
+        },
+        {
+          "nombre": "Tercera Generación Y400 (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.2L Diesel/2.0L Turbo", "Transmisión automática 7 velocidades", "Tracción 4x4", "SUV grande"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "actyon",
+      "nombre": "Actyon",
+      "slug": "actyon",
+      "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación C100 (2005-2011)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011],
+          "caracteristicas": ["Motor 2.0L/2.3L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Segunda Generación C200 (2011-2023)",
+          "años": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+          "caracteristicas": ["Motor 2.0L/2.0L Diesel", "Transmisión manual/automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "kyron",
+      "nombre": "Kyron",
+      "slug": "kyron",
+      "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2005-2015)",
+          "años": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 2.0L/2.7L/3.2L", "Transmisión manual/automática 5 velocidades", "Tracción 4x4", "SUV mediano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "tivoli",
+      "nombre": "Tivoli",
+      "slug": "tivoli",
+      "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.6L", "Transmisión manual/automática 6 velocidades", "Tracción delantera/AWD", "SUV subcompacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

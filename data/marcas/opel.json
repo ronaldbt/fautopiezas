@@ -1,0 +1,156 @@
+{
+  "marca": {
+    "id": "opel",
+    "nombre": "OPEL",
+    "slug": "opel",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "astra",
+      "nombre": "Astra",
+      "slug": "astra",
+      "años": [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación F (1991-1998)",
+          "años": [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
+          "caracteristicas": ["Motor 1.4L/1.6L/1.8L/2.0L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Compacto"]
+        },
+        {
+          "nombre": "Segunda Generación G (1998-2004)",
+          "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004],
+          "caracteristicas": ["Motor 1.2L/1.4L/1.6L/1.8L/2.0L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Compacto"]
+        },
+        {
+          "nombre": "Tercera Generación H (2004-2009)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009],
+          "caracteristicas": ["Motor 1.3L/1.4L/1.6L/1.8L/2.0L Turbo", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera", "Compacto"]
+        },
+        {
+          "nombre": "Cuarta Generación J (2009-2015)",
+          "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015],
+          "caracteristicas": ["Motor 1.4L/1.6L/1.7L/2.0L Turbo", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera", "Compacto"]
+        },
+        {
+          "nombre": "Quinta Generación K (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.0L/1.2L/1.4L Turbo", "Transmisión manual/automática 5-9 velocidades", "Tracción delantera", "Compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "corsa",
+      "nombre": "Corsa",
+      "slug": "corsa",
+      "años": [1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación A (1982-1993)",
+          "años": [1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993],
+          "caracteristicas": ["Motor 1.0L/1.2L/1.3L/1.4L/1.6L", "Transmisión manual 4-5 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Segunda Generación B (1993-2000)",
+          "años": [1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000],
+          "caracteristicas": ["Motor 1.0L/1.2L/1.4L/1.6L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Tercera Generación C (2000-2006)",
+          "años": [2000, 2001, 2002, 2003, 2004, 2005, 2006],
+          "caracteristicas": ["Motor 1.0L/1.2L/1.3L/1.4L/1.7L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Cuarta Generación D (2006-2014)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 1.0L/1.2L/1.3L/1.4L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Quinta Generación E (2014-2019)",
+          "años": [2014, 2015, 2016, 2017, 2018, 2019],
+          "caracteristicas": ["Motor 1.0L/1.2L/1.4L", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera", "Subcompacto"]
+        },
+        {
+          "nombre": "Sexta Generación F (2019-presente)",
+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.2L Turbo", "Transmisión manual/automática 5-8 velocidades", "Tracción delantera", "Subcompacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "vectra",
+      "nombre": "Vectra",
+      "slug": "vectra",
+      "años": [1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación A (1988-1995)",
+          "años": [1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995],
+          "caracteristicas": ["Motor 1.4L/1.6L/1.8L/2.0L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Segunda Generación B (1995-2002)",
+          "años": [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002],
+          "caracteristicas": ["Motor 1.6L/1.8L/2.0L/2.2L/2.5L V6", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Sedán mediano"]
+        },
+        {
+          "nombre": "Tercera Generación C (2002-2008)",
+          "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008],
+          "caracteristicas": ["Motor 1.6L/1.8L/1.9L/2.0L/2.2L/3.2L V6", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera", "Sedán mediano"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "insignia",
+      "nombre": "Insignia",
+      "slug": "insignia",
+      "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación A (2008-2017)",
+          "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 1.4L/1.6L/1.8L/2.0L Turbo", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera/AWD", "Sedán grande"]
+        },
+        {
+          "nombre": "Segunda Generación B (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L/1.6L/2.0L Turbo", "Transmisión manual/automática 6-9 velocidades", "Tracción delantera/AWD", "Sedán grande"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "meriva",
+      "nombre": "Meriva",
+      "slug": "meriva",
+      "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación A (2003-2010)",
+          "años": [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010],
+          "caracteristicas": ["Motor 1.3L/1.4L/1.6L/1.7L", "Transmisión manual/automática 5 velocidades", "Tracción delantera", "Monovolumen compacto"]
+        },
+        {
+          "nombre": "Segunda Generación B (2010-2017)",
+          "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 1.3L/1.4L/1.6L/1.7L", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera", "Monovolumen compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

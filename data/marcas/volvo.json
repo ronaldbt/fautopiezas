@@ -1,0 +1,158 @@
+{
+  "marca": {
+    "id": "volvo",
+    "nombre": "VOLVO",
+    "slug": "volvo",
+    "activa": true,
+    "popular": true
+  },
+  "modelos": [
+    {
+      "id": "s60",
+      "nombre": "S60",
+      "slug": "s60",
+      "años": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2000-2009)",
+          "años": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009],
+          "caracteristicas": ["Motor 2.0L/2.3L/2.4L/2.5L/3.0L", "Transmisión manual/automática 5 velocidades", "Tracción delantera/AWD", "Sedán compacto ejecutivo"]
+        },
+        {
+          "nombre": "Segunda Generación (2010-2018)",
+          "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 1.6L/2.0L/2.5L/3.0L", "Transmisión manual/automática 6 velocidades", "Tracción delantera/AWD", "Sedán compacto ejecutivo"]
+        },
+        {
+          "nombre": "Tercera Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.0L Hybrid", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "Sedán compacto ejecutivo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "s90",
+      "nombre": "S90",
+      "slug": "s90",
+      "años": [1996, 1997, 1998, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1996-1998)",
+          "años": [1996, 1997, 1998],
+          "caracteristicas": ["Motor 2.9L 6 cilindros", "Transmisión manual/automática 4 velocidades", "Tracción trasera", "Sedán de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.0L Hybrid", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "Sedán de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "xc60",
+      "nombre": "XC60",
+      "slug": "xc60",
+      "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2008-2017)",
+          "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+          "caracteristicas": ["Motor 2.0L/2.4L/2.5L/3.0L/3.2L", "Transmisión manual/automática 6 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.0L Hybrid", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "SUV compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "xc90",
+      "nombre": "XC90",
+      "slug": "xc90",
+      "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2002-2014)",
+          "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          "caracteristicas": ["Motor 2.5L/2.9L/3.2L/4.4L V8", "Transmisión manual/automática 5 velocidades", "Tracción delantera/AWD", "SUV grande"]
+        },
+        {
+          "nombre": "Segunda Generación (2015-presente)",
+          "años": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.0L Hybrid", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "SUV grande"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": true
+    },
+    {
+      "id": "v60",
+      "nombre": "V60",
+      "slug": "v60",
+      "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2010-2018)",
+          "años": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+          "caracteristicas": ["Motor 1.6L/2.0L/2.4L/2.5L/3.0L", "Transmisión manual/automática 6 velocidades", "Tracción delantera/AWD", "Wagon compacto"]
+        },
+        {
+          "nombre": "Segunda Generación (2018-presente)",
+          "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.0L Hybrid", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "Wagon compacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "v90",
+      "nombre": "V90",
+      "slug": "v90",
+      "años": [1996, 1997, 1998, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1996-1998)",
+          "años": [1996, 1997, 1998],
+          "caracteristicas": ["Motor 2.9L 6 cilindros", "Transmisión manual/automática 4 velocidades", "Tracción trasera", "Wagon de lujo"]
+        },
+        {
+          "nombre": "Segunda Generación (2016-presente)",
+          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.0L/2.0L Hybrid", "Transmisión automática 8 velocidades", "Tracción delantera/AWD", "Wagon de lujo"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    },
+    {
+      "id": "xc40",
+      "nombre": "XC40",
+      "slug": "xc40",
+      "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (2017-presente)",
+          "años": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 1.5L/2.0L/2.0L Hybrid/Eléctrico", "Transmisión manual/automática 8 velocidades", "Tracción delantera/AWD", "SUV subcompacto"]
+        }
+      ],
+      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "activa": true,
+      "popular": false
+    }
+  ]
+}

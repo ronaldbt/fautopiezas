@@ -60,6 +60,60 @@
       </div>
     </section>
 
+    <!-- Repuestos de Alta Gama -->
+    <section class="py-16 bg-blue-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">
+          Repuestos de Alta Gama - Difíciles de Encontrar en Chile
+        </h2>
+        <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+          Especializados en importación directa de repuestos para vehículos premium: <strong>Audi, BMW, Mercedes-Benz, Ford Raptor, Volvo, Porsche</strong> y más. 
+          Los conseguimos aunque no los tenga nadie más en Chile.
+        </p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
+            <div class="text-2xl mb-2">🏆</div>
+            <h3 class="font-bold text-sm text-blue-600 mb-1">Audi</h3>
+            <p class="text-xs text-gray-600">Repuestos premium</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
+            <div class="text-2xl mb-2">⭐</div>
+            <h3 class="font-bold text-sm text-blue-600 mb-1">BMW</h3>
+            <p class="text-xs text-gray-600">Piezas originales</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
+            <div class="text-2xl mb-2">💎</div>
+            <h3 class="font-bold text-sm text-blue-600 mb-1">Mercedes-Benz</h3>
+            <p class="text-xs text-gray-600">Alta calidad</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
+            <div class="text-2xl mb-2">🚙</div>
+            <h3 class="font-bold text-sm text-blue-600 mb-1">Ford Raptor</h3>
+            <p class="text-xs text-gray-600">Piezas especiales</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
+            <div class="text-2xl mb-2">🛡️</div>
+            <h3 class="font-bold text-sm text-blue-600 mb-1">Volvo</h3>
+            <p class="text-xs text-gray-600">Seguridad sueca</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
+            <div class="text-2xl mb-2">🏎️</div>
+            <h3 class="font-bold text-sm text-blue-600 mb-1">Porsche</h3>
+            <p class="text-xs text-gray-600">Rendimiento</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <div class="bg-orange-100 border border-orange-300 rounded-lg p-6 inline-block">
+            <h3 class="text-lg font-bold text-orange-800 mb-2">¿No encuentras el repuesto?</h3>
+            <p class="text-orange-700 mb-4">Si no está en stock, lo importamos especialmente para ti</p>
+            <p class="text-sm text-orange-600">✅ Conseguimos cualquier pieza • ⏱️ 7-14 días • 💰 Hasta 50% menos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Categorías de Repuestos -->
     <section class="py-16 bg-white">
       <div class="max-w-6xl mx-auto px-4">
@@ -143,6 +197,14 @@
               (parachoques, puertas, espejos, luces).
             </p>
             
+            <h4 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Repuestos de Alta Gama Difíciles de Encontrar</h4>
+            <p class="mb-4">
+              Especializados en <strong>repuestos Audi Chile</strong>, <strong>repuestos BMW Chile</strong>, <strong>repuestos Mercedes-Benz Chile</strong>, 
+              <strong>repuestos Ford Raptor Chile</strong>, <strong>repuestos Volvo Chile</strong>, <strong>repuestos Porsche Chile</strong>, 
+              <strong>repuestos Jaguar Chile</strong> y <strong>repuestos Land Rover Chile</strong>. Si no lo encuentra en stock tradicional, 
+              nosotros lo importamos directamente desde fábrica con hasta 50% de descuento.
+            </p>
+            
             <h4 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Cobertura Nacional</h4>
             <p class="mb-4">
               Realizamos envíos de <strong>autopartes a todo Chile</strong>: Santiago, Valparaíso, Viña del Mar, Concepción, 
@@ -159,6 +221,16 @@
                   <li>• Repuestos Chevrolet Chile</li>
                   <li>• Repuestos BMW Chile</li>
                   <li>• Repuestos Hyundai Chile</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-semibold text-gray-800 mb-2">Alta Gama:</h5>
+                <ul class="space-y-1 text-gray-600">
+                  <li>• Repuestos Audi Chile</li>
+                  <li>• Repuestos Mercedes-Benz Chile</li>
+                  <li>• Repuestos Ford Raptor Chile</li>
+                  <li>• Repuestos Volvo Chile</li>
+                  <li>• Repuestos Porsche Chile</li>
                 </ul>
               </div>
               <div>
@@ -236,7 +308,7 @@ useHead({
         "@context": "https://schema.org",
         "@type": "AutoPartsStore",
         "name": "AutoPiezas360 Chile",
-        "description": "Tienda de repuestos automotrices en Chile. Importación de autopartes de calidad para todas las marcas de vehículos.",
+        "description": "Importación de repuestos automotrices directo de fábrica con 50% de descuento. Entrega en 7 días a todo Chile. Más de 70 marcas disponibles.",
         "url": "https://autopiezas360.cl",
         "telephone": "+56979796841",
         "address": {
@@ -279,7 +351,14 @@ useHead({
           { "@type": "Brand", "name": "Nissan" },
           { "@type": "Brand", "name": "Chevrolet" },
           { "@type": "Brand", "name": "BMW" },
-          { "@type": "Brand", "name": "Hyundai" }
+          { "@type": "Brand", "name": "Hyundai" },
+          { "@type": "Brand", "name": "Audi" },
+          { "@type": "Brand", "name": "Mercedes-Benz" },
+          { "@type": "Brand", "name": "Ford" },
+          { "@type": "Brand", "name": "Volvo" },
+          { "@type": "Brand", "name": "Porsche" },
+          { "@type": "Brand", "name": "Jaguar" },
+          { "@type": "Brand", "name": "Land Rover" }
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
