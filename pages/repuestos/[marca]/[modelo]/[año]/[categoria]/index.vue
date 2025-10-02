@@ -20,119 +20,155 @@
           Repuestos {{ categoriaCapitalizada }} - {{ marcaCapitalizada }} {{ modeloCapitalizado }} {{ año }}
         </h1>
         <p class="text-gray-600 mt-2">
-          Repuestos de {{ categoriaCapitalizada.toLowerCase() }} originales para {{ marcaCapitalizada }} {{ modeloCapitalizado }} año {{ año }}
+          Repuestos originales {{ categoriaCapitalizada }} para {{ marcaCapitalizada }} {{ modeloCapitalizado }} año {{ año }}
         </p>
       </div>
     </div>
 
-    <!-- Botón para ver listado completo -->
-    <div class="max-w-6xl mx-auto px-4 py-8">
-      <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
-        <div class="flex items-center justify-between">
-          <div>
-            <h2 class="text-xl font-bold text-blue-800 mb-2">Ver Listado Completo de Repuestos</h2>
-            <p class="text-blue-600">Explora todos los repuestos de {{ categoriaCapitalizada }} disponibles para {{ marcaCapitalizada }} {{ modeloCapitalizado }} {{ año }}</p>
-          </div>
-          <NuxtLink 
-            :to="`/repuestos-listado?marca=${marca}&modelo=${modelo}&año=${año}&categoria=${categoria}`"
-            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-          >
-            Ver Listado Completo →
-          </NuxtLink>
-        </div>
-      </div>
-
-      <!-- Lista de repuestos destacados -->
-      <div class="mb-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">Repuestos Destacados</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div v-for="repuesto in repuestos" :key="repuesto.slug" 
-               class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6">
-            <NuxtLink :to="`/repuestos/${marca}/${modelo}/${año}/${categoria}/${repuesto.slug}`" class="block">
-              <h3 class="text-lg font-bold text-blue-600 mb-2">{{ repuesto.nombre }}</h3>
-              <p class="text-sm text-gray-600 mb-3">{{ repuesto.descripcion }}</p>
-              <div class="flex justify-between items-center mb-3">
-                <span class="text-xl font-bold text-green-600">${{ repuesto.precio.toLocaleString() }}</span>
-                <span v-if="repuesto.stock" class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">En Stock</span>
-                <span v-else class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">Agotado</span>
-              </div>
-              <div class="text-xs text-gray-500">
-                Ver detalles →
-              </div>
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sección de listado estilo RockAuto -->
-      <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-        <div class="flex items-center justify-between mb-6">
-          <div>
-            <h2 class="text-2xl font-bold text-gray-800">Listado Completo de Repuestos</h2>
-            <p class="text-gray-600 mt-1">Vista estilo RockAuto con filtros avanzados</p>
-          </div>
-          <NuxtLink 
-            :to="`/repuestos-listado?marca=${marca}&modelo=${modelo}&año=${año}&categoria=${categoria}`"
-            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-          >
-            Ver Listado Completo →
-          </NuxtLink>
-        </div>
-        
-        <!-- Vista previa del listado -->
-        <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
-          <div class="flex gap-4 mb-4">
-            <!-- Sidebar preview -->
-            <div class="w-48 bg-white rounded border p-3">
-              <h4 class="font-semibold text-sm mb-2">Filtros</h4>
-              <div class="space-y-1 text-xs">
-                <div>✓ Marca del Repuesto</div>
-                <div>✓ Rango de Precio</div>
-                <div>✓ Disponibilidad</div>
-              </div>
-            </div>
-            <!-- Lista preview -->
-            <div class="flex-1 bg-white rounded border p-3">
-              <h4 class="font-semibold text-sm mb-2">{{ repuestos.length }} repuestos encontrados</h4>
-              <div class="space-y-2">
-                <div v-for="repuesto in repuestos.slice(0, 3)" :key="repuesto.slug" 
-                     class="flex justify-between items-center text-xs border-b pb-1">
-                  <span>{{ repuesto.nombre }}</span>
-                  <span class="font-bold text-green-600">${{ repuesto.precio.toLocaleString() }}</span>
-                </div>
-                <div class="text-xs text-gray-500">... y {{ repuestos.length - 3 }} más</div>
-              </div>
-            </div>
-          </div>
-          <p class="text-xs text-gray-600 text-center">
-            Vista completa con filtros avanzados, ordenamiento y paginación
-          </p>
+    <!-- Loading State -->
+    <div v-if="loading" class="max-w-6xl mx-auto px-4 py-8">
+      <div class="flex items-center justify-center h-64">
+        <div class="text-center">
+          <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p class="text-gray-600">Cargando repuestos...</p>
         </div>
       </div>
     </div>
 
-    <!-- Información de la categoría -->
+    <!-- Error State -->
+    <div v-else-if="error" class="max-w-6xl mx-auto px-4 py-8">
+      <div class="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
+        <div class="text-red-600 text-6xl mb-4">⚠️</div>
+        <h2 class="text-xl font-bold text-red-800 mb-2">Error al cargar los repuestos</h2>
+        <p class="text-red-600">{{ error }}</p>
+      </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div v-else class="max-w-6xl mx-auto px-4 py-8">
+      <div class="flex gap-8">
+        <!-- Sidebar de filtros -->
+        <div class="w-80 flex-shrink-0">
+          <FiltrosRepuestos 
+            :subcategorias="subcategorias"
+            :marcas-repuestos="marcasRepuestos"
+            @filtros-aplicados="aplicarFiltros"
+            @filtros-limpios="limpiarFiltros"
+          />
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="flex-1">
+          <!-- Encabezado de resultados -->
+          <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="text-xl font-bold text-gray-800">
+                  {{ repuestos.length }} repuestos encontrados
+                </h2>
+                <p class="text-gray-600 mt-1">
+                  {{ categoriaCapitalizada }} para {{ marcaCapitalizada }} {{ modeloCapitalizado }} {{ año }}
+                </p>
+              </div>
+              <div class="flex items-center space-x-4">
+                <select 
+                  v-model="ordenamiento" 
+                  @change="aplicarFiltros"
+                  class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="relevancia">Ordenar por relevancia</option>
+                  <option value="precio">Precio (menor a mayor)</option>
+                  <option value="precio-desc">Precio (mayor a menor)</option>
+                  <option value="nombre">Nombre (A-Z)</option>
+                  <option value="fecha">Más recientes</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lista de repuestos -->
+          <div v-if="repuestos.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <RepuestoCard 
+              v-for="repuesto in repuestos" 
+              :key="repuesto.id"
+              :repuesto="repuesto"
+            />
+          </div>
+
+          <!-- Sin resultados -->
+          <div v-else class="bg-white rounded-lg shadow-md p-12 text-center">
+            <div class="text-6xl mb-4">🔍</div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">No se encontraron repuestos</h3>
+            <p class="text-gray-600 mb-4">
+              No hay repuestos {{ categoriaCapitalizada }} disponibles para {{ marcaCapitalizada }} {{ modeloCapitalizado }} {{ año }}
+            </p>
+            <NuxtLink 
+              :to="`/repuestos/${marca}/${modelo}/${año}`"
+              class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Ver otras categorías
+            </NuxtLink>
+          </div>
+
+          <!-- Paginación -->
+          <div v-if="totalPaginas > 1" class="mt-8 flex justify-center">
+            <nav class="flex items-center space-x-2">
+              <button 
+                @click="cambiarPagina(paginaActual - 1)"
+                :disabled="paginaActual === 1"
+                class="px-3 py-2 border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Anterior
+              </button>
+              
+              <button 
+                v-for="pagina in paginasVisibles" 
+                :key="pagina"
+                @click="cambiarPagina(pagina)"
+                :class="[
+                  'px-3 py-2 border rounded-md',
+                  pagina === paginaActual 
+                    ? 'bg-blue-600 text-white border-blue-600' 
+                    : 'border-gray-300 hover:bg-gray-50'
+                ]"
+              >
+                {{ pagina }}
+              </button>
+              
+              <button 
+                @click="cambiarPagina(paginaActual + 1)"
+                :disabled="paginaActual === totalPaginas"
+                class="px-3 py-2 border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Siguiente
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO Content -->
     <section class="bg-white py-12">
       <div class="max-w-4xl mx-auto px-4">
         <h2 class="text-2xl font-bold text-gray-800 mb-6">
-          Repuestos {{ categoriaCapitalizada }} {{ marcaCapitalizada }} {{ modeloCapitalizado }} {{ año }}
+          Repuestos {{ categoriaCapitalizada }} {{ marcaCapitalizada }} {{ modeloCapitalizado }} {{ año }} - Especialistas
         </h2>
         <div class="prose max-w-none">
           <p class="text-gray-600 mb-4">
-            En FAutopiezas Chile ofrecemos los mejores repuestos de {{ categoriaCapitalizada.toLowerCase() }} 
-            para {{ marcaCapitalizada }} {{ modeloCapitalizado }} año {{ año }}. Todos nuestros repuestos son 100% originales 
-            y cuentan con garantía oficial del fabricante.
+            En FAutopiezas Chile somos especialistas en repuestos {{ categoriaCapitalizada }} para {{ marcaCapitalizada }} {{ modeloCapitalizado }} año {{ año }}. 
+            Contamos con el catálogo más completo de autopartes originales específicas para esta categoría.
           </p>
           <p class="text-gray-600 mb-4">
-            Nuestro catálogo de repuestos de {{ categoriaCapitalizada.toLowerCase() }} incluye todas las piezas necesarias 
-            para mantener tu {{ marcaCapitalizada }} {{ modeloCapitalizado }} {{ año }} en perfecto estado.
+            Todos nuestros repuestos {{ categoriaCapitalizada }} para {{ marcaCapitalizada }} {{ modeloCapitalizado }} {{ año }} son 100% originales, 
+            cuentan con garantía oficial del fabricante y están disponibles con entrega inmediata en Santiago y regiones.
           </p>
           <ul class="list-disc list-inside text-gray-600 space-y-2">
-            <li>Repuestos {{ categoriaCapitalizada.toLowerCase() }} originales {{ marcaCapitalizada }}</li>
-            <li>Compatibilidad garantizada para {{ modeloCapitalizado }} {{ año }}</li>
-            <li>Stock disponible con entrega inmediata</li>
-            <li>Garantía oficial del fabricante</li>
+            <li>Repuestos {{ categoriaCapitalizada }} específicos para {{ marcaCapitalizada }} {{ modeloCapitalizado }} {{ año }}</li>
+            <li>Compatibilidad 100% garantizada</li>
+            <li>Stock disponible en tiempo real</li>
             <li>Instalación por técnicos certificados</li>
+            <li>Garantía extendida en todos los repuestos</li>
           </ul>
         </div>
       </div>
@@ -141,6 +177,8 @@
 </template>
 
 <script setup>
+import { ref, computed, onMounted, watch } from 'vue'
+
 // Obtener parámetros de la URL
 const route = useRoute()
 const marca = route.params.marca
@@ -153,55 +191,109 @@ const marcaCapitalizada = marca.charAt(0).toUpperCase() + marca.slice(1)
 const modeloCapitalizado = modelo.charAt(0).toUpperCase() + modelo.slice(1)
 const categoriaCapitalizada = categoria.charAt(0).toUpperCase() + categoria.slice(1)
 
-// Repuestos según la categoría
-const repuestosMotor = [
-  { nombre: 'Cigueñal', slug: 'ciguenal', descripcion: 'Cigueñal original', precio: 450000, stock: true },
-  { nombre: 'Pistones', slug: 'pistones', descripcion: 'Juego de pistones', precio: 180000, stock: true },
-  { nombre: 'Válvulas', slug: 'valvulas', descripcion: 'Válvulas de admisión', precio: 85000, stock: true },
-  { nombre: 'Filtro de Aire', slug: 'filtro-aire', descripcion: 'Filtro de aire original', precio: 35000, stock: true },
-  { nombre: 'Bomba de Aceite', slug: 'bomba-aceite', descripcion: 'Bomba de aceite', precio: 120000, stock: false },
-  { nombre: 'Termostato', slug: 'termostato', descripcion: 'Termostato original', precio: 45000, stock: true }
-]
+// Variables reactivas
+const repuestos = ref([])
+const loading = ref(true)
+const error = ref(null)
+const filtros = ref({})
+const ordenamiento = ref('relevancia')
+const paginaActual = ref(1)
+const repuestosPorPagina = 12
 
-const repuestosFrenos = [
-  { nombre: 'Pastillas Freno Delanteras', slug: 'pastillas-freno-delanteras', descripcion: 'Pastillas originales', precio: 85000, stock: true },
-  { nombre: 'Discos de Freno', slug: 'discos-freno', descripcion: 'Discos delanteros', precio: 120000, stock: true },
-  { nombre: 'Líquido de Frenos', slug: 'liquido-frenos', descripcion: 'Líquido DOT 4', precio: 15000, stock: true },
-  { nombre: 'Pastillas Freno Traseras', slug: 'pastillas-freno-traseras', descripcion: 'Pastillas traseras', precio: 65000, stock: true },
-  { nombre: 'Cable de Freno', slug: 'cable-freno', descripcion: 'Cable de freno de mano', precio: 35000, stock: true }
-]
+// Composables
+const { getRepuestos } = useRepuestos()
+const { getCategoriaBySlug } = useVehiculos()
 
-const repuestosSuspension = [
-  { nombre: 'Amortiguadores Delanteros', slug: 'amortiguadores-delanteros', descripcion: 'Amortiguadores originales', precio: 180000, stock: true },
-  { nombre: 'Amortiguadores Traseros', slug: 'amortiguadores-traseros', descripcion: 'Amortiguadores traseros', precio: 160000, stock: true },
-  { nombre: 'Muelles', slug: 'muelles', descripcion: 'Muelles de suspensión', precio: 95000, stock: true },
-  { nombre: 'Brazos de Suspensión', slug: 'brazos-suspension', descripcion: 'Brazos inferiores', precio: 125000, stock: true },
-  { nombre: 'Rótulas', slug: 'rotulas', descripcion: 'Rótulas de dirección', precio: 75000, stock: true }
-]
+    // Obtener información de la categoría
+    const categoriaData = getCategoriaBySlug(String(categoria))
+const subcategorias = categoriaData?.subcategorias || []
 
-// Seleccionar repuestos según la categoría
-let repuestos = []
-if (categoria === 'motor') {
-  repuestos = repuestosMotor
-} else if (categoria === 'frenos') {
-  repuestos = repuestosFrenos
-} else if (categoria === 'suspension') {
-  repuestos = repuestosSuspension
-} else {
-  // Repuestos genéricos para otras categorías
-  repuestos = [
-    { nombre: 'Repuesto A', slug: 'repuesto-a', descripcion: 'Descripción del repuesto', precio: 50000, stock: true },
-    { nombre: 'Repuesto B', slug: 'repuesto-b', descripcion: 'Descripción del repuesto', precio: 75000, stock: true },
-    { nombre: 'Repuesto C', slug: 'repuesto-c', descripcion: 'Descripción del repuesto', precio: 100000, stock: false }
-  ]
+// Obtener marcas de repuestos únicas
+const marcasRepuestos = ref([])
+
+// Computed para paginación
+const totalPaginas = computed(() => Math.ceil(repuestos.value.length / repuestosPorPagina))
+
+const paginasVisibles = computed(() => {
+  const total = totalPaginas.value
+  const actual = paginaActual.value
+  const paginas = []
+  
+  // Mostrar máximo 5 páginas
+  const inicio = Math.max(1, actual - 2)
+  const fin = Math.min(total, actual + 2)
+  
+  for (let i = inicio; i <= fin; i++) {
+    paginas.push(i)
+  }
+  
+  return paginas
+})
+
+// Cargar repuestos
+const cargarRepuestos = async () => {
+  try {
+    loading.value = true
+    error.value = null
+    
+    const repuestosEncontrados = await getRepuestos({
+      marca: String(marca),
+      modelo: String(modelo),
+      anio: parseInt(String(año)),
+      categoria: String(categoria),
+      ...filtros.value,
+      ordenarPor: ordenamiento.value === 'precio-desc' ? 'precio' : ordenamiento.value,
+      orden: ordenamiento.value === 'precio-desc' ? 'desc' : 'asc'
+    })
+    
+    repuestos.value = repuestosEncontrados
+    
+    // Obtener marcas únicas de repuestos
+    const marcas = [...new Set(repuestosEncontrados.map(r => r.marcaRepuesto).filter(Boolean))]
+    marcasRepuestos.value = marcas
+    
+  } catch (err) {
+    console.error('Error cargando repuestos:', err)
+    error.value = 'Error al cargar los repuestos'
+  } finally {
+    loading.value = false
+  }
 }
 
-// SEO Meta dinámico por categoría
+// Aplicar filtros
+const aplicarFiltros = (nuevosFiltros) => {
+  filtros.value = { ...filtros.value, ...nuevosFiltros }
+  paginaActual.value = 1
+  cargarRepuestos()
+}
+
+// Limpiar filtros
+const limpiarFiltros = () => {
+  filtros.value = {}
+  paginaActual.value = 1
+  cargarRepuestos()
+}
+
+// Cambiar página
+const cambiarPagina = (pagina) => {
+  if (pagina >= 1 && pagina <= totalPaginas.value) {
+    paginaActual.value = pagina
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+}
+
+// Cargar datos iniciales
+onMounted(() => {
+  cargarRepuestos()
+})
+
+// SEO Meta dinámico
 useHead({
   title: `Repuestos ${categoriaCapitalizada} ${marcaCapitalizada} ${modeloCapitalizado} ${año} - Originales | FAutopiezas`,
   meta: [
-    { name: 'description', content: `Repuestos ${categoriaCapitalizada.toLowerCase()} originales ${marcaCapitalizada} ${modeloCapitalizado} ${año} en Chile. Stock inmediato, garantía extendida, envío gratis. Especialistas en ${categoriaCapitalizada.toLowerCase()} ${marcaCapitalizada}.` },
-    { name: 'keywords', content: `repuestos ${categoria} ${marca} ${modelo} ${año}, autopartes ${categoria} ${marca} ${modelo} ${año}, repuestos originales ${categoria} ${marca}, ${categoria} ${marca} ${modelo} ${año}` }
+    { name: 'description', content: `Repuestos originales ${categoriaCapitalizada} para ${marcaCapitalizada} ${modeloCapitalizado} ${año} en Chile. Stock inmediato, garantía extendida, envío gratis. Especialistas en ${categoriaCapitalizada} ${marcaCapitalizada} ${modeloCapitalizado}.` },
+    { name: 'keywords', content: `repuestos ${categoria} ${marca} ${modelo} ${año}, ${categoria} ${marca} ${modelo}, repuestos originales ${categoria} ${marca} ${modelo} ${año}, ${marca} ${modelo} ${año} ${categoria} repuestos` }
   ]
 })
 </script>

@@ -18,7 +18,7 @@ export interface Repuesto {
   id?: string
   marca: string
   modelo: string
-  año: number
+  anio: number
   categoria: string
   subcategoria?: string
   nombre: string
@@ -58,7 +58,7 @@ export interface Repuesto {
 export interface FiltrosRepuestos {
   marca?: string
   modelo?: string
-  año?: number
+  anio?: number
   categoria?: string
   subcategoria?: string
   precioMin?: number
@@ -92,8 +92,8 @@ export const useRepuestos = () => {
       if (filtros.modelo) {
         q = query(q, where('modelo', '==', filtros.modelo))
       }
-      if (filtros.año) {
-        q = query(q, where('año', '==', filtros.año))
+      if (filtros.anio) {
+        q = query(q, where('anio', '==', filtros.anio))
       }
       if (filtros.categoria) {
         q = query(q, where('categoria', '==', filtros.categoria))
@@ -281,7 +281,7 @@ export const useRepuestos = () => {
     return await getRepuestos({
       marca: repuesto.marca,
       modelo: repuesto.modelo,
-      año: repuesto.año,
+      anio: repuesto.anio,
       categoria: repuesto.categoria,
       limite
     })

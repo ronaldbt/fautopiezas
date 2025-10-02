@@ -1,103 +1,36 @@
 <template>
-  <div>
-    <!-- Breadcrumbs -->
-    <div class="bg-white border-b">
-      <div class="max-w-6xl mx-auto px-4">
-        <Breadcrumbs :items="breadcrumbItems" />
-      </div>
-    </div>
+  <div class="pt-32">
+    <!-- Header fijo -->
+    <Header />
 
-    <!-- Hero Section FAutopiezas -->
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24">
       <div class="max-w-6xl mx-auto px-4 text-center">
         <h1 class="text-5xl font-bold mb-6">
-          Repuestos para Autos en Chile - FAutopiezas
+          Repuestos para Autos en Chile - Autopiezas360
         </h1>
         <p class="text-xl mb-4">
-          <strong>Stock inmediato</strong> de repuestos originales para Toyota, Nissan, Chevrolet, BMW, Hyundai y 74+ marcas. 
+          <strong>Importación de repuestos</strong> para Toyota, Nissan, Chevrolet, BMW, Hyundai y 74+ marcas. 
         </p>
         <p class="text-lg mb-8 opacity-90">
-          Envío gratis en compras sobre $50.000 • Garantía extendida • Los mejores precios de Chile
+          🚚 En 7 días están en tu casa • Garantía extendida • Los mejores precios de Chile
         </p>
-        <!-- Búsqueda por Vehículo Específico -->
-        <div class="bg-white rounded-xl p-6 mx-auto max-w-4xl mb-8 shadow-lg">
+        <!-- Selector de Vehículo Mejorado -->
+        <div class="bg-white rounded-xl p-6 mx-auto max-w-6xl mb-8 shadow-lg">
           <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">🔍 Buscar Repuestos por Vehículo</h2>
-          
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
-            <!-- Selector de Marca -->
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">Marca</label>
-              <select 
-                v-model="selectedMarca"
-                @change="onMarcaChange"
-                class="w-full px-3 py-2 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900 shadow-sm hover:border-gray-400 transition-colors"
-              >
-                <option value="">Seleccionar marca</option>
-                <option v-for="marca in searchMarcas" :key="marca.slug" :value="marca.slug">
-                  {{ marca.nombre }}
-                </option>
-              </select>
-            </div>
-            
-            <!-- Selector de Modelo -->
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">Modelo</label>
-              <select 
-                v-model="selectedModelo"
-                @change="onModeloChange"
-                :disabled="!selectedMarca"
-                class="w-full px-3 py-2 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900 shadow-sm hover:border-gray-400 transition-colors disabled:bg-gray-100 disabled:text-gray-500 disabled:border-gray-200 disabled:cursor-not-allowed"
-              >
-                <option value="">Seleccionar modelo</option>
-                <option v-for="modelo in availableModelos" :key="modelo" :value="modelo">
-                  {{ modelo }}
-                </option>
-              </select>
-            </div>
-            
-            <!-- Selector de Año -->
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">Año</label>
-              <select 
-                v-model="selectedAno"
-                :disabled="!selectedModelo"
-                class="w-full px-3 py-2 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900 shadow-sm hover:border-gray-400 transition-colors disabled:bg-gray-100 disabled:text-gray-500 disabled:border-gray-200 disabled:cursor-not-allowed"
-              >
-                <option value="">Seleccionar año</option>
-                <option v-for="ano in availableAnos" :key="ano" :value="ano">
-                  {{ ano }}
-                </option>
-              </select>
-            </div>
-            
-            <!-- Botón de Búsqueda -->
-            <div class="flex items-end">
-              <button 
-                @click="buscarRepuestos"
-                :disabled="!selectedMarca || !selectedModelo || !selectedAno"
-                class="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-semibold py-2 px-4 rounded-md transition-colors"
-              >
-                Buscar Repuestos
-              </button>
-            </div>
-          </div>
-          
-          <!-- Mensaje de resultado -->
-          <div v-if="searchMessage" class="text-center text-sm text-gray-600 mb-4">
-            {{ searchMessage }}
-          </div>
+          <SelectorVehiculo />
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <NuxtLink to="/repuestos" class="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
             Ver Catálogo Completo
           </NuxtLink>
-          <NuxtLink to="/repuestos/toyota" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-            Repuestos Toyota
-          </NuxtLink>
         </div>
       </div>
     </section>
+
+    <!-- Contenido principal -->
+    <main>
 
     <!-- Marcas Principales -->
     <section class="py-16 bg-gray-50">
@@ -152,31 +85,31 @@
     <section class="py-16 bg-gray-100">
       <div class="max-w-4xl mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
-          ¿Por Qué Elegir FAutopiezas Chile?
+          ¿Por Qué Elegir AutoPiezas360 Chile?
         </h2>
         
         <div class="grid md:grid-cols-2 gap-8 mb-12">
           <div class="bg-white rounded-lg p-6 shadow-md">
-            <h3 class="text-xl font-bold text-blue-600 mb-4">✅ Repuestos 100% Originales</h3>
+            <h3 class="text-xl font-bold text-blue-600 mb-4">✅ Repuestos de Calidad</h3>
             <p class="text-gray-700">
               Trabajamos directamente con distribuidores oficiales de Toyota, Nissan, Chevrolet, BMW, Hyundai y más de 70 marcas. 
-              Todos nuestros repuestos son originales con garantía de fábrica.
+              Todos nuestros repuestos tienen garantía de fábrica.
             </p>
           </div>
           
           <div class="bg-white rounded-lg p-6 shadow-md">
             <h3 class="text-xl font-bold text-blue-600 mb-4">🚚 Envío Gratis a Todo Chile</h3>
             <p class="text-gray-700">
-              Envío gratuito en compras superiores a $50.000 pesos. Despacho el mismo día en Santiago, 
+              Despacho el mismo día en Santiago, 
               y entrega en 24-48 horas en regiones. Cobertura desde Arica a Punta Arenas.
             </p>
           </div>
           
           <div class="bg-white rounded-lg p-6 shadow-md">
-            <h3 class="text-xl font-bold text-blue-600 mb-4">📦 Stock Inmediato</h3>
+            <h3 class="text-xl font-bold text-blue-600 mb-4">📦 Importación de Repuestos</h3>
             <p class="text-gray-700">
-              Mantenemos inventario permanente de más de 50.000 referencias diferentes. 
-              Los repuestos más solicitados siempre disponibles para entrega inmediata.
+              Nosotros importamos repuestos de la mejor calidad y llegan en 7 días, te puedes ahorrar hasta un 50%. 
+              Más de 50.000 referencias diferentes disponibles.
             </p>
           </div>
           
@@ -195,7 +128,7 @@
           
           <div class="prose max-w-none text-gray-700">
             <p class="mb-4">
-              <strong>FAutopiezas Chile</strong> es la tienda de repuestos automotrices líder en Chile, especializada en autopartes originales 
+              <strong>AutoPiezas360 Chile</strong> es la tienda de repuestos automotrices líder en Chile, especializada en autopartes de calidad 
               para todas las marcas de vehículos. Nuestro catálogo incluye repuestos para <strong>Toyota Chile</strong>, 
               <strong>Nissan Chile</strong>, <strong>Chevrolet Chile</strong>, <strong>BMW Chile</strong>, <strong>Hyundai Chile</strong>, 
               <strong>Ford Chile</strong>, <strong>Volkswagen Chile</strong>, <strong>Honda Chile</strong>, <strong>Mazda Chile</strong>, 
@@ -241,11 +174,11 @@
               <div>
                 <h5 class="font-semibold text-gray-800 mb-2">Servicios:</h5>
                 <ul class="space-y-1 text-gray-600">
-                  <li>• Envío Gratis sobre $50.000</li>
+                  <li>• Envío Gratis a todo Chile</li>
                   <li>• Entrega en 24-48 horas</li>
                   <li>• Garantía hasta 12 meses</li>
                   <li>• Asesoría técnica especializada</li>
-                  <li>• Repuestos 100% originales</li>
+                  <li>• Repuestos de calidad garantizada</li>
                 </ul>
               </div>
             </div>
@@ -253,6 +186,11 @@
         </div>
       </div>
     </section>
+
+    </main>
+
+    <!-- Botón flotante de WhatsApp -->
+    <WhatsAppFloating />
   </div>
 </template>
 
@@ -281,71 +219,14 @@ const categorias = [
   { nombre: 'Iluminación', slug: 'iluminacion', icono: '💡', descripcion: 'Focos, faros, intermitentes' }
 ]
 
-// Variables reactivas para búsqueda
-const selectedMarca = ref('')
-const selectedModelo = ref('')
-const selectedAno = ref('')
+// Variables reactivas para búsqueda (simplificadas)
 const searchMessage = ref('')
-
-// Usar todas las marcas para búsqueda
-const searchMarcas = marcasPrincipales
-
-// Años disponibles (2000-2024)
-const availableAnos = Array.from({length: 25}, (_, i) => 2024 - i)
-
-// Computed para modelos disponibles según marca seleccionada
-const availableModelos = ref([])
-
-// Cargar modelos cuando se selecciona una marca
-const onMarcaChange = async () => {
-  selectedModelo.value = ''
-  selectedAno.value = ''
-  searchMessage.value = ''
-  
-  if (selectedMarca.value) {
-    try {
-      const modelos = await getModelosByMarca(selectedMarca.value)
-      availableModelos.value = modelos.map(modelo => modelo.nombre)
-    } catch (error) {
-      console.error('Error cargando modelos:', error)
-      availableModelos.value = []
-    }
-  } else {
-    availableModelos.value = []
-  }
-}
-
-// Funciones de manejo de búsqueda
-
-const onModeloChange = () => {
-  selectedAno.value = ''
-  searchMessage.value = ''
-}
-
-const buscarRepuestos = () => {
-  if (selectedMarca.value && selectedModelo.value && selectedAno.value) {
-    searchMessage.value = `Buscando repuestos para ${selectedMarca.value.toUpperCase()} ${selectedModelo.value} ${selectedAno.value}...`
-    
-    // Simular búsqueda y redirigir
-    setTimeout(() => {
-      // Convertir nombre del modelo a slug
-      const modeloSlug = selectedModelo.value.toLowerCase().replace(/\s+/g, '-')
-      const url = `/repuestos/${selectedMarca.value}/${modeloSlug}/${selectedAno.value}`
-      navigateTo(url)
-    }, 1000)
-  }
-}
-
-// Breadcrumbs para homepage
-const breadcrumbItems = [
-  { name: 'Repuestos para Autos', url: '/', isLast: true }
-]
 
 // SEO Meta para homepage
 useHead({
-  title: 'FAutopiezas Chile - Repuestos para Autos | Stock Inmediato',
+  title: 'AutoPiezas360 Chile - Repuestos para Autos | Importación de Repuestos',
   meta: [
-    { name: 'description', content: 'Repuestos originales Toyota, Nissan, Chevrolet, BMW en Chile. Stock inmediato, envío gratis, garantía extendida. ¡Los mejores precios del mercado!' },
+    { name: 'description', content: 'Repuestos Toyota, Nissan, Chevrolet, BMW en Chile. Importación de repuestos, envío gratis, garantía extendida. ¡Los mejores precios del mercado!' },
     { name: 'keywords', content: 'repuestos autos chile, autopartes chile, repuestos toyota chile, repuestos nissan chile, repuestos chevrolet chile, repuestos bmw chile' }
   ],
   script: [
@@ -354,13 +235,13 @@ useHead({
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "AutoPartsStore",
-        "name": "FAutopiezas Chile",
-        "description": "Tienda de repuestos automotrices en Chile. Stock inmediato de autopartes originales para todas las marcas de vehículos.",
-        "url": "https://fautopiezas.cl",
-        "telephone": "+56-2-1234-5678",
+        "name": "AutoPiezas360 Chile",
+        "description": "Tienda de repuestos automotrices en Chile. Importación de autopartes de calidad para todas las marcas de vehículos.",
+        "url": "https://autopiezas360.cl",
+        "telephone": "+56979796841",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Av. Providencia 1234",
+          "streetAddress": "Santiago de Chile",
           "addressLocality": "Santiago",
           "addressRegion": "Región Metropolitana",
           "postalCode": "7500000",
@@ -402,7 +283,7 @@ useHead({
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Catálogo de Repuestos FAutopiezas",
+          "name": "Catálogo de Repuestos AutoPiezas360",
           "itemListElement": [
             {
               "@type": "Offer",

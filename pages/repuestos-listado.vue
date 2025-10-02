@@ -28,7 +28,7 @@
     </div>
 
     <!-- Layout principal con sidebar y listado -->
-    <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="max-w-7xl mx-auto px-4 py-4">
       <div class="flex gap-8">
         <!-- Sidebar de filtros -->
         <div class="w-80 flex-shrink-0">
@@ -295,6 +295,9 @@ useHead({
   ]
 })
 </script>
+
+
+
 
 
 

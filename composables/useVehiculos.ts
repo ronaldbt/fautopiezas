@@ -53,8 +53,10 @@ export const useVehiculos = () => {
   // Obtener modelos por marca (carga dinámica)
   const getModelosByMarca = async (marcaSlug: string): Promise<Modelo[]> => {
     try {
-      const { data } = await $fetch(`/data/marcas/${marcaSlug}.json`)
-      return data.modelos.filter((modelo: Modelo) => modelo.activa)
+      // Importar dinámicamente el archivo JSON de la marca
+      const marcaData = await import(`~/data/marcas/${marcaSlug}.json`)
+      const marcaInfo = marcaData.default || marcaData
+      return marcaInfo.modelos?.filter((modelo: Modelo) => modelo.activa) || []
     } catch (error) {
       console.error(`Error cargando modelos de ${marcaSlug}:`, error)
       return []

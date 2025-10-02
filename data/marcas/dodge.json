@@ -2,260 +2,105 @@
   "marca": {
     "id": "dodge",
     "nombre": "DODGE",
-+    "slug": "dodge",
-+    "activa": true,
-+    "popular": false
-+  },
-+  "modelos": [
-+    {
-+      "id": "challenger",
-+      "nombre": "Challenger",
-+      "slug": "challenger",
-+      "años": [1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-+      "generaciones": [
-+        {
-+          "nombre": "Primera Generación (1970-1974)",
-+          "años": [1970, 1971, 1972, 1973, 1974],
-+          "caracteristicas": ["Motor 3.2L/3.7L/5.2L/5.9L/6.3L/7.0L V8", "Transmisión manual 3 velocidades/automática 3 velocidades", "Tracción trasera", "Coupé deportivo"]
-+        },
-+        {
-+          "nombre": "Segunda Generación (1978-1983)",
-+          "años": [1978, 1979, 1980, 1981, 1982, 1983],
-+          "caracteristicas": ["Motor 1.6L/2.2L/2.6L", "Transmisión manual 4 velocidades/automática 3 velocidades", "Tracción delantera", "Coupé deportivo"]
-+        },
-+        {
-+          "nombre": "Tercera Generación (2008-presente)",
-+          "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-+          "caracteristicas": ["Motor 3.6L V6/5.7L V8/6.1L V8/6.2L V8/6.4L V8", "Transmisión manual 6 velocidades/automática 8 velocidades", "Tracción trasera/AWD", "Coupé deportivo"]
-+        }
-+      ],
-+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
-+      "activa": true
-+    },
-+    {
-+      "id": "charger",
-+      "nombre": "Charger",
-+      "slug": "charger",
-+      "años": [1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-+      "generaciones": [
-+        {
-+          "nombre": "Primera Generación (1966-1967)",
-+          "años": [1966, 1967],
-+          "caracteristicas": ["Motor 3.7L/4.5L/5.2L/5.9L/6.3L/7.0L V8", "Transmisión manual 3 velocidades/automática 3 velocidades", "Tracción trasera", "Sedán deportivo"]
-+        },
-+        {
-+          "nombre": "Segunda Generación (1968-1970)",
-+          "años": [1968, 1969, 1970],
-+          "caracteristicas": ["Motor 3.7L/4.5L/5.2L/5.9L/6.3L/7.0L V8", "Transmisión manual 3 velocidades/automática 3 velocidades", "Tracción trasera", "Sedán deportivo"]
-+        },
-+        {
-+          "nombre": "Tercera Generación (1971-1974)",
-+          "años": [1971, 1972, 1973, 1974],
-+          "caracteristicas": ["Motor 3.7L/4.5L/5.2L/5.9L/6.3L/7.0L V8", "Transmisión manual 3 velocidades/automática 3 velocidades", "Tracción trasera", "Sedán deportivo"]
-+        },
-+        {
-+          "nombre": "Cuarta Generación (1975-1978)",
-+          "años": [1975, 1976, 1977, 1978],
-+          "caracteristicas": ["Motor 3.7L/4.5L/5.2L/5.9L/6.3L V8", "Transmisión manual 3 velocidades/automática 3 velocidades", "Tracción trasera", "Sedán deportivo"]
-+        },
-+        {
-+          "nombre": "Quinta Generación (1982-1987)",
-+          "años": [1982, 1983, 1984, 1985, 1986, 1987],
-+          "caracteristicas": ["Motor 2.2L/2.6L/3.7L V6", "Transmisión manual 4 velocidades/automática 3 velocidades", "Tracción delantera", "Sedán deportivo"]
-+        },
-+        {
-+          "nombre": "Sexta Generación (2006-presente)",
-+          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-+          "caracteristicas": ["Motor 2.7L V6/3.5L V6/3.6L V6/5.7L V8/6.1L V8/6.2L V8/6.4L V8", "Transmisión manual 6 velocidades/automática 8 velocidades", "Tracción trasera/AWD", "Sedán deportivo"]
-+        }
-+      ],
-+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
-+      "activa": true
-+    },
-+    {
-+      "id": "durango",
-+      "nombre": "Durango",
-+      "slug": "durango",
-+      "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-+      "generaciones": [
-+        {
-+          "nombre": "Primera Generación (1998-2003)",
-+          "años": [1998, 1999, 2000, 2001, 2002, 2003],
-+          "caracteristicas": ["Motor 3.9L V6/5.2L V8/5.9L V8", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción trasera/AWD", "SUV grande"]
-+        },
-+        {
-+          "nombre": "Segunda Generación (2004-2009)",
-+          "años": [2004, 2005, 2006, 2007, 2008, 2009],
-+          "caracteristicas": ["Motor 3.7L V6/4.7L V8/5.7L V8", "Transmisión manual 6 velocidades/automática 5 velocidades", "Tracción trasera/AWD", "SUV grande"]
-+        },
-+        {
-+          "nombre": "Tercera Generación (2011-2020)",
-+          "años": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
-+          "caracteristicas": ["Motor 3.6L V6/5.7L V8", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "SUV grande"]
-+        },
-+        {
-+          "nombre": "Cuarta Generación (2021-presente)",
-+          "años": [2021, 2022, 2023, 2024],
-+          "caracteristicas": ["Motor 3.6L V6/5.7L V8", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "SUV grande"]
-+        }
-+      ],
-+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
-+      "activa": true
-+    },
-+    {
-+      "id": "journey",
-+      "nombre": "Journey",
-+      "slug": "journey",
-+      "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-+      "generaciones": [
-+        {
-+          "nombre": "Primera Generación (2009-2020)",
-+          "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
-+          "caracteristicas": ["Motor 2.4L/2.7L V6/3.5L V6", "Transmisión automática 4 velocidades/6 velocidades", "Tracción delantera/AWD", "SUV mediano"]
-+        }
-+      ],
-+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
-+      "activa": true
-+    },
-+    {
-+      "id": "grand-caravan",
-+      "nombre": "Grand Caravan",
-+      "slug": "grand-caravan",
-+      "años": [1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-+      "generaciones": [
-+        {
-+          "nombre": "Primera Generación (1987-1990)",
-+          "años": [1987, 1988, 1989, 1990],
-+          "caracteristicas": ["Motor 2.5L/3.0L V6", "Transmisión manual 5 velocidades/automática 3 velocidades", "Tracción delantera", "Minivan"]
-+        },
-+        {
-+          "nombre": "Segunda Generación (1991-1995)",
-+          "años": [1991, 1992, 1993, 1994, 1995],
-+          "caracteristicas": ["Motor 3.0L V6/3.3L V6/3.8L V6", "Transmisión manual 5 velocidades/automática 3 velocidades", "Tracción delantera", "Minivan"]
-+        },
-+        {
-+          "nombre": "Tercera Generación (1996-2000)",
-+          "años": [1996, 1997, 1998, 1999, 2000],
-+          "caracteristicas": ["Motor 2.4L/3.0L V6/3.3L V6/3.8L V6", "Transmisión manual 5 velocidades/automática 3 velocidades", "Tracción delantera", "Minivan"]
-+        },
-+        {
-+          "nombre": "Cuarta Generación (2001-2007)",
-+          "años": [2001, 2002, 2003, 2004, 2005, 2006, 2007],
-+          "caracteristicas": ["Motor 2.4L/3.3L V6/3.8L V6/4.0L V6", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Minivan"]
-+        },
-+        {
-+          "nombre": "Quinta Generación (2008-2020)",
-+          "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
-+          "caracteristicas": ["Motor 3.3L V6/3.6L V6", "Transmisión automática 6 velocidades", "Tracción delantera", "Minivan"]
-+        }
-+      ],
-+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
-+      "activa": true
-+    },
-+    {
-+      "id": "ram",
-+      "nombre": "Ram",
-+      "slug": "ram",
-+      "años": [1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-+      "generaciones": [
-+        {
-+          "nombre": "Primera Generación (1981-1993)",
-+          "años": [1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993],
-+          "caracteristicas": ["Motor 3.7L/3.9L/5.2L/5.9L V8", "Transmisión manual 4 velocidades/automática 3 velocidades", "Tracción trasera/AWD", "Pickup"]
-+        },
-+        {
-+          "nombre": "Segunda Generación (1994-2001)",
-+          "años": [1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001],
-+          "caracteristicas": ["Motor 3.7L/3.9L/5.2L/5.9L V8/8.0L V10", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción trasera/AWD", "Pickup"]
-+        },
-+        {
-+          "nombre": "Tercera Generación (2002-2008)",
-+          "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008],
-+          "caracteristicas": ["Motor 3.7L/4.7L V8/5.7L V8/6.1L V8/8.0L V10", "Transmisión manual 6 velocidades/automática 4 velocidades", "Tracción trasera/AWD", "Pickup"]
-+        },
-+        {
-+          "nombre": "Cuarta Generación (2009-2018)",
-+          "años": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
-+          "caracteristicas": ["Motor 3.6L V6/4.7L V8/5.7L V8/6.4L V8", "Transmisión manual 6 velocidades/automática 8 velocidades", "Tracción trasera/AWD", "Pickup"]
-+        },
-+        {
-+          "nombre": "Quinta Generación (2019-presente)",
-+          "años": [2019, 2020, 2021, 2022, 2023, 2024],
-+          "caracteristicas": ["Motor 3.6L V6/5.7L V8/6.4L V8", "Transmisión manual 6 velocidades/automática 8 velocidades", "Tracción trasera/AWD", "Pickup"]
-+        }
-+      ],
-+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
-+      "activa": true
-+    },
-+    {
-+      "id": "dart",
-+      "nombre": "Dart",
-+      "slug": "dart",
-+      "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-+      "generaciones": [
-+        {
-+          "nombre": "Primera Generación (2013-2016)",
-+          "años": [2013, 2014, 2015, 2016],
-+          "caracteristicas": ["Motor 1.4L Turbo/2.0L/2.4L", "Transmisión manual 6 velocidades/automática 6 velocidades", "Tracción delantera", "Sedán compacto"]
-+        }
-+      ],
-+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
-+      "activa": true
-+    },
-+    {
-+      "id": "caliber",
-+      "nombre": "Caliber",
-+      "slug": "caliber",
-+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-+      "generaciones": [
-+        {
-+          "nombre": "Primera Generación (2007-2012)",
-+          "años": [2007, 2008, 2009, 2010, 2011, 2012],
-+          "caracteristicas": ["Motor 1.8L/2.0L/2.4L", "Transmisión manual 5 velocidades/automática CVT", "Tracción delantera", "Hatchback compacto"]
-+        }
-+      ],
-+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
-+      "activa": true
-+    },
-+    {
-+      "id": "avenger",
-+      "nombre": "Avenger",
-+      "slug": "avenger",
-+      "años": [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-+      "generaciones": [
-+        {
-+          "nombre": "Primera Generación (1995-2000)",
-+          "años": [1995, 1996, 1997, 1998, 1999, 2000],
-+          "caracteristicas": ["Motor 2.0L/2.5L V6", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Sedán mediano"]
-+        },
-+        {
-+          "nombre": "Segunda Generación (2008-2014)",
-+          "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014],
-+          "caracteristicas": ["Motor 2.4L/2.7L V6/3.5L V6", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Sedán mediano"]
-+        }
-+      ],
-+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
-+      "activa": true
-+    },
-+    {
-+      "id": "intrepid",
-+      "nombre": "Intrepid",
-+      "slug": "intrepid",
-+      "años": [1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-+      "generaciones": [
-+        {
-+          "nombre": "Primera Generación (1993-1997)",
-+          "años": [1993, 1994, 1995, 1996, 1997],
-+          "caracteristicas": ["Motor 2.7L V6/3.3L V6/3.5L V6", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Sedán mediano"]
-+        },
-+        {
-+          "nombre": "Segunda Generación (1998-2004)",
-+          "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004],
-+          "caracteristicas": ["Motor 2.7L V6/3.2L V6/3.5L V6", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción delantera", "Sedán mediano"]
-+        }
-+      ],
-+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
-+      "activa": true
-+    }
-+  ]
-+}
+    "slug": "dodge",
+    "activa": true,
+    "popular": false
+  },
+  "modelos": [
+    {
+      "id": "challenger",
+      "nombre": "Challenger",
+      "slug": "challenger",
+      "años": [1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1970-1974)",
+          "años": [1970, 1971, 1972, 1973, 1974],
+          "caracteristicas": ["Motor 3.2L/3.7L/5.2L/5.9L/6.3L/7.0L V8", "Transmisión manual 3 velocidades/automática 3 velocidades", "Tracción trasera", "Coupé deportivo"]
+        },
+        {
+          "nombre": "Segunda Generación (1978-1983)",
+          "años": [1978, 1979, 1980, 1981, 1982, 1983],
+          "caracteristicas": ["Motor 1.6L/2.2L/2.6L", "Transmisión manual 4 velocidades/automática 3 velocidades", "Tracción delantera", "Coupé deportivo"]
+        },
+        {
+          "nombre": "Tercera Generación (2008-presente)",
+          "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.6L V6/5.7L V8/6.1L V8/6.2L V8/6.4L V8", "Transmisión manual 6 velocidades/automática 8 velocidades", "Tracción trasera/AWD", "Coupé deportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true
+    },
+    {
+      "id": "charger",
+      "nombre": "Charger",
+      "slug": "charger",
+      "años": [1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1966-1967)",
+          "años": [1966, 1967],
+          "caracteristicas": ["Motor 3.7L/4.5L/5.2L/5.9L/6.3L/7.0L V8", "Transmisión manual 3 velocidades/automática 3 velocidades", "Tracción trasera", "Sedán deportivo"]
+        },
+        {
+          "nombre": "Segunda Generación (1968-1970)",
+          "años": [1968, 1969, 1970],
+          "caracteristicas": ["Motor 3.7L/4.5L/5.2L/5.9L/6.3L/7.0L V8", "Transmisión manual 3 velocidades/automática 3 velocidades", "Tracción trasera", "Sedán deportivo"]
+        },
+        {
+          "nombre": "Tercera Generación (1971-1974)",
+          "años": [1971, 1972, 1973, 1974],
+          "caracteristicas": ["Motor 3.7L/4.5L/5.2L/5.9L/6.3L/7.0L V8", "Transmisión manual 3 velocidades/automática 3 velocidades", "Tracción trasera", "Sedán deportivo"]
+        },
+        {
+          "nombre": "Cuarta Generación (1975-1978)",
+          "años": [1975, 1976, 1977, 1978],
+          "caracteristicas": ["Motor 3.7L/4.5L/5.2L/5.9L/6.3L V8", "Transmisión manual 3 velocidades/automática 3 velocidades", "Tracción trasera", "Sedán deportivo"]
+        },
+        {
+          "nombre": "Quinta Generación (1982-1987)",
+          "años": [1982, 1983, 1984, 1985, 1986, 1987],
+          "caracteristicas": ["Motor 2.2L/2.6L/3.7L V6", "Transmisión manual 4 velocidades/automática 3 velocidades", "Tracción delantera", "Sedán deportivo"]
+        },
+        {
+          "nombre": "Sexta Generación (2006-presente)",
+          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 2.7L V6/3.5L V6/3.6L V6/5.7L V8/6.1L V8/6.2L V8/6.4L V8", "Transmisión manual 6 velocidades/automática 8 velocidades", "Tracción trasera/AWD", "Sedán deportivo"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true
+    },
+    {
+      "id": "durango",
+      "nombre": "Durango",
+      "slug": "durango",
+      "años": [1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "generaciones": [
+        {
+          "nombre": "Primera Generación (1998-2003)",
+          "años": [1998, 1999, 2000, 2001, 2002, 2003],
+          "caracteristicas": ["Motor 3.9L V6/5.2L V8/5.9L V8", "Transmisión manual 5 velocidades/automática 4 velocidades", "Tracción trasera/AWD", "SUV grande"]
+        },
+        {
+          "nombre": "Segunda Generación (2004-2009)",
+          "años": [2004, 2005, 2006, 2007, 2008, 2009],
+          "caracteristicas": ["Motor 3.7L V6/4.7L V8/5.7L V8", "Transmisión manual 6 velocidades/automática 5 velocidades", "Tracción trasera/AWD", "SUV grande"]
+        },
+        {
+          "nombre": "Tercera Generación (2011-2020)",
+          "años": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+          "caracteristicas": ["Motor 3.6L V6/5.7L V8", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "SUV grande"]
+        },
+        {
+          "nombre": "Cuarta Generación (2021-presente)",
+          "años": [2021, 2022, 2023, 2024],
+          "caracteristicas": ["Motor 3.6L V6/5.7L V8", "Transmisión automática 8 velocidades", "Tracción trasera/AWD", "SUV grande"]
+        }
+      ],
+      "categorias": ["motor", "freno-maza-rueda", "suspension", "electrico", "combustible-aire"],
+      "activa": true
+    }
+  ]
+}
