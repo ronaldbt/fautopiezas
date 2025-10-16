@@ -132,6 +132,14 @@ const authStore = useAuthStore()
 // Datos del usuario desde el store (priorizar email para mostrar en UI)
 const userName = computed(() => authStore.user?.email || authStore.user?.displayName || 'Usuario')
 const userEmail = computed(() => authStore.user?.email || '')
+
+// Debug sidebar
+try {
+  console.log('🧭 [Sidebar] authStore.user:', authStore.user)
+  watchEffect(() => {
+    console.log('🧭 [Sidebar] userName:', userName.value, 'userEmail:', userEmail.value)
+  })
+} catch (e) {}
 const userInitial = computed(() => userName.value.charAt(0).toUpperCase())
 
 // Cargar configuración del menú

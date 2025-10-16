@@ -514,9 +514,10 @@ const crearPedido = async () => {
 const cargarPedidos = async () => {
   try {
     const { $firestore } = useNuxtApp()
-    const { collection, query, where, orderBy, getDocs } = await import('firebase/firestore')
+    const { collection, query, where, getDocs } = await import('firebase/firestore')
     
-  if (!authStore.user?.uid && !authStore.user?.email) return
+  console.log('📦 [Pedidos] Usuario actual:', authStore.user)
+  if (!authStore.user?.uid && !authStore.user?.email) { console.warn('📦 [Pedidos] No uid/email'); return }
   
   // Si el usuario tiene UID, usarlo; adicionalmente buscar por email para pedidos creados manualmente
   let filtros = []
@@ -528,11 +529,13 @@ const cargarPedidos = async () => {
   if (authStore.user?.uid) {
     const qUid = query(collection($firestore, 'pedidos'), where('userId', '==', authStore.user.uid))
     const snapUid = await getDocs(qUid)
+    console.log('📦 [Pedidos] Cantidad por uid:', snapUid.size)
     snapUid.forEach(doc => pedidosTmp.push({ id: doc.id, ...doc.data() }))
   }
   if (authStore.user?.email) {
     const qEmail = query(collection($firestore, 'pedidos'), where('userEmail', '==', authStore.user.email))
     const snapEmail = await getDocs(qEmail)
+    console.log('📦 [Pedidos] Cantidad por email:', snapEmail.size, 'email:', authStore.user?.email)
     snapEmail.forEach(doc => pedidosTmp.push({ id: doc.id, ...doc.data() }))
   }
   
@@ -540,6 +543,7 @@ const cargarPedidos = async () => {
   const mapById = new Map()
   pedidosTmp.forEach(p => mapById.set(p.id, p))
   const datos = Array.from(mapById.values()).sort((a,b)=> (b.createdAt?.toDate?.()||new Date(b.createdAt||0)) - (a.createdAt?.toDate?.()||new Date(a.createdAt||0)))
+  console.log('📦 [Pedidos] Fusionados:', datos.map(d=>({id:d.id, userId:d.userId, userEmail:d.userEmail, numero:d.numero})))
     
   pedidos.value = []
   datos.forEach((dataObj) => {
@@ -563,7 +567,7 @@ const cargarPedidos = async () => {
     })
     
   } catch (error) {
-    console.error('Error cargando pedidos:', error)
+    console.error('❌ [Pedidos] Error cargando pedidos:', error)
     // En caso de error, mostrar mensaje pero no bloquear la interfaz
     console.warn('No se pudieron cargar los pedidos desde Firestore')
   }
