@@ -44,35 +44,6 @@
               </div>
             </div>
 
-            <div class="border border-gray-200 rounded-lg p-4">
-              <div class="flex items-center justify-between mb-3">
-                <div class="flex items-center space-x-3">
-                  <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 class="font-semibold text-gray-900">Banco Estado</h3>
-                    <p class="text-sm text-gray-500">Cuenta Corriente</p>
-                  </div>
-                </div>
-                <button @click="copyToClipboard('09876543210')" class="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                  Copiar
-                </button>
-              </div>
-              <div class="bg-gray-50 rounded-lg p-3">
-                <p class="text-sm text-gray-600">Número de cuenta:</p>
-                <p class="font-mono text-lg font-semibold text-gray-900">09-876-543-210</p>
-              </div>
-              <div class="mt-3">
-                <p class="text-sm text-gray-600">Email de contacto:</p>
-                <div class="flex items-center justify-between">
-                  <p class="font-medium text-gray-900">contacto@grupoabarza.cl</p>
-                  <button @click="copyToClipboard('contacto@grupoabarza.cl')" class="text-blue-600 hover:text-blue-700 text-sm font-medium">Copiar</button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
