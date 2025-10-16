@@ -66,6 +66,7 @@
             <td class="py-4 px-6 text-sm text-gray-500">{{ formatDate(q.createdAt?.toDate?.() || q.createdAt) }}</td>
             <td class="py-4 px-6 text-right font-semibold text-gray-900">{{ formatCurrency(q.total, q.currency) }}</td>
             <td class="py-4 px-6 text-right space-x-2">
+              <button @click="verPreview(q.id)" class="px-3 py-2 text-sm border rounded-lg hover:bg-gray-50">Preview</button>
               <button @click="descargarPDF(q.id)" class="px-3 py-2 text-sm border rounded-lg hover:bg-gray-50">PDF</button>
               <NuxtLink :to="`/cliente/cotizaciones/${q.id}`" class="px-3 py-2 text-sm border rounded-lg hover:bg-gray-50">Ver</NuxtLink>
             </td>
@@ -149,13 +150,32 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal Preview PDF -->
+    <div v-if="preview.open" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div class="bg-white rounded-2xl w-full max-w-4xl overflow-hidden">
+        <div class="px-6 py-4 border-b flex items-center justify-between">
+          <h3 class="text-lg font-semibold">Preview Cotización</h3>
+          <button @click="preview.open = false" class="w-9 h-9 rounded-lg hover:bg-gray-100 flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="p-0 max-h-[80vh] overflow-auto bg-gray-50">
+          <div class="p-6">
+            <div class="bg-white shadow border rounded-xl p-6">
+              <div v-html="preview.html"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 definePageMeta({ layout: 'dashboard-professional', middleware: 'admin' })
 
-const { listQuotes, createQuote, getQuoteWithItems, generateQuotePdfClient } = useCotizaciones()
+const { listQuotes, createQuote, getQuoteWithItems, generateQuotePdfClient, buildQuoteHtml } = useCotizaciones()
 const authStore = useAuthStore()
 
 const estados = ['borrador','enviada','aceptada','rechazada','vencida']
@@ -238,9 +258,15 @@ const crear = async () => {
   } finally { creating.value = false }
 }
 
+const preview = reactive({ open: false, html: '' })
 const descargarPDF = async (id) => {
   const q = await getQuoteWithItems(id)
   await generateQuotePdfClient(q)
+}
+const verPreview = async (id) => {
+  const q = await getQuoteWithItems(id)
+  preview.html = buildQuoteHtml(q)
+  preview.open = true
 }
 </script>
 

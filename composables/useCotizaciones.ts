@@ -142,19 +142,8 @@ export const useCotizaciones = () => {
     await addDoc(collection($firestore, `cotizaciones/${id}/events`), { type: status, description: description || '', byUserId: actor.userId, byName: actor.nombre, byRole: actor.role, createdAt: serverTimestamp() })
   }
 
-  // Generación de PDF del lado del cliente (sin Functions ni Storage)
-  const generateQuotePdfClient = async (quote: any) => {
-    const [{ jsPDF }, html2canvas] = await Promise.all([
-      import('jspdf'),
-      import('html2canvas')
-    ])
-
-    // Crear HTML temporal con estilo para PDF
-    const container = document.createElement('div')
-    container.style.width = '800px'
-    container.style.padding = '24px'
-    container.style.fontFamily = 'Inter, Arial, sans-serif'
-    container.innerHTML = `
+  // Construye el HTML base de la cotización para reutilizar en preview y PDF
+  const buildQuoteHtml = (quote: any) => `
       <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #1e40af;padding-bottom:12px;margin-bottom:16px;">
         <div style="display:flex;align-items:center;gap:10px;">
           <div style="font-size:20px;font-weight:800;color:#1e40af;">AutoVentas360.cl</div>
@@ -232,6 +221,20 @@ export const useCotizaciones = () => {
       <div style="margin-top:16px;color:#9ca3af;font-size:10px;">Esta cotización es informativa y puede variar según disponibilidad. No incluye instalación.</div>
     `
 
+  // Generación de PDF del lado del cliente (sin Functions ni Storage)
+  const generateQuotePdfClient = async (quote: any) => {
+    const [{ jsPDF }, html2canvas] = await Promise.all([
+      import('jspdf'),
+      import('html2canvas')
+    ])
+
+    // Crear HTML temporal con estilo para PDF
+    const container = document.createElement('div')
+    container.style.width = '800px'
+    container.style.padding = '24px'
+    container.style.fontFamily = 'Inter, Arial, sans-serif'
+    container.innerHTML = buildQuoteHtml(quote)
+
     document.body.appendChild(container)
     const canvas = await (html2canvas as any).default(container, { scale: 2 })
     const imgData = canvas.toDataURL('image/png')
@@ -243,7 +246,7 @@ export const useCotizaciones = () => {
     document.body.removeChild(container)
   }
 
-  return { createQuote, listQuotes, getQuoteWithItems, updateQuoteStatus, generateQuotePdfClient }
+  return { createQuote, listQuotes, getQuoteWithItems, updateQuoteStatus, generateQuotePdfClient, buildQuoteHtml }
 }
 
 
