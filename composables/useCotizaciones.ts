@@ -236,7 +236,21 @@ export const useCotizaciones = () => {
     container.innerHTML = buildQuoteHtml(quote)
 
     document.body.appendChild(container)
-    const canvas = await (html2canvas as any).default(container, { scale: 2 })
+    const canvas = await (html2canvas as any).default(container, {
+      scale: 2,
+      backgroundColor: '#ffffff',
+      logging: false,
+      onclone: (clonedDoc: Document) => {
+        try {
+          // Remover estilos globales para evitar colores modernos no soportados (oklch)
+          const head = clonedDoc.querySelector('head')
+          head?.querySelectorAll('link[rel="stylesheet"], style').forEach((el) => el.parentNode?.removeChild(el))
+          // Forzar fondo blanco del body clonado
+          const body = clonedDoc.querySelector('body') as HTMLElement | null
+          if (body) body.style.backgroundColor = '#ffffff'
+        } catch (_) {}
+      }
+    })
     const imgData = canvas.toDataURL('image/png')
     const pdf = new jsPDF({ unit: 'pt', format: 'a4' })
     const pageWidth = pdf.internal.pageSize.getWidth()
