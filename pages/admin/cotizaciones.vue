@@ -261,7 +261,7 @@ const crear = async () => {
   } finally { creating.value = false }
 }
 
-const preview = reactive({ open: false, html: '', quote: null as any })
+const preview = reactive({ open: false, html: '', quote: null })
 const descargarPDF = async (id) => {
   const q = await getQuoteWithItems(id)
   await generateQuotePdfClient(q)
