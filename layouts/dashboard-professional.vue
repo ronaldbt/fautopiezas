@@ -140,6 +140,17 @@ try {
     console.log('🧭 [Sidebar] userName:', userName.value, 'userEmail:', userEmail.value)
   })
 } catch (e) {}
+
+// Asegurar carga del usuario al montar el layout (algunas vistas llegan antes del plugin)
+onMounted(async () => {
+  try {
+    console.log('🧭 [Sidebar] onMounted → checkAuthState()')
+    await authStore.checkAuthState()
+    console.log('🧭 [Sidebar] después de checkAuthState:', authStore.user)
+  } catch (e) {
+    console.warn('🧭 [Sidebar] error checkAuthState:', e)
+  }
+})
 const userInitial = computed(() => userName.value.charAt(0).toUpperCase())
 
 // Cargar configuración del menú

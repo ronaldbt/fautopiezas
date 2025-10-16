@@ -574,6 +574,10 @@ const cargarPedidos = async () => {
 }
 
 onMounted(() => {
-  cargarPedidos()
+  // asegurar que el authStore tenga el usuario cargado
+  authStore.checkAuthState().then(() => {
+    console.log('📦 [Pedidos] after checkAuthState:', authStore.user)
+    cargarPedidos()
+  })
 })
 </script>
