@@ -516,22 +516,37 @@ const cargarPedidos = async () => {
     const { $firestore } = useNuxtApp()
     const { collection, query, where, orderBy, getDocs } = await import('firebase/firestore')
     
-    if (!authStore.user?.uid) return
+  if (!authStore.user?.uid && !authStore.user?.email) return
+  
+  // Si el usuario tiene UID, usarlo; adicionalmente buscar por email para pedidos creados manualmente
+  let filtros = []
+  if (authStore.user?.uid) filtros.push(where('userId', '==', authStore.user.uid))
+  if (authStore.user?.email) filtros.push(where('userEmail', '==', authStore.user.email))
+  
+  // Por limitaciones de Firestore, hacemos dos consultas y unimos resultados si hay ambos filtros
+  const pedidosTmp = []
+  if (authStore.user?.uid) {
+    const qUid = query(collection($firestore, 'pedidos'), where('userId', '==', authStore.user.uid), orderBy('createdAt', 'desc'))
+    const snapUid = await getDocs(qUid)
+    snapUid.forEach(doc => pedidosTmp.push({ id: doc.id, ...doc.data() }))
+  }
+  if (authStore.user?.email) {
+    const qEmail = query(collection($firestore, 'pedidos'), where('userEmail', '==', authStore.user.email), orderBy('createdAt', 'desc'))
+    const snapEmail = await getDocs(qEmail)
+    snapEmail.forEach(doc => pedidosTmp.push({ id: doc.id, ...doc.data() }))
+  }
+  
+  // Unificar por id y ordenar por fecha
+  const mapById = new Map()
+  pedidosTmp.forEach(p => mapById.set(p.id, p))
+  const datos = Array.from(mapById.values()).sort((a,b)=> (b.createdAt?.toDate?.()||new Date(b.createdAt||0)) - (a.createdAt?.toDate?.()||new Date(a.createdAt||0)))
     
-    // Crear query para obtener pedidos del usuario
-    const q = query(
-      collection($firestore, 'pedidos'),
-      where('userId', '==', authStore.user.uid),
-      orderBy('createdAt', 'desc')
-    )
-    
-    const querySnapshot = await getDocs(q)
-    pedidos.value = []
-    
-    querySnapshot.forEach((doc) => {
-      const data = doc.data()
+  pedidos.value = []
+  datos.forEach((dataObj) => {
+    const data = dataObj
+    const id = dataObj.id
       pedidos.value.push({
-        id: doc.id,
+      id,
         numero: data.numero,
         descripcion: data.descripcion,
         marca: data.marca,

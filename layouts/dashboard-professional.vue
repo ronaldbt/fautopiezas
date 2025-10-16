@@ -129,8 +129,8 @@ useHead({
 const route = useRoute()
 const authStore = useAuthStore()
 
-// Datos del usuario desde el store
-const userName = computed(() => authStore.user?.displayName || authStore.user?.email || 'Usuario')
+// Datos del usuario desde el store (priorizar email para mostrar en UI)
+const userName = computed(() => authStore.user?.email || authStore.user?.displayName || 'Usuario')
 const userEmail = computed(() => authStore.user?.email || '')
 const userInitial = computed(() => userName.value.charAt(0).toUpperCase())
 

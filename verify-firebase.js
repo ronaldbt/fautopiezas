@@ -29,3 +29,5 @@ console.log('\n📋 Configuración completa:')
 console.log(JSON.stringify(config, null, 2))
 
 
+
+
