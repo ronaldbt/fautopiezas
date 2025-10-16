@@ -1,50 +1,9 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    function isSignedIn() { return request.auth != null; }
-    function userDoc(uid) { return get(/databases/$(database)/documents/users/$(uid)); }
-    function hasRole(r) { return isSignedIn() && userDoc(request.auth.uid).data.role == r; }
-    function isAdmin() { return hasRole('admin'); }
-    function isVendedor() { return hasRole('vendedor'); }
-    function emailMatches(resourceEmail) {
-      return isSignedIn() && resourceEmail != null && request.auth.token.email != null && resourceEmail == request.auth.token.email;
-    }
-
-    // Público de solo lectura para catálogos
-    match /repuestos/{repuestoId} { allow read: if true; allow write: if false; }
-    match /marcas/{marcaId} { allow read: if true; allow write: if false; }
-    match /modelos/{modeloId} { allow read: if true; allow write: if false; }
-    match /categorias/{categoriaId} { allow read: if true; allow write: if false; }
-
-    // Usuarios
-    match /users/{userId} {
-      allow read, write: if (isSignedIn() && request.auth.uid == userId) || isAdmin();
-    }
-    match /usuarios/{userId} { allow read, write: if isSignedIn() && request.auth.uid == userId; }
-
-    // Pedidos
-    match /pedidos/{pedidoId} {
-      // Leer: dueño por uid, dueño por email, admin o vendedor (si asignado o sin asignar)
-      allow read: if isSignedIn() && (
-        request.auth.uid == resource.data.userId ||
-        emailMatches(resource.data.userEmail) ||
-        isAdmin() ||
-        (isVendedor() && (resource.data.asignadoA == request.auth.uid || !resource.data.keys().hasAny(['asignadoA']) || resource.data.asignadoA == null))
-      );
-
-      // Crear: cliente propio (uid o email) o admin/vendedor
-      allow create: if isSignedIn() && (
-        request.auth.uid == request.resource.data.userId ||
-        emailMatches(request.resource.data.userEmail) ||
-        isAdmin() || isVendedor()
-      );
-
-      // Actualizar/eliminar: dueño, admin o vendedor
-      allow update, delete: if isSignedIn() && (
-        request.auth.uid == resource.data.userId ||
-        emailMatches(resource.data.userEmail) ||
-        isAdmin() || isVendedor()
-      );
+    // Permitir lectura y escritura sin restricciones
+    match /{document=**} {
+      allow read, write: if true;
     }
   }
 }
