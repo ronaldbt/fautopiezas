@@ -294,7 +294,8 @@
 <script setup>
 // Layout específico para admin
 definePageMeta({
-  layout: 'dashboard-professional'
+  layout: 'dashboard-professional',
+  middleware: 'admin'
 })
 
 // SEO - No indexar páginas privadas

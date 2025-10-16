@@ -1,8 +1,16 @@
 <template>
   <div>
     <div class="mb-8">
-      <h1 class="text-3xl font-bold text-gray-900">Panel de Administración</h1>
-      <p class="text-gray-600 mt-2">Gestiona usuarios, pedidos y el sistema completo</p>
+      <div class="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 text-white">
+        <h1 class="text-3xl font-bold">Panel de Administración</h1>
+        <p class="text-red-100 mt-2 text-lg">Gestiona usuarios, pedidos y el sistema completo</p>
+        <div class="mt-4 flex items-center space-x-2 text-red-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span class="text-sm">Bienvenido, {{ userName }}</span>
+        </div>
+      </div>
     </div>
 
     <!-- Estadísticas Generales -->
@@ -208,7 +216,8 @@
 <script setup>
 // Layout específico para admin
 definePageMeta({
-  layout: 'dashboard-professional'
+  layout: 'dashboard-professional',
+  middleware: 'admin'
 })
 
 // SEO - No indexar páginas privadas
@@ -220,6 +229,13 @@ useHead({
 })
 
 const authStore = useAuthStore()
+const { $firebaseAuth } = useNuxtApp()
+
+// Datos del usuario
+const userName = computed(() => {
+  const user = $firebaseAuth?.currentUser
+  return user?.displayName || user?.email || 'Admin'
+})
 
 // Estado
 const showQuickActions = ref(false)

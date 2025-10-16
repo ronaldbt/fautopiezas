@@ -182,7 +182,7 @@
         <div class="bg-gradient-to-r from-green-600 to-green-700 px-8 py-6">
           <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
+              <div class="w-12 h-12 bg-green-500 bg-opacity-30 rounded-xl flex items-center justify-center">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                 </svg>
@@ -194,7 +194,7 @@
             </div>
             <button
               @click="showNewPedidoModal = false"
-              class="w-10 h-10 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-xl flex items-center justify-center transition-all duration-200"
+              class="w-10 h-10 bg-green-500 bg-opacity-30 hover:bg-opacity-50 rounded-xl flex items-center justify-center transition-all duration-200"
             >
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -221,12 +221,23 @@
                 v-model="nuevoPedido.userId"
                 required
                 class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-200"
+                :disabled="clientes.length === 0"
               >
-                <option value="">Seleccionar cliente</option>
+                <option value="">
+                  {{ clientes.length === 0 ? 'Cargando clientes...' : 'Seleccionar cliente' }}
+                </option>
                 <option v-for="cliente in clientes" :key="cliente.id" :value="cliente.id">
                   {{ cliente.displayName }} ({{ cliente.email }})
                 </option>
               </select>
+              <div v-if="clientes.length === 0" class="text-sm text-gray-500 mt-2">
+                <div class="flex items-center space-x-2">
+                  <svg class="w-4 h-4 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                  </svg>
+                  <span>Cargando lista de clientes...</span>
+                </div>
+              </div>
             </div>
 
             <!-- Descripción del Repuesto -->
@@ -366,7 +377,8 @@
 <script setup>
 // Layout específico para admin
 definePageMeta({
-  layout: 'dashboard-professional'
+  layout: 'dashboard-professional',
+  middleware: 'admin'
 })
 
 // SEO - No indexar páginas privadas
@@ -669,30 +681,53 @@ const cargarPedidos = async () => {
 // Cargar clientes
 const cargarClientes = async () => {
   try {
+    console.log('🔄 Cargando clientes...')
     const { $firestore } = useNuxtApp()
     const { collection, getDocs, query, where, orderBy } = await import('firebase/firestore')
     
-    const clientesQuery = query(
-      collection($firestore, 'users'),
-      where('role', 'in', ['cliente', 'vendedor']),
-      orderBy('displayName', 'asc')
-    )
+    // Primero intentar con orderBy, si falla, cargar sin orderBy
+    let clientesQuery
+    try {
+      clientesQuery = query(
+        collection($firestore, 'users'),
+        where('role', 'in', ['cliente', 'vendedor']),
+        orderBy('email', 'asc')
+      )
+    } catch (orderError) {
+      console.log('⚠️ No se puede ordenar por email, cargando sin ordenar...')
+      clientesQuery = query(
+        collection($firestore, 'users'),
+        where('role', 'in', ['cliente', 'vendedor'])
+      )
+    }
     
     const querySnapshot = await getDocs(clientesQuery)
     clientes.value = []
     
+    console.log('📊 Total documentos encontrados:', querySnapshot.size)
+    
     querySnapshot.forEach((doc) => {
       const data = doc.data()
-      clientes.value.push({
+      console.log('👤 Cliente encontrado:', {
         id: doc.id,
         email: data.email,
         displayName: data.displayName,
         role: data.role
       })
+      
+      clientes.value.push({
+        id: doc.id,
+        email: data.email || 'Sin email',
+        displayName: data.displayName || data.name || data.email || 'Usuario',
+        role: data.role
+      })
     })
     
+    console.log('✅ Clientes cargados:', clientes.value.length)
+    
   } catch (error) {
-    console.error('Error cargando clientes:', error)
+    console.error('❌ Error cargando clientes:', error)
+    console.error('🔍 Detalles del error:', error.message)
   }
 }
 

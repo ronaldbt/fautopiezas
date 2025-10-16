@@ -108,7 +108,7 @@ const { $firebaseAuth } = useNuxtApp()
 // Datos del usuario
 const userName = computed(() => {
   const user = $firebaseAuth?.currentUser
-  return user?.displayName || 'Usuario'
+  return user?.displayName || user?.email || 'Usuario'
 })
 
 // Los datos se cargarán desde Firebase cuando esté conectado

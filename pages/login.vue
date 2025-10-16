@@ -134,35 +134,59 @@ const error = ref('')
 
 // Función para redirigir según el rol del usuario
 const redirectByRole = async (userId) => {
+  console.log('🔄 Iniciando redirección por rol...')
+  console.log('👤 User ID:', userId)
+  
   try {
+    console.log('🔍 Obteniendo Firestore...')
     const { $firestore } = useNuxtApp()
+    console.log('✅ Firestore obtenido:', $firestore ? 'SÍ' : 'NO')
+    
     const { doc, getDoc } = await import('firebase/firestore')
+    console.log('📄 Buscando documento de usuario...')
+    
     const userDoc = await getDoc(doc($firestore, 'users', userId))
+    console.log('📋 Documento existe:', userDoc.exists())
     
     if (userDoc.exists()) {
       const userData = userDoc.data()
-      const role = userData.role || 'cliente'
+      console.log('👤 Datos del usuario completos:', userData)
+      console.log('🔍 Campos disponibles:', Object.keys(userData))
+      
+      // Buscar el rol de diferentes maneras posibles
+      const role = userData.role || userData.userRole || userData.role_type || 'cliente'
+      console.log('🎭 Rol detectado:', role)
+      console.log('🔍 Verificación de rol admin:', role === 'admin')
       
       // Actualizar último login
+      console.log('⏰ Actualizando último login...')
       const { setDoc } = await import('firebase/firestore')
       await setDoc(doc($firestore, 'users', userId), {
         ...userData,
         lastLogin: new Date()
       }, { merge: true })
+      console.log('✅ Último login actualizado')
       
       // Redirigir según el rol
-      switch (role) {
-        case 'superadmin':
-        case 'admin':
-          await navigateTo('/admin')
-          break
-        case 'vendedor':
-          await navigateTo('/vendedor')
-          break
-        default:
-          await navigateTo('/cliente')
+      console.log('🎯 Redirigiendo según rol:', role)
+      console.log('🔍 Comparación de roles:')
+      console.log('  - role === "admin":', role === 'admin')
+      console.log('  - role === "superadmin":', role === 'superadmin')
+      console.log('  - typeof role:', typeof role)
+      console.log('  - role.trim():', role.trim())
+      
+      if (role === 'admin' || role === 'superadmin') {
+        console.log('🔐 Redirigiendo a admin...')
+        await navigateTo('/admin')
+      } else if (role === 'vendedor') {
+        console.log('💼 Redirigiendo a vendedor...')
+        await navigateTo('/vendedor')
+      } else {
+        console.log('👤 Redirigiendo a cliente (rol no reconocido):', role)
+        await navigateTo('/cliente')
       }
     } else {
+      console.log('📝 Documento de usuario no existe, creando...')
       // Si no existe el documento, crear uno con rol de cliente por defecto
       const { setDoc } = await import('firebase/firestore')
       const { $firebaseAuth } = useNuxtApp()
@@ -175,29 +199,63 @@ const redirectByRole = async (userId) => {
         createdAt: new Date(),
         lastLogin: new Date()
       })
+      console.log('✅ Documento de usuario creado')
       
+      console.log('👤 Redirigiendo a cliente (nuevo usuario)...')
       await navigateTo('/cliente')
     }
   } catch (error) {
-    console.error('Error verificando rol de usuario:', error)
+    console.error('❌ Error verificando rol de usuario:', error)
+    console.error('🔍 Código de error:', error.code)
+    console.error('📝 Mensaje de error:', error.message)
     // En caso de error, redirigir al dashboard del cliente por defecto
+    console.log('🆘 Redirigiendo a cliente por defecto (error)...')
     await navigateTo('/cliente')
   }
 }
 
 // Función de login con email y contraseña
 const login = async () => {
+  console.log('🚀 Iniciando proceso de login...')
+  console.log('📧 Email ingresado:', email.value)
+  console.log('🔒 Contraseña ingresada:', password.value ? '***' + password.value.slice(-2) : 'VACÍA')
+  
   loading.value = true
   error.value = ''
 
   try {
+    console.log('🔍 Obteniendo Firebase Auth...')
     const { $firebaseAuth } = useNuxtApp()
+    console.log('✅ Firebase Auth obtenido:', $firebaseAuth ? 'SÍ' : 'NO')
+    console.log('🔑 Firebase Auth object:', $firebaseAuth)
+    
+    console.log('📡 Intentando autenticación con Firebase...')
+    console.log('🌐 URL de autenticación: https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword')
+    
     const userCredential = await signInWithEmailAndPassword($firebaseAuth, email.value, password.value)
+    console.log('✅ Autenticación exitosa!')
+    console.log('👤 Usuario autenticado:', userCredential.user.uid)
+    console.log('📧 Email del usuario:', userCredential.user.email)
     
     // Redirigir según el rol del usuario
+    console.log('🔄 Redirigiendo según rol...')
     await redirectByRole(userCredential.user.uid)
   } catch (err) {
-    console.error('Error en login:', err)
+    console.error('❌ Error en login:', err)
+    console.error('🔍 Código de error:', err.code)
+    console.error('📝 Mensaje de error:', err.message)
+    console.error('🌐 Error stack:', err.stack)
+    
+    // Verificar si es un error de red
+    if (err.code === 'auth/network-request-failed') {
+      console.error('🌐 Error de red detectado!')
+      console.error('🔍 Posibles causas:')
+      console.error('   - Conexión a internet interrumpida')
+      console.error('   - Firebase API no disponible')
+      console.error('   - Configuración incorrecta de Firebase')
+      console.error('   - CORS o políticas de seguridad')
+    }
+    
     switch (err.code) {
       case 'auth/user-not-found':
         error.value = 'No existe una cuenta con este correo electrónico.'
@@ -211,10 +269,14 @@ const login = async () => {
       case 'auth/too-many-requests':
         error.value = 'Demasiados intentos fallidos. Intenta más tarde.'
         break
+      case 'auth/network-request-failed':
+        error.value = 'Error de conexión. Verifica tu conexión a internet e intenta nuevamente.'
+        break
       default:
         error.value = 'Error al iniciar sesión. Intenta nuevamente.'
     }
   } finally {
+    console.log('🏁 Finalizando proceso de login...')
     loading.value = false
   }
 }

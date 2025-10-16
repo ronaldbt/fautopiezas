@@ -5,13 +5,11 @@
       <!-- Header del Sidebar -->
       <div class="flex items-center h-20 px-6 border-b border-slate-700">
         <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg" :class="getHeaderColorClass()">
+            <span class="text-white font-bold text-lg">{{ currentMenuConfig.icon }}</span>
           </div>
           <div>
-            <h1 class="text-xl font-bold text-white">AutoVentas360</h1>
+            <h1 class="text-xl font-bold text-white">{{ currentMenuConfig.title }}</h1>
             <p class="text-xs text-slate-400">{{ panelTitle }}</p>
           </div>
         </div>
@@ -20,65 +18,17 @@
       <!-- Navigation -->
       <nav class="mt-8 px-4">
         <div class="space-y-2">
-          <NuxtLink to="/cliente" 
-                   class="flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 group"
-                   :class="isActive('/cliente') ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/25' : 'text-slate-300 hover:bg-slate-700 hover:text-white'">
+          <NuxtLink 
+            v-for="item in menuItems" 
+            :key="item.path"
+            :to="item.path"
+            class="flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 group"
+            :class="isActive(item.path) ? getActiveClass() : 'text-slate-300 hover:bg-slate-700 hover:text-white'">
             <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="item.icon"></path>
             </svg>
-            <span>Dashboard</span>
-            <div v-if="isActive('/cliente')" class="ml-auto w-2 h-2 bg-blue-300 rounded-full"></div>
-          </NuxtLink>
-          
-          <NuxtLink to="/cliente/perfil" 
-                   class="flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 group"
-                   :class="isActive('/cliente/perfil') ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/25' : 'text-slate-300 hover:bg-slate-700 hover:text-white'">
-            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-            </svg>
-            <span>Mi Perfil</span>
-            <div v-if="isActive('/cliente/perfil')" class="ml-auto w-2 h-2 bg-blue-300 rounded-full"></div>
-          </NuxtLink>
-          
-          <NuxtLink to="/cliente/pedidos" 
-                   class="flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 group"
-                   :class="isActive('/cliente/pedidos') ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/25' : 'text-slate-300 hover:bg-slate-700 hover:text-white'">
-            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-            </svg>
-            <span>Mis Pedidos</span>
-            <div v-if="isActive('/cliente/pedidos')" class="ml-auto w-2 h-2 bg-blue-300 rounded-full"></div>
-          </NuxtLink>
-          
-          <NuxtLink to="/cliente/pagos" 
-                   class="flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 group"
-                   :class="isActive('/cliente/pagos') ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/25' : 'text-slate-300 hover:bg-slate-700 hover:text-white'">
-            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
-            </svg>
-            <span>Pagos</span>
-            <div v-if="isActive('/cliente/pagos')" class="ml-auto w-2 h-2 bg-blue-300 rounded-full"></div>
-          </NuxtLink>
-          
-          
-          <NuxtLink to="/cliente/historial" 
-                   class="flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 group"
-                   :class="isActive('/cliente/historial') ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/25' : 'text-slate-300 hover:bg-slate-700 hover:text-white'">
-            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <span>Historial</span>
-            <div v-if="isActive('/cliente/historial')" class="ml-auto w-2 h-2 bg-blue-300 rounded-full"></div>
-          </NuxtLink>
-          
-          <NuxtLink to="/cliente/soporte" 
-                   class="flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 group"
-                   :class="isActive('/cliente/soporte') ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/25' : 'text-slate-300 hover:bg-slate-700 hover:text-white'">
-            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
-            </svg>
-            <span>Soporte</span>
-            <div v-if="isActive('/cliente/soporte')" class="ml-auto w-2 h-2 bg-blue-300 rounded-full"></div>
+            <span>{{ item.label }}</span>
+            <div v-if="isActive(item.path)" class="ml-auto w-2 h-2 rounded-full" :class="getActiveDotClass()"></div>
           </NuxtLink>
         </div>
       </nav>
@@ -86,7 +36,7 @@
       <!-- User info -->
       <div class="absolute bottom-0 left-0 right-0 p-6 border-t border-slate-700">
         <div class="flex items-center space-x-3 mb-4">
-          <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center" :class="getHeaderColorClass()">
             <span class="text-sm font-bold text-white">{{ userInitial }}</span>
           </div>
           <div class="flex-1 min-w-0">
@@ -126,7 +76,7 @@
               
               <!-- User Menu -->
               <div class="flex items-center space-x-3">
-                <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                <div class="w-8 h-8 rounded-full flex items-center justify-center" :class="getHeaderColorClass()">
                   <span class="text-xs font-bold text-white">{{ userInitial }}</span>
                 </div>
                 <span class="text-sm font-medium text-gray-700">{{ userName }}</span>
@@ -180,42 +130,77 @@ const route = useRoute()
 const authStore = useAuthStore()
 
 // Datos del usuario desde el store
-const userName = computed(() => authStore.user?.displayName || 'Usuario')
+const userName = computed(() => authStore.user?.displayName || authStore.user?.email || 'Usuario')
 const userEmail = computed(() => authStore.user?.email || '')
 const userInitial = computed(() => userName.value.charAt(0).toUpperCase())
 
+// Cargar configuración del menú
+const menuConfig = await import('~/data/menu-config.json')
+
+// Determinar el rol del usuario y cargar menú correspondiente
+const userRole = computed(() => {
+  if (route.path.startsWith('/admin')) return 'admin'
+  if (route.path.startsWith('/vendedor')) return 'vendedor'
+  return 'cliente'
+})
+
+// Items del menú según el rol
+const menuItems = computed(() => {
+  return menuConfig.default[userRole.value]?.items || menuConfig.default.cliente.items
+})
+
+// Configuración del menú actual
+const currentMenuConfig = computed(() => {
+  return menuConfig.default[userRole.value] || menuConfig.default.cliente
+})
+
 // Título del panel según la ruta
 const panelTitle = computed(() => {
-  if (route.path.startsWith('/admin')) {
-    return 'Panel Admin'
-  } else if (route.path.startsWith('/vendedor')) {
-    return 'Panel Vendedor'
-  } else {
-    return 'Panel Cliente'
-  }
+  return currentMenuConfig.value?.title || 'Panel'
 })
 
 // Título de la página
 const pageTitle = computed(() => {
-  const titles = {
-    '/cliente': 'Dashboard',
-    '/cliente/perfil': 'Mi Perfil',
-    '/cliente/pedidos': 'Mis Pedidos',
-    '/cliente/pagos': 'Pagos',
-    '/cliente/favoritos': 'Favoritos',
-    '/cliente/historial': 'Historial',
-    '/cliente/soporte': 'Soporte',
-    '/admin': 'Panel Admin',
-    '/admin/usuarios': 'Gestión de Usuarios',
-    '/admin/pedidos': 'Gestión de Pedidos',
-    '/vendedor': 'Panel Vendedor'
-  }
-  return titles[route.path] || 'Dashboard'
+  const currentItem = menuItems.value.find(item => item.path === route.path)
+  return currentItem?.label || 'Dashboard'
 })
 
 // Función para verificar si una ruta está activa
 const isActive = (path) => {
   return route.path === path
+}
+
+// Función para obtener clase activa según el color del menú
+const getActiveClass = () => {
+  const color = currentMenuConfig.value?.color || 'blue'
+  const colorMap = {
+    blue: 'bg-blue-600 text-white shadow-lg shadow-blue-600/25',
+    red: 'bg-red-600 text-white shadow-lg shadow-red-600/25',
+    green: 'bg-green-600 text-white shadow-lg shadow-green-600/25'
+  }
+  return colorMap[color] || colorMap.blue
+}
+
+// Función para obtener clase del dot activo
+const getActiveDotClass = () => {
+  const color = currentMenuConfig.value?.color || 'blue'
+  const colorMap = {
+    blue: 'bg-blue-300',
+    red: 'bg-red-300',
+    green: 'bg-green-300'
+  }
+  return colorMap[color] || colorMap.blue
+}
+
+// Función para obtener clase del header
+const getHeaderColorClass = () => {
+  const color = currentMenuConfig.value?.color || 'blue'
+  const colorMap = {
+    blue: 'bg-gradient-to-br from-blue-500 to-blue-600',
+    red: 'bg-gradient-to-br from-red-500 to-red-600',
+    green: 'bg-gradient-to-br from-green-500 to-green-600'
+  }
+  return colorMap[color] || colorMap.blue
 }
 
 // Función de logout
