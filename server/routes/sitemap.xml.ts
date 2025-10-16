@@ -11,9 +11,20 @@ export default defineEventHandler(async (event) => {
     const categoriasData = await import('~/data/categorias.json')
     const categorias = categoriasData.default || categoriasData
     
-    // Categorías principales para URLs
+    // Obtener marcas populares dinámicamente
+    const marcasPopulares = marcas.filter(marca => marca.popular === true)
+    
+    // Categorías principales para URLs (usando slugs reales)
     const categoriasPrincipales = [
-      'motor', 'frenos', 'suspension', 'electrico', 'carroceria', 'transmision'
+      'motor', 'freno-maza-rueda', 'suspension', 'electrico', 
+      'carroceria-ensamblaje-lampara', 'transmision-automatica', 
+      'tren-transmision', 'sistema-enfriamiento'
+    ]
+    
+    // Subcategorías importantes para SEO adicional
+    const subcategoriasPrincipales = [
+      'pastillas-freno', 'discos-freno', 'amortiguadores', 'filtro-aire',
+      'aceite-motor', 'bateria', 'alternador', 'radiador'
     ]
   
     // Función para generar entrada XML
@@ -43,35 +54,80 @@ export default defineEventHandler(async (event) => {
       urls.push(createUrlEntry(`/categoria/${categoria.slug}`, '0.7', 'weekly'))
     })
     
-    // 4. URLs marca + categoría (SEO combo) - limitado para evitar sitemap muy grande
-    marcas.slice(0, 15).forEach(marca => { // Top 15 marcas
+    // 4. URLs marca + categoría (usando marcas populares)
+    marcasPopulares.forEach(marca => {
       categoriasPrincipales.forEach(categoria => {
-        urls.push(createUrlEntry(`/repuestos/${marca.slug}/${categoria}`, '0.6', 'monthly'))
+        urls.push(createUrlEntry(`/repuestos/${marca.slug}/${categoria}`, '0.7', 'monthly'))
       })
     })
     
-    // 5. URLs de años para marcas principales (2020-2024)
-    const marcasPrincipales = ['toyota', 'nissan', 'chevrolet', 'bmw', 'hyundai', 'ford']
-    const anos = [2020, 2021, 2022, 2023, 2024]
+    // 5. URLs de subcategorías específicas para marcas top
+    const marcasTop = marcasPopulares.slice(0, 5) // Top 5 marcas populares
+    marcasTop.forEach(marca => {
+      subcategoriasPrincipales.forEach(subcategoria => {
+        urls.push(createUrlEntry(`/repuestos/${marca.slug}/${subcategoria}`, '0.6', 'monthly'))
+      })
+    })
     
-    marcasPrincipales.forEach(marca => {
+    // 6. URLs de años extendido para marcas populares (2018-2025)
+    const anos = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+    marcasPopulares.forEach(marca => {
       anos.forEach(ano => {
-        urls.push(createUrlEntry(`/repuestos/${marca}/${ano}`, '0.6', 'monthly'))
+        urls.push(createUrlEntry(`/repuestos/${marca.slug}/${ano}`, '0.6', 'monthly'))
+        
+        // URLs marca + año + categoría principal para top 3 marcas
+        if (marcasPopulares.indexOf(marca) < 3) {
+          categoriasPrincipales.slice(0, 4).forEach(categoria => {
+            urls.push(createUrlEntry(`/repuestos/${marca.slug}/${ano}/${categoria}`, '0.5', 'monthly'))
+          })
+        }
       })
     })
     
-    // 6. URLs de páginas especiales
-    const paginasEspeciales = [
-      '/repuestos-toyota-chile',
-      '/repuestos-nissan-chile', 
-      '/repuestos-chevrolet-chile',
-      '/repuestos-bmw-chile',
-      '/autopartes-chile',
-      '/repuestos-originales-chile'
-    ]
+    // 7. URLs de páginas especiales (generadas dinámicamente)
+    const paginasEspeciales = []
+    
+    // Páginas especiales para marcas populares
+    marcasPopulares.forEach(marca => {
+      paginasEspeciales.push(`/repuestos-${marca.slug}-chile`)
+      paginasEspeciales.push(`/autopartes-${marca.slug}-originales`)
+    })
+    
+    // Páginas especiales generales
+    paginasEspeciales.push('/autopartes-chile')
+    paginasEspeciales.push('/repuestos-originales-chile')
+    paginasEspeciales.push('/importacion-repuestos-chile')
+    paginasEspeciales.push('/repuestos-premium-chile')
     
     paginasEspeciales.forEach(pagina => {
       urls.push(createUrlEntry(pagina, '0.8', 'weekly'))
+    })
+    
+    // 8. URLs de combinaciones marca + modelo para marcas top
+    const marcasConModelos = marcasPopulares.slice(0, 3) // Solo top 3 para evitar sobrecargar
+    
+    // Función para obtener modelos populares por marca
+    const getModelosPopularesPorMarca = (marcaSlug: string): string[] => {
+      const modelosPorMarca: { [key: string]: string[] } = {
+        'toyota': ['corolla', 'camry', 'rav4', 'prius', 'hilux'],
+        'nissan': ['sentra', 'altima', 'x-trail', 'qashqai', 'navara'],
+        'chevrolet': ['cruze', 'spark', 'aveo', 'silverado', 'equinox'],
+        'bmw': ['serie-3', 'serie-5', 'x3', 'x5', 'serie-1'],
+        'hyundai': ['elantra', 'tucson', 'accent', 'santa-fe', 'i30'],
+        'ford': ['focus', 'fiesta', 'escape', 'f-150', 'mustang'],
+        'volkswagen': ['golf', 'jetta', 'tiguan', 'polo', 'passat'],
+        'honda': ['civic', 'accord', 'cr-v', 'fit', 'pilot'],
+        'mazda': ['mazda3', 'cx-5', 'mazda6', 'cx-3', 'mx-5'],
+        'kia': ['rio', 'sportage', 'sorento', 'optima', 'picanto']
+      }
+      return modelosPorMarca[marcaSlug] || []
+    }
+    
+    marcasConModelos.forEach(marca => {
+      const modelosPopulares = getModelosPopularesPorMarca(marca.slug)
+      modelosPopulares.forEach((modelo: string) => {
+        urls.push(createUrlEntry(`/repuestos/${marca.slug}/${modelo}`, '0.6', 'monthly'))
+      })
     })
     
     // Generar XML del sitemap

@@ -132,17 +132,70 @@ const rememberMe = ref(false)
 const loading = ref(false)
 const error = ref('')
 
+// Función para redirigir según el rol del usuario
+const redirectByRole = async (userId) => {
+  try {
+    const { $firestore } = useNuxtApp()
+    const { doc, getDoc } = await import('firebase/firestore')
+    const userDoc = await getDoc(doc($firestore, 'users', userId))
+    
+    if (userDoc.exists()) {
+      const userData = userDoc.data()
+      const role = userData.role || 'cliente'
+      
+      // Actualizar último login
+      const { setDoc } = await import('firebase/firestore')
+      await setDoc(doc($firestore, 'users', userId), {
+        ...userData,
+        lastLogin: new Date()
+      }, { merge: true })
+      
+      // Redirigir según el rol
+      switch (role) {
+        case 'superadmin':
+        case 'admin':
+          await navigateTo('/admin')
+          break
+        case 'vendedor':
+          await navigateTo('/vendedor')
+          break
+        default:
+          await navigateTo('/cliente')
+      }
+    } else {
+      // Si no existe el documento, crear uno con rol de cliente por defecto
+      const { setDoc } = await import('firebase/firestore')
+      const { $firebaseAuth } = useNuxtApp()
+      const user = $firebaseAuth?.currentUser
+      
+      await setDoc(doc($firestore, 'users', userId), {
+        email: user?.email,
+        displayName: user?.displayName,
+        role: 'cliente',
+        createdAt: new Date(),
+        lastLogin: new Date()
+      })
+      
+      await navigateTo('/cliente')
+    }
+  } catch (error) {
+    console.error('Error verificando rol de usuario:', error)
+    // En caso de error, redirigir al dashboard del cliente por defecto
+    await navigateTo('/cliente')
+  }
+}
+
 // Función de login con email y contraseña
 const login = async () => {
   loading.value = true
   error.value = ''
 
   try {
-    const { $auth } = useNuxtApp()
-    await signInWithEmailAndPassword($auth, email.value, password.value)
+    const { $firebaseAuth } = useNuxtApp()
+    const userCredential = await signInWithEmailAndPassword($firebaseAuth, email.value, password.value)
     
-    // Redirigir al dashboard o página principal
-    await navigateTo('/')
+    // Redirigir según el rol del usuario
+    await redirectByRole(userCredential.user.uid)
   } catch (err) {
     console.error('Error en login:', err)
     switch (err.code) {
@@ -172,12 +225,12 @@ const loginWithGoogle = async () => {
   error.value = ''
 
   try {
-    const { $auth } = useNuxtApp()
+    const { $firebaseAuth } = useNuxtApp()
     const provider = new GoogleAuthProvider()
-    await signInWithPopup($auth, provider)
+    const result = await signInWithPopup($firebaseAuth, provider)
     
-    // Redirigir al dashboard o página principal
-    await navigateTo('/')
+    // Redirigir según el rol del usuario
+    await redirectByRole(result.user.uid)
   } catch (err) {
     console.error('Error en login con Google:', err)
     error.value = 'Error al iniciar sesión con Google. Intenta nuevamente.'
@@ -194,6 +247,8 @@ useHead({
   ]
 })
 </script>
+
+
 
 
 

@@ -80,46 +80,86 @@
 </template>
 
 <script setup>
-// Obtener parámetros de la URL
+import { ref, computed, onMounted } from 'vue'
+
+// Obtener parámetros de la URL de forma estable
 const route = useRoute()
-const marca = route.params.marca
-const modelo = route.params.modelo
+const marca = computed(() => String(route.params.marca))
+const modelo = computed(() => String(route.params.modelo))
 
 // Capitalizar para display
-const marcaCapitalizada = marca.charAt(0).toUpperCase() + marca.slice(1)
-const modeloCapitalizado = modelo.charAt(0).toUpperCase() + modelo.slice(1)
+const marcaCapitalizada = computed(() => marca.value.charAt(0).toUpperCase() + marca.value.slice(1))
+const modeloCapitalizado = computed(() => modelo.value.charAt(0).toUpperCase() + modelo.value.slice(1))
 
-// Años disponibles según el modelo
-const añosDisponibles = []
-if (modelo === 'corolla') {
-  for (let i = 2010; i <= 2024; i++) añosDisponibles.push(i)
-} else if (modelo === 'qashqai') {
-  for (let i = 2014; i <= 2024; i++) añosDisponibles.push(i)
-} else if (modelo === 'sail') {
-  for (let i = 2012; i <= 2024; i++) añosDisponibles.push(i)
-} else {
-  // Años genéricos
-  for (let i = 2015; i <= 2024; i++) añosDisponibles.push(i)
+// Composables
+const { getAñosByModelo, getCategoriasByModelo } = useVehiculos()
+
+// Variables reactivas
+const añosDisponibles = ref([])
+const categorias = ref([])
+const loading = ref(true)
+
+// Iconos para categorías
+const iconosPorCategoria = {
+  'motor': '🔧',
+  'freno-maza-rueda': '🛑', 
+  'frenos': '🛑',
+  'suspension': '⚡',
+  'electrico': '⚡',
+  'carroceria-ensamblaje-lampara': '🚗',
+  'carroceria': '🚗',
+  'transmision-automatica': '⚙️',
+  'transmision': '⚙️',
+  'sistema-enfriamiento': '❄️',
+  'refrigeracion': '❄️',
+  'escapes-emisiones': '💨',
+  'escape': '💨'
 }
 
-// Categorías de repuestos
-const categorias = [
-  { nombre: 'Motor', slug: 'motor', icono: '🔧', repuestos: 45 },
-  { nombre: 'Frenos', slug: 'frenos', icono: '🛑', repuestos: 23 },
-  { nombre: 'Suspensión', slug: 'suspension', icono: '⚡', repuestos: 18 },
-  { nombre: 'Eléctrico', slug: 'electrico', icono: '⚡', repuestos: 31 },
-  { nombre: 'Carrocería', slug: 'carroceria', icono: '🚗', repuestos: 27 },
-  { nombre: 'Transmisión', slug: 'transmision', icono: '⚙️', repuestos: 15 },
-  { nombre: 'Refrigeración', slug: 'refrigeracion', icono: '❄️', repuestos: 12 },
-  { nombre: 'Escape', slug: 'escape', icono: '💨', repuestos: 9 }
-]
+// Cargar datos reales del modelo
+const cargarDatos = async () => {
+  try {
+    loading.value = true
+    
+    // Cargar años reales disponibles para este modelo
+    const años = await getAñosByModelo(marca.value, modelo.value)
+    añosDisponibles.value = años.sort((a, b) => b - a) // Orden descendente
+    
+    // Cargar categorías reales disponibles para este modelo
+    const categoriasDisponibles = await getCategoriasByModelo(marca.value, modelo.value)
+    categorias.value = categoriasDisponibles.map(categoria => ({
+      nombre: categoria.nombre,
+      slug: categoria.slug,
+      icono: iconosPorCategoria[categoria.slug] || '🔧',
+      repuestos: Math.floor(Math.random() * 40) + 10 // Simulado por ahora
+    }))
+    
+  } catch (error) {
+    console.error('Error cargando datos del modelo:', error)
+    // Fallback con datos básicos
+    añosDisponibles.value = Array.from({ length: 10 }, (_, i) => 2024 - i)
+    categorias.value = [
+      { nombre: 'Motor', slug: 'motor', icono: '🔧', repuestos: 45 },
+      { nombre: 'Frenos', slug: 'freno-maza-rueda', icono: '🛑', repuestos: 23 },
+      { nombre: 'Suspensión', slug: 'suspension', icono: '⚡', repuestos: 18 },
+      { nombre: 'Eléctrico', slug: 'electrico', icono: '⚡', repuestos: 31 }
+    ]
+  } finally {
+    loading.value = false
+  }
+}
+
+// Cargar datos al montar
+onMounted(() => {
+  cargarDatos()
+})
 
 // SEO Meta dinámico por modelo
 useHead({
-  title: `Repuestos ${marcaCapitalizada} ${modeloCapitalizado} Chile - Originales | FAutopiezas`,
+  title: `Repuestos ${marcaCapitalizada.value} ${modeloCapitalizado.value} Chile - Originales | FAutopiezas`,
   meta: [
-    { name: 'description', content: `Repuestos originales ${marcaCapitalizada} ${modeloCapitalizado} en Chile. Stock inmediato, garantía extendida, envío gratis. Especialistas en ${marcaCapitalizada} ${modeloCapitalizado}.` },
-    { name: 'keywords', content: `repuestos ${marca} ${modelo} chile, autopartes ${marca} ${modelo}, repuestos originales ${marca} ${modelo}, ${marca} ${modelo} repuestos` }
+    { name: 'description', content: `Repuestos originales ${marcaCapitalizada.value} ${modeloCapitalizado.value} en Chile. Stock inmediato, garantía extendida, envío gratis. Especialistas en ${marcaCapitalizada.value} ${modeloCapitalizado.value}.` },
+    { name: 'keywords', content: `repuestos ${marca.value} ${modelo.value} chile, autopartes ${marca.value} ${modelo.value}, repuestos originales ${marca.value} ${modelo.value}, ${marca.value} ${modelo.value} repuestos` }
   ]
 })
 </script>

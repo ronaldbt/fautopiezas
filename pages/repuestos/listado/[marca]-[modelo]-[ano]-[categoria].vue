@@ -212,17 +212,18 @@
 </template>
 
 <script setup>
-// Obtener parámetros de la URL
+import { computed } from 'vue'
+// Obtener parámetros de la URL de forma estable
 const route = useRoute()
-const marca = route.params.marca
-const modelo = route.params.modelo
-const año = route.params.año
-const categoria = route.params.categoria
+const marca = computed(() => String(route.params.marca))
+const modelo = computed(() => String(route.params.modelo))
+const año = computed(() => String(route.params.ano))
+const categoria = computed(() => String(route.params.categoria))
 
 // Capitalizar para display
-const marcaCapitalizada = marca.charAt(0).toUpperCase() + marca.slice(1)
-const modeloCapitalizado = modelo.charAt(0).toUpperCase() + modelo.slice(1)
-const categoriaCapitalizada = categoria.charAt(0).toUpperCase() + categoria.slice(1)
+const marcaCapitalizada = computed(() => marca.value.charAt(0).toUpperCase() + marca.value.slice(1))
+const modeloCapitalizado = computed(() => modelo.value.charAt(0).toUpperCase() + modelo.value.slice(1))
+const categoriaCapitalizada = computed(() => categoria.value.charAt(0).toUpperCase() + categoria.value.slice(1))
 
 // Datos de repuestos de ejemplo
 const repuestos = [
@@ -230,8 +231,8 @@ const repuestos = [
     id: 1,
     nombre: 'Pastillas de Freno Delanteras',
     descripcion: 'Pastillas de freno delanteras originales para mejor rendimiento',
-    codigo: `${marca.toUpperCase()}-FB-001`,
-    marca: marcaCapitalizada,
+    codigo: `${marca.value.toUpperCase()}-FB-001`,
+    marca: marcaCapitalizada.value,
     precio: 85000,
     stock: 15,
     slug: 'pastillas-freno-delanteras',
@@ -285,13 +286,14 @@ const repuestos = [
 
 // SEO Meta dinámico
 useHead({
-  title: `Listado de Repuestos ${categoriaCapitalizada} ${marcaCapitalizada} ${modeloCapitalizado} ${año} | FAutopiezas`,
+  title: `Listado de Repuestos ${categoriaCapitalizada.value} ${marcaCapitalizada.value} ${modeloCapitalizado.value} ${año.value} | FAutopiezas`,
   meta: [
-    { name: 'description', content: `Listado completo de repuestos ${categoriaCapitalizada.toLowerCase()} para ${marcaCapitalizada} ${modeloCapitalizado} ${año}. ${repuestos.length} repuestos disponibles con precios y stock.` },
-    { name: 'keywords', content: `listado repuestos ${categoria} ${marca} ${modelo} ${año}, repuestos ${categoria} ${marca} ${modelo} ${año} precio, catálogo ${categoria} ${marca} ${modelo}` }
+    { name: 'description', content: `Listado completo de repuestos ${categoriaCapitalizada.value.toLowerCase()} para ${marcaCapitalizada.value} ${modeloCapitalizado.value} ${año.value}. ${repuestos.length} repuestos disponibles con precios y stock.` },
+    { name: 'keywords', content: `listado repuestos ${categoria.value} ${marca.value} ${modelo.value} ${año.value}, repuestos ${categoria.value} ${marca.value} ${modelo.value} ${año.value} precio, catálogo ${categoria.value} ${marca.value} ${modelo.value}` }
   ]
 })
 </script>
+
 
 
 

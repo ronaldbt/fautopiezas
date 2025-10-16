@@ -211,23 +211,29 @@ const register = async () => {
   }
 
   try {
-    const { $auth } = useNuxtApp()
-    const userCredential = await createUserWithEmailAndPassword($auth, email.value, password.value)
+    const { $firebaseAuth } = useNuxtApp()
+    const userCredential = await createUserWithEmailAndPassword($firebaseAuth, email.value, password.value)
     
     // Actualizar perfil del usuario
     await updateProfile(userCredential.user, {
       displayName: fullName.value
     })
 
-    // TODO: Guardar información adicional en Firestore
-    // await saveUserData(userCredential.user.uid, {
-    //   fullName: fullName.value,
-    //   phone: phone.value,
-    //   subscribeNewsletter: subscribeNewsletter.value
-    // })
+    // Guardar información del usuario en Firestore con rol "cliente"
+    const { $firestore } = useNuxtApp()
+    const { doc, setDoc } = await import('firebase/firestore')
+    await setDoc(doc($firestore, 'users', userCredential.user.uid), {
+      email: userCredential.user.email,
+      displayName: fullName.value,
+      phone: phone.value,
+      role: 'cliente',
+      subscribeNewsletter: subscribeNewsletter.value,
+      createdAt: new Date(),
+      lastLogin: new Date()
+    })
     
-    // Redirigir al dashboard o página principal
-    await navigateTo('/')
+    // Redirigir al dashboard del cliente
+    await navigateTo('/cliente')
   } catch (err) {
     console.error('Error en registro:', err)
     switch (err.code) {
@@ -254,12 +260,28 @@ const registerWithGoogle = async () => {
   error.value = ''
 
   try {
-    const { $auth } = useNuxtApp()
+    const { $firebaseAuth, $firestore } = useNuxtApp()
     const provider = new GoogleAuthProvider()
-    await signInWithPopup($auth, provider)
+    const result = await signInWithPopup($firebaseAuth, provider)
     
-    // Redirigir al dashboard o página principal
-    await navigateTo('/')
+    // Guardar información del usuario en Firestore con rol "cliente" si es nuevo usuario
+    const { doc, setDoc, getDoc } = await import('firebase/firestore')
+    const userDoc = await getDoc(doc($firestore, 'users', result.user.uid))
+    
+    if (!userDoc.exists()) {
+      await setDoc(doc($firestore, 'users', result.user.uid), {
+        email: result.user.email,
+        displayName: result.user.displayName,
+        phone: '',
+        role: 'cliente',
+        subscribeNewsletter: false,
+        createdAt: new Date(),
+        lastLogin: new Date()
+      })
+    }
+    
+    // Redirigir al dashboard del cliente
+    await navigateTo('/cliente')
   } catch (err) {
     console.error('Error en registro con Google:', err)
     error.value = 'Error al registrarse con Google. Intenta nuevamente.'
@@ -276,6 +298,8 @@ useHead({
   ]
 })
 </script>
+
+
 
 
 

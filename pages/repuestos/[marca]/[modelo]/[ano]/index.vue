@@ -16,6 +16,7 @@
         </nav>
         <h1 class="text-3xl font-bold text-gray-800">
           Repuestos {{ marcaCapitalizada }} {{ modeloCapitalizado }} {{ año }}
+          <!-- DEBUG: {{ JSON.stringify({ marca: marca, modelo: modelo, año: año }) }} -->
         </h1>
         <p class="text-gray-600 mt-2">
           Repuestos originales para {{ marcaCapitalizada }} {{ modeloCapitalizado }} año {{ año }}
@@ -90,29 +91,90 @@
 </template>
 
 <script setup>
-// Obtener parámetros de la URL
+import { ref, computed, onMounted } from 'vue'
+
+// Obtener parámetros de la URL de forma estable
 const route = useRoute()
-const marca = route.params.marca
-const modelo = route.params.modelo
-const año = route.params.año
+const marca = computed(() => String(route.params.marca))
+const modelo = computed(() => String(route.params.modelo))
+const año = computed(() => String(route.params.ano))
 
 // Capitalizar para display
-const marcaCapitalizada = marca.charAt(0).toUpperCase() + marca.slice(1)
-const modeloCapitalizado = modelo.charAt(0).toUpperCase() + modelo.slice(1)
+const marcaCapitalizada = computed(() => marca.value.charAt(0).toUpperCase() + marca.value.slice(1))
+const modeloCapitalizado = computed(() => modelo.value.charAt(0).toUpperCase() + modelo.value.slice(1))
 
-// Categorías de repuestos
-const categorias = [
-  { nombre: 'Motor', slug: 'motor', icono: '🔧', repuestos: 45 },
-  { nombre: 'Frenos', slug: 'frenos', icono: '🛑', repuestos: 23 },
-  { nombre: 'Suspensión', slug: 'suspension', icono: '⚡', repuestos: 18 },
-  { nombre: 'Eléctrico', slug: 'electrico', icono: '⚡', repuestos: 31 },
-  { nombre: 'Carrocería', slug: 'carroceria', icono: '🚗', repuestos: 27 },
-  { nombre: 'Transmisión', slug: 'transmision', icono: '⚙️', repuestos: 15 },
-  { nombre: 'Refrigeración', slug: 'refrigeracion', icono: '❄️', repuestos: 12 },
-  { nombre: 'Escape', slug: 'escape', icono: '💨', repuestos: 9 }
-]
+// Composables
+const { getCategoriasByModelo, validarVehiculo, getCategorias } = useVehiculos()
 
-// Repuestos populares para el año específico
+// Variables reactivas
+const categorias = ref([])
+const loading = ref(true)
+const vehiculoValido = ref(false)
+
+// Iconos para categorías (mantener diseño visual)
+const iconosPorCategoria = {
+  'motor': '🔧',
+  'freno-maza-rueda': '🛑', 
+  'frenos': '🛑',
+  'suspension': '⚡',
+  'electrico': '⚡',
+  'carroceria-ensamblaje-lampara': '🚗',
+  'carroceria': '🚗',
+  'transmision-automatica': '⚙️',
+  'transmision': '⚙️',
+  'sistema-enfriamiento': '❄️',
+  'refrigeracion': '❄️',
+  'escapes-emisiones': '💨',
+  'escape': '💨'
+}
+
+// Cargar datos reales
+const cargarDatos = async () => {
+  try {
+    loading.value = true
+    
+    
+    // Validar que el vehículo existe
+    const esValido = await validarVehiculo(marca.value, modelo.value, parseInt(año.value))
+    console.log('✅ VEHÍCULO VÁLIDO:', esValido)
+    vehiculoValido.value = esValido
+    
+    if (esValido) {
+      // Cargar categorías reales disponibles para este modelo
+      const categoriasDisponibles = await getCategoriasByModelo(marca.value, modelo.value)
+      
+      // Mapear categorías con iconos y datos simulados de cantidad
+      categorias.value = categoriasDisponibles.map(categoria => ({
+        nombre: categoria.nombre,
+        slug: categoria.slug,
+        icono: iconosPorCategoria[categoria.slug] || '🔧',
+        repuestos: Math.floor(Math.random() * 40) + 10 // Simulado por ahora
+      }))
+    } else {
+      // Si el vehículo no es válido, usar categorías generales
+      const todasCategorias = getCategorias()
+      categorias.value = todasCategorias.slice(0, 8).map(categoria => ({
+        nombre: categoria.nombre,
+        slug: categoria.slug,
+        icono: iconosPorCategoria[categoria.slug] || '🔧',
+        repuestos: Math.floor(Math.random() * 40) + 10
+      }))
+    }
+  } catch (error) {
+    console.error('Error cargando datos del vehículo:', error)
+    // Fallback con categorías básicas
+    categorias.value = [
+      { nombre: 'Motor', slug: 'motor', icono: '🔧', repuestos: 45 },
+      { nombre: 'Frenos', slug: 'freno-maza-rueda', icono: '🛑', repuestos: 23 },
+      { nombre: 'Suspensión', slug: 'suspension', icono: '⚡', repuestos: 18 },
+      { nombre: 'Eléctrico', slug: 'electrico', icono: '⚡', repuestos: 31 }
+    ]
+  } finally {
+    loading.value = false
+  }
+}
+
+// Repuestos populares para el año específico (mantener igual)
 const repuestosPopulares = [
   { nombre: 'Filtro de Aceite', slug: 'filtro-aceite', descripcion: 'Filtro de aceite original', precio: 25000 },
   { nombre: 'Pastillas de Freno', slug: 'pastillas-freno', descripcion: 'Pastillas de freno delanteras', precio: 85000 },
@@ -122,12 +184,17 @@ const repuestosPopulares = [
   { nombre: 'Radiador', slug: 'radiador', descripcion: 'Radiador de motor', precio: 280000 }
 ]
 
+// Cargar datos al montar
+onMounted(() => {
+  cargarDatos()
+})
+
 // SEO Meta dinámico por año específico
 useHead({
-  title: `Repuestos ${marcaCapitalizada} ${modeloCapitalizado} ${año} - Originales | FAutopiezas`,
+  title: `Repuestos ${marcaCapitalizada.value} ${modeloCapitalizado.value} ${año.value} - Originales | FAutopiezas`,
   meta: [
-    { name: 'description', content: `Repuestos originales ${marcaCapitalizada} ${modeloCapitalizado} año ${año} en Chile. Stock inmediato, garantía extendida, envío gratis. Especialistas en ${marcaCapitalizada} ${modeloCapitalizado} ${año}.` },
-    { name: 'keywords', content: `repuestos ${marca} ${modelo} ${año}, autopartes ${marca} ${modelo} ${año}, repuestos originales ${marca} ${modelo} ${año}, ${marca} ${modelo} ${año} repuestos` }
+    { name: 'description', content: `Repuestos originales ${marcaCapitalizada.value} ${modeloCapitalizado.value} año ${año.value} en Chile. Stock inmediato, garantía extendida, envío gratis. Especialistas en ${marcaCapitalizada.value} ${modeloCapitalizado.value} ${año.value}.` },
+    { name: 'keywords', content: `repuestos ${marca.value} ${modelo.value} ${año.value}, autopartes ${marca.value} ${modelo.value} ${año.value}, repuestos originales ${marca.value} ${modelo.value} ${año.value}, ${marca.value} ${modelo.value} ${año.value} repuestos` }
   ]
 })
 </script>

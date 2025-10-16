@@ -245,21 +245,21 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 
-// Obtener parámetros de la URL
+// Obtener parámetros de la URL de forma estable
 const route = useRoute()
-const marca = route.params.marca
-const modelo = route.params.modelo
-const año = route.params.año
-const categoria = route.params.categoria
-const repuesto = route.params.repuesto
+const marca = computed(() => String(route.params.marca))
+const modelo = computed(() => String(route.params.modelo))
+const año = computed(() => String(route.params.ano))
+const categoria = computed(() => String(route.params.categoria))
+const repuesto = computed(() => String(route.params.repuesto))
 
 // Capitalizar para display
-const marcaCapitalizada = marca.charAt(0).toUpperCase() + marca.slice(1)
-const modeloCapitalizado = modelo.charAt(0).toUpperCase() + modelo.slice(1)
-const categoriaCapitalizada = categoria.charAt(0).toUpperCase() + categoria.slice(1)
-const repuestoCapitalizado = repuesto.charAt(0).toUpperCase() + repuesto.slice(1).replace(/-/g, ' ')
+const marcaCapitalizada = computed(() => marca.value.charAt(0).toUpperCase() + marca.value.slice(1))
+const modeloCapitalizado = computed(() => modelo.value.charAt(0).toUpperCase() + modelo.value.slice(1))
+const categoriaCapitalizada = computed(() => categoria.value.charAt(0).toUpperCase() + categoria.value.slice(1))
+const repuestoCapitalizado = computed(() => repuesto.value.charAt(0).toUpperCase() + repuesto.value.slice(1).replace(/-/g, ' '))
 
 // Variables reactivas
 const repuestoData = ref(null)
@@ -275,7 +275,7 @@ onMounted(async () => {
     loading.value = true
     
     // Buscar repuesto por slug
-    const repuestoEncontrado = await getRepuestoBySlug(String(repuesto))
+    const repuestoEncontrado = await getRepuestoBySlug(repuesto.value)
     
     if (repuestoEncontrado) {
       repuestoData.value = repuestoEncontrado
@@ -283,18 +283,18 @@ onMounted(async () => {
       // Si no se encuentra en Firebase, usar datos de ejemplo
       repuestoData.value = {
         id: 'ejemplo',
-        nombre: repuestoCapitalizado,
-        descripcion: `Repuesto original ${marcaCapitalizada} ${modeloCapitalizado} ${año}`,
+        nombre: repuestoCapitalizado.value,
+        descripcion: `Repuesto original ${marcaCapitalizada.value} ${modeloCapitalizado.value} ${año.value}`,
         precio: 85000,
         precioOriginal: 100000,
         descuento: 15,
         stock: true,
         cantidad: 5,
-        codigoOEM: `${String(marca).toUpperCase()}-${String(repuesto).toUpperCase()}-${año}`,
-        marca: String(marca),
-        modelo: String(modelo),
-        anio: parseInt(String(año)),
-        categoria: String(categoria),
+        codigoOEM: `${marca.value.toUpperCase()}-${repuesto.value.toUpperCase()}-${año.value}`,
+        marca: marca.value,
+        modelo: modelo.value,
+        anio: parseInt(año.value),
+        categoria: categoria.value,
         garantia: 12,
         peso: 1.5,
         dimensiones: {
@@ -340,10 +340,10 @@ onMounted(async () => {
 
 // SEO Meta dinámico por repuesto específico
 useHead({
-  title: `${repuestoCapitalizado} ${marcaCapitalizada} ${modeloCapitalizado} ${año} - Original | FAutopiezas`,
+  title: `${repuestoCapitalizado.value} ${marcaCapitalizada.value} ${modeloCapitalizado.value} ${año.value} - Original | FAutopiezas`,
   meta: [
-    { name: 'description', content: `${repuestoCapitalizado} original ${marcaCapitalizada} ${modeloCapitalizado} ${año} en Chile. Stock inmediato, garantía extendida, envío gratis. Repuesto original con código ${repuestoData.value?.codigoOEM || 'N/A'}.` },
-    { name: 'keywords', content: `${repuesto} ${marca} ${modelo} ${año}, ${repuesto} original ${marca} ${modelo}, ${repuesto} ${marca} ${modelo} ${año} precio, ${repuesto} ${marca} ${modelo} chile` }
+    { name: 'description', content: `${repuestoCapitalizado.value} original ${marcaCapitalizada.value} ${modeloCapitalizado.value} ${año.value} en Chile. Stock inmediato, garantía extendida, envío gratis. Repuesto original con código ${repuestoData.value?.codigoOEM || 'N/A'}.` },
+    { name: 'keywords', content: `${repuesto.value} ${marca.value} ${modelo.value} ${año.value}, ${repuesto.value} original ${marca.value} ${modelo.value}, ${repuesto.value} ${marca.value} ${modelo.value} ${año.value} precio, ${repuesto.value} ${marca.value} ${modelo.value} chile` }
   ]
 })
 </script>

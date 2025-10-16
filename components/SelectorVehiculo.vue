@@ -127,8 +127,31 @@ const onModeloChange = () => {
 
 // Función para buscar repuestos
 const buscarRepuestos = () => {
-  if (marcaSeleccionada.value && modeloSeleccionado.value && añoSeleccionado.value) {
-    navigateTo(`/repuestos/${marcaSeleccionada.value.slug}/${modeloSeleccionado.value.slug}/${añoSeleccionado.value}`)
+  // Validación estricta de todos los campos requeridos
+  if (!marcaSeleccionada.value || !marcaSeleccionada.value.slug) {
+    alert('Por favor selecciona una marca')
+    return
+  }
+  
+  if (!modeloSeleccionado.value || !modeloSeleccionado.value.slug) {
+    alert('Por favor selecciona un modelo')
+    return
+  }
+  
+  if (!añoSeleccionado.value || añoSeleccionado.value === '' || añoSeleccionado.value === 'undefined') {
+    alert('Por favor selecciona un año')
+    return
+  }
+  
+  // Solo navegar si todos los valores son válidos
+  const marcaSlug = String(marcaSeleccionada.value.slug).trim()
+  const modeloSlug = String(modeloSeleccionado.value.slug).trim()
+  const año = String(añoSeleccionado.value).trim()
+  
+  if (marcaSlug && modeloSlug && año && año !== 'undefined') {
+    navigateTo(`/repuestos/${marcaSlug}/${modeloSlug}/${año}`)
+  } else {
+    alert('Por favor completa todos los campos correctamente')
   }
 }
 
