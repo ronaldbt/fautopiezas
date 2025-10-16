@@ -631,7 +631,7 @@ const cargarPedidos = async () => {
         ano: data.ano,
         vin: data.vin,
         telefono: data.telefono,
-        precio: data.precio,
+        precio: data.price ?? data.precio ?? null,
         estado: data.estado,
         userId: data.userId,
         userEmail: data.userEmail,
