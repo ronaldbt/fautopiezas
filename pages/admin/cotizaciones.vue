@@ -89,12 +89,22 @@
         <div class="p-6 space-y-6 max-h-[70vh] overflow-y-auto">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">Cliente</label>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Cliente registrado</label>
               <select v-model="form.userId" class="w-full px-3 py-2 border rounded-lg">
-                <option value="">Seleccionar</option>
+                <option value="">Sin seleccionar</option>
                 <option v-for="c in clientes" :key="c.id" :value="c.id">{{ c.displayName }} ({{ c.email }})</option>
               </select>
             </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Nombre cliente (manual)</label>
+              <input v-model="form.manualName" type="text" class="w-full px-3 py-2 border rounded-lg" placeholder="Nombre del cliente"/>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Email cliente (manual)</label>
+              <input v-model="form.manualEmail" type="email" class="w-full px-3 py-2 border rounded-lg" placeholder="email@cliente.cl"/>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-2">Moneda</label>
               <select v-model="form.currency" class="w-full px-3 py-2 border rounded-lg">
@@ -177,7 +187,7 @@ const showNewQuote = ref(false)
 const creating = ref(false)
 const clientes = ref([])
 const form = reactive({
-  userId: '', userPhone: '',
+  userId: '', userPhone: '', manualName: '', manualEmail: '',
   currency: 'CLP', validez: 'Válida por 5 días',
   vehicle: { marca: '', modelo: '', ano: null, vin: '' },
   condicionesPago: '', plazoEntrega: '',
@@ -206,11 +216,13 @@ const cargarClientes = async () => {
 onMounted(cargarClientes)
 
 const crear = async () => {
-  if (!form.userId || form.items.length===0) return
+  if ((!form.userId && !form.manualName) || form.items.length===0) return
   creating.value = true
   try {
     const { id } = await createQuote({
-      userId: form.userId,
+      userId: form.userId || `manual_${Date.now()}`,
+      userEmail: form.manualEmail || null,
+      userName: form.manualName || null,
       userPhone: form.userPhone || null,
       vehicle: { marca: form.vehicle.marca||null, modelo: form.vehicle.modelo||null, ano: form.vehicle.ano||null, vin: form.vehicle.vin||null },
       currency: form.currency,

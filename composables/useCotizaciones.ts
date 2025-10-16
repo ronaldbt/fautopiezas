@@ -155,13 +155,12 @@ export const useCotizaciones = () => {
     container.style.padding = '24px'
     container.style.fontFamily = 'Inter, Arial, sans-serif'
     container.innerHTML = `
-      <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e5e7eb;padding-bottom:12px;margin-bottom:16px;">
-        <div>
-          <div style="font-size:20px;font-weight:700;">AutoPiezas360</div>
-          <div style="color:#6b7280;font-size:12px;">www.autopiezas360.cl</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #1e40af;padding-bottom:12px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="font-size:20px;font-weight:800;color:#1e40af;">AutoVentas360.cl</div>
         </div>
         <div style="text-align:right;">
-          <div style="font-size:22px;font-weight:800;color:#1f2937;">COTIZACIÓN</div>
+          <div style="font-size:22px;font-weight:800;color:#1e40af;">COTIZACIÓN</div>
           <div style="color:#6b7280;font-size:12px;">${quote.numero}</div>
         </div>
       </div>
