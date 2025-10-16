@@ -526,12 +526,12 @@ const cargarPedidos = async () => {
   // Por limitaciones de Firestore, hacemos dos consultas y unimos resultados si hay ambos filtros
   const pedidosTmp = []
   if (authStore.user?.uid) {
-    const qUid = query(collection($firestore, 'pedidos'), where('userId', '==', authStore.user.uid), orderBy('createdAt', 'desc'))
+    const qUid = query(collection($firestore, 'pedidos'), where('userId', '==', authStore.user.uid))
     const snapUid = await getDocs(qUid)
     snapUid.forEach(doc => pedidosTmp.push({ id: doc.id, ...doc.data() }))
   }
   if (authStore.user?.email) {
-    const qEmail = query(collection($firestore, 'pedidos'), where('userEmail', '==', authStore.user.email), orderBy('createdAt', 'desc'))
+    const qEmail = query(collection($firestore, 'pedidos'), where('userEmail', '==', authStore.user.email))
     const snapEmail = await getDocs(qEmail)
     snapEmail.forEach(doc => pedidosTmp.push({ id: doc.id, ...doc.data() }))
   }
