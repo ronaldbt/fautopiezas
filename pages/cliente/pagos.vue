@@ -22,7 +22,7 @@
                     </svg>
                   </div>
                   <div>
-                    <h3 class="font-semibold text-gray-900">Banco de Chile</h3>
+                    <h3 class="font-semibold text-gray-900">Banco Santander</h3>
                     <p class="text-sm text-gray-500">Cuenta Corriente</p>
                   </div>
                 </div>
@@ -32,15 +32,15 @@
               </div>
               <div class="bg-gray-50 rounded-lg p-3">
                 <p class="text-sm text-gray-600">Número de cuenta:</p>
-                <p class="font-mono text-lg font-semibold text-gray-900">12-345-678-901</p>
+                <p class="font-mono text-lg font-semibold text-gray-900">0-000-9726500-3</p>
               </div>
               <div class="mt-3">
                 <p class="text-sm text-gray-600">Titular:</p>
-                <p class="font-medium text-gray-900">AutoVentas360 SpA</p>
+                <p class="font-medium text-gray-900">Grupo Abarza Spa</p>
               </div>
               <div class="mt-3">
                 <p class="text-sm text-gray-600">RUT:</p>
-                <p class="font-mono text-gray-900">76.123.456-7</p>
+                <p class="font-mono text-gray-900">78.126.543-8</p>
               </div>
             </div>
 
@@ -66,12 +66,11 @@
                 <p class="font-mono text-lg font-semibold text-gray-900">09-876-543-210</p>
               </div>
               <div class="mt-3">
-                <p class="text-sm text-gray-600">Titular:</p>
-                <p class="font-medium text-gray-900">AutoVentas360 SpA</p>
-              </div>
-              <div class="mt-3">
-                <p class="text-sm text-gray-600">RUT:</p>
-                <p class="font-mono text-gray-900">76.123.456-7</p>
+                <p class="text-sm text-gray-600">Email de contacto:</p>
+                <div class="flex items-center justify-between">
+                  <p class="font-medium text-gray-900">contacto@grupoabarza.cl</p>
+                  <button @click="copyToClipboard('contacto@grupoabarza.cl')" class="text-blue-600 hover:text-blue-700 text-sm font-medium">Copiar</button>
+                </div>
               </div>
             </div>
           </div>
@@ -87,8 +86,12 @@
                 <span class="text-xs font-bold text-white">1</span>
               </div>
               <div>
-                <h3 class="font-medium text-gray-900">Realiza la transferencia</h3>
-                <p class="text-sm text-gray-600">Usa cualquiera de las cuentas bancarias mostradas arriba</p>
+                <h3 class="font-medium text-gray-900">Paga en nuestro link de pago</h3>
+                <p class="text-sm text-gray-600">
+                  Ingresa a
+                  <a class="text-blue-600 hover:text-blue-700 font-medium" href="https://link.mercadopago.cl/autopiezas360" target="_blank">link.mercadopago.cl/autopiezas360</a>
+                  e introduce el <strong>monto total de tu pedido</strong> y tus datos.
+                </p>
               </div>
             </div>
             
@@ -98,7 +101,7 @@
               </div>
               <div>
                 <h3 class="font-medium text-gray-900">Guarda el comprobante</h3>
-                <p class="text-sm text-gray-600">Toma una foto o screenshot del comprobante de transferencia</p>
+                <p class="text-sm text-gray-600">Toma una foto o screenshot del comprobante de pago</p>
               </div>
             </div>
             
