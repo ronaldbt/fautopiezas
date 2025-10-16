@@ -156,9 +156,12 @@
       <div class="bg-white rounded-2xl w-full max-w-4xl overflow-hidden">
         <div class="px-6 py-4 border-b flex items-center justify-between">
           <h3 class="text-lg font-semibold">Preview Cotización</h3>
-          <button @click="preview.open = false" class="w-9 h-9 rounded-lg hover:bg-gray-100 flex items-center justify-center">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-          </button>
+          <div class="flex items-center gap-2">
+            <button v-if="preview.quote" @click="generateQuotePdfClient(preview.quote)" class="px-4 py-2 border rounded-lg hover:bg-gray-50">Descargar PDF</button>
+            <button @click="preview.open = false" class="w-9 h-9 rounded-lg hover:bg-gray-100 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
         </div>
         <div class="p-0 max-h-[80vh] overflow-auto bg-gray-50">
           <div class="p-6">
@@ -258,13 +261,14 @@ const crear = async () => {
   } finally { creating.value = false }
 }
 
-const preview = reactive({ open: false, html: '' })
+const preview = reactive({ open: false, html: '', quote: null as any })
 const descargarPDF = async (id) => {
   const q = await getQuoteWithItems(id)
   await generateQuotePdfClient(q)
 }
 const verPreview = async (id) => {
   const q = await getQuoteWithItems(id)
+  preview.quote = q
   preview.html = buildQuoteHtml(q)
   preview.open = true
 }
