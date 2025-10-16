@@ -185,7 +185,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, updateProfile } from 'firebase/auth'
+// Cargar auth dinámicamente para mejor code-splitting
 
 // Variables reactivas
 const fullName = ref('')
@@ -212,6 +212,7 @@ const register = async () => {
 
   try {
     const { $firebaseAuth } = useNuxtApp()
+    const { createUserWithEmailAndPassword, updateProfile } = await import('firebase/auth')
     const userCredential = await createUserWithEmailAndPassword($firebaseAuth, email.value, password.value)
     
     // Actualizar perfil del usuario
@@ -261,6 +262,7 @@ const registerWithGoogle = async () => {
 
   try {
     const { $firebaseAuth, $firestore } = useNuxtApp()
+    const { signInWithPopup, GoogleAuthProvider } = await import('firebase/auth')
     const provider = new GoogleAuthProvider()
     const result = await signInWithPopup($firebaseAuth, provider)
     

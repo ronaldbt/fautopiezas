@@ -511,31 +511,39 @@ const editarPedido = (pedido) => {
   console.log('Editar pedido:', pedido.id)
 }
 
-// Función para actualizar estado
+// Función para actualizar estado (evento en subcolección + denormalización en doc padre)
 const actualizarEstado = async (pedidoId, nuevoEstado) => {
   try {
     const { $firestore } = useNuxtApp()
-    const { doc, updateDoc, serverTimestamp } = await import('firebase/firestore')
-    
+    const { doc, updateDoc, serverTimestamp, collection, addDoc } = await import('firebase/firestore')
+
+    // 1) Crear evento en subcolección
+    await addDoc(collection($firestore, `pedidos/${pedidoId}/events`), {
+      type: 'estado',
+      status: nuevoEstado,
+      description: `Estado actualizado a ${getStatusText(nuevoEstado)}`,
+      byUserId: authStore.user?.uid || null,
+      byName: authStore.user?.displayName || authStore.user?.email || 'Sistema',
+      byRole: 'admin',
+      createdAt: serverTimestamp()
+    })
+
+    // 2) Actualizar doc padre (denormalizado)
     await updateDoc(doc($firestore, 'pedidos', pedidoId), {
       estado: nuevoEstado,
+      status: nuevoEstado,
       updatedAt: serverTimestamp(),
-      [`historialEstados.${nuevoEstado}`]: {
-        estado: nuevoEstado,
-        fecha: serverTimestamp(),
-        descripcion: `Estado actualizado a ${getStatusText(nuevoEstado)}`,
-        usuario: authStore.user?.displayName || 'Admin'
-      }
+      lastEventAt: serverTimestamp()
     })
-    
-    // Actualizar en la lista local
+
+    // 3) Actualizar en la lista local
     const pedidoIndex = pedidos.value.findIndex(p => p.id === pedidoId)
     if (pedidoIndex !== -1) {
       pedidos.value[pedidoIndex].estado = nuevoEstado
     }
-    
+
     alert('Estado actualizado correctamente')
-    
+
   } catch (error) {
     console.error('Error actualizando estado:', error)
     alert('Error al actualizar el estado')
@@ -547,69 +555,29 @@ const crearPedido = async () => {
   loading.value = true
   
   try {
-    const { $firestore } = useNuxtApp()
-    const { collection, addDoc, serverTimestamp, doc, getDoc } = await import('firebase/firestore')
-    
-    // Obtener datos del cliente seleccionado
-    const clienteDoc = await getDoc(doc($firestore, 'users', nuevoPedido.value.userId))
-    const clienteData = clienteDoc.data()
-    
-    // Crear el documento del pedido en Firestore
-    const pedidoData = {
-      // Información básica
-      numero: `PED-${Date.now().toString().slice(-6)}`,
-      descripcion: nuevoPedido.value.descripcion,
-      vin: nuevoPedido.value.vin || null,
-      marca: nuevoPedido.value.marca || null,
-      modelo: nuevoPedido.value.modelo || null,
-      ano: nuevoPedido.value.ano ? parseInt(nuevoPedido.value.ano) : null,
-      telefono: nuevoPedido.value.telefono || null,
-      precio: nuevoPedido.value.precio ? parseInt(nuevoPedido.value.precio) : null,
-      
-      // Estado y seguimiento
-      estado: 'solicitud_enviada',
-      fechaEstimada: null,
-      
-      // Información del usuario
-      userId: nuevoPedido.value.userId,
-      userEmail: clienteData.email,
-      userName: clienteData.displayName,
-      
-      // Timestamps
-      createdAt: serverTimestamp(),
-      updatedAt: serverTimestamp(),
-      
-      // Historial de estados
-      historialEstados: [
-        {
-          estado: 'solicitud_enviada',
-          fecha: serverTimestamp(),
-          descripcion: 'Pedido creado por administrador',
-          usuario: authStore.user?.displayName || 'Admin'
-        }
-      ],
-      
-      // Información adicional
-      productoEncontrado: null,
-      fotoProducto: null,
-      paisOrigen: null,
-      proveedor: null,
-      codigoProducto: null,
-      transportista: null,
-      numeroSeguimiento: null,
-      direccionEntrega: null,
-      fechaEntrega: null,
-      review: null,
-      
-      // Metadatos
-      prioridad: 'normal',
-      notas: '',
-      asignadoA: authStore.user?.uid, // Asignado al admin que lo crea
-      creadoPor: authStore.user?.uid // Admin que lo creó
+    const { createPedido } = usePedidos()
+    const actor = {
+      byUserId: authStore.user?.uid || null,
+      byName: authStore.user?.displayName || authStore.user?.email || 'Admin',
+      byRole: 'admin'
     }
-    
-    // Guardar en Firestore
-    const docRef = await addDoc(collection($firestore, 'pedidos'), pedidoData)
+    const input = {
+      descripcion: nuevoPedido.value.descripcion,
+      vehicle: {
+        marca: nuevoPedido.value.marca || null,
+        modelo: nuevoPedido.value.modelo || null,
+        ano: nuevoPedido.value.ano ? parseInt(nuevoPedido.value.ano) : null,
+        vin: nuevoPedido.value.vin || null
+      },
+      telefono: nuevoPedido.value.telefono || null,
+      price: nuevoPedido.value.precio ? parseInt(nuevoPedido.value.precio) : null,
+      userId: nuevoPedido.value.userId,
+      createdBy: authStore.user?.uid || null,
+      createdByRole: 'admin',
+      assignedTo: authStore.user?.uid || null
+    }
+
+    const { id: pedidoId, numero } = await createPedido(input, actor)
     
     // Limpiar formulario
     nuevoPedido.value = {
@@ -628,7 +596,7 @@ const crearPedido = async () => {
     // Recargar lista de pedidos
     await cargarPedidos()
     
-    alert(`Pedido #${pedidoData.numero} creado exitosamente para ${clienteData.displayName}`)
+    alert(`Pedido #${numero} creado exitosamente`)
     
   } catch (error) {
     console.error('Error creando pedido:', error)
@@ -680,41 +648,23 @@ const cargarPedidos = async () => {
 
 // Cargar clientes
 const cargarClientes = async () => {
+  console.log('🔄 Cargando clientes...')
+  const { $firestore } = useNuxtApp()
+  const { collection, getDocs, query, where, orderBy } = await import('firebase/firestore')
+
+  // Intento 1: con orderBy (requiere índice compuesto)
   try {
-    console.log('🔄 Cargando clientes...')
-    const { $firestore } = useNuxtApp()
-    const { collection, getDocs, query, where, orderBy } = await import('firebase/firestore')
-    
-    // Primero intentar con orderBy, si falla, cargar sin orderBy
-    let clientesQuery
-    try {
-      clientesQuery = query(
-        collection($firestore, 'users'),
-        where('role', 'in', ['cliente', 'vendedor']),
-        orderBy('email', 'asc')
-      )
-    } catch (orderError) {
-      console.log('⚠️ No se puede ordenar por email, cargando sin ordenar...')
-      clientesQuery = query(
-        collection($firestore, 'users'),
-        where('role', 'in', ['cliente', 'vendedor'])
-      )
-    }
-    
-    const querySnapshot = await getDocs(clientesQuery)
+    const qOrdenado = query(
+      collection($firestore, 'users'),
+      where('role', 'in', ['cliente', 'vendedor']),
+      orderBy('email', 'asc')
+    )
+
+    const snap = await getDocs(qOrdenado)
     clientes.value = []
-    
-    console.log('📊 Total documentos encontrados:', querySnapshot.size)
-    
-    querySnapshot.forEach((doc) => {
+    console.log('📊 Total documentos encontrados (ordenado):', snap.size)
+    snap.forEach((doc) => {
       const data = doc.data()
-      console.log('👤 Cliente encontrado:', {
-        id: doc.id,
-        email: data.email,
-        displayName: data.displayName,
-        role: data.role
-      })
-      
       clientes.value.push({
         id: doc.id,
         email: data.email || 'Sin email',
@@ -722,12 +672,41 @@ const cargarClientes = async () => {
         role: data.role
       })
     })
-    
-    console.log('✅ Clientes cargados:', clientes.value.length)
-    
+    console.log('✅ Clientes cargados (ordenado):', clientes.value.length)
+    return
+  } catch (e) {
+    console.warn('⚠️ Consulta ordenada requiere índice. Reintentando sin orderBy...', e && e.message ? e.message : e)
+  }
+
+  // Intento 2: sin orderBy, con ordenamiento en cliente (no requiere índice)
+  try {
+    const qSimple = query(
+      collection($firestore, 'users'),
+      where('role', 'in', ['cliente', 'vendedor'])
+    )
+    const snap = await getDocs(qSimple)
+    clientes.value = []
+    console.log('📊 Total documentos encontrados (simple):', snap.size)
+    snap.forEach((doc) => {
+      const data = doc.data()
+      clientes.value.push({
+        id: doc.id,
+        email: data.email || 'Sin email',
+        displayName: data.displayName || data.name || data.email || 'Usuario',
+        role: data.role
+      })
+    })
+    // Ordenar en cliente por displayName luego email
+    clientes.value.sort((a, b) => {
+      const an = (a.displayName || '').toLowerCase()
+      const bn = (b.displayName || '').toLowerCase()
+      if (an === bn) return (a.email || '').toLowerCase().localeCompare((b.email || '').toLowerCase())
+      return an.localeCompare(bn)
+    })
+    console.log('✅ Clientes cargados (simple):', clientes.value.length)
   } catch (error) {
-    console.error('❌ Error cargando clientes:', error)
-    console.error('🔍 Detalles del error:', error.message)
+    console.error('❌ Error cargando clientes (simple):', error)
+    console.error('🔍 Detalles del error:', error && error.message ? error.message : error)
   }
 }
 

@@ -459,100 +459,49 @@ const showReviewModal = (pedido) => {
   console.log('Mostrar review para pedido:', pedido.id)
 }
 
-// Función para crear pedido
+// Función para crear pedido usando composable
 const crearPedido = async () => {
   loading.value = true
-  
   try {
-    const { $firestore } = useNuxtApp()
-    const { collection, addDoc, serverTimestamp } = await import('firebase/firestore')
-    
-    // Crear el documento del pedido en Firestore
-    const pedidoData = {
-      // Información básica
-      numero: `PED-${Date.now().toString().slice(-6)}`,
-      descripcion: nuevoPedido.value.descripcion,
-      vin: nuevoPedido.value.vin || null,
-      marca: nuevoPedido.value.marca || null,
-      modelo: nuevoPedido.value.modelo || null,
-      ano: nuevoPedido.value.ano ? parseInt(nuevoPedido.value.ano) : null,
-      telefono: nuevoPedido.value.telefono || null,
-      
-      // Estado y seguimiento
-      estado: 'solicitud_enviada',
-      fechaEstimada: null,
-      
-      // Información del usuario
-      userId: authStore.user?.uid,
-      userEmail: authStore.user?.email,
-      userName: authStore.user?.displayName,
-      
-      // Timestamps
-      createdAt: serverTimestamp(),
-      updatedAt: serverTimestamp(),
-      
-      // Historial de estados
-      historialEstados: [
-        {
-          estado: 'solicitud_enviada',
-          fecha: serverTimestamp(),
-          descripcion: 'Solicitud enviada por el cliente',
-          usuario: authStore.user?.displayName || 'Cliente'
-        }
-      ],
-      
-      // Información adicional (se llenará por vendedores/admins)
-      productoEncontrado: null,
-      fotoProducto: null,
-      precio: null,
-      paisOrigen: null,
-      proveedor: null,
-      codigoProducto: null,
-      transportista: null,
-      numeroSeguimiento: null,
-      direccionEntrega: null,
-      fechaEntrega: null,
-      review: null,
-      
-      // Metadatos
-      prioridad: 'normal',
-      notas: '',
-      asignadoA: null // Se asignará a un vendedor
+    const { createPedido } = usePedidos()
+    const actor = {
+      byUserId: authStore.user?.uid || null,
+      byName: authStore.user?.displayName || authStore.user?.email || 'Cliente',
+      byRole: 'cliente'
     }
-    
-    // Guardar en Firestore
-    const docRef = await addDoc(collection($firestore, 'pedidos'), pedidoData)
-    
-    // Agregar el pedido a la lista local con el ID de Firestore
-    const pedidoLocal = {
-      id: docRef.id,
-      numero: pedidoData.numero,
+    const input = {
       descripcion: nuevoPedido.value.descripcion,
-      marca: nuevoPedido.value.marca,
-      modelo: nuevoPedido.value.modelo,
-      ano: nuevoPedido.value.ano,
+      vehicle: {
+        marca: nuevoPedido.value.marca || null,
+        modelo: nuevoPedido.value.modelo || null,
+        ano: nuevoPedido.value.ano ? parseInt(nuevoPedido.value.ano) : null,
+        vin: nuevoPedido.value.vin || null
+      },
+      telefono: nuevoPedido.value.telefono || null,
+      price: null,
+      userId: authStore.user?.uid || '',
+      createdBy: authStore.user?.uid || null,
+      createdByRole: 'cliente',
+      assignedTo: null
+    }
+
+    const { id, numero } = await createPedido(input, actor)
+
+    pedidos.value.unshift({
+      id,
+      numero,
+      descripcion: input.descripcion,
+      marca: input.vehicle.marca,
+      modelo: input.vehicle.modelo,
+      ano: input.vehicle.ano,
       estado: 'solicitud_enviada',
       createdAt: new Date(),
       fechaEstimada: null
-    }
-    
-    pedidos.value.unshift(pedidoLocal)
-    
-    // Limpiar formulario
-    nuevoPedido.value = {
-      descripcion: '',
-      vin: '',
-      marca: '',
-      modelo: '',
-      ano: '',
-      telefono: ''
-    }
-    
+    })
+
+    nuevoPedido.value = { descripcion: '', vin: '', marca: '', modelo: '', ano: '', telefono: '' }
     showNewOrderModal.value = false
-    
-    // Mostrar mensaje de éxito
-    alert(`Pedido #${pedidoData.numero} creado exitosamente. Te contactaremos pronto con más información.`)
-    
+    alert(`Pedido #${numero} creado exitosamente. Te contactaremos pronto.`)
   } catch (error) {
     console.error('Error creando pedido:', error)
     alert('Error al crear el pedido. Por favor, inténtalo nuevamente.')

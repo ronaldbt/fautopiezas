@@ -123,7 +123,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
+// Cargar funciones de auth de forma dinámica más adelante para mejor code-splitting
 
 // Variables reactivas
 const email = ref('')
@@ -226,6 +226,7 @@ const login = async () => {
   try {
     console.log('🔍 Obteniendo Firebase Auth...')
     const { $firebaseAuth } = useNuxtApp()
+    const { signInWithEmailAndPassword } = await import('firebase/auth')
     console.log('✅ Firebase Auth obtenido:', $firebaseAuth ? 'SÍ' : 'NO')
     console.log('🔑 Firebase Auth object:', $firebaseAuth)
     
@@ -288,6 +289,7 @@ const loginWithGoogle = async () => {
 
   try {
     const { $firebaseAuth } = useNuxtApp()
+    const { signInWithPopup, GoogleAuthProvider } = await import('firebase/auth')
     const provider = new GoogleAuthProvider()
     const result = await signInWithPopup($firebaseAuth, provider)
     

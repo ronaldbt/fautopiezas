@@ -13,6 +13,16 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('firebase')) return 'firebase'
+            return undefined
+          }
+        }
+      }
+    }
   },
 
   runtimeConfig: {

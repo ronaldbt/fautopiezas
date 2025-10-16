@@ -1,9 +1,9 @@
 import { initializeApp } from 'firebase/app'
-import { getFirestore } from 'firebase/firestore'
+import { initializeFirestore, enableIndexedDbPersistence } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 import { getStorage } from 'firebase/storage'
 
-export default defineNuxtPlugin(() => {
+export default defineNuxtPlugin(async () => {
   console.log('🔧 Inicializando plugin de Firebase...')
   const config = useRuntimeConfig()
   
@@ -50,8 +50,20 @@ export default defineNuxtPlugin(() => {
     
     // Initialize Firebase services
     console.log('🔗 Inicializando servicios de Firebase...')
-    const db = getFirestore(app)
-    console.log('✅ Firestore inicializado')
+    // Forzar long-polling para evitar problemas con CORS/Service Worker
+    const db = initializeFirestore(app, {
+      experimentalForceLongPolling: true,
+      useFetchStreams: false
+    })
+    console.log('✅ Firestore inicializado (long-polling habilitado)')
+
+    // Habilitar persistencia para disponer de caché si la red falla
+    try {
+      await enableIndexedDbPersistence(db)
+      console.log('✅ Persistencia de Firestore habilitada (IndexedDB)')
+    } catch (persistenceError: any) {
+      console.warn('⚠️ No se pudo habilitar la persistencia de Firestore:', persistenceError?.message || persistenceError)
+    }
     
     const auth = getAuth(app)
     console.log('✅ Firebase Auth inicializado')

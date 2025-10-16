@@ -18,3 +18,4 @@ const user = $firebaseAuth?.currentUser
 console.log('Usuario en página de prueba:', user)
 </script>
 
+
