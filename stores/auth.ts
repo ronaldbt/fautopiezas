@@ -16,6 +16,34 @@ export const useAuthStore = defineStore('auth', () => {
   const userRole = computed(() => user.value?.role || 'cliente')
   const isLoading = ref(false)
 
+  // Detección de navegador para optimizaciones específicas
+  const detectBrowser = () => {
+    if (process.client) {
+      const userAgent = navigator.userAgent
+      return {
+        isChrome: /Chrome/.test(userAgent) && !/Edge/.test(userAgent),
+        isFirefox: /Firefox/.test(userAgent),
+        version: userAgent.match(/Chrome\/(\d+)/)?.[1] || '0'
+      }
+    }
+    return { isChrome: false, isFirefox: false, version: '0' }
+  }
+
+  // Función de retry con backoff exponencial
+  const retryWithBackoff = async (fn: () => Promise<any>, maxRetries = 3, baseDelay = 1000) => {
+    for (let i = 0; i < maxRetries; i++) {
+      try {
+        return await fn()
+      } catch (error) {
+        if (i === maxRetries - 1) throw error
+        
+        const delay = baseDelay * Math.pow(2, i)
+        console.log(`🔄 Reintentando en ${delay}ms (intento ${i + 1}/${maxRetries})`)
+        await new Promise(resolve => setTimeout(resolve, delay))
+      }
+    }
+  }
+
   // Acciones
   const setUser = (userData: User | null) => {
     user.value = userData
@@ -28,15 +56,49 @@ export const useAuthStore = defineStore('auth', () => {
   const login = async (email: string, password: string) => {
     try {
       setLoading(true)
-      const { $firebaseAuth } = useNuxtApp()
-      const { signInWithEmailAndPassword } = await import('firebase/auth')
+      const browserInfo = detectBrowser()
       
-      const userCredential = await signInWithEmailAndPassword($firebaseAuth, email, password)
-      await loadUserData(userCredential.user.uid)
+      const loginAttempt = async () => {
+        const { $firebaseAuth } = useNuxtApp()
+        const { signInWithEmailAndPassword } = await import('firebase/auth')
+        
+        const userCredential = await signInWithEmailAndPassword($firebaseAuth, email, password)
+        await loadUserData(userCredential.user.uid)
+        
+        return userCredential.user
+      }
       
-      return userCredential.user
+      // Aplicar retry logic solo en Chrome para mejorar compatibilidad
+      if (browserInfo.isChrome) {
+        console.log('🚀 Aplicando retry logic para Chrome...')
+        return await retryWithBackoff(loginAttempt, 3, 1500)
+      } else {
+        return await loginAttempt()
+      }
+      
     } catch (error) {
       console.error('Error en login:', error)
+      
+      // Manejo específico de errores de Chrome
+      const browserInfo = detectBrowser()
+      if (browserInfo.isChrome) {
+        console.warn('🚨 Error específico de Chrome detectado, aplicando soluciones...')
+        
+        // Limpiar caché local si es necesario
+        if (error.code === 'auth/network-request-failed') {
+          console.log('🧹 Limpiando asistencia de Chrome...')
+          // Intentar limpiar datos locales problemáticos
+          try {
+            if (process.client) {
+              localStorage.removeItem('firebase:authUser')
+              sessionStorage.clear()
+            }
+          } catch (cleanError) {
+            console.warn('No se pudo limpiar caché:', cleanError)
+          }
+        }
+      }
+      
       throw error
     } finally {
       setLoading(false)
@@ -46,16 +108,36 @@ export const useAuthStore = defineStore('auth', () => {
   const loginWithGoogle = async () => {
     try {
       setLoading(true)
-      const { $firebaseAuth } = await import('firebase/auth')
-      const { signInWithPopup, GoogleAuthProvider } = await import('firebase/auth')
+      const browserInfo = detectBrowser()
       
-      const provider = new GoogleAuthProvider()
-      const result = await signInWithPopup($firebaseAuth, provider)
-      await loadUserData(result.user.uid)
+      const googleLoginAttempt = async () => {
+        const { $firebaseAuth } = useNuxtApp()
+        const { signInWithPopup, GoogleAuthProvider } = await import('firebase/auth')
+        
+        const provider = new GoogleAuthProvider()
+        const result = await signInWithPopup($firebaseAuth, provider)
+        await loadUserData(result.user.uid)
+        
+        return result.user
+      }
       
-      return result.user
+      // Aplicar retry logic solo en Chrome para login con Google
+      if (browserInfo.isChrome) {
+        console.log('🚀 Aplicando retry logic para Google login en Chrome...')
+        return await retryWithBackoff(googleLoginAttempt, 2, 2000)
+      } else {
+        return await googleLoginAttempt()
+      }
+      
     } catch (error) {
       console.error('Error en login con Google:', error)
+      
+      // Manejo específico para Chrome
+      const browserInfo = detectBrowser()
+      if (browserInfo.isChrome && error.code === 'auth/popup-closed-by-user') {
+        console.log('🔄 Usuario cerró popup en Chrome, esto es normal')
+      }
+      
       throw error
     } finally {
       setLoading(false)

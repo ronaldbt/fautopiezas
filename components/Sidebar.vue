@@ -77,6 +77,21 @@ const emit = defineEmits(['toggle'])
 const route = useRoute()
 const { $firebaseAuth } = useNuxtApp()
 
+// Detección de navegador para optimizaciones específicas
+const detectBrowser = () => {
+  if (process.client) {
+    const userAgent = navigator.userAgent
+    return {
+      isChrome: /Chrome/.test(userAgent) && !/Edge/.test(userAgent),
+      isFirefox: /Firefox/.test(userAgent),
+      version: userAgent.match(/Chrome\/(\d+)/)?.[1] || '0'
+    }
+  }
+  return { isChrome: false, isFirefox: false, version: '0' }
+}
+
+const browserInfo = detectBrowser()
+
 // Datos del usuario
 const userName = computed(() => props.user.displayName || 'Usuario')
 const userEmail = computed(() => props.user.email || '')
@@ -121,14 +136,51 @@ const getActiveClass = (color) => {
   return activeMap[color] || activeMap.blue
 }
 
-// Función de logout
+// Función de logout optimizada para Chrome
 const logout = async () => {
   try {
     const { signOut } = await import('firebase/auth')
+    
+    // Limpieza específica para Chrome
+    if (browserInfo.isChrome) {
+      console.log('🧹 Limpiando datos específicos de Chrome...')
+      try {
+        // Limpiar localStorage y sessionStorage
+        localStorage.clear()
+        sessionStorage.clear()
+        
+        // Limpiar datos específicos de Firebase
+        localStorage.removeItem('firebase:authUser')
+        localStorage.removeItem('firebase:host:')
+        
+        console.log('✅ Limpieza de Chrome completada')
+      } catch (cleanError) {
+        console.warn('⚠️ Error en limpieza de Chrome:', cleanError)
+      }
+    }
+    
     await signOut($firebaseAuth)
     await navigateTo('/')
+    
   } catch (error) {
     console.error('Error al cerrar sesión:', error)
+    
+    // Fallback para Chrome si falla el logout normal
+    if (browserInfo.isChrome) {
+      console.log('🔄 Aplicando logout alternativo para Chrome...')
+      try {
+        // Limpiar todo y redirigir
+        localStorage.clear()
+        sessionStorage.clear()
+        await navigateTo('/')
+      } catch (fallbackError) {
+        console.error('Error en logout alternativo:', fallbackError)
+        // Último recurso: recargar la página
+        if (process.client) {
+          window.location.href = '/'
+        }
+      }
+    }
   }
 }
 </script>

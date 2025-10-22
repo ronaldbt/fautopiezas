@@ -7,6 +7,19 @@ export default defineNuxtPlugin(async () => {
   console.log('🔧 Inicializando plugin de Firebase...')
   const config = useRuntimeConfig()
   
+  // Detección de navegador para optimizaciones específicas
+  const detectBrowser = () => {
+    const userAgent = navigator.userAgent
+    return {
+      isChrome: /Chrome/.test(userAgent) && !/Edge/.test(userAgent),
+      isFirefox: /Firefox/.test(userAgent),
+      version: userAgent.match(/Chrome\/(\d+)/)?.[1] || '0'
+    }
+  }
+
+  const browserInfo = detectBrowser()
+  console.log('🌐 Navegador detectado:', browserInfo)
+  
   // Debug: Log the configuration
   console.log('🔍 Firebase Config Debug:', {
     apiKey: config.public.firebaseApiKey ? '✅ Definida' : '❌ NO DEFINIDA',
@@ -50,19 +63,53 @@ export default defineNuxtPlugin(async () => {
     
     // Initialize Firebase services
     console.log('🔗 Inicializando servicios de Firebase...')
-    // Forzar long-polling para evitar problemas con CORS/Service Worker
-    const db = initializeFirestore(app, {
-      experimentalForceLongPolling: true,
-      useFetchStreams: false
-    })
-    console.log('✅ Firestore inicializado (long-polling habilitado)')
+    
+    // Configuración optimizada según el navegador
+    const getFirestoreConfig = () => {
+      const baseConfig = {
+        experimentalForceLongPolling: true,
+        useFetchStreams: false
+      }
+      
+      if (browserInfo.isChrome) {
+        console.log('🚀 Aplicando configuración optimizada para Chrome...')
+        return {
+          ...baseConfig,
+          cacheSizeBytes: 30 * 1024 * 1024, // 30MB para Chrome
+          ignoreUndefinedProperties: true,
+          merge: true
+        }
+      }
+      
+      console.log('🦊 Usando configuración estándar para Firefox/otros navegadores')
+      return baseConfig
+    }
 
-    // Habilitar persistencia para disponer de caché si la red falla
+    const db = initializeFirestore(app, getFirestoreConfig())
+    console.log('✅ Firestore inicializado con configuración optimizada para el navegador')
+
+    // Habilitar persistencia con configuración optimizada según el navegador
     try {
-      await enableIndexedDbPersistence(db)
-      console.log('✅ Persistencia de Firestore habilitada (IndexedDB)')
+      if (browserInfo.isChrome) {
+        console.log('🔧 Configurando persistencia optimizada para Chrome...')
+        // Configuración específica para Chrome con mejor manejo de errores
+        await enableIndexedDbPersistence(db, {
+          forceOwnership: false,
+          synchronizeTabs: true
+        })
+        console.log('✅ Persistencia de Firestore habilitada para Chrome (IndexedDB optimizado)')
+      } else {
+        await enableIndexedDbPersistence(db)
+        console.log('✅ Persistencia de Firestore habilitada (IndexedDB)')
+      }
     } catch (persistenceError: any) {
       console.warn('⚠️ No se pudo habilitar la persistencia de Firestore:', persistenceError?.message || persistenceError)
+      
+      // Fallback específico para Chrome
+      if (browserInfo.isChrome) {
+        console.log('🔄 Chrome: Aplicando configuración alternativa sin persistencia...')
+        console.log('ℹ️ La aplicación funcionará sin caché offline para Chrome')
+      }
     }
     
     const auth = getAuth(app)

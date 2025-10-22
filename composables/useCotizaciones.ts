@@ -34,6 +34,34 @@ export interface CreateQuoteInput {
 }
 
 export const useCotizaciones = () => {
+  // Detección de navegador para optimizaciones específicas
+  const detectBrowser = () => {
+    if (process.client) {
+      const userAgent = navigator.userAgent
+      return {
+        isChrome: /Chrome/.test(userAgent) && !/Edge/.test(userAgent),
+        isFirefox: /Firefox/.test(userAgent),
+        version: userAgent.match(/Chrome\/(\d+)/)?.[1] || '0'
+      }
+    }
+    return { isChrome: false, isFirefox: false, version: '0' }
+  }
+
+  // Función de retry con backoff exponencial
+  const retryWithBackoff = async (fn: () => Promise<any>, maxRetries = 3, baseDelay = 1500) => {
+    for (let i = 0; i < maxRetries; i++) {
+      try {
+        return await fn()
+      } catch (error) {
+        if (i === maxRetries - 1) throw error
+        
+        const delay = baseDelay * Math.pow(2, i)
+        console.log(`🔄 Reintentando creación de cotización en ${delay}ms (intento ${i + 1}/${maxRetries})`)
+        await new Promise(resolve => setTimeout(resolve, delay))
+      }
+    }
+  }
+
   const computeTotals = (items: QuoteItemInput[], opts?: { modoTotalFinal?: boolean; totalFinal?: number }) => {
     if (opts?.modoTotalFinal && typeof opts.totalFinal === 'number') {
       const total = Math.max(0, opts.totalFinal)
@@ -44,8 +72,11 @@ export const useCotizaciones = () => {
   }
 
   const createQuote = async (input: CreateQuoteInput) => {
-    const { $firestore } = useNuxtApp()
-    const { collection, addDoc, serverTimestamp, doc, getDoc, setDoc } = await import('firebase/firestore')
+    const browserInfo = detectBrowser()
+    
+    const createAttempt = async () => {
+      const { $firestore } = useNuxtApp()
+      const { collection, addDoc, serverTimestamp, doc, getDoc, setDoc } = await import('firebase/firestore')
 
     // Datos del cliente (denormalización)
     let userEmail = input.userEmail || null
@@ -108,7 +139,16 @@ export const useCotizaciones = () => {
       createdAt: serverTimestamp()
     })
 
-    return { id: ref.id, numero }
+      return { id: ref.id, numero }
+    }
+    
+    // Aplicar retry logic solo en Chrome para mejorar compatibilidad
+    if (browserInfo.isChrome) {
+      console.log('🚀 Aplicando retry logic para creación de cotización en Chrome...')
+      return await retryWithBackoff(createAttempt, 3, 1500)
+    } else {
+      return await createAttempt()
+    }
   }
 
   const addDoc = async (...args: any[]) => {

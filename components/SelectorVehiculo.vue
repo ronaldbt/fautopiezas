@@ -307,7 +307,22 @@ const obtenerMarcaPorWMI = async (vinStr) => {
   }
 }
 
-// Buscar por VIN usando API gratuita NHTSA vPIC
+// Detección de navegador para optimizaciones específicas
+const detectBrowser = () => {
+  if (process.client) {
+    const userAgent = navigator.userAgent
+    return {
+      isChrome: /Chrome/.test(userAgent) && !/Edge/.test(userAgent),
+      isFirefox: /Firefox/.test(userAgent),
+      version: userAgent.match(/Chrome\/(\d+)/)?.[1] || '0'
+    }
+  }
+  return { isChrome: false, isFirefox: false, version: '0' }
+}
+
+const browserInfo = detectBrowser()
+
+// Buscar por VIN usando API gratuita NHTSA vPIC - optimizado para Chrome
 const buscarPorVIN = async () => {
   vinError.value = ''
   const vinIngresado = vin.value.trim().toUpperCase()
@@ -318,6 +333,14 @@ const buscarPorVIN = async () => {
 
   vinLoading.value = true
   try {
+    // Configuración de timeout específica para Chrome
+    const timeoutDuration = browserInfo.isChrome ? 15000 : 10000
+    console.log(`🚀 Búsqueda VIN optimizada para ${browserInfo.isChrome ? 'Chrome' : 'otros navegadores'} (timeout: ${timeoutDuration}ms)`)
+    
+    // Crear promise de timeout
+    const timeoutPromise = new Promise((_, reject) => 
+      setTimeout(() => reject(new Error('Timeout de búsqueda VIN')), timeoutDuration)
+    )
     // vPIC endpoints válidos: DecodeVinValuesExtended, DecodeVinValues, DecodeVin
     const endpoints = [
       (v) => `https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/${encodeURIComponent(v)}?format=json`,
@@ -333,16 +356,23 @@ const buscarPorVIN = async () => {
       const url = builder(vinIngresado)
       try {
         console.log('[VIN] intentando endpoint:', url)
+        
+        // Función de fetch con timeout específico para Chrome
+        const fetchWithTimeout = async (url) => {
+          const searchPromise = fetchJSONConFallback(url)
+          return Promise.race([searchPromise, timeoutPromise])
+        }
+        
         // Si el usuario seleccionó un año, agregar modelyear; si no, probar con candidatos
         if (vinYear.value) {
           const withYear = url + `&modelyear=${encodeURIComponent(vinYear.value)}`
           console.log('[VIN] usando modelyear seleccionado:', vinYear.value)
-          data = await fetchJSONConFallback(withYear)
+          data = await fetchWithTimeout(withYear)
         } else if (vinYearCandidates.value.length > 0) {
           for (const y of vinYearCandidates.value) {
             const withYear = url + `&modelyear=${encodeURIComponent(y)}`
             console.log('[VIN] probando modelyear candidato:', y)
-            const d = await fetchJSONConFallback(withYear)
+            const d = await fetchWithTimeout(withYear)
             if (d && Array.isArray(d.Results) && d.Results.length > 0) {
               const r0 = d.Results[0]
               if (r0 && (r0.Make || r0.Model || r0.ModelYear)) {
@@ -353,10 +383,10 @@ const buscarPorVIN = async () => {
           }
           if (!data) {
             // último intento sin modelyear
-            data = await fetchJSONConFallback(url)
+            data = await fetchWithTimeout(url)
           }
         } else {
-          data = await fetchJSONConFallback(url)
+          data = await fetchWithTimeout(url)
         }
         if (data && Array.isArray(data.Results) && data.Results.length > 0) break
         console.warn('[VIN] respuesta sin Results, probando siguiente endpoint', data)
@@ -474,8 +504,14 @@ const buscarPorVIN = async () => {
     // Navegar a la ruta
     navigateTo(`/repuestos/${marcaSlug}/${modeloCoincidente.slug}/${añoFinal}`)
   } catch (err) {
-    vinError.value = 'Error de red al consultar vPIC. Intenta nuevamente.'
-    console.error('[VIN] error general:', err)
+    // Manejo específico de errores para Chrome
+    if (browserInfo.isChrome && err.message === 'Timeout de búsqueda VIN') {
+      vinError.value = 'La búsqueda VIN tardó demasiado en Chrome. Intenta nuevamente o usa la búsqueda manual.'
+      console.warn('🚨 Timeout específico de Chrome en búsqueda VIN')
+    } else {
+      vinError.value = 'Error de red al consultar vPIC. Intenta nuevamente.'
+      console.error('[VIN] error general:', err)
+    }
   } finally {
     vinLoading.value = false
   }
