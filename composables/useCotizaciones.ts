@@ -5,6 +5,7 @@ export interface QuoteItemInput {
   cantidad: number
   precioUnitario: number
   descuentoUnit?: number
+  fotoPreview?: string | null
 }
 
 export interface VehicleInfo {
@@ -26,11 +27,18 @@ export interface CreateQuoteInput {
   validez?: string
   validaHasta?: Date | null
   items: QuoteItemInput[]
+  // Nuevo: modo total final sin unitarios
+  modoTotalFinal?: boolean
+  totalFinal?: number
   creadaPor: { userId: string | null; nombre: string | null; role: 'admin' | 'vendedor' | 'cliente' }
 }
 
 export const useCotizaciones = () => {
-  const computeTotals = (items: QuoteItemInput[]) => {
+  const computeTotals = (items: QuoteItemInput[], opts?: { modoTotalFinal?: boolean; totalFinal?: number }) => {
+    if (opts?.modoTotalFinal && typeof opts.totalFinal === 'number') {
+      const total = Math.max(0, opts.totalFinal)
+      return { subTotal: total, descuento: 0, impuestos: 0, envio: 0, total }
+    }
     const subTotal = items.reduce((acc, it) => acc + (it.cantidad * it.precioUnitario - (it.descuentoUnit || 0)), 0)
     return { subTotal, descuento: 0, impuestos: 0, envio: 0, total: subTotal }
   }
@@ -52,7 +60,7 @@ export const useCotizaciones = () => {
     }
 
     const numero = `COT-${new Date().getFullYear()}-${String(Date.now()).slice(-5)}`
-    const totals = computeTotals(input.items)
+    const totals = computeTotals(input.items, { modoTotalFinal: input.modoTotalFinal, totalFinal: input.totalFinal })
 
     const quoteData: any = {
       numero,
@@ -65,6 +73,8 @@ export const useCotizaciones = () => {
       validez: input.validez || 'Válida por 5 días',
       validaHasta: input.validaHasta || null,
       ...totals,
+      modoTotalFinal: !!input.modoTotalFinal,
+      totalFinal: typeof input.totalFinal === 'number' ? input.totalFinal : undefined,
       userId: input.userId,
       userEmail,
       userName,
@@ -81,7 +91,7 @@ export const useCotizaciones = () => {
 
     // Items
     for (const it of input.items) {
-      const subtotalLinea = it.cantidad * it.precioUnitario - (it.descuentoUnit || 0)
+      const subtotalLinea = input.modoTotalFinal ? null : (it.cantidad * it.precioUnitario - (it.descuentoUnit || 0))
       await addDoc(collection($firestore, `cotizaciones/${ref.id}/items`), {
         ...it,
         subtotalLinea
@@ -135,11 +145,56 @@ export const useCotizaciones = () => {
     return { id, ...data, items }
   }
 
+  // Eliminar cotización con sus subcolecciones (items y events)
+  const deleteQuote = async (id: string) => {
+    const { $firestore } = useNuxtApp()
+    const { doc, deleteDoc, collection, getDocs } = await import('firebase/firestore')
+    // Borrar items
+    const itemsSnap = await getDocs(collection($firestore, `cotizaciones/${id}/items`))
+    const eventsSnap = await getDocs(collection($firestore, `cotizaciones/${id}/events`))
+    const deletions: Promise<any>[] = []
+    itemsSnap.forEach(d => deletions.push(deleteDoc(doc($firestore, `cotizaciones/${id}/items`, d.id))))
+    eventsSnap.forEach(d => deletions.push(deleteDoc(doc($firestore, `cotizaciones/${id}/events`, d.id))))
+    await Promise.all(deletions)
+    // Borrar doc principal
+    await deleteDoc(doc($firestore, 'cotizaciones', id))
+  }
+
   const updateQuoteStatus = async (id: string, status: string, actor: { userId: string | null; nombre: string | null; role: string }, description?: string) => {
     const { $firestore } = useNuxtApp()
     const { doc, updateDoc, serverTimestamp, collection, addDoc } = await import('firebase/firestore')
     await updateDoc(doc($firestore, 'cotizaciones', id), { status, updatedAt: serverTimestamp(), lastEventAt: serverTimestamp() })
     await addDoc(collection($firestore, `cotizaciones/${id}/events`), { type: status, description: description || '', byUserId: actor.userId, byName: actor.nombre, byRole: actor.role, createdAt: serverTimestamp() })
+  }
+
+  // Actualizar cotización e items (sobrescribe items)
+  const updateQuote = async (id: string, input: CreateQuoteInput) => {
+    const { $firestore } = useNuxtApp()
+    const { doc, updateDoc, serverTimestamp, collection, getDocs, deleteDoc, addDoc } = await import('firebase/firestore')
+    const totals = computeTotals(input.items, { modoTotalFinal: input.modoTotalFinal, totalFinal: input.totalFinal })
+    await updateDoc(doc($firestore, 'cotizaciones', id), {
+      vehicle: input.vehicle,
+      currency: input.currency,
+      condicionesPago: input.condicionesPago || '',
+      plazoEntrega: input.plazoEntrega || '',
+      validez: input.validez || 'Válida por 5 días',
+      validaHasta: input.validaHasta || null,
+      ...totals,
+      modoTotalFinal: !!input.modoTotalFinal,
+      totalFinal: typeof input.totalFinal === 'number' ? input.totalFinal : undefined,
+      updatedAt: serverTimestamp(),
+      lastEventAt: serverTimestamp(),
+    })
+
+    // Reemplazar items
+    const existing = await getDocs(collection($firestore, `cotizaciones/${id}/items`))
+    const deletions: Promise<any>[] = []
+    existing.forEach(d => deletions.push(deleteDoc(d.ref)))
+    await Promise.all(deletions)
+    for (const it of input.items) {
+      const subtotalLinea = input.modoTotalFinal ? null : (it.cantidad * it.precioUnitario - (it.descuentoUnit || 0))
+      await addDoc(collection($firestore, `cotizaciones/${id}/items`), { ...it, subtotalLinea })
+    }
   }
 
   // Construye el HTML base de la cotización para reutilizar en preview y PDF
@@ -168,22 +223,26 @@ export const useCotizaciones = () => {
       <table style="width:100%;border-collapse:collapse;margin-top:8px;">
         <thead>
           <tr>
-            <th style="text-align:left;border-bottom:1px solid #e5e7eb;padding:8px;font-size:12px;color:#6b7280;">Ítem</th>
-            <th style="text-align:left;border-bottom:1px solid #e5e7eb;padding:8px;font-size:12px;color:#6b7280;">Descripción</th>
-            <th style="text-align:right;border-bottom:1px solid #e5e7eb;padding:8px;font-size:12px;color:#6b7280;">Cant.</th>
-            <th style="text-align:right;border-bottom:1px solid #e5e7eb;padding:8px;font-size:12px;color:#6b7280;">P. Unit.</th>
-            <th style="text-align:right;border-bottom:1px solid #e5e7eb;padding:8px;font-size:12px;color:#6b7280;">Subtotal</th>
+            <th style="text-align:left;border-bottom:1px solid #e5e7eb;padding:10px;font-size:12px;color:#6b7280;">Ítem</th>
+            <th style="text-align:left;border-bottom:1px solid #e5e7eb;padding:10px;font-size:12px;color:#6b7280;">Descripción</th>
+            <th style="text-align:left;border-bottom:1px solid #e5e7eb;padding:10px;font-size:12px;color:#6b7280;">Marca</th>
+            <th style="text-align:center;border-bottom:1px solid #e5e7eb;padding:10px;font-size:12px;color:#6b7280;">Foto</th>
+            <th style="text-align:right;border-bottom:1px solid #e5e7eb;padding:10px;font-size:12px;color:#6b7280;">Cant.</th>
+            ${quote.modoTotalFinal ? '' : '<th style="text-align:right;border-bottom:1px solid #e5e7eb;padding:10px;font-size:12px;color:#6b7280;">P. Unit.</th>'}
+            ${quote.modoTotalFinal ? '' : '<th style="text-align:right;border-bottom:1px solid #e5e7eb;padding:10px;font-size:12px;color:#6b7280;">Subtotal</th>'}
           </tr>
         </thead>
         <tbody>
           ${
             (quote.items || []).map((it: any, idx: number) => `
               <tr>
-                <td style="padding:8px;border-bottom:1px solid #f3f4f6;font-size:12px;color:#374151;">${it.itemCode || idx + 1}</td>
-                <td style="padding:8px;border-bottom:1px solid #f3f4f6;font-size:12px;color:#111827;">${it.descripcion}</td>
-                <td style="padding:8px;border-bottom:1px solid #f3f4f6;text-align:right;font-size:12px;color:#374151;">${it.cantidad}</td>
-                <td style="padding:8px;border-bottom:1px solid #f3f4f6;text-align:right;font-size:12px;color:#374151;">${new Intl.NumberFormat('es-CL',{style:'currency',currency:quote.currency}).format(it.precioUnitario)}</td>
-                <td style="padding:8px;border-bottom:1px solid #f3f4f6;text-align:right;font-size:12px;color:#111827;">${new Intl.NumberFormat('es-CL',{style:'currency',currency:quote.currency}).format((it.cantidad*it.precioUnitario)-(it.descuentoUnit||0))}</td>
+                <td style="padding:12px 10px;border-bottom:1px solid #f3f4f6;font-size:12px;color:#374151;vertical-align:middle;">${it.itemCode || idx + 1}</td>
+                <td style="padding:12px 10px;border-bottom:1px solid #f3f4f6;font-size:12px;color:#111827;vertical-align:middle;">${it.descripcion}</td>
+                <td style="padding:12px 10px;border-bottom:1px solid #f3f4f6;font-size:12px;color:#374151;vertical-align:middle;">${it.marca || '-'}</td>
+                <td style="padding:12px 10px;border-bottom:1px solid #f3f4f6;text-align:center;font-size:12px;color:#374151;vertical-align:middle;">${it.fotoPreview ? `<img src="${it.fotoPreview}" style="width:50px;height:50px;object-fit:cover;border-radius:4px;display:block;margin:0 auto;" />` : '-'}</td>
+                <td style="padding:12px 10px;border-bottom:1px solid #f3f4f6;text-align:right;font-size:12px;color:#374151;vertical-align:middle;">${it.cantidad}</td>
+                ${quote.modoTotalFinal ? '' : `<td style="padding:12px 10px;border-bottom:1px solid #f3f4f6;text-align:right;font-size:12px;color:#374151;vertical-align:middle;">${new Intl.NumberFormat('es-CL',{style:'currency',currency:quote.currency}).format(it.precioUnitario)}</td>`}
+                ${quote.modoTotalFinal ? '' : `<td style=\"padding:12px 10px;border-bottom:1px solid #f3f4f6;text-align:right;font-size:12px;color:#111827;vertical-align:middle;\">${new Intl.NumberFormat('es-CL',{style:'currency',currency:quote.currency}).format((it.cantidad*it.precioUnitario)-(it.descuentoUnit||0))}</td>`}
               </tr>
             `).join('')
           }
@@ -191,10 +250,7 @@ export const useCotizaciones = () => {
       </table>
       <div style="display:flex;justify-content:flex-end;margin-top:12px;">
         <div style="width:260px;">
-          <div style="display:flex;justify-content:space-between;font-size:12px;color:#374151;padding:4px 0;">
-            <span>Subtotal</span>
-            <span>${new Intl.NumberFormat('es-CL',{style:'currency',currency:quote.currency}).format(quote.subTotal||0)}</span>
-          </div>
+          ${quote.modoTotalFinal ? '' : `<div style="display:flex;justify-content:space-between;font-size:12px;color:#374151;padding:4px 0;"><span>Subtotal</span><span>${new Intl.NumberFormat('es-CL',{style:'currency',currency:quote.currency}).format(quote.subTotal||0)}</span></div>`}
           <div style="display:flex;justify-content:space-between;font-size:12px;color:#374151;padding:4px 0;">
             <span>Descuento</span>
             <span>${new Intl.NumberFormat('es-CL',{style:'currency',currency:quote.currency}).format(quote.descuento||0)}</span>
@@ -260,7 +316,7 @@ export const useCotizaciones = () => {
     document.body.removeChild(container)
   }
 
-  return { createQuote, listQuotes, getQuoteWithItems, updateQuoteStatus, generateQuotePdfClient, buildQuoteHtml }
+  return { createQuote, listQuotes, getQuoteWithItems, updateQuoteStatus, generateQuotePdfClient, buildQuoteHtml, deleteQuote, updateQuote }
 }
 
 

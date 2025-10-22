@@ -37,3 +37,19 @@ export default defineNuxtPlugin(() => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

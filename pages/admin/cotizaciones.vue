@@ -68,7 +68,8 @@
             <td class="py-4 px-6 text-right space-x-2">
               <button @click="verPreview(q.id)" class="px-3 py-2 text-sm border rounded-lg hover:bg-gray-50">Preview</button>
               <button @click="descargarPDF(q.id)" class="px-3 py-2 text-sm border rounded-lg hover:bg-gray-50">PDF</button>
-              <NuxtLink :to="`/cliente/cotizaciones/${q.id}`" class="px-3 py-2 text-sm border rounded-lg hover:bg-gray-50">Ver</NuxtLink>
+              <button @click="editar(q.id)" class="px-3 py-2 text-sm border rounded-lg hover:bg-gray-50">Editar</button>
+              <button @click="onEliminar(q)" class="px-3 py-2 text-sm border rounded-lg hover:bg-red-50 text-red-600">Eliminar</button>
             </td>
           </tr>
           <tr v-if="cotizaciones.length === 0">
@@ -118,23 +119,62 @@
               <input v-model="form.validez" type="text" class="w-full px-3 py-2 border rounded-lg" placeholder="Válida por 5 días"/>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
             <input v-model="form.vehicle.marca" type="text" class="w-full px-3 py-2 border rounded-lg" placeholder="Marca"/>
             <input v-model="form.vehicle.modelo" type="text" class="w-full px-3 py-2 border rounded-lg" placeholder="Modelo"/>
             <input v-model.number="form.vehicle.ano" type="number" class="w-full px-3 py-2 border rounded-lg" placeholder="Año"/>
+            <input v-model="form.vehicle.vin" type="text" class="w-full px-3 py-2 border rounded-lg" placeholder="VIN (opcional)" maxlength="17"/>
           </div>
-          <div class="space-y-2">
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <label class="flex items-center gap-2 text-sm text-gray-700">
+                <input type="checkbox" v-model="form.modoTotalFinal" />
+                Modo precio total (ocultar unitarios)
+              </label>
+            </div>
+            <div v-if="form.modoTotalFinal" class="grid grid-cols-1">
+              <label class="block text-sm font-medium text-gray-700 mb-2">Total de la cotización</label>
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-2 border rounded-lg bg-gray-50 text-gray-700">{{ form.currency }}</span>
+                <input v-model.number="form.totalFinal" type="number" step="any" min="0" class="w-full px-3 py-2 border rounded-lg" placeholder="Ingresa el total" />
+              </div>
+            </div>
             <div class="flex items-center justify-between">
               <h4 class="font-medium">Ítems</h4>
               <button @click="addItem" class="text-blue-600 text-sm">Agregar ítem</button>
             </div>
             <div class="space-y-3">
-              <div v-for="(it,idx) in form.items" :key="idx" class="grid grid-cols-12 gap-2">
+              <div v-for="(it,idx) in form.items" :key="idx" class="grid grid-cols-12 gap-2 items-end">
                 <input v-model="it.itemCode" class="col-span-2 px-3 py-2 border rounded-lg" placeholder="Código"/>
-                <input v-model="it.descripcion" class="col-span-5 px-3 py-2 border rounded-lg" placeholder="Descripción"/>
+                <input v-model="it.descripcion" class="col-span-3 px-3 py-2 border rounded-lg" placeholder="Descripción"/>
                 <input v-model="it.marca" class="col-span-2 px-3 py-2 border rounded-lg" placeholder="Marca"/>
                 <input v-model.number="it.cantidad" type="number" class="col-span-1 px-3 py-2 border rounded-lg" placeholder="Cant"/>
-                <input v-model.number="it.precioUnitario" type="number" class="col-span-2 px-3 py-2 border rounded-lg" placeholder="Precio"/>
+                <input v-if="!form.modoTotalFinal" v-model.number="it.precioUnitario" type="number" class="col-span-2 px-3 py-2 border rounded-lg" placeholder="Precio"/>
+                <div v-if="form.modoTotalFinal" class="col-span-2"></div>
+                <div class="col-span-2 flex gap-1">
+                  <input 
+                    :ref="el => fileInputs[idx] = el"
+                    type="file" 
+                    accept="image/*" 
+                    @change="handleFileUpload($event, idx)"
+                    class="hidden"
+                  />
+                  <button 
+                    type="button"
+                    @click="fileInputs[idx]?.click()"
+                    class="px-2 py-2 text-xs border rounded-lg hover:bg-gray-50"
+                  >
+                    📷 Foto
+                  </button>
+                  <button 
+                    v-if="it.fotoPreview"
+                    type="button"
+                    @click="removePhoto(idx)"
+                    class="px-2 py-2 text-xs border rounded-lg hover:bg-red-50 text-red-600"
+                  >
+                    ✕
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -146,7 +186,7 @@
         </div>
         <div class="px-6 py-4 bg-gray-50 border-t flex justify-end space-x-3">
           <button @click="showNewQuote=false" class="px-4 py-2 border rounded-lg">Cancelar</button>
-          <button :disabled="creating" @click="crear" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">{{ creating ? 'Creando...' : 'Crear' }}</button>
+          <button :disabled="creating || (form.modoTotalFinal && !(Number(form.totalFinal) > 0))" @click="crear" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">{{ creating ? 'Creando...' : 'Crear' }}</button>
         </div>
       </div>
     </div>
@@ -178,7 +218,7 @@
 <script setup>
 definePageMeta({ layout: 'dashboard-professional', middleware: 'admin' })
 
-const { listQuotes, createQuote, getQuoteWithItems, generateQuotePdfClient, buildQuoteHtml } = useCotizaciones()
+const { listQuotes, createQuote, getQuoteWithItems, generateQuotePdfClient, buildQuoteHtml, deleteQuote, updateQuote } = useCotizaciones()
 const authStore = useAuthStore()
 
 const estados = ['borrador','enviada','aceptada','rechazada','vencida']
@@ -214,10 +254,33 @@ const form = reactive({
   currency: 'CLP', validez: 'Válida por 5 días',
   vehicle: { marca: '', modelo: '', ano: null, vin: '' },
   condicionesPago: '', plazoEntrega: '',
-  items: [ { itemCode:'', descripcion:'', marca:'', cantidad:1, precioUnitario:0 } ]
+  modoTotalFinal: false, totalFinal: null,
+  items: [ { itemCode:'', descripcion:'', marca:'', cantidad:1, precioUnitario:0, fotoPreview: null } ]
 })
 
-const addItem = () => form.items.push({ itemCode:'', descripcion:'', marca:'', cantidad:1, precioUnitario:0 })
+// Referencias para inputs de archivo
+const fileInputs = ref([])
+
+const addItem = () => form.items.push({ itemCode:'', descripcion:'', marca:'', cantidad:1, precioUnitario:0, fotoPreview: null })
+
+// Manejo de fotos
+const handleFileUpload = (event, idx) => {
+  const file = event.target.files[0]
+  if (file && file.type.startsWith('image/')) {
+    const reader = new FileReader()
+    reader.onload = (e) => {
+      form.items[idx].fotoPreview = e.target.result
+    }
+    reader.readAsDataURL(file)
+  }
+}
+
+const removePhoto = (idx) => {
+  form.items[idx].fotoPreview = null
+  if (fileInputs.value[idx]) {
+    fileInputs.value[idx].value = ''
+  }
+}
 
 // cargar clientes básicos para seleccionar
 const cargarClientes = async () => {
@@ -242,7 +305,7 @@ const crear = async () => {
   if ((!form.userId && !form.manualName) || form.items.length===0) return
   creating.value = true
   try {
-    const { id } = await createQuote({
+    const payload = {
       userId: form.userId || `manual_${Date.now()}`,
       userEmail: form.manualEmail || null,
       userName: form.manualName || null,
@@ -254,8 +317,16 @@ const crear = async () => {
       validez: form.validez,
       validaHasta: null,
       items: form.items,
+      modoTotalFinal: form.modoTotalFinal,
+      totalFinal: form.modoTotalFinal ? (Number(form.totalFinal)||0) : undefined,
       creadaPor: { userId: authStore.user?.uid || null, nombre: authStore.user?.displayName || authStore.user?.email || null, role: 'admin' }
-    })
+    }
+    if (editState.id) {
+      await updateQuote(editState.id, payload)
+    } else {
+      const { id } = await createQuote(payload)
+      editState.id = id
+    }
     showNewQuote.value = false
     await cargar()
   } finally { creating.value = false }
@@ -271,6 +342,48 @@ const verPreview = async (id) => {
   preview.quote = q
   preview.html = buildQuoteHtml(q)
   preview.open = true
+}
+
+const editState = reactive({ id: '' })
+const editar = async (id) => {
+  const q = await getQuoteWithItems(id)
+  // Prellenar formulario
+  form.userId = q.userId || ''
+  form.manualName = q.userName || ''
+  form.manualEmail = q.userEmail || ''
+  form.userPhone = q.userPhone || ''
+  form.currency = q.currency || 'CLP'
+  form.validez = q.validez || 'Válida por 5 días'
+  form.vehicle.marca = q.vehicle?.marca || ''
+  form.vehicle.modelo = q.vehicle?.modelo || ''
+  form.vehicle.ano = q.vehicle?.ano || null
+  form.vehicle.vin = q.vehicle?.vin || ''
+  form.condicionesPago = q.condicionesPago || ''
+  form.plazoEntrega = q.plazoEntrega || ''
+  form.modoTotalFinal = !!q.modoTotalFinal
+  form.totalFinal = q.totalFinal || null
+  form.items = (q.items || []).map((it) => ({
+    itemCode: it.itemCode || '',
+    descripcion: it.descripcion || '',
+    marca: it.marca || '',
+    cantidad: it.cantidad || 1,
+    precioUnitario: it.precioUnitario || 0,
+    fotoPreview: it.fotoPreview || null
+  }))
+  editState.id = id
+  showNewQuote.value = true
+}
+
+const onEliminar = async (q) => {
+  const ok = confirm(`¿Eliminar la cotización ${q.numero}? Esta acción no se puede deshacer.`)
+  if (!ok) return
+  try {
+    await deleteQuote(q.id)
+    await cargar()
+  } catch (e) {
+    alert('No se pudo eliminar la cotización. Intenta nuevamente.')
+    console.error(e)
+  }
 }
 </script>
 
