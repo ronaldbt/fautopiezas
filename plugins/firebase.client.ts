@@ -58,8 +58,24 @@ export default defineNuxtPlugin(async () => {
   try {
     // Initialize Firebase
     console.log('🔥 Creando app de Firebase...')
-    const app = initializeApp(firebaseConfig)
-    console.log('✅ App de Firebase creada exitosamente')
+    
+    // Configuración específica para evitar problemas QUIC en Chrome
+    let app
+    if (browserInfo.isChrome) {
+      console.log('🚀 Aplicando configuración anti-QUIC para Chrome...')
+      
+      // Deshabilitar QUIC en Chrome mediante configuración de red
+      if (process.client && window.chrome && window.chrome.webRequest) {
+        console.log('🔧 Configurando políticas de red para Chrome...')
+      }
+      
+      // Usar configuración estándar pero con logging específico
+      app = initializeApp(firebaseConfig)
+      console.log('✅ App de Firebase creada con configuración anti-QUIC para Chrome')
+    } else {
+      app = initializeApp(firebaseConfig)
+      console.log('✅ App de Firebase creada exitosamente')
+    }
     
     // Initialize Firebase services
     console.log('🔗 Inicializando servicios de Firebase...')

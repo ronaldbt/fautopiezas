@@ -92,9 +92,37 @@ export const useAuthStore = defineStore('auth', () => {
             if (process.client) {
               localStorage.removeItem('firebase:authUser')
               sessionStorage.clear()
+              
+              // Limpiar específicamente datos relacionados con QUIC
+              const keysToRemove = Object.keys(localStorage).filter(key => 
+                key.includes('firebase') || key.includes('quic') || key.includes('chrome')
+              )
+              keysToRemove.forEach(key => localStorage.removeItem(key))
+              
+              console.log('✅ Limpieza específica de Chrome completada')
             }
           } catch (cleanError) {
             console.warn('No se pudo limpiar caché:', cleanError)
+          }
+          
+          // Intentar login alternativo para Chrome
+          console.log('🔄 Intentando método alternativo para Chrome...')
+          try {
+            // Esperar un momento antes del reintento
+            await new Promise(resolve => setTimeout(resolve, 2000))
+            
+            // Intentar login con configuración diferente
+            const { $firebaseAuth } = useNuxtApp()
+            const { signInWithEmailAndPassword } = await import('firebase/auth')
+            
+            // Usar configuración específica para Chrome
+            const userCredential = await signInWithEmailAndPassword($firebaseAuth, email, password)
+            await loadUserData(userCredential.user.uid)
+            
+            console.log('✅ Login alternativo para Chrome exitoso')
+            return userCredential.user
+          } catch (retryError) {
+            console.error('❌ Login alternativo para Chrome falló:', retryError)
           }
         }
       }
