@@ -11,6 +11,22 @@
       </div>
       
       <div class="space-y-4">
+        <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div class="ml-3">
+              <h4 class="text-sm font-medium text-red-800">Error QUIC Detectado</h4>
+              <p class="text-sm text-red-700 mt-1">
+                Chrome está usando el protocolo QUIC que causa problemas con Firebase. <strong>Solución rápida:</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+        
         <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
           <div class="flex">
             <div class="flex-shrink-0">
@@ -29,12 +45,12 @@
         
         <div class="space-y-3">
           <div class="flex items-start space-x-3">
-            <div class="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-              <span class="text-xs font-medium text-blue-600">1</span>
+            <div class="flex-shrink-0 w-6 h-6 bg-red-100 rounded-full flex items-center justify-center">
+              <span class="text-xs font-medium text-red-600">1</span>
             </div>
             <div>
               <p class="text-sm text-gray-700">
-                <strong>Limpiar caché de Chrome:</strong> Presiona <kbd class="px-1 py-0.5 bg-gray-100 rounded text-xs">Ctrl+Shift+Del</kbd> y selecciona "Todo el tiempo"
+                <strong>DESHABILITAR QUIC:</strong> Ve a <code class="px-1 py-0.5 bg-gray-100 rounded text-xs">chrome://flags/#enable-quic</code> y cambia a <strong>Disabled</strong>
               </p>
             </div>
           </div>
@@ -45,7 +61,7 @@
             </div>
             <div>
               <p class="text-sm text-gray-700">
-                <strong>Desactivar extensiones:</strong> Ve a <code class="px-1 py-0.5 bg-gray-100 rounded text-xs">chrome://extensions/</code> y desactiva temporalmente todas las extensiones
+                <strong>Limpiar caché de Chrome:</strong> Presiona <kbd class="px-1 py-0.5 bg-gray-100 rounded text-xs">Ctrl+Shift+Del</kbd> y selecciona "Todo el tiempo"
               </p>
             </div>
           </div>
@@ -56,7 +72,18 @@
             </div>
             <div>
               <p class="text-sm text-gray-700">
-                <strong>Actualizar Chrome:</strong> Ve a <code class="px-1 py-0.5 bg-gray-100 rounded text-xs">chrome://settings/help</code> y actualiza a la última versión
+                <strong>Desactivar extensiones:</strong> Ve a <code class="px-1 py-0.5 bg-gray-100 rounded text-xs">chrome://extensions/</code> y desactiva temporalmente todas las extensiones
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-3">
+            <div class="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+              <span class="text-xs font-medium text-blue-600">4</span>
+            </div>
+            <div>
+              <p class="text-sm text-gray-700">
+                <strong>Reiniciar Chrome:</strong> Cierra completamente Chrome y ábrelo nuevamente
               </p>
             </div>
           </div>
@@ -79,13 +106,18 @@
         </div>
       </div>
       
-      <div class="mt-6 flex justify-end space-x-3">
-        <button @click="tryAgain" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-          Intentar Nuevamente
+      <div class="mt-6 flex justify-between">
+        <button @click="openQuicSettings" class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700">
+          🔧 Abrir Configuración QUIC
         </button>
-        <button @click="closeInstructions" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50">
-          Cerrar
-        </button>
+        <div class="flex space-x-3">
+          <button @click="tryAgain" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+            Intentar Nuevamente
+          </button>
+          <button @click="closeInstructions" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50">
+            Cerrar
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -109,6 +141,11 @@ const closeInstructions = () => {
 
 const tryAgain = () => {
   emit('retry')
+}
+
+const openQuicSettings = () => {
+  // Abrir configuración de QUIC en Chrome
+  window.open('chrome://flags/#enable-quic', '_blank')
 }
 </script>
 </template>
