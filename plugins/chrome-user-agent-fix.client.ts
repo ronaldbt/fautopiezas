@@ -37,14 +37,14 @@ export default defineNuxtPlugin(() => {
       }
     }
     
-    // Configurar headers globales para evitar QUIC
+    // Configurar headers globales para evitar QUIC (solo headers seguros)
     const originalOpen = XMLHttpRequest.prototype.open
     XMLHttpRequest.prototype.open = function(method, url, ...rest) {
       // Agregar headers específicos para evitar QUIC
       this.addEventListener('readystatechange', () => {
         if (this.readyState === 1) { // OPENED
           try {
-            this.setRequestHeader('Connection', 'keep-alive')
+            // Solo headers seguros que Chrome no rechaza
             this.setRequestHeader('Cache-Control', 'no-cache')
             this.setRequestHeader('Pragma', 'no-cache')
           } catch (e) {
