@@ -136,12 +136,12 @@
         <h2 class="text-2xl font-bold text-gray-800 mb-6">Repuestos Originales en Chile</h2>
         <div class="prose max-w-none">
           <p class="text-gray-600 mb-4">
-            En FAutopiezas Chile encontrarás la más amplia gama de repuestos originales para todas las marcas de vehículos. 
-            Trabajamos con los principales distribuidores oficiales para garantizar autopartes 100% originales y de calidad.
+            En AutoPiezas360 Chile encontrarás la más amplia gama de repuestos para todas las marcas de vehículos con importación directa. 
+            Trabajamos directamente con fabricantes para garantizar autopartes de calidad con hasta 50% de descuento.
           </p>
           <p class="text-gray-600 mb-4">
-            Nuestro catálogo incluye repuestos para Toyota, Nissan, Chevrolet, BMW, Hyundai, Ford, Volkswagen, Honda, Mazda, Kia 
-            y muchas más marcas. Todos nuestros repuestos cuentan con garantía oficial y envío gratis a todo Chile.
+            Nuestro catálogo incluye {{ marcas.length }} marcas: Toyota, Nissan, Chevrolet, BMW, Hyundai, Ford, Volkswagen, Honda, Mazda, Kia 
+            y muchas más. Todos nuestros repuestos cuentan con garantía extendida y entrega en 7 días a todo Chile.
           </p>
           <ul class="list-disc list-inside text-gray-600 space-y-2">
             <li>Stock inmediato en Santiago y regiones</li>
@@ -256,10 +256,41 @@ const selectMarca = (marca) => {
 
 // SEO Meta dinámico
 useHead({
-  title: 'Repuestos por Marca - FAutopiezas Chile | Catálogo Completo',
+  title: 'Repuestos por Marca - AutoPiezas360 Chile | Catálogo Completo 50% Descuento',
   meta: [
-    { name: 'description', content: 'Catálogo completo de repuestos por marca en Chile. Toyota, Nissan, Chevrolet, BMW, Hyundai. Repuestos originales con garantía y envío gratis.' },
-    { name: 'keywords', content: 'repuestos por marca chile, catálogo repuestos autos, repuestos originales chile, autopartes por marca' }
+    { name: 'description', content: `Catálogo completo de repuestos por marca en Chile. ${marcas.length} marcas disponibles: Toyota, Nissan, Chevrolet, BMW, Hyundai y más. Importación directa con 50% descuento.` },
+    { name: 'keywords', content: 'repuestos por marca chile, catálogo repuestos autos, repuestos importados chile, autopartes por marca, repuestos descuento' },
+    { name: 'robots', content: 'index, follow' },
+    { property: 'og:title', content: 'Repuestos por Marca Chile - 50% Descuento | AutoPiezas360' },
+    { property: 'og:description', content: `${marcas.length} marcas disponibles con importación directa y 50% descuento. Toyota, Nissan, BMW, Chevrolet y más.` },
+    { property: 'og:url', content: 'https://autopiezas360.cl/repuestos' },
+    { property: 'og:type', content: 'website' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://autopiezas360.cl/repuestos' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Repuestos por Marca AutoPiezas360",
+        "description": `Catálogo completo de repuestos automotrices por marca con ${marcas.length} marcas disponibles`,
+        "url": "https://autopiezas360.cl/repuestos",
+        "mainEntity": {
+          "@type": "ItemList",
+          "name": "Marcas de Vehículos",
+          "numberOfItems": marcas.length,
+          "itemListElement": marcas.slice(0, 20).map((marca, index) => ({
+            "@type": "Brand",
+            "position": index + 1,
+            "name": marca.nombre,
+            "url": `https://autopiezas360.cl/repuestos/${marca.slug}`
+          }))
+        }
+      })
+    }
   ]
 })
 </script>

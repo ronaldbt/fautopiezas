@@ -44,69 +44,27 @@ export default defineEventHandler(async (event) => {
     urls.push(createUrlEntry('/', '1.0', 'daily')) // Homepage - máxima prioridad
     urls.push(createUrlEntry('/repuestos', '0.9', 'daily')) // Catálogo principal
     
-    // 2. URLs por marca
-    marcas.forEach(marca => {
-      urls.push(createUrlEntry(`/repuestos/${marca.slug}`, '0.8', 'weekly'))
+    // 2. URLs por marca (solo marcas populares y activas)
+    marcas.filter(marca => marca.activa).forEach(marca => {
+      const priority = marca.popular ? '0.8' : '0.6'
+      urls.push(createUrlEntry(`/repuestos/${marca.slug}`, priority, 'weekly'))
     })
     
-    // 3. URLs de categorías
-    categorias.forEach(categoria => {
+    // 3. URLs de categorías (solo activas)
+    categorias.filter(categoria => categoria.activa).forEach(categoria => {
       urls.push(createUrlEntry(`/categoria/${categoria.slug}`, '0.7', 'weekly'))
     })
     
-    // 4. URLs marca + categoría (usando marcas populares)
-    marcasPopulares.forEach(marca => {
-      categoriasPrincipales.forEach(categoria => {
-        urls.push(createUrlEntry(`/repuestos/${marca.slug}/${categoria}`, '0.7', 'monthly'))
+    // 4. URLs de modelos populares para marcas top (solo con datos reales)
+    const marcasConModelosReales = marcasPopulares.slice(0, 5) // Top 5 marcas
+    marcasConModelosReales.forEach(marca => {
+      const modelosPopulares = getModelosPopularesPorMarca(marca.slug)
+      modelosPopulares.forEach((modelo: string) => {
+        urls.push(createUrlEntry(`/repuestos/${marca.slug}/${modelo}`, '0.7', 'weekly'))
       })
     })
     
-    // 5. URLs de subcategorías específicas para marcas top
-    const marcasTop = marcasPopulares.slice(0, 5) // Top 5 marcas populares
-    marcasTop.forEach(marca => {
-      subcategoriasPrincipales.forEach(subcategoria => {
-        urls.push(createUrlEntry(`/repuestos/${marca.slug}/${subcategoria}`, '0.6', 'monthly'))
-      })
-    })
-    
-    // 6. URLs de años extendido para marcas populares (2018-2025)
-    const anos = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
-    marcasPopulares.forEach(marca => {
-      anos.forEach(ano => {
-        urls.push(createUrlEntry(`/repuestos/${marca.slug}/${ano}`, '0.6', 'monthly'))
-        
-        // URLs marca + año + categoría principal para top 3 marcas
-        if (marcasPopulares.indexOf(marca) < 3) {
-          categoriasPrincipales.slice(0, 4).forEach(categoria => {
-            urls.push(createUrlEntry(`/repuestos/${marca.slug}/${ano}/${categoria}`, '0.5', 'monthly'))
-          })
-        }
-      })
-    })
-    
-    // 7. URLs de páginas especiales (generadas dinámicamente)
-    const paginasEspeciales = []
-    
-    // Páginas especiales para marcas populares
-    marcasPopulares.forEach(marca => {
-      paginasEspeciales.push(`/repuestos-${marca.slug}-chile`)
-      paginasEspeciales.push(`/autopartes-${marca.slug}-originales`)
-    })
-    
-    // Páginas especiales generales
-    paginasEspeciales.push('/autopartes-chile')
-    paginasEspeciales.push('/repuestos-originales-chile')
-    paginasEspeciales.push('/importacion-repuestos-chile')
-    paginasEspeciales.push('/repuestos-premium-chile')
-    
-    paginasEspeciales.forEach(pagina => {
-      urls.push(createUrlEntry(pagina, '0.8', 'weekly'))
-    })
-    
-    // 8. URLs de combinaciones marca + modelo para marcas top
-    const marcasConModelos = marcasPopulares.slice(0, 3) // Solo top 3 para evitar sobrecargar
-    
-    // Función para obtener modelos populares por marca
+    // 5. Función para obtener modelos populares por marca
     const getModelosPopularesPorMarca = (marcaSlug: string): string[] => {
       const modelosPorMarca: { [key: string]: string[] } = {
         'toyota': ['corolla', 'camry', 'rav4', 'prius', 'hilux'],
@@ -123,12 +81,8 @@ export default defineEventHandler(async (event) => {
       return modelosPorMarca[marcaSlug] || []
     }
     
-    marcasConModelos.forEach(marca => {
-      const modelosPopulares = getModelosPopularesPorMarca(marca.slug)
-      modelosPopulares.forEach((modelo: string) => {
-        urls.push(createUrlEntry(`/repuestos/${marca.slug}/${modelo}`, '0.6', 'monthly'))
-      })
-    })
+    // 6. URLs de páginas de contacto y servicios
+    urls.push(createUrlEntry('/contacto', '0.8', 'monthly'))
     
     // Generar XML del sitemap
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

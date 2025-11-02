@@ -77,12 +77,74 @@ const { getModelosByMarca } = useVehiculos()
 const modelosData = await getModelosByMarca(marca)
 const modelos = modelosData || []
 
+// Obtener información de la marca para SEO
+const { getMarcaBySlug } = useVehiculos()
+const marcaInfo = getMarcaBySlug(marca)
+
 // SEO Meta dinámico por marca
 useHead({
   title: `Repuestos ${marcaCapitalizada} Chile - Importación Directa 50% Descuento | AutoPiezas360`,
   meta: [
-    { name: 'description', content: `Repuestos ${marcaCapitalizada} importados en Chile con 50% descuento. Importación directa desde fábrica, entrega en 7 días, garantía extendida. Conseguimos cualquier pieza.` },
-    { name: 'keywords', content: `repuestos ${marca} chile, autopartes ${marca} chile, repuestos ${marca} importados, repuestos ${marca} descuento, autopiezas360` }
+    { name: 'description', content: `Repuestos ${marcaCapitalizada} importados en Chile con 50% descuento. ${modelos.length} modelos disponibles. Importación directa desde fábrica, entrega en 7 días, garantía extendida.` },
+    { name: 'keywords', content: `repuestos ${marca} chile, autopartes ${marca} chile, repuestos ${marca} importados, repuestos ${marca} descuento, repuestos ${marca} baratos` },
+    { name: 'robots', content: 'index, follow' },
+    { property: 'og:title', content: `Repuestos ${marcaCapitalizada} Chile - Descuento 50% | AutoPiezas360` },
+    { property: 'og:description', content: `Repuestos ${marcaCapitalizada} importados con 50% descuento. ${modelos.length} modelos disponibles. Entrega en 7 días a todo Chile.` },
+    { property: 'og:url', content: `https://autopiezas360.cl/repuestos/${marca}` },
+    { property: 'og:type', content: 'website' }
+  ],
+  link: [
+    { rel: 'canonical', href: `https://autopiezas360.cl/repuestos/${marca}` }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": `Repuestos ${marcaCapitalizada} Chile`,
+        "description": `Catálogo completo de repuestos ${marcaCapitalizada} importados con 50% de descuento`,
+        "url": `https://autopiezas360.cl/repuestos/${marca}`,
+        "mainEntity": {
+          "@type": "ItemList",
+          "name": `Modelos ${marcaCapitalizada}`,
+          "numberOfItems": modelos.length,
+          "itemListElement": modelos.map((modelo, index) => ({
+            "@type": "Vehicle",
+            "position": index + 1,
+            "name": `${marcaCapitalizada} ${modelo.nombre}`,
+            "url": `https://autopiezas360.cl/repuestos/${marca}/${modelo.slug}`,
+            "brand": {
+              "@type": "Brand",
+              "name": marcaCapitalizada
+            }
+          }))
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Inicio",
+              "item": "https://autopiezas360.cl"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Repuestos",
+              "item": "https://autopiezas360.cl/repuestos"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": marcaCapitalizada,
+              "item": `https://autopiezas360.cl/repuestos/${marca}`
+            }
+          ]
+        }
+      })
+    }
   ]
 })
 </script>

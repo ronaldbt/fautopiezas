@@ -47,11 +47,53 @@ export default defineNuxtConfig({
         '/',
         '/repuestos',
         '/sitemap.xml',
+        // Marcas principales
         '/repuestos/toyota',
         '/repuestos/nissan',
         '/repuestos/chevrolet',
         '/repuestos/bmw',
-        '/repuestos/hyundai'
+        '/repuestos/hyundai',
+        '/repuestos/ford',
+        '/repuestos/volkswagen',
+        '/repuestos/honda',
+        '/repuestos/mazda',
+        '/repuestos/kia',
+        '/repuestos/audi',
+        '/repuestos/mercedes-benz',
+        '/repuestos/subaru',
+        '/repuestos/mitsubishi',
+        '/repuestos/peugeot',
+        '/repuestos/renault',
+        '/repuestos/fiat',
+        '/repuestos/citroen',
+        '/repuestos/opel',
+        '/repuestos/skoda',
+        '/repuestos/seat',
+        // Marcas premium
+        '/repuestos/porsche',
+        '/repuestos/jaguar',
+        '/repuestos/land-rover',
+        '/repuestos/volvo',
+        '/repuestos/lexus',
+        '/repuestos/infiniti',
+        '/repuestos/acura',
+        // Modelos populares Toyota
+        '/repuestos/toyota/corolla',
+        '/repuestos/toyota/camry',
+        '/repuestos/toyota/rav4',
+        '/repuestos/toyota/prius',
+        '/repuestos/toyota/hilux',
+        // Modelos populares Nissan
+        '/repuestos/nissan/sentra',
+        '/repuestos/nissan/altima',
+        '/repuestos/nissan/x-trail',
+        '/repuestos/nissan/qashqai',
+        // Modelos populares Chevrolet
+        '/repuestos/chevrolet/cruze',
+        '/repuestos/chevrolet/spark',
+        '/repuestos/chevrolet/aveo',
+        // Páginas de contacto y servicios
+        '/contacto'
       ]
     }
   },

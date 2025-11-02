@@ -16,7 +16,7 @@
           Repuestos {{ marcaCapitalizada }} {{ modeloCapitalizado }} Chile
         </h1>
         <p class="text-gray-600 mt-2">
-          Repuestos originales {{ marcaCapitalizada }} {{ modeloCapitalizado }} con stock inmediato
+          Repuestos {{ marcaCapitalizada }} {{ modeloCapitalizado }} con stock inmediato y envío a todo Chile
         </p>
       </div>
     </div>
@@ -60,18 +60,18 @@
         </h2>
         <div class="prose max-w-none">
           <p class="text-gray-600 mb-4">
-            En FAutopiezas Chile somos especialistas en repuestos {{ marcaCapitalizada }} {{ modeloCapitalizado }}. 
-            Contamos con el catálogo más completo de autopartes originales para este modelo específico.
+            En AutoPiezas360 Chile somos especialistas en repuestos {{ marcaCapitalizada }} {{ modeloCapitalizado }}. 
+            Contamos con el catálogo más completo de autopartes para este modelo específico con garantía extendida.
           </p>
           <p class="text-gray-600 mb-4">
-            Todos nuestros repuestos {{ marcaCapitalizada }} {{ modeloCapitalizado }} son 100% originales, 
-            cuentan con garantía oficial y están disponibles con entrega inmediata.
+            Importamos repuestos {{ marcaCapitalizada }} {{ modeloCapitalizado }} directamente desde fábrica con hasta 50% de descuento, 
+            todos cuentan con garantía extendida y están disponibles para entrega en 7 días.
           </p>
           <ul class="list-disc list-inside text-gray-600 space-y-2">
-            <li>Repuestos {{ marcaCapitalizada }} {{ modeloCapitalizado }} originales</li>
-            <li>Stock disponible para todos los años</li>
-            <li>Garantía oficial del fabricante</li>
-            <li>Instalación por técnicos especializados</li>
+            <li>Repuestos {{ marcaCapitalizada }} {{ modeloCapitalizado }} con garantía extendida</li>
+            <li>Stock disponible para años {{ añosDisponibles[añosDisponibles.length-1] }} - {{ añosDisponibles[0] }}</li>
+            <li>Importación directa con 50% descuento</li>
+            <li>Entrega en 7 días a todo Chile</li>
           </ul>
         </div>
       </div>
@@ -156,11 +156,72 @@ onMounted(() => {
 
 // SEO Meta dinámico por modelo
 useHead({
-  title: `Repuestos ${marcaCapitalizada.value} ${modeloCapitalizado.value} Chile - Originales | FAutopiezas`,
-  meta: [
-    { name: 'description', content: `Repuestos originales ${marcaCapitalizada.value} ${modeloCapitalizado.value} en Chile. Stock inmediato, garantía extendida, envío gratis. Especialistas en ${marcaCapitalizada.value} ${modeloCapitalizado.value}.` },
-    { name: 'keywords', content: `repuestos ${marca.value} ${modelo.value} chile, autopartes ${marca.value} ${modelo.value}, repuestos originales ${marca.value} ${modelo.value}, ${marca.value} ${modelo.value} repuestos` }
-  ]
+  title: computed(() => `Repuestos ${marcaCapitalizada.value} ${modeloCapitalizado.value} Chile - Importación 50% Descuento | AutoPiezas360`),
+  meta: computed(() => [
+    { name: 'description', content: `Repuestos ${marcaCapitalizada.value} ${modeloCapitalizado.value} importados en Chile con 50% descuento. ${añosDisponibles.value.length} años disponibles, garantía extendida, entrega en 7 días.` },
+    { name: 'keywords', content: `repuestos ${marca.value} ${modelo.value} chile, autopartes ${marca.value} ${modelo.value}, repuestos ${marca.value} ${modelo.value} importados, ${marca.value} ${modelo.value} descuento` },
+    { name: 'robots', content: 'index, follow' },
+    { property: 'og:title', content: `Repuestos ${marcaCapitalizada.value} ${modeloCapitalizado.value} Chile - 50% Descuento` },
+    { property: 'og:description', content: `Repuestos ${marcaCapitalizada.value} ${modeloCapitalizado.value} importados con 50% descuento. ${añosDisponibles.value.length} años disponibles. Entrega en 7 días.` },
+    { property: 'og:url', content: `https://autopiezas360.cl/repuestos/${marca.value}/${modelo.value}` },
+    { property: 'og:type', content: 'website' }
+  ]),
+  link: computed(() => [
+    { rel: 'canonical', href: `https://autopiezas360.cl/repuestos/${marca.value}/${modelo.value}` }
+  ]),
+  script: computed(() => [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": `Repuestos ${marcaCapitalizada.value} ${modeloCapitalizado.value}`,
+        "description": `Repuestos ${marcaCapitalizada.value} ${modeloCapitalizado.value} importados con 50% de descuento`,
+        "url": `https://autopiezas360.cl/repuestos/${marca.value}/${modelo.value}`,
+        "brand": {
+          "@type": "Brand",
+          "name": marcaCapitalizada.value
+        },
+        "model": modeloCapitalizado.value,
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "CLP",
+          "lowPrice": "15000",
+          "highPrice": "500000",
+          "offerCount": categorias.value.length
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Inicio",
+              "item": "https://autopiezas360.cl"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Repuestos",
+              "item": "https://autopiezas360.cl/repuestos"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": marcaCapitalizada.value,
+              "item": `https://autopiezas360.cl/repuestos/${marca.value}`
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": modeloCapitalizado.value,
+              "item": `https://autopiezas360.cl/repuestos/${marca.value}/${modelo.value}`
+            }
+          ]
+        }
+      })
+    }
+  ])
 })
 </script>
 
