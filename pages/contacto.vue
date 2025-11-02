@@ -335,7 +335,38 @@ useHead({
   title: 'Contacto AutoPiezas360 Chile - Importación de Repuestos Especiales',
   meta: [
     { name: 'description', content: '¿No encuentras tu repuesto? Lo importamos por ti con 50% descuento vs competencia local. Repuestos para modelos antiguos y piezas especiales. Contacto WhatsApp directo.' },
-    { name: 'keywords', content: 'contacto autopiezas360, importación repuestos chile, repuestos modelos antiguos, cotización repuestos, whatsapp repuestos chile' }
+    { name: 'keywords', content: 'contacto autopiezas360, importación repuestos chile, repuestos modelos antiguos, cotización repuestos, whatsapp repuestos chile' },
+    { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
+    { property: 'og:title', content: 'Contacto AutoPiezas360 - Importación Repuestos Chile' },
+    { property: 'og:description', content: 'Importamos cualquier repuesto con 50% descuento. WhatsApp directo para respuesta inmediata.' },
+    { property: 'og:url', content: 'https://autopiezas360.cl/contacto' },
+    { property: 'og:type', content: 'website' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://autopiezas360.cl/contacto' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contacto AutoPiezas360 Chile",
+        "description": "Página de contacto para importación de repuestos especiales",
+        "url": "https://autopiezas360.cl/contacto",
+        "mainEntity": {
+          "@type": "LocalBusiness",
+          "name": "AutoPiezas360 Chile",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+56979796841",
+            "contactType": "customer service",
+            "availableLanguage": "Spanish",
+            "areaServed": "CL"
+          }
+        }
+      })
+    }
   ]
 })
 </script>

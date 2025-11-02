@@ -27,11 +27,27 @@ export default defineEventHandler(async (event) => {
       'aceite-motor', 'bateria', 'alternador', 'radiador'
     ]
   
-    // Función para generar entrada XML
-    const createUrlEntry = (url: string, priority: string = '0.8', changefreq: string = 'weekly') => {
+    // Función para generar entrada XML con freshness inteligente
+    const createUrlEntry = (url: string, priority: string = '0.8', changefreq: string = 'weekly', customLastmod?: string) => {
+      // Determinar lastmod basado en tipo de página
+      let lastmod = customLastmod || new Date().toISOString().split('T')[0]
+      
+      if (url === '/') {
+        // Homepage se actualiza diariamente
+        lastmod = new Date().toISOString().split('T')[0]
+      } else if (url.includes('/repuestos/') && url.split('/').length === 3) {
+        // Páginas de marca se actualizaron recientemente (mejoras SEO)
+        lastmod = new Date().toISOString().split('T')[0]
+      } else if (url.includes('/repuestos/') && url.split('/').length === 4) {
+        // Páginas de modelo - freshness moderado
+        const date = new Date()
+        date.setDate(date.getDate() - 2) // 2 días atrás
+        lastmod = date.toISOString().split('T')[0]
+      }
+      
       return `  <url>
     <loc>${baseURL}${url}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`

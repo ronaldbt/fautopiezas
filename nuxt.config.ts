@@ -18,6 +18,8 @@ export default defineNuxtConfig({
         output: {
           manualChunks(id) {
             if (id.includes('firebase')) return 'firebase'
+            if (id.includes('vue')) return 'vue'
+            if (id.includes('node_modules')) return 'vendor'
             return undefined
           }
         }
@@ -25,6 +27,11 @@ export default defineNuxtConfig({
     }
   },
 
+  // Optimizaciones para Core Web Vitals
+  experimental: {
+    payloadExtraction: false
+  },
+  
   runtimeConfig: {
     // Variables privadas (solo en servidor)
     firebaseServiceAccountKey: process.env.FIREBASE_SERVICE_ACCOUNT_KEY,
@@ -40,7 +47,7 @@ export default defineNuxtConfig({
     }
   },
 
-  // Configuración de generación estática
+  // Configuración de generación y SSR híbrido
   nitro: {
     prerender: {
       routes: [
@@ -95,11 +102,14 @@ export default defineNuxtConfig({
         // Páginas de contacto y servicios
         '/contacto'
       ]
-    }
+    },
+    // Optimización para rendimiento
+    minify: true,
+    compressPublicAssets: true
   },
 
-  // Configuración para Firebase Hosting
-  ssr: false,
+  // Configuración SSR híbrida para SEO y Firebase Hosting
+  ssr: true,
 
   // Configuración de SEO y Google
   app: {
@@ -116,11 +126,16 @@ export default defineNuxtConfig({
         { name: 'keywords', content: 'repuestos importados, autopartes chile, toyota, nissan, chevrolet, bmw, repuestos baratos, descuento 50%, importación directa, audi chile, mercedes benz chile, ford raptor chile, volvo chile, repuestos alta gama, repuestos premium, difíciles de encontrar' },
         { name: 'author', content: 'AutoPiezas360' },
         { name: 'robots', content: 'index, follow' },
+        { name: 'geo.region', content: 'CL' },
+        { name: 'geo.country', content: 'Chile' },
+        { name: 'geo.placename', content: 'Santiago, Chile' },
+        { name: 'ICBM', content: '-33.4489,-70.6693' },
         { property: 'og:title', content: 'AutoPiezas360 - Repuestos Importados con 50% Descuento' },
         { property: 'og:description', content: 'Repuestos importados directamente desde fábrica con 50% de descuento. Envío a todo Chile en 7 días.' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://autopiezas360.cl' },
         { property: 'og:image', content: 'https://autopiezas360.cl/og-image.jpg' },
+        { property: 'og:locale', content: 'es_CL' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'AutoPiezas360 - Repuestos Importados 50% Descuento' },
         { name: 'twitter:description', content: 'Repuestos importados con 50% descuento. Envío Chile en 7 días.' },
@@ -128,6 +143,9 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'canonical', href: 'https://autopiezas360.cl' },
+        { rel: 'alternate', hreflang: 'es-CL', href: 'https://autopiezas360.cl' },
+        { rel: 'alternate', hreflang: 'es', href: 'https://autopiezas360.cl' },
+        { rel: 'alternate', hreflang: 'x-default', href: 'https://autopiezas360.cl' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'sitemap', type: 'application/xml', href: '/sitemap.xml' }
       ]

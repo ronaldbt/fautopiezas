@@ -38,7 +38,7 @@
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
           <div v-for="marca in getMarcasPopulares()" :key="marca.slug" 
                class="bg-white rounded-lg shadow p-4 text-center hover:shadow-lg transition-shadow">
-            <NuxtLink :to="`/repuestos/${marca.slug}`" class="block">
+            <NuxtLink :to="`/repuestos/${marca.slug}`" class="block" :title="`Repuestos ${marca.nombre} Chile - Ver catálogo completo`">
               <h3 class="font-bold text-sm text-blue-600 mb-1">
                 {{ marca.nombre }}
               </h3>
@@ -52,6 +52,20 @@
                 Ver repuestos →
               </p>
             </NuxtLink>
+          </div>
+        </div>
+        
+        <!-- Enlaces internos adicionales para SEO -->
+        <div class="mt-8 text-center">
+          <h3 class="text-lg font-semibold text-gray-800 mb-4">Explora por Categoría</h3>
+          <div class="flex flex-wrap justify-center gap-2">
+            <NuxtLink to="/repuestos" class="text-blue-600 hover:text-blue-800 text-sm px-3 py-1 bg-blue-50 rounded-full">Ver Todas las Marcas</NuxtLink>
+            <span class="text-gray-400">•</span>
+            <NuxtLink to="/repuestos/toyota" class="text-blue-600 hover:text-blue-800 text-sm px-3 py-1 bg-blue-50 rounded-full">Repuestos Toyota</NuxtLink>
+            <span class="text-gray-400">•</span>
+            <NuxtLink to="/repuestos/nissan" class="text-blue-600 hover:text-blue-800 text-sm px-3 py-1 bg-blue-50 rounded-full">Repuestos Nissan</NuxtLink>
+            <span class="text-gray-400">•</span>
+            <NuxtLink to="/repuestos/bmw" class="text-blue-600 hover:text-blue-800 text-sm px-3 py-1 bg-blue-50 rounded-full">Repuestos BMW</NuxtLink>
           </div>
         </div>
       </div>
@@ -297,47 +311,72 @@ useHead({
       type: 'application/ld+json',
       children: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "AutoPartsStore",
-        "name": "AutoPiezas360 Chile",
-        "description": "Importación de repuestos automotrices directo de fábrica con 50% de descuento. Entrega en 7 días a todo Chile. Más de 70 marcas disponibles.",
-        "url": "https://autopiezas360.cl",
-        "telephone": "+56979796841",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Santiago de Chile",
-          "addressLocality": "Santiago",
-          "addressRegion": "Región Metropolitana",
-          "postalCode": "7500000",
-          "addressCountry": "CL"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -33.4489,
-          "longitude": -70.6693
-        },
-        "openingHoursSpecification": [
+        "@graph": [
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "09:00",
-            "closes": "18:00"
+            "@type": "Organization",
+            "@id": "https://autopiezas360.cl/#organization",
+            "name": "AutoPiezas360 Chile",
+            "url": "https://autopiezas360.cl",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://autopiezas360.cl/logo.png",
+              "width": 300,
+              "height": 100
+            },
+            "sameAs": [
+              "https://www.facebook.com/autopiezas360",
+              "https://www.instagram.com/autopiezas360"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+56979796841",
+              "contactType": "customer service",
+              "areaServed": "CL",
+              "availableLanguage": "Spanish"
+            }
           },
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "09:00",
-            "closes": "14:00"
-          }
-        ],
-        "currenciesAccepted": "CLP",
-        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
-        "priceRange": "$15000-$500000",
-        "servesCuisine": null,
-        "areaServed": {
-          "@type": "Country",
-          "name": "Chile"
-        },
-        "brand": [
+            "@type": "LocalBusiness",
+            "@id": "https://autopiezas360.cl/#localbusiness",
+            "name": "AutoPiezas360 Chile",
+            "description": "Importación de repuestos automotrices directo de fábrica con 50% de descuento. Entrega en 7 días a todo Chile. Más de 70 marcas disponibles.",
+            "url": "https://autopiezas360.cl",
+            "telephone": "+56979796841",
+            "priceRange": "$15000-$500000",
+            "currenciesAccepted": "CLP",
+            "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Santiago de Chile",
+              "addressLocality": "Santiago",
+              "addressRegion": "Región Metropolitana",
+              "postalCode": "7500000",
+              "addressCountry": "CL"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": -33.4489,
+              "longitude": -70.6693
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "14:00"
+              }
+            ],
+            "areaServed": {
+              "@type": "Country",
+              "name": "Chile"
+            },
+            "brand": [
           { "@type": "Brand", "name": "Toyota" },
           { "@type": "Brand", "name": "Nissan" },
           { "@type": "Brand", "name": "Chevrolet" },
@@ -348,39 +387,41 @@ useHead({
           { "@type": "Brand", "name": "Ford" },
           { "@type": "Brand", "name": "Volvo" },
           { "@type": "Brand", "name": "Porsche" },
-          { "@type": "Brand", "name": "Jaguar" },
-          { "@type": "Brand", "name": "Land Rover" }
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Catálogo de Repuestos AutoPiezas360",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Product",
-                "name": "Repuestos de Motor",
-                "category": "Automotive Parts"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Product",
-                "name": "Repuestos de Frenos",
-                "category": "Automotive Parts"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Product",
-                "name": "Repuestos de Suspensión",
-                "category": "Automotive Parts"
-              }
+              { "@type": "Brand", "name": "Jaguar" },
+              { "@type": "Brand", "name": "Land Rover" }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Catálogo de Repuestos AutoPiezas360",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Repuestos de Motor",
+                    "category": "Automotive Parts"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Repuestos de Frenos", 
+                    "category": "Automotive Parts"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Repuestos de Suspensión",
+                    "category": "Automotive Parts"
+                  }
+                }
+              ]
             }
-          ]
-        }
+          }
+        ]
       })
     }
   ]

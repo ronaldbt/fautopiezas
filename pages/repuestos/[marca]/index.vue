@@ -87,7 +87,7 @@ useHead({
   meta: [
     { name: 'description', content: `Repuestos ${marcaCapitalizada} importados en Chile con 50% descuento. ${modelos.length} modelos disponibles. Importación directa desde fábrica, entrega en 7 días, garantía extendida.` },
     { name: 'keywords', content: `repuestos ${marca} chile, autopartes ${marca} chile, repuestos ${marca} importados, repuestos ${marca} descuento, repuestos ${marca} baratos` },
-    { name: 'robots', content: 'index, follow' },
+    { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
     { property: 'og:title', content: `Repuestos ${marcaCapitalizada} Chile - Descuento 50% | AutoPiezas360` },
     { property: 'og:description', content: `Repuestos ${marcaCapitalizada} importados con 50% descuento. ${modelos.length} modelos disponibles. Entrega en 7 días a todo Chile.` },
     { property: 'og:url', content: `https://autopiezas360.cl/repuestos/${marca}` },
