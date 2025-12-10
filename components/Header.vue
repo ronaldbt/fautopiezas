@@ -126,6 +126,21 @@
               <span>WhatsApp</span>
             </button>
             
+            <!-- Carrito -->
+            <NuxtLink 
+              to="/carrito" 
+              class="relative text-gray-700 hover:text-blue-600 px-4 py-2 rounded-lg border border-gray-300 hover:border-blue-500 transition-colors flex items-center space-x-2"
+            >
+              <ShoppingCartIcon class="w-5 h-5" />
+              <span class="hidden md:inline">Carrito</span>
+              <span 
+                v-if="cantidadItems > 0"
+                class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center"
+              >
+                {{ cantidadItems }}
+              </span>
+            </NuxtLink>
+            
             <NuxtLink 
               to="/login" 
               class="text-gray-700 hover:text-blue-600 px-4 py-2 rounded-lg border border-gray-300 hover:border-blue-500 transition-colors"
@@ -214,6 +229,10 @@
 
 <script setup>
 import { ref } from 'vue'
+import { ShoppingCartIcon } from '@heroicons/vue/24/outline'
+
+// Composables
+const { cantidadItems } = useCarrito()
 
 // Estado del menú móvil
 const mobileMenuOpen = ref(false)

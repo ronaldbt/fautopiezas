@@ -43,6 +43,27 @@
         <div class="text-red-600 text-6xl mb-4">⚠️</div>
         <h2 class="text-xl font-bold text-red-800 mb-2">Error al cargar el repuesto</h2>
         <p class="text-red-600">{{ error }}</p>
+        <NuxtLink 
+          :to="`/repuestos/${marca}/${modelo}/${año}/${categoria}`" 
+          class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+        >
+          Volver a la lista
+        </NuxtLink>
+      </div>
+    </div>
+
+    <!-- Estado: No encontrado -->
+    <div v-else-if="!loading && !repuestoData" class="max-w-6xl mx-auto px-4 py-8">
+      <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 text-center">
+        <div class="text-yellow-600 text-6xl mb-4">🔍</div>
+        <h2 class="text-xl font-bold text-yellow-800 mb-2">Repuesto no encontrado</h2>
+        <p class="text-yellow-700 mb-4">No se pudo encontrar el repuesto solicitado.</p>
+        <NuxtLink 
+          :to="`/repuestos/${marca}/${modelo}/${año}/${categoria}`" 
+          class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+        >
+          Volver a la lista de repuestos
+        </NuxtLink>
       </div>
     </div>
 
@@ -141,9 +162,18 @@
 
           <!-- Botones de acción -->
           <div class="space-y-3">
-            <button v-if="repuestoData.stock && repuestoData.precio" 
+            <button 
+              v-if="repuestoData.stock && repuestoData.precio" 
+              @click="agregarAlCarritoYComprar"
                     class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
               Comprar Ahora - ${{ repuestoData.precio.toLocaleString() }}
+            </button>
+            <button 
+              v-if="repuestoData.stock && repuestoData.precio" 
+              @click="agregarAlCarrito"
+              class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2">
+              <ShoppingCartIcon class="w-5 h-5" />
+              <span>Agregar al Carrito</span>
             </button>
             <div v-else class="space-y-2">
               <button class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2">
@@ -240,7 +270,7 @@
     </section>
 
     <!-- SEO Content -->
-    <section class="bg-gray-50 py-12">
+    <section v-if="repuestoData" class="bg-gray-50 py-12">
       <div class="max-w-4xl mx-auto px-4">
         <h2 class="text-2xl font-bold text-gray-800 mb-6">
           {{ repuestoCapitalizado }} {{ marcaCapitalizada }} {{ modeloCapitalizado }} {{ año }} - Original
@@ -255,7 +285,10 @@
             para este modelo y año, garantizando compatibilidad perfecta y rendimiento óptimo.
           </p>
           <ul class="list-disc list-inside text-gray-600 space-y-2">
-            <li>Repuesto original {{ marcaCapitalizada }} con código {{ repuestoData.codigoOriginal }}</li>
+            <li v-if="repuestoData.codigoOEM || repuestoData.codigoOriginal">
+              Repuesto original {{ marcaCapitalizada }} con código {{ repuestoData.codigoOEM || repuestoData.codigoOriginal }}
+            </li>
+            <li v-else>Repuesto original {{ marcaCapitalizada }}</li>
             <li>Compatibilidad 100% garantizada para {{ modeloCapitalizado }} {{ año }}</li>
             <li>Stock disponible con entrega inmediata</li>
             <li>Garantía oficial del fabricante por 12 meses</li>
@@ -269,6 +302,12 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { ShoppingCartIcon } from '@heroicons/vue/24/solid'
+
+// Debug: Verificar que esta página se está cargando
+console.log('🔵 [Página Detalles] Componente montado')
+console.log('🔵 [Página Detalles] Ruta completa:', useRoute().path)
+console.log('🔵 [Página Detalles] Parámetros:', useRoute().params)
 
 // Obtener parámetros de la URL de forma estable
 const route = useRoute()
@@ -277,6 +316,11 @@ const modelo = computed(() => String(route.params.modelo))
 const año = computed(() => String(route.params.ano))
 const categoria = computed(() => String(route.params.categoria))
 const repuesto = computed(() => String(route.params.repuesto))
+
+// Debug: Log de parámetros
+watch([marca, modelo, año, categoria, repuesto], ([m, mod, a, c, r]) => {
+  console.log('🔵 [Página Detalles] Parámetros actualizados:', { marca: m, modelo: mod, año: a, categoria: c, repuesto: r })
+}, { immediate: true })
 
 // Capitalizar para display
 const marcaCapitalizada = computed(() => marca.value.charAt(0).toUpperCase() + marca.value.slice(1))
@@ -290,17 +334,101 @@ const loading = ref(true)
 const error = ref(null)
 
 // Composables
-const { getRepuestoBySlug, getRepuestosRelacionados } = useRepuestos()
+const { getRepuestoBySlug, getRepuestosRelacionados, getRepuestos } = useRepuestos()
+const { agregarAlCarrito: agregarProductoAlCarrito } = useCarrito()
+const router = useRouter()
 
 // Cargar datos del repuesto
 onMounted(async () => {
+  // Solo ejecutar en el cliente
+  if (process.server) return
+  
   try {
     loading.value = true
+    error.value = null
+    console.log('🔍 [Detalles] Buscando repuesto con slug:', repuesto.value)
+    console.log('🔍 [Detalles] Parámetros:', { marca: marca.value, modelo: modelo.value, año: año.value, categoria: categoria.value })
     
-    // Buscar repuesto por slug
-    const repuestoEncontrado = await getRepuestoBySlug(repuesto.value)
+    // Validar que tenemos los parámetros necesarios
+    if (!repuesto.value || !marca.value || !modelo.value || !año.value || !categoria.value) {
+      throw new Error('Faltan parámetros en la URL')
+    }
+    
+    // Buscar repuesto por slug primero (intentar con el slug exacto y también en minúsculas)
+    let repuestoEncontrado = null
+    try {
+      // Intentar con el slug exacto de la URL
+      repuestoEncontrado = await getRepuestoBySlug(repuesto.value)
+      console.log('🔍 [Detalles] Resultado búsqueda por slug exacto:', repuestoEncontrado ? 'Encontrado' : 'No encontrado')
+      
+      // Si no se encuentra, intentar con el slug en minúsculas
+      if (!repuestoEncontrado) {
+        const slugLower = repuesto.value.toLowerCase()
+        repuestoEncontrado = await getRepuestoBySlug(slugLower)
+        console.log('🔍 [Detalles] Resultado búsqueda por slug en minúsculas:', repuestoEncontrado ? 'Encontrado' : 'No encontrado')
+      }
+    } catch (err) {
+      console.warn('⚠️ [Detalles] Error en búsqueda por slug:', err)
+      // Continuar con búsqueda alternativa
+    }
+    
+    // Si no se encuentra por slug, intentar buscar por filtros
+    if (!repuestoEncontrado) {
+      console.log('🔍 [Detalles] Intentando búsqueda alternativa por filtros...')
+      try {
+        const añoNumero = parseInt(año.value)
+        if (isNaN(añoNumero)) {
+          throw new Error(`Año inválido: ${año.value}`)
+        }
+        const repuestos = await getRepuestos({
+          marca: marca.value.toLowerCase(),
+          modelo: modelo.value.toLowerCase(),
+          anio: añoNumero,
+          categoria: categoria.value.toLowerCase()
+        })
+        console.log('🔍 [Detalles] Productos encontrados con filtros:', repuestos.length)
+        
+        // Buscar el que tenga un slug similar o que coincida con el nombre
+        const slugBuscado = repuesto.value.toLowerCase()
+        console.log('🔍 [Detalles] Buscando slug:', slugBuscado)
+        console.log('🔍 [Detalles] Slugs disponibles:', repuestos.map(r => r.slug))
+        
+        repuestoEncontrado = repuestos.find(r => {
+          const slugProducto = (r.slug || '').toLowerCase()
+          const nombreProducto = (r.nombre || '').toLowerCase()
+          const slugMatch = slugProducto === slugBuscado || 
+                 slugProducto.includes(slugBuscado) || 
+                 slugBuscado.includes(slugProducto)
+          const nombreMatch = nombreProducto.includes(slugBuscado.replace(/-/g, ' '))
+          
+          if (slugMatch || nombreMatch) {
+            console.log('✅ [Detalles] Coincidencia encontrada:', {
+              slugProducto,
+              slugBuscado,
+              nombreProducto,
+              slugMatch,
+              nombreMatch
+            })
+          }
+          
+          return slugMatch || nombreMatch
+        })
+        
+        if (repuestoEncontrado) {
+          console.log('✅ [Detalles] Repuesto encontrado por búsqueda alternativa')
+        } else if (repuestos.length > 0) {
+          // Si hay productos pero ninguno coincide exactamente, usar el primero
+          console.log('⚠️ [Detalles] No se encontró coincidencia exacta, usando el primer producto encontrado')
+          repuestoEncontrado = repuestos[0]
+        }
+      } catch (err) {
+        console.error('⚠️ [Detalles] Error en búsqueda alternativa:', err)
+        // Continuar sin repuesto encontrado, se usará el fallback
+      }
+    }
     
     if (repuestoEncontrado) {
+      console.log('✅ [Detalles] Repuesto encontrado:', repuestoEncontrado.nombre)
       repuestoData.value = repuestoEncontrado
     } else {
       // Si no se encuentra en Firebase, usar datos de ejemplo
@@ -340,8 +468,9 @@ onMounted(async () => {
       }
     }
   } catch (err) {
-    console.error('Error cargando repuesto:', err)
-    error.value = 'Error al cargar el repuesto'
+    console.error('❌ [Detalles] Error cargando repuesto:', err)
+    console.error('❌ [Detalles] Stack:', err.stack)
+    error.value = err.message || 'Error al cargar el repuesto. Por favor, intenta de nuevo.'
   } finally {
     loading.value = false
   }
@@ -392,6 +521,8 @@ watch(repuestoData, (newData) => {
       codigoOEM: newData.codigoOEM,
       categoria: categoriaCapitalizada.value,
       id: newData.id,
+      imagen: newData.imagen,
+      garantia: newData.garantia,
       vehicle: {
         marca: marcaCapitalizada.value,
         modelo: modeloCapitalizado.value,
@@ -413,5 +544,37 @@ watch(repuestoData, (newData) => {
     })
   }
 }, { immediate: true })
+
+// Funciones para el carrito
+const agregarAlCarrito = () => {
+  if (!repuestoData.value) return
+  
+  const itemCarrito = {
+    id: repuestoData.value.id || '',
+    nombre: repuestoData.value.nombre,
+    precio: repuestoData.value.precio,
+    cantidad: 1,
+    imagen: repuestoData.value.imagen,
+    marca: repuestoData.value.marca,
+    modelo: repuestoData.value.modelo,
+    anio: repuestoData.value.anio,
+    categoria: repuestoData.value.categoria,
+    slug: repuestoData.value.slug || '',
+    stock: repuestoData.value.stock,
+    codigoOEM: repuestoData.value.codigoOEM
+  }
+  
+  agregarProductoAlCarrito(itemCarrito)
+  console.log('✅ Producto agregado al carrito:', repuestoData.value.nombre)
+  
+  if (process.client) {
+    alert(`✅ ${repuestoData.value.nombre} agregado al carrito`)
+  }
+}
+
+const agregarAlCarritoYComprar = () => {
+  agregarAlCarrito()
+  router.push('/carrito')
+}
 </script>
 

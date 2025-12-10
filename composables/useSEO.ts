@@ -103,7 +103,7 @@ export const useSEO = () => {
 
     switch (type) {
       case 'product':
-        return {
+        const productSchema: any = {
           "@context": "https://schema.org",
           "@type": "Product",
           "name": data?.nombre || '',
@@ -120,9 +120,28 @@ export const useSEO = () => {
             "availability": data?.stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
             "seller": baseOrganization
           },
-          "category": data?.categoria || '',
-          "vehicleCompatibility": data?.vehicle ? `${data.vehicle.marca} ${data.vehicle.modelo} ${data.vehicle.año || ''}` : undefined
+          "category": data?.categoria || ''
         }
+        
+        // Agregar imagen si existe
+        if (data?.imagen) {
+          productSchema.image = data.imagen
+        }
+        
+        // Agregar garantía si existe
+        if (data?.garantia) {
+          productSchema.warranty = {
+            "@type": "WarrantyPromise",
+            "duration": `P${data.garantia}M`
+          }
+        }
+        
+        // Agregar compatibilidad con vehículo si existe
+        if (data?.vehicle) {
+          productSchema.vehicleCompatibility = `${data.vehicle.marca} ${data.vehicle.modelo} ${data.vehicle.año || ''}`
+        }
+        
+        return productSchema
       
       case 'breadcrumb':
         return {

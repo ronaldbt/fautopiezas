@@ -218,12 +218,23 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
 
+// Debug: Verificar que esta página se está cargando
+console.log('🟢 [Página Lista] Componente montado')
+console.log('🟢 [Página Lista] Ruta completa:', useRoute().path)
+console.log('🟢 [Página Lista] Parámetros:', useRoute().params)
+
 // Obtener parámetros de la URL
 const route = useRoute()
 const marca = route.params.marca
 const modelo = route.params.modelo
 const año = route.params.ano
 const categoria = route.params.categoria
+
+// Debug: Si hay un parámetro "repuesto", significa que estamos en la ruta incorrecta
+if (route.params.repuesto) {
+  console.error('❌ [Página Lista] ERROR: Esta es la página de lista pero hay un parámetro "repuesto" en la URL:', route.params.repuesto)
+  console.error('❌ [Página Lista] Esto significa que Nuxt no está resolviendo correctamente la ruta dinámica')
+}
 
 // Capitalizar para display
 const marcaCapitalizada = marca.charAt(0).toUpperCase() + marca.slice(1)
@@ -275,15 +286,27 @@ const cargarRepuestos = async () => {
     loading.value = true
     error.value = null
     
-    const repuestosEncontrados = await getRepuestos({
-      marca: String(marca),
+    const filtrosBusqueda = {
+      marca: String(marca).toLowerCase(),
       modelo: String(modelo),
       anio: parseInt(String(año)),
-      categoria: String(categoria),
+      categoria: String(categoria).toLowerCase(),
       ...filtros.value,
       ordenarPor: ordenamiento.value === 'precio-desc' ? 'precio' : ordenamiento.value,
-      orden: ordenamiento.value === 'precio-desc' ? 'desc' : 'asc'
-    })
+      orden: ordenamiento.value === 'precio-desc' ? 'desc' : 'asc',
+      limite: 100 // Aumentar límite para ver más productos
+    }
+    
+    console.log('🔍 [cargarRepuestos] Buscando productos con:', filtrosBusqueda)
+    console.log('📍 [cargarRepuestos] URL:', route.path)
+    console.log('📋 [cargarRepuestos] Parámetros:', { marca, modelo, año, categoria })
+    
+    const repuestosEncontrados = await getRepuestos(filtrosBusqueda)
+    
+    console.log(`✅ [cargarRepuestos] Productos encontrados: ${repuestosEncontrados.length}`)
+    if (repuestosEncontrados.length > 0) {
+      console.log('📦 [cargarRepuestos] Primer producto:', repuestosEncontrados[0])
+    }
     
     repuestos.value = repuestosEncontrados
     
@@ -292,7 +315,8 @@ const cargarRepuestos = async () => {
     marcasRepuestos.value = marcas
     
   } catch (err) {
-    console.error('Error cargando repuestos:', err)
+    console.error('❌ [cargarRepuestos] Error cargando repuestos:', err)
+    console.error('❌ [cargarRepuestos] Detalles:', err.message, err.stack)
     error.value = 'Error al cargar los repuestos'
   } finally {
     loading.value = false

@@ -37,7 +37,7 @@
             {{ repuesto.modelo }}
           </span>
           <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full">
-            {{ repuesto.año }}
+            {{ repuesto.año || repuesto.anio }}
           </span>
         </div>
       </div>
@@ -84,7 +84,7 @@
       <!-- Botones de acción -->
       <div class="flex space-x-2">
         <NuxtLink 
-          :to="`/repuestos/${repuesto.marca}/${repuesto.modelo}/${repuesto.año}/${repuesto.categoria}/${repuesto.slug}`"
+          :to="generarUrlDetalle(repuesto)"
           class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center text-sm font-medium"
         >
           Ver Detalles
@@ -94,10 +94,9 @@
           v-if="repuesto.stock"
           @click="agregarAlCarrito"
           class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-sm font-medium"
+          title="Agregar al carrito"
         >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01"></path>
-          </svg>
+          <ShoppingCartIcon class="w-4 h-4" />
         </button>
       </div>
 
@@ -119,6 +118,8 @@
 </template>
 
 <script setup>
+import { ShoppingCartIcon } from '@heroicons/vue/24/solid'
+
 const props = defineProps({
   repuesto: {
     type: Object,
@@ -126,11 +127,79 @@ const props = defineProps({
   }
 })
 
-// Función para agregar al carrito (placeholder)
+// Función para generar slug desde un texto
+const generarSlug = (texto) => {
+  if (!texto) return ''
+  return String(texto)
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Eliminar acentos
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
+// Función para generar la URL de detalles del producto
+const generarUrlDetalle = (repuesto) => {
+  const marca = String(repuesto.marca || '').toLowerCase()
+  const modelo = String(repuesto.modelo || '').toLowerCase()
+  const anio = String(repuesto.año || repuesto.anio || '')
+  const categoria = String(repuesto.categoria || '').toLowerCase()
+  
+  // Si hay slug, usarlo; si no, generar uno desde el nombre
+  let slug = repuesto.slug || ''
+  if (!slug && repuesto.nombre) {
+    slug = generarSlug(repuesto.nombre)
+  }
+  // Si aún no hay slug, usar el ID como fallback
+  if (!slug && repuesto.id) {
+    slug = repuesto.id
+  }
+  // Último fallback: usar 'producto'
+  if (!slug) {
+    slug = 'producto'
+  }
+  
+  const url = `/repuestos/${marca}/${modelo}/${anio}/${categoria}/${slug}`
+  console.log('🔗 [RepuestoCard] Generando URL de detalles:', {
+    producto: repuesto.nombre,
+    slugOriginal: repuesto.slug,
+    slugUsado: slug,
+    urlGenerada: url,
+    datosCompletos: { marca, modelo, anio, categoria }
+  })
+  
+  return url
+}
+
+// Composables
+const { agregarAlCarrito: agregarProductoAlCarrito } = useCarrito()
+
+// Función para agregar al carrito
 const agregarAlCarrito = () => {
-  // TODO: Implementar lógica del carrito
-  console.log('Agregando al carrito:', props.repuesto.nombre)
-  // Aquí podrías emitir un evento o usar un composable para el carrito
+  const itemCarrito = {
+    id: props.repuesto.id || '',
+    nombre: props.repuesto.nombre,
+    precio: props.repuesto.precio,
+    cantidad: 1,
+    imagen: props.repuesto.imagen,
+    marca: props.repuesto.marca,
+    modelo: props.repuesto.modelo,
+    anio: props.repuesto.año || props.repuesto.anio,
+    categoria: props.repuesto.categoria,
+    slug: props.repuesto.slug || '',
+    stock: props.repuesto.stock,
+    codigoOEM: props.repuesto.codigoOEM
+  }
+  
+  agregarProductoAlCarrito(itemCarrito)
+  console.log('✅ Producto agregado al carrito:', props.repuesto.nombre)
+  
+  // Mostrar notificación (opcional)
+  if (process.client) {
+    alert(`✅ ${props.repuesto.nombre} agregado al carrito`)
+  }
 }
 </script>
 

@@ -420,7 +420,7 @@
                 v-model="productoManual.modelo"
                 type="text"
                 required
-                placeholder="Ej: S-Type"
+                placeholder="Ej: 370Z o S-Type"
                 class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
@@ -808,12 +808,15 @@ const cargarAñosPorModelo = async () => {
   
   try {
     console.log('🔍 Cargando años para modelo:', productoManual.value.modelo)
-    const modelo = modelosDisponibles.value.find(m => m.nombre === productoManual.value.modelo)
-    if (modelo) {
-      añosDisponibles.value = [...modelo.años].sort((a, b) => b - a) // Más recientes primero
+    const modeloEncontrado = modelosDisponibles.value.find(m => m.nombre === productoManual.value.modelo)
+    if (modeloEncontrado) {
+      añosDisponibles.value = [...modeloEncontrado.años].sort((a, b) => b - a) // Más recientes primero
       console.log('✅ Años cargados:', añosDisponibles.value.length)
+      // Guardar el nombre exacto del modelo del JSON para consistencia
+      productoManual.value.modeloExacto = modeloEncontrado.nombre
     } else {
       añosDisponibles.value = []
+      productoManual.value.modeloExacto = productoManual.value.modelo
     }
     productoManual.value.anio = null
   } catch (error) {
@@ -1005,6 +1008,15 @@ const convertirCategoriaASlug = (nombreCategoria) => {
     .replace(/^-|-$/g, '')
 }
 
+// Función para generar slug de producto de manera consistente
+const generarSlugProducto = (marca, modelo, anio, nombre) => {
+  const marcaSlug = convertirCategoriaASlug(marca)
+  const modeloSlug = convertirCategoriaASlug(String(modelo))
+  const nombreSlug = convertirCategoriaASlug(nombre)
+  const slug = `${marcaSlug}-${modeloSlug}-${anio}-${nombreSlug}`.substring(0, 100)
+  return slug
+}
+
 const transformarProducto = (producto, marca, año, categoria, subcategoria) => {
   // Limpiar precio
   const precioStr = producto.precio?.toString().replace('$', '').replace(',', '') || '0'
@@ -1014,8 +1026,8 @@ const transformarProducto = (producto, marca, año, categoria, subcategoria) => 
   const categoriaSlug = convertirCategoriaASlug(categoria)
   const subcategoriaSlug = subcategoria ? convertirCategoriaASlug(subcategoria) : null
 
-  // Generar slug
-  const slug = `${marca}-${producto.modelo || 'sin-modelo'}-${año}-${producto.nombre?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || 'producto'}`.substring(0, 100)
+  // Generar slug de manera consistente
+  const slug = generarSlugProducto(marca, producto.modelo || 'sin-modelo', año, producto.nombre || 'producto')
 
   return {
     marca: marca.toLowerCase(),
@@ -1082,8 +1094,13 @@ const guardarProductoManual = async () => {
     const precio = parseFloat(precioStr) || 0
     console.log('💰 Precio procesado:', precio)
 
-    // Generar slug
-    const slug = `${productoManual.value.marca}-${productoManual.value.modelo}-${productoManual.value.anio}-${productoManual.value.nombre.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`.substring(0, 100)
+    // Generar slug de manera consistente
+    const slug = generarSlugProducto(
+      productoManual.value.marca,
+      productoManual.value.modelo,
+      productoManual.value.anio,
+      productoManual.value.nombre
+    )
     console.log('🔗 Slug generado:', slug)
 
     // Convertir categoría a slug
@@ -1093,9 +1110,22 @@ const guardarProductoManual = async () => {
       : null
     console.log('📂 Categoría slug:', categoriaSlug, 'Subcategoría slug:', subcategoriaSlug)
 
+    // Usar el modelo exacto del JSON si está disponible, sino el ingresado
+    // Normalizar para que sea consistente (primera letra mayúscula, resto según el JSON)
+    let modeloFinal = productoManual.value.modeloExacto || productoManual.value.modelo
+    // Si viene del select, usar el nombre exacto; si es texto libre, normalizar
+    if (modelosDisponibles.value.length > 0) {
+      const modeloEncontrado = modelosDisponibles.value.find(m => m.nombre === productoManual.value.modelo)
+      if (modeloEncontrado) {
+        modeloFinal = modeloEncontrado.nombre // Usar el nombre exacto del JSON
+      }
+    }
+    
+    console.log('🚗 Modelo final a guardar:', modeloFinal)
+    
     const producto = {
       marca: productoManual.value.marca.toLowerCase(),
-      modelo: productoManual.value.modelo,
+      modelo: modeloFinal, // Usar el nombre exacto del modelo del JSON para consistencia
       anio: productoManual.value.anio,
       categoria: categoriaSlug,
       subcategoria: subcategoriaSlug,
@@ -1183,6 +1213,7 @@ const limpiarFormularioManual = () => {
   productoManual.value = {
     marca: '',
     modelo: '',
+    modeloExacto: '',
     anio: null,
     categoria: '',
     subcategoria: '',
@@ -1193,6 +1224,9 @@ const limpiarFormularioManual = () => {
     imagen: '',
     stock: true
   }
+  modelosDisponibles.value = []
+  añosDisponibles.value = []
+  subcategoriasDisponibles.value = []
   resultadoProcesamiento.value = null
 }
 

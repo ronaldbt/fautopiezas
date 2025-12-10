@@ -82,24 +82,38 @@ export const useRepuestos = () => {
   // Obtener repuestos con filtros
   const getRepuestos = async (filtros: FiltrosRepuestos = {}): Promise<Repuesto[]> => {
     try {
+      console.log('🔍 [getRepuestos] Buscando productos con filtros:', filtros)
       const repuestosRef = collection($firestore, 'repuestos')
       let q = query(repuestosRef, where('activo', '==', true))
 
       // Aplicar filtros
       if (filtros.marca) {
-        q = query(q, where('marca', '==', filtros.marca))
+        const marcaFiltro = filtros.marca.toLowerCase()
+        console.log('🔍 [getRepuestos] Filtrando por marca:', marcaFiltro)
+        q = query(q, where('marca', '==', marcaFiltro))
       }
-      if (filtros.modelo) {
-        q = query(q, where('modelo', '==', filtros.modelo))
-      }
+      // Guardar el filtro de modelo para filtrar en memoria después
+      // (Firestore es case-sensitive y puede haber diferencias de mayúsculas)
+      // Por ahora NO filtramos por modelo en la query inicial para evitar problemas de case
+      // Filtraremos en memoria después
+      const modeloFiltro = filtros.modelo
+      // if (filtros.modelo) {
+      //   console.log('🔍 [getRepuestos] Filtrando por modelo (en query):', filtros.modelo)
+      //   q = query(q, where('modelo', '==', filtros.modelo))
+      // }
       if (filtros.anio) {
+        console.log('🔍 [getRepuestos] Filtrando por año:', filtros.anio)
         q = query(q, where('anio', '==', filtros.anio))
       }
       if (filtros.categoria) {
-        q = query(q, where('categoria', '==', filtros.categoria))
+        const categoriaFiltro = filtros.categoria.toLowerCase()
+        console.log('🔍 [getRepuestos] Filtrando por categoría:', categoriaFiltro)
+        q = query(q, where('categoria', '==', categoriaFiltro))
       }
       if (filtros.subcategoria) {
-        q = query(q, where('subcategoria', '==', filtros.subcategoria))
+        const subcategoriaFiltro = filtros.subcategoria.toLowerCase()
+        console.log('🔍 [getRepuestos] Filtrando por subcategoría:', subcategoriaFiltro)
+        q = query(q, where('subcategoria', '==', subcategoriaFiltro))
       }
       if (filtros.stock !== undefined) {
         q = query(q, where('stock', '==', filtros.stock))
@@ -126,15 +140,27 @@ export const useRepuestos = () => {
         q = query(q, orderBy('createdAt', orden))
       }
 
-      // Limitar resultados
-      const limite = filtros.limite || 20
+      // Limitar resultados (aumentar límite si hay filtros específicos)
+      const limite = filtros.limite || (filtros.marca && filtros.modelo && filtros.anio ? 200 : 20)
       q = query(q, limit(limite))
+      console.log(`📊 [getRepuestos] Límite de resultados: ${limite}`)
 
       const querySnapshot = await getDocs(q)
       const repuestos: Repuesto[] = []
 
+      console.log(`📦 [getRepuestos] Documentos encontrados en query: ${querySnapshot.size}`)
+
       querySnapshot.forEach((doc) => {
         const data = doc.data()
+        console.log(`📄 [getRepuestos] Documento ${doc.id}:`, {
+          marca: data.marca,
+          modelo: data.modelo,
+          anio: data.anio,
+          categoria: data.categoria,
+          subcategoria: data.subcategoria,
+          nombre: data.nombre,
+          activo: data.activo
+        })
         repuestos.push({
           id: doc.id,
           ...data,
@@ -143,17 +169,65 @@ export const useRepuestos = () => {
         } as Repuesto)
       })
 
+      // Filtrado adicional en memoria para manejar diferencias de case en modelo y otros campos
+      let repuestosFiltrados = repuestos
+      
+      // Si hay filtro de modelo, aplicar filtrado case-insensitive
+      if (filtros.modelo) {
+        const modeloBuscado = filtros.modelo.toLowerCase()
+        repuestosFiltrados = repuestos.filter(r => {
+          const modeloProducto = (r.modelo || '').toLowerCase()
+          return modeloProducto === modeloBuscado
+        })
+        console.log(`🔍 [getRepuestos] Después de filtro case-insensitive de modelo: ${repuestosFiltrados.length} productos (de ${repuestos.length} totales)`)
+        
+        // Si no encontramos resultados con el filtro case-insensitive, 
+        // intentar buscar sin el filtro de modelo en la query inicial
+        if (repuestosFiltrados.length === 0 && repuestos.length > 0) {
+          console.log('⚠️ [getRepuestos] No se encontraron productos con el modelo exacto, pero hay productos en la query')
+          console.log('📋 [getRepuestos] Modelos encontrados:', [...new Set(repuestos.map(r => r.modelo))])
+        }
+      }
+      
+      // También verificar otros filtros en memoria por si acaso
+      if (filtros.marca && repuestosFiltrados.length > 0) {
+        const marcaBuscada = filtros.marca.toLowerCase()
+        const antes = repuestosFiltrados.length
+        repuestosFiltrados = repuestosFiltrados.filter(r => 
+          (r.marca || '').toLowerCase() === marcaBuscada
+        )
+        if (antes !== repuestosFiltrados.length) {
+          console.log(`🔍 [getRepuestos] Filtrado adicional por marca: ${repuestosFiltrados.length} productos`)
+        }
+      }
+      
+      if (filtros.categoria && repuestosFiltrados.length > 0) {
+        const categoriaBuscada = filtros.categoria.toLowerCase()
+        const antes = repuestosFiltrados.length
+        repuestosFiltrados = repuestosFiltrados.filter(r => 
+          (r.categoria || '').toLowerCase() === categoriaBuscada
+        )
+        if (antes !== repuestosFiltrados.length) {
+          console.log(`🔍 [getRepuestos] Filtrado adicional por categoría: ${repuestosFiltrados.length} productos`)
+        }
+      }
+
+      console.log(`✅ [getRepuestos] Total productos procesados: ${repuestosFiltrados.length}`)
+
       // Filtrar por búsqueda de texto si se proporciona
       if (filtros.busqueda) {
         const termino = filtros.busqueda.toLowerCase()
-        return repuestos.filter(repuesto => 
+        const filtrados = repuestosFiltrados.filter(repuesto => 
           repuesto.nombre.toLowerCase().includes(termino) ||
           repuesto.descripcion.toLowerCase().includes(termino) ||
           repuesto.searchTerms.some(term => term.toLowerCase().includes(termino))
         )
+        console.log(`🔍 [getRepuestos] Después de búsqueda de texto: ${filtrados.length} productos`)
+        return filtrados
       }
 
-      return repuestos
+      console.log(`✅ [getRepuestos] Retornando ${repuestosFiltrados.length} productos`)
+      return repuestosFiltrados
     } catch (error) {
       console.error('Error al obtener repuestos:', error)
       throw error
@@ -182,12 +256,47 @@ export const useRepuestos = () => {
     }
   }
 
-  // Obtener repuestos por slug
+  // Obtener repuestos por slug (case-insensitive)
   const getRepuestoBySlug = async (slug: string): Promise<Repuesto | null> => {
     try {
       const repuestosRef = collection($firestore, 'repuestos')
-      const q = query(repuestosRef, where('slug', '==', slug), where('activo', '==', true))
-      const querySnapshot = await getDocs(q)
+      const slugLower = slug.toLowerCase()
+      
+      // Intentar primero con el slug exacto (puede tener mayúsculas)
+      let q = query(repuestosRef, where('slug', '==', slug), where('activo', '==', true))
+      let querySnapshot = await getDocs(q)
+      
+      // Si no se encuentra, intentar con el slug en minúsculas
+      if (querySnapshot.empty && slug !== slugLower) {
+        q = query(repuestosRef, where('slug', '==', slugLower), where('activo', '==', true))
+        querySnapshot = await getDocs(q)
+      }
+      
+      // Si aún no se encuentra, buscar todos los activos y filtrar en memoria (case-insensitive)
+      if (querySnapshot.empty) {
+        q = query(repuestosRef, where('activo', '==', true), limit(100))
+        querySnapshot = await getDocs(q)
+        
+        const repuestos: Repuesto[] = []
+        querySnapshot.forEach((doc) => {
+          const data = doc.data()
+          repuestos.push({
+            id: doc.id,
+            ...data,
+            createdAt: data.createdAt?.toDate() || new Date(),
+            updatedAt: data.updatedAt?.toDate() || new Date()
+          } as Repuesto)
+        })
+        
+        // Buscar por slug case-insensitive
+        const repuestoEncontrado = repuestos.find(r => 
+          (r.slug || '').toLowerCase() === slugLower
+        )
+        
+        if (repuestoEncontrado) {
+          return repuestoEncontrado
+        }
+      }
       
       if (!querySnapshot.empty) {
         const doc = querySnapshot.docs[0]
