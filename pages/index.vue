@@ -1,27 +1,102 @@
 <template>
-  <div class="pt-32">
+  <div>
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24">
-      <div class="max-w-6xl mx-auto px-4 text-center">
-        <h1 class="text-5xl font-bold mb-6">
-          Repuestos para Autos en Chile - Autopiezas360
-        </h1>
-        <p class="text-xl mb-4">
-          <strong>Importación de repuestos</strong> para Toyota, Nissan, Chevrolet, BMW, Hyundai y 74+ marcas. 
-        </p>
-        <p class="text-lg mb-8 opacity-90">
-          🚚 En 7 días están en tu casa • Garantía extendida • Los mejores precios de Chile
-        </p>
-        <!-- Selector de Vehículo Mejorado -->
-        <div class="bg-white rounded-xl p-6 mx-auto max-w-6xl mb-8 shadow-lg">
-          <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">🔍 Buscar Repuestos por Vehículo</h2>
-          <SelectorVehiculo />
+    <section class="relative pt-36 pb-24 overflow-hidden">
+      <!-- Modern Background Gradient -->
+      <div 
+        class="absolute inset-0 z-0" 
+        style="background: radial-gradient(ellipse at top right, rgb(37 99 235), rgb(30 64 175), rgb(15 23 42));"
+      ></div>
+      
+      <!-- Animated Overlay Shapes -->
+      <div class="absolute -top-1/2 -right-1/2 w-full h-full bg-blue-500/10 rounded-full blur-3xl z-0 pointer-events-none animate-spin-slow"></div>
+      <div class="absolute -bottom-1/2 -left-1/2 w-full h-full bg-indigo-500/10 rounded-full blur-3xl z-0 pointer-events-none animate-spin-reverse-slow"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center mb-10">
+          <!-- Título principal -->
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+            Repuestos para Autos en Chile
+          </h1>
+          
+          <!-- Descripción -->
+          <p class="text-base md:text-lg text-blue-100/90 max-w-2xl mx-auto mb-4 font-light whitespace-nowrap">
+            Importación de repuestos para Toyota, Nissan, Chevrolet, BMW, Hyundai y 74+ marcas.
+          </p>
+          
+          <p class="text-lg mb-8 text-blue-100/90">
+            🚚 En 7 días están en tu casa • Garantía extendida • Los mejores precios de Chile
+          </p>
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <NuxtLink to="/repuestos" class="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+        <!-- Search Card -->
+        <div class="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl shadow-blue-900/30 p-1 ring-1 ring-white/50 max-w-5xl mx-auto mb-10">
+          <div class="bg-white rounded-[20px] p-6 md:p-8">
+            <!-- Selector de Vehículo (mantiene funcionalidad) -->
+            <div class="[&>div]:bg-transparent [&>div]:shadow-none [&>div]:p-0">
+              <SelectorVehiculo />
+            </div>
+          </div>
+        </div>
+        
+        <!-- Trust Signals & CTA -->
+        <div class="mt-10 flex flex-col items-center">
+          <NuxtLink 
+            to="/repuestos" 
+            class="bg-orange-500 hover:bg-orange-600 text-white text-lg px-10 py-4 rounded-full font-bold shadow-xl shadow-orange-500/20 transition-all mb-8 flex items-center gap-2 border-b-4 border-orange-700 hover:scale-105 active:scale-95"
+          >
             Ver Catálogo Completo
           </NuxtLink>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 text-white/80">
+            <div class="flex flex-col items-center gap-2 group">
+              <div class="p-2 bg-white/10 rounded-full group-hover:bg-white/20 transition-colors">
+                <svg class="w-5 h-5 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <div class="text-center">
+                <p class="text-xs font-bold text-white uppercase tracking-wider">Pago Seguro</p>
+                <p class="text-[10px] opacity-70">Webpay / Transferencia</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-2 group">
+              <div class="p-2 bg-white/10 rounded-full group-hover:bg-white/20 transition-colors">
+                <svg class="w-5 h-5 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div class="text-center">
+                <p class="text-xs font-bold text-white uppercase tracking-wider">Envíos Rápidos</p>
+                <p class="text-[10px] opacity-70">A todo Chile</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-2 group">
+              <div class="p-2 bg-white/10 rounded-full group-hover:bg-white/20 transition-colors">
+                <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div class="text-center">
+                <p class="text-xs font-bold text-white uppercase tracking-wider">Garantía Real</p>
+                <p class="text-[10px] opacity-70">Hasta 6 meses</p>
+              </div>
+            </div>
+            
+            <div class="flex flex-col items-center gap-2 group">
+              <div class="p-2 bg-white/10 rounded-full group-hover:bg-white/20 transition-colors">
+                <svg class="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                </svg>
+              </div>
+              <div class="text-center">
+                <p class="text-xs font-bold text-white uppercase tracking-wider">Hasta 6 Cuotas</p>
+                <p class="text-[10px] opacity-70">Sin interés</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
