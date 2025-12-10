@@ -22,3 +22,7 @@ logs
 .env
 .env.*
 !.env.example
+
+# MSRepuestos data (too many files for dev)
+msrepuestos-data/
+msrepuestos-scraper*.js

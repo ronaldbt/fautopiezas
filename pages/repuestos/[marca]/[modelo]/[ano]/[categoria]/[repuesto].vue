@@ -85,9 +85,18 @@
           
           <!-- Precio -->
           <div class="mb-6">
-            <div class="flex items-baseline space-x-2">
+            <div v-if="repuestoData.precio" class="flex items-baseline space-x-2">
               <span class="text-3xl font-bold text-green-600">${{ repuestoData.precio.toLocaleString() }}</span>
               <span class="text-sm text-gray-600">CLP</span>
+            </div>
+            <div v-else class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+              <div class="flex items-center space-x-2">
+                <span class="text-orange-600 text-xl">📋</span>
+                <div>
+                  <h3 class="text-lg font-semibold text-orange-800">¡Tu repuesto llega en 7 días!</h3>
+                  <p class="text-orange-700 text-sm">Como somos especialistas en <strong>importación directa</strong>, no tenemos este repuesto en stock, pero podemos conseguirlo para ti.</p>
+                </div>
+              </div>
             </div>
             <div v-if="repuestoData.precioOriginal && repuestoData.descuento" class="flex items-center space-x-2 mt-1">
               <span class="text-lg text-gray-500 line-through">${{ repuestoData.precioOriginal.toLocaleString() }}</span>
@@ -97,14 +106,19 @@
             </div>
           </div>
 
-          <!-- Stock -->
+          <!-- Stock e Importación -->
           <div class="mb-6">
             <span v-if="repuestoData.stock" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
               ✓ En Stock - {{ repuestoData.cantidad || 'Disponible' }}
             </span>
-            <span v-else class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800">
-              ✗ Agotado
-            </span>
+            <div v-else class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h4 class="text-green-800 font-semibold mb-2">🚚 Importación Express</h4>
+              <ul class="text-green-700 text-sm space-y-1">
+                <li>✅ Llegada garantizada en 7 días a tu casa o taller</li>
+                <li>✅ En promedio se puede ahorrar un 50% importando el producto</li>
+                <li>✅ Envío a todas las ciudades de Chile</li>
+              </ul>
+            </div>
           </div>
 
           <!-- Código OEM -->
@@ -125,18 +139,27 @@
             </ul>
           </div>
 
-          <!-- Botón de compra -->
+          <!-- Botones de acción -->
           <div class="space-y-3">
-            <button v-if="repuestoData.stock" 
+            <button v-if="repuestoData.stock && repuestoData.precio" 
                     class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
               Comprar Ahora - ${{ repuestoData.precio.toLocaleString() }}
             </button>
-            <button v-else 
-                    class="w-full bg-gray-400 text-white font-bold py-3 px-6 rounded-lg cursor-not-allowed">
-              Repuesto Agotado
-            </button>
+            <div v-else class="space-y-2">
+              <button class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2">
+                <span>💬</span>
+                <span>Consultar por WhatsApp</span>
+              </button>
+              <div class="flex items-center justify-center space-x-2 text-sm text-gray-600">
+                <span>📅</span>
+                <span>Respuesta inmediata</span>
+                <span>•</span>
+                <span>🕒</span>
+                <span>Horario: Lunes a Viernes 9:00 - 18:00</span>
+              </div>
+            </div>
             <button class="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-6 rounded-lg transition-colors">
-              Consultar Disponibilidad
+              Ver otras categorías disponibles
             </button>
           </div>
         </div>
@@ -338,13 +361,57 @@ onMounted(async () => {
   }
 })
 
-// SEO Meta dinámico por repuesto específico
-useHead({
-  title: `${repuestoCapitalizado.value} ${marcaCapitalizada.value} ${modeloCapitalizado.value} ${año.value} - Original | FAutopiezas`,
-  meta: [
-    { name: 'description', content: `${repuestoCapitalizado.value} original ${marcaCapitalizada.value} ${modeloCapitalizado.value} ${año.value} en Chile. Stock inmediato, garantía extendida, envío gratis. Repuesto original con código ${repuestoData.value?.codigoOEM || 'N/A'}.` },
-    { name: 'keywords', content: `${repuesto.value} ${marca.value} ${modelo.value} ${año.value}, ${repuesto.value} original ${marca.value} ${modelo.value}, ${repuesto.value} ${marca.value} ${modelo.value} ${año.value} precio, ${repuesto.value} ${marca.value} ${modelo.value} chile` }
-  ]
-})
+// SEO y Structured Data
+const { setPageSEO, setStructuredData } = useSEO()
+
+// Configurar SEO dinámico
+watch(repuestoData, (newData) => {
+  if (newData) {
+    setPageSEO('producto', {
+      nombre: newData.nombre,
+      marca: marcaCapitalizada.value,
+      modelo: modeloCapitalizado.value,
+      año: año.value,
+      categoria: categoriaCapitalizada.value,
+      precio: newData.precio,
+      codigoOEM: newData.codigoOEM,
+      vehicle: {
+        marca: marcaCapitalizada.value,
+        modelo: modeloCapitalizado.value,
+        año: año.value
+      }
+    })
+
+    // Structured Data para producto
+    setStructuredData('product', {
+      nombre: newData.nombre,
+      descripcion: newData.descripcion,
+      marca: marcaCapitalizada.value,
+      precio: newData.precio,
+      stock: newData.stock ? 1 : 0,
+      codigoOEM: newData.codigoOEM,
+      categoria: categoriaCapitalizada.value,
+      id: newData.id,
+      vehicle: {
+        marca: marcaCapitalizada.value,
+        modelo: modeloCapitalizado.value,
+        año: año.value
+      }
+    })
+
+    // Breadcrumb structured data
+    setStructuredData('breadcrumb', {
+      breadcrumbs: [
+        { name: 'Inicio', path: '/' },
+        { name: 'Repuestos', path: '/repuestos' },
+        { name: marcaCapitalizada.value, path: `/repuestos/${marca.value}` },
+        { name: modeloCapitalizado.value, path: `/repuestos/${marca.value}/${modelo.value}` },
+        { name: año.value, path: `/repuestos/${marca.value}/${modelo.value}/${año.value}` },
+        { name: categoriaCapitalizada.value, path: `/repuestos/${marca.value}/${modelo.value}/${año.value}/${categoria.value}` },
+        { name: repuestoCapitalizado.value, path: useRoute().path }
+      ]
+    })
+  }
+}, { immediate: true })
 </script>
 

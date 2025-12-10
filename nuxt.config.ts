@@ -14,22 +14,49 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
     build: {
+      sourcemap: false,
+      chunkSizeWarningLimit: 1000,
       rollupOptions: {
         output: {
           manualChunks(id) {
+            // Firebase en chunk separado
             if (id.includes('firebase')) return 'firebase'
-            if (id.includes('vue')) return 'vue'
+            
+            // Vue core
+            if (id.includes('vue/') || id.includes('@vue/')) return 'vue-core'
+            
+            // UI Libraries
+            if (id.includes('tailwindcss') || id.includes('@tailwindcss')) return 'ui-framework'
+            
+            // PDF and Canvas libs (heavy)
+            if (id.includes('jspdf') || id.includes('html2canvas')) return 'pdf-utils'
+            
+            // Nuxt framework
+            if (id.includes('nuxt') || id.includes('@nuxt')) return 'nuxt-framework'
+            
+            // Router
+            if (id.includes('vue-router')) return 'router'
+            
+            // Other node_modules
             if (id.includes('node_modules')) return 'vendor'
+            
             return undefined
           }
         }
+      }
+    },
+    server: {
+      watch: {
+        usePolling: false,
+        useFsEvents: false,
+        ignored: ['**/node_modules/**', '**/.git/**', '**/dist/**', '**/.nuxt/**', '**/msrepuestos-data/**']
       }
     }
   },
 
   // Optimizaciones para Core Web Vitals
   experimental: {
-    payloadExtraction: false
+    payloadExtraction: true
   },
   
   runtimeConfig: {
@@ -49,12 +76,18 @@ export default defineNuxtConfig({
 
   // Configuración de generación y SSR híbrido
   nitro: {
+    preset: 'firebase',
+    firebase: {
+      gen: 2,
+      nodeVersion: '18'
+    },
     prerender: {
       routes: [
+        // Páginas principales
         '/',
         '/repuestos',
         '/sitemap.xml',
-        // Marcas principales
+        // Marcas principales con servicio de importación
         '/repuestos/toyota',
         '/repuestos/nissan',
         '/repuestos/chevrolet',
@@ -67,23 +100,6 @@ export default defineNuxtConfig({
         '/repuestos/kia',
         '/repuestos/audi',
         '/repuestos/mercedes-benz',
-        '/repuestos/subaru',
-        '/repuestos/mitsubishi',
-        '/repuestos/peugeot',
-        '/repuestos/renault',
-        '/repuestos/fiat',
-        '/repuestos/citroen',
-        '/repuestos/opel',
-        '/repuestos/skoda',
-        '/repuestos/seat',
-        // Marcas premium
-        '/repuestos/porsche',
-        '/repuestos/jaguar',
-        '/repuestos/land-rover',
-        '/repuestos/volvo',
-        '/repuestos/lexus',
-        '/repuestos/infiniti',
-        '/repuestos/acura',
         // Modelos populares Toyota
         '/repuestos/toyota/corolla',
         '/repuestos/toyota/camry',
@@ -99,17 +115,37 @@ export default defineNuxtConfig({
         '/repuestos/chevrolet/cruze',
         '/repuestos/chevrolet/spark',
         '/repuestos/chevrolet/aveo',
-        // Páginas de contacto y servicios
-        '/contacto'
+        // Categorías principales - importación disponible
+        '/categoria/frenos',
+        '/categoria/motor',
+        '/categoria/suspension',
+        '/categoria/transmision',
+        '/categoria/electricidad',
+        '/categoria/carroceria',
+        '/categoria/filtros',
+        '/categoria/aceites',
+        // Combinaciones marca + categoría populares
+        '/repuestos/toyota/frenos',
+        '/repuestos/toyota/motor',
+        '/repuestos/nissan/frenos',
+        '/repuestos/chevrolet/frenos',
+        '/repuestos/bmw/frenos',
+        '/repuestos/hyundai/frenos',
+        '/repuestos/ford/frenos',
+        // Páginas de servicios
+        '/contacto',
+        '/sobre-nosotros',
+        '/como-comprar',
+        '/garantias'
       ]
     },
     // Optimización para rendimiento
-    minify: true,
+    minify: false,
     compressPublicAssets: true
   },
 
-  // Configuración SSR híbrida para SEO y Firebase Hosting
-  ssr: true,
+  // Configuración SSG para Firebase Hosting
+  ssr: false,
 
   // Configuración de SEO y Google
   app: {
@@ -139,7 +175,6 @@ export default defineNuxtConfig({
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'AutoPiezas360 - Repuestos Importados 50% Descuento' },
         { name: 'twitter:description', content: 'Repuestos importados con 50% descuento. Envío Chile en 7 días.' },
-        { name: 'google-site-verification', content: 'TU_CODIGO_DE_VERIFICACION_AQUI' }
       ],
       link: [
         { rel: 'canonical', href: 'https://autopiezas360.cl' },

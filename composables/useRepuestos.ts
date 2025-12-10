@@ -209,7 +209,12 @@ export const useRepuestos = () => {
   // Crear un nuevo repuesto
   const crearRepuesto = async (repuestoData: Omit<Repuesto, 'id' | 'createdAt' | 'updatedAt'>): Promise<string> => {
     try {
+      console.log('📝 [useRepuestos] Guardando producto en Firestore...')
+      console.log('📦 [useRepuestos] Datos del producto:', repuestoData)
+      
       const repuestosRef = collection($firestore, 'repuestos')
+      console.log('✅ [useRepuestos] Referencia a colección "repuestos" creada')
+      
       const now = new Date()
       
       const nuevoRepuesto = {
@@ -218,10 +223,22 @@ export const useRepuestos = () => {
         updatedAt: now
       }
 
+      console.log('💾 [useRepuestos] Producto a guardar:', nuevoRepuesto)
       const docRef = await addDoc(repuestosRef, nuevoRepuesto)
+      console.log('✅ [useRepuestos] Producto guardado exitosamente!')
+      console.log('🆔 [useRepuestos] ID del documento:', docRef.id)
+      console.log('📍 [useRepuestos] Ruta completa en Firestore: repuestos/' + docRef.id)
+      console.log('📋 [useRepuestos] Para verlo en Firestore Console:')
+      console.log('   1. Ve a https://console.firebase.google.com')
+      console.log('   2. Selecciona tu proyecto')
+      console.log('   3. Ve a Firestore Database')
+      console.log('   4. Busca la colección: "repuestos"')
+      console.log('   5. Busca el documento con ID:', docRef.id)
+      
       return docRef.id
     } catch (error) {
-      console.error('Error al crear repuesto:', error)
+      console.error('❌ [useRepuestos] Error al crear repuesto:', error)
+      console.error('❌ [useRepuestos] Detalles del error:', error.message, error.stack)
       throw error
     }
   }

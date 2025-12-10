@@ -299,13 +299,14 @@ const categorias = [
 // Variables reactivas para búsqueda (simplificadas)
 const searchMessage = ref('')
 
-// SEO Meta para homepage
+// SEO Meta para homepage usando composable
+const { setPageSEO, setStructuredData } = useSEO()
+
+setPageSEO('home')
+setStructuredData('website')
+
+// Structured data adicional para página principal
 useHead({
-  title: 'AutoPiezas360 Chile - Repuestos para Autos | Importación de Repuestos',
-  meta: [
-    { name: 'description', content: 'Repuestos Toyota, Nissan, Chevrolet, BMW en Chile. Importación de repuestos, envío gratis, garantía extendida. ¡Los mejores precios del mercado!' },
-    { name: 'keywords', content: 'repuestos autos chile, autopartes chile, repuestos toyota chile, repuestos nissan chile, repuestos chevrolet chile, repuestos bmw chile' }
-  ],
   script: [
     {
       type: 'application/ld+json',

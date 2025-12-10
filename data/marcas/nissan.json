@@ -11,50 +11,214 @@
       "id": "sentra",
       "nombre": "Sentra",
       "slug": "sentra",
-      "años": [1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "años": [
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
       "generaciones": [
         {
           "nombre": "Primera Generación B11 (1982-1986)",
-          "años": [1982, 1983, 1984, 1985, 1986],
-          "caracteristicas": ["Motor 1.5L/1.6L", "Transmisión manual/automática 3-5 velocidades", "Tracción delantera", "Sedán compacto"]
+          "años": [
+            1982,
+            1983,
+            1984,
+            1985,
+            1986
+          ],
+          "caracteristicas": [
+            "Motor 1.5L/1.6L",
+            "Transmisión manual/automática 3-5 velocidades",
+            "Tracción delantera",
+            "Sedán compacto"
+          ]
         },
         {
           "nombre": "Segunda Generación B12 (1986-1990)",
-          "años": [1986, 1987, 1988, 1989, 1990],
-          "caracteristicas": ["Motor 1.6L/2.0L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Sedán compacto"]
+          "años": [
+            1986,
+            1987,
+            1988,
+            1989,
+            1990
+          ],
+          "caracteristicas": [
+            "Motor 1.6L/2.0L",
+            "Transmisión manual/automática 4-5 velocidades",
+            "Tracción delantera",
+            "Sedán compacto"
+          ]
         },
         {
           "nombre": "Tercera Generación B13 (1990-1994)",
-          "años": [1990, 1991, 1992, 1993, 1994],
-          "caracteristicas": ["Motor 1.6L/2.0L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Sedán compacto"]
+          "años": [
+            1990,
+            1991,
+            1992,
+            1993,
+            1994
+          ],
+          "caracteristicas": [
+            "Motor 1.6L/2.0L",
+            "Transmisión manual/automática 4-5 velocidades",
+            "Tracción delantera",
+            "Sedán compacto"
+          ]
         },
         {
           "nombre": "Cuarta Generación B14 (1994-1999)",
-          "años": [1994, 1995, 1996, 1997, 1998, 1999],
-          "caracteristicas": ["Motor 1.6L/2.0L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Sedán compacto"]
+          "años": [
+            1994,
+            1995,
+            1996,
+            1997,
+            1998,
+            1999
+          ],
+          "caracteristicas": [
+            "Motor 1.6L/2.0L",
+            "Transmisión manual/automática 4-5 velocidades",
+            "Tracción delantera",
+            "Sedán compacto"
+          ]
         },
         {
           "nombre": "Quinta Generación B15 (1999-2006)",
-          "años": [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006],
-          "caracteristicas": ["Motor 1.8L/2.5L", "Transmisión manual/automática 4-6 velocidades", "Tracción delantera", "Sedán compacto"]
+          "años": [
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006
+          ],
+          "caracteristicas": [
+            "Motor 1.8L/2.5L",
+            "Transmisión manual/automática 4-6 velocidades",
+            "Tracción delantera",
+            "Sedán compacto"
+          ]
         },
         {
           "nombre": "Sexta Generación B16 (2006-2012)",
-          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012],
-          "caracteristicas": ["Motor 2.0L/2.5L", "Transmisión manual/automática CVT", "Tracción delantera", "Sedán compacto"]
+          "años": [
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012
+          ],
+          "caracteristicas": [
+            "Motor 2.0L/2.5L",
+            "Transmisión manual/automática CVT",
+            "Tracción delantera",
+            "Sedán compacto"
+          ]
         },
         {
           "nombre": "Séptima Generación B17 (2012-2019)",
-          "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-          "caracteristicas": ["Motor 1.8L", "Transmisión manual/automática CVT", "Tracción delantera", "Sedán compacto"]
+          "años": [
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019
+          ],
+          "caracteristicas": [
+            "Motor 1.8L",
+            "Transmisión manual/automática CVT",
+            "Tracción delantera",
+            "Sedán compacto"
+          ]
         },
         {
           "nombre": "Octava Generación B18 (2019-presente)",
-          "años": [2019, 2020, 2021, 2022, 2023, 2024],
-          "caracteristicas": ["Motor 2.0L", "Transmisión manual/automática CVT", "Tracción delantera", "Sedán compacto"]
+          "años": [
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "caracteristicas": [
+            "Motor 2.0L",
+            "Transmisión manual/automática CVT",
+            "Tracción delantera",
+            "Sedán compacto"
+          ]
         }
       ],
-      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "categorias": [
+        "calefaccion-aire-acondicionado",
+        "carroceria-ensamblaje-lampara",
+        "combustible-aire",
+        "correa-transmision",
+        "direccion",
+        "electrico",
+        "electrico-bombilla-casquillo",
+        "electrico-conector",
+        "electrico-interruptor-rele",
+        "encendido",
+        "escapes-emisiones",
+        "freno-maza-rueda",
+        "interior",
+        "limpiaparabrisas",
+        "motor",
+        "rueda",
+        "sistema-enfriamiento",
+        "suspension",
+        "transmision-automatica",
+        "transmision-manual",
+        "tren-transmision"
+      ],
       "activa": true,
       "popular": true
     },
@@ -62,40 +226,167 @@
       "id": "altima",
       "nombre": "Altima",
       "slug": "altima",
-      "años": [1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "años": [
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
       "generaciones": [
         {
           "nombre": "Primera Generación U13 (1992-1997)",
-          "años": [1992, 1993, 1994, 1995, 1996, 1997],
-          "caracteristicas": ["Motor 2.4L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Sedán mediano"]
+          "años": [
+            1992,
+            1993,
+            1994,
+            1995,
+            1996,
+            1997
+          ],
+          "caracteristicas": [
+            "Motor 2.4L",
+            "Transmisión manual/automática 4-5 velocidades",
+            "Tracción delantera",
+            "Sedán mediano"
+          ]
         },
         {
           "nombre": "Segunda Generación U14 (1997-2001)",
-          "años": [1997, 1998, 1999, 2000, 2001],
-          "caracteristicas": ["Motor 2.4L", "Transmisión manual/automática 4-5 velocidades", "Tracción delantera", "Sedán mediano"]
+          "años": [
+            1997,
+            1998,
+            1999,
+            2000,
+            2001
+          ],
+          "caracteristicas": [
+            "Motor 2.4L",
+            "Transmisión manual/automática 4-5 velocidades",
+            "Tracción delantera",
+            "Sedán mediano"
+          ]
         },
         {
           "nombre": "Tercera Generación L31 (2002-2006)",
-          "años": [2002, 2003, 2004, 2005, 2006],
-          "caracteristicas": ["Motor 2.5L/3.5L V6", "Transmisión manual/automática 5-6 velocidades", "Tracción delantera", "Sedán mediano"]
+          "años": [
+            2002,
+            2003,
+            2004,
+            2005,
+            2006
+          ],
+          "caracteristicas": [
+            "Motor 2.5L/3.5L V6",
+            "Transmisión manual/automática 5-6 velocidades",
+            "Tracción delantera",
+            "Sedán mediano"
+          ]
         },
         {
           "nombre": "Cuarta Generación L32 (2007-2012)",
-          "años": [2007, 2008, 2009, 2010, 2011, 2012],
-          "caracteristicas": ["Motor 2.5L/3.5L V6", "Transmisión manual/automática CVT", "Tracción delantera", "Sedán mediano"]
+          "años": [
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012
+          ],
+          "caracteristicas": [
+            "Motor 2.5L/3.5L V6",
+            "Transmisión manual/automática CVT",
+            "Tracción delantera",
+            "Sedán mediano"
+          ]
         },
         {
           "nombre": "Quinta Generación L33 (2012-2018)",
-          "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018],
-          "caracteristicas": ["Motor 2.5L/3.5L V6", "Transmisión manual/automática CVT", "Tracción delantera", "Sedán mediano"]
+          "años": [
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018
+          ],
+          "caracteristicas": [
+            "Motor 2.5L/3.5L V6",
+            "Transmisión manual/automática CVT",
+            "Tracción delantera",
+            "Sedán mediano"
+          ]
         },
         {
           "nombre": "Sexta Generación L34 (2019-presente)",
-          "años": [2019, 2020, 2021, 2022, 2023, 2024],
-          "caracteristicas": ["Motor 2.0L Turbo/2.5L", "Transmisión manual/automática CVT", "Tracción delantera/AWD", "Sedán mediano"]
+          "años": [
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "caracteristicas": [
+            "Motor 2.0L Turbo/2.5L",
+            "Transmisión manual/automática CVT",
+            "Tracción delantera/AWD",
+            "Sedán mediano"
+          ]
         }
       ],
-      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "categorias": [
+        "calefaccion-aire-acondicionado",
+        "carroceria-ensamblaje-lampara",
+        "combustible-aire",
+        "correa-transmision",
+        "direccion",
+        "electrico",
+        "electrico-bombilla-casquillo",
+        "electrico-conector",
+        "electrico-interruptor-rele",
+        "encendido",
+        "escapes-emisiones",
+        "freno-maza-rueda",
+        "interior",
+        "limpiaparabrisas",
+        "motor",
+        "rueda",
+        "sistema-enfriamiento",
+        "suspension",
+        "transmision-automatica",
+        "transmision-manual",
+        "tren-transmision"
+      ],
       "activa": true,
       "popular": true
     },
@@ -103,25 +394,100 @@
       "id": "rogue",
       "nombre": "Rogue",
       "slug": "rogue",
-      "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "años": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
       "generaciones": [
         {
           "nombre": "Primera Generación S35 (2008-2013)",
-          "años": [2008, 2009, 2010, 2011, 2012, 2013],
-          "caracteristicas": ["Motor 2.5L", "Transmisión CVT", "Tracción delantera/AWD", "SUV compacto"]
+          "años": [
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013
+          ],
+          "caracteristicas": [
+            "Motor 2.5L",
+            "Transmisión CVT",
+            "Tracción delantera/AWD",
+            "SUV compacto"
+          ]
         },
         {
           "nombre": "Segunda Generación T32 (2014-2020)",
-          "años": [2014, 2015, 2016, 2017, 2018, 2019, 2020],
-          "caracteristicas": ["Motor 2.5L", "Transmisión CVT", "Tracción delantera/AWD", "SUV compacto"]
+          "años": [
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020
+          ],
+          "caracteristicas": [
+            "Motor 2.5L",
+            "Transmisión CVT",
+            "Tracción delantera/AWD",
+            "SUV compacto"
+          ]
         },
         {
           "nombre": "Tercera Generación T33 (2021-presente)",
-          "años": [2021, 2022, 2023, 2024],
-          "caracteristicas": ["Motor 2.5L", "Transmisión CVT", "Tracción delantera/AWD", "SUV compacto"]
+          "años": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "caracteristicas": [
+            "Motor 2.5L",
+            "Transmisión CVT",
+            "Tracción delantera/AWD",
+            "SUV compacto"
+          ]
         }
       ],
-      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "categorias": [
+        "calefaccion-aire-acondicionado",
+        "carroceria-ensamblaje-lampara",
+        "combustible-aire",
+        "correa-transmision",
+        "direccion",
+        "electrico",
+        "electrico-bombilla-casquillo",
+        "electrico-conector",
+        "electrico-interruptor-rele",
+        "encendido",
+        "escapes-emisiones",
+        "freno-maza-rueda",
+        "interior",
+        "limpiaparabrisas",
+        "motor",
+        "rueda",
+        "sistema-enfriamiento",
+        "suspension",
+        "transmision-automatica",
+        "transmision-manual",
+        "tren-transmision"
+      ],
       "activa": true,
       "popular": true
     },
@@ -129,30 +495,157 @@
       "id": "pathfinder",
       "nombre": "Pathfinder",
       "slug": "pathfinder",
-      "años": [1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "años": [
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
       "generaciones": [
         {
           "nombre": "Primera Generación WD21 (1986-1995)",
-          "años": [1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995],
-          "caracteristicas": ["Motor 2.4L/3.0L V6", "Transmisión manual/automática 4-5 velocidades", "Tracción 4x2/4x4", "SUV mediano"]
+          "años": [
+            1986,
+            1987,
+            1988,
+            1989,
+            1990,
+            1991,
+            1992,
+            1993,
+            1994,
+            1995
+          ],
+          "caracteristicas": [
+            "Motor 2.4L/3.0L V6",
+            "Transmisión manual/automática 4-5 velocidades",
+            "Tracción 4x2/4x4",
+            "SUV mediano"
+          ]
         },
         {
           "nombre": "Segunda Generación R50 (1995-2004)",
-          "años": [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004],
-          "caracteristicas": ["Motor 3.3L V6/3.5L V6", "Transmisión manual/automática 4-5 velocidades", "Tracción 4x2/4x4", "SUV mediano"]
+          "años": [
+            1995,
+            1996,
+            1997,
+            1998,
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004
+          ],
+          "caracteristicas": [
+            "Motor 3.3L V6/3.5L V6",
+            "Transmisión manual/automática 4-5 velocidades",
+            "Tracción 4x2/4x4",
+            "SUV mediano"
+          ]
         },
         {
           "nombre": "Tercera Generación R51 (2004-2012)",
-          "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
-          "caracteristicas": ["Motor 4.0L V6/5.6L V8", "Transmisión automática 5-7 velocidades", "Tracción 4x2/4x4", "SUV mediano"]
+          "años": [
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012
+          ],
+          "caracteristicas": [
+            "Motor 4.0L V6/5.6L V8",
+            "Transmisión automática 5-7 velocidades",
+            "Tracción 4x2/4x4",
+            "SUV mediano"
+          ]
         },
         {
           "nombre": "Cuarta Generación R52 (2013-presente)",
-          "años": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-          "caracteristicas": ["Motor 3.5L V6", "Transmisión CVT", "Tracción delantera/AWD", "SUV mediano"]
+          "años": [
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "caracteristicas": [
+            "Motor 3.5L V6",
+            "Transmisión CVT",
+            "Tracción delantera/AWD",
+            "SUV mediano"
+          ]
         }
       ],
-      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "categorias": [
+        "calefaccion-aire-acondicionado",
+        "carroceria-ensamblaje-lampara",
+        "combustible-aire",
+        "correa-transmision",
+        "direccion",
+        "electrico",
+        "electrico-bombilla-casquillo",
+        "electrico-conector",
+        "electrico-interruptor-rele",
+        "encendido",
+        "escapes-emisiones",
+        "freno-maza-rueda",
+        "interior",
+        "limpiaparabrisas",
+        "motor",
+        "rueda",
+        "sistema-enfriamiento",
+        "suspension",
+        "transmision-automatica",
+        "transmision-manual",
+        "tren-transmision"
+      ],
       "activa": true,
       "popular": false
     },
@@ -160,25 +653,124 @@
       "id": "frontier",
       "nombre": "Frontier",
       "slug": "frontier",
-      "años": [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "años": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
       "generaciones": [
         {
           "nombre": "Primera Generación D22 (1997-2004)",
-          "años": [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004],
-          "caracteristicas": ["Motor 2.4L/3.3L V6", "Transmisión manual/automática 4-5 velocidades", "Tracción 4x2/4x4", "Pickup mediana"]
+          "años": [
+            1997,
+            1998,
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004
+          ],
+          "caracteristicas": [
+            "Motor 2.4L/3.3L V6",
+            "Transmisión manual/automática 4-5 velocidades",
+            "Tracción 4x2/4x4",
+            "Pickup mediana"
+          ]
         },
         {
           "nombre": "Segunda Generación D40 (2004-2021)",
-          "años": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
-          "caracteristicas": ["Motor 2.5L/4.0L V6", "Transmisión manual/automática 5-6 velocidades", "Tracción 4x2/4x4", "Pickup mediana"]
+          "años": [
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021
+          ],
+          "caracteristicas": [
+            "Motor 2.5L/4.0L V6",
+            "Transmisión manual/automática 5-6 velocidades",
+            "Tracción 4x2/4x4",
+            "Pickup mediana"
+          ]
         },
         {
           "nombre": "Tercera Generación D23 (2021-presente)",
-          "años": [2021, 2022, 2023, 2024],
-          "caracteristicas": ["Motor 3.8L V6", "Transmisión automática 9 velocidades", "Tracción 4x2/4x4", "Pickup mediana"]
+          "años": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "caracteristicas": [
+            "Motor 3.8L V6",
+            "Transmisión automática 9 velocidades",
+            "Tracción 4x2/4x4",
+            "Pickup mediana"
+          ]
         }
       ],
-      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "categorias": [
+        "calefaccion-aire-acondicionado",
+        "carroceria-ensamblaje-lampara",
+        "combustible-aire",
+        "correa-transmision",
+        "direccion",
+        "electrico",
+        "electrico-bombilla-casquillo",
+        "electrico-conector",
+        "electrico-interruptor-rele",
+        "encendido",
+        "escapes-emisiones",
+        "freno-maza-rueda",
+        "interior",
+        "limpiaparabrisas",
+        "motor",
+        "rueda",
+        "sistema-enfriamiento",
+        "suspension",
+        "transmision-automatica",
+        "transmision-manual",
+        "tren-transmision"
+      ],
       "activa": true,
       "popular": false
     },
@@ -186,15 +778,62 @@
       "id": "kicks",
       "nombre": "Kicks",
       "slug": "kicks",
-      "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "años": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
       "generaciones": [
         {
           "nombre": "Primera Generación P15 (2016-presente)",
-          "años": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-          "caracteristicas": ["Motor 1.6L", "Transmisión manual/automática CVT", "Tracción delantera", "SUV subcompacto"]
+          "años": [
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "caracteristicas": [
+            "Motor 1.6L",
+            "Transmisión manual/automática CVT",
+            "Tracción delantera",
+            "SUV subcompacto"
+          ]
         }
       ],
-      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "categorias": [
+        "calefaccion-aire-acondicionado",
+        "carroceria-ensamblaje-lampara",
+        "combustible-aire",
+        "correa-transmision",
+        "direccion",
+        "electrico",
+        "electrico-bombilla-casquillo",
+        "electrico-conector",
+        "electrico-interruptor-rele",
+        "encendido",
+        "escapes-emisiones",
+        "freno-maza-rueda",
+        "interior",
+        "limpiaparabrisas",
+        "motor",
+        "rueda",
+        "sistema-enfriamiento",
+        "suspension",
+        "transmision-automatica",
+        "transmision-manual",
+        "tren-transmision"
+      ],
       "activa": true,
       "popular": false
     },
@@ -202,25 +841,105 @@
       "id": "versa",
       "nombre": "Versa",
       "slug": "versa",
-      "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+      "años": [
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
       "generaciones": [
         {
           "nombre": "Primera Generación C11 (2006-2012)",
-          "años": [2006, 2007, 2008, 2009, 2010, 2011, 2012],
-          "caracteristicas": ["Motor 1.6L/1.8L", "Transmisión manual/automática CVT", "Tracción delantera", "Subcompacto"]
+          "años": [
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012
+          ],
+          "caracteristicas": [
+            "Motor 1.6L/1.8L",
+            "Transmisión manual/automática CVT",
+            "Tracción delantera",
+            "Subcompacto"
+          ]
         },
         {
           "nombre": "Segunda Generación N17 (2012-2019)",
-          "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-          "caracteristicas": ["Motor 1.6L", "Transmisión manual/automática CVT", "Tracción delantera", "Subcompacto"]
+          "años": [
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019
+          ],
+          "caracteristicas": [
+            "Motor 1.6L",
+            "Transmisión manual/automática CVT",
+            "Tracción delantera",
+            "Subcompacto"
+          ]
         },
         {
           "nombre": "Tercera Generación N18 (2020-presente)",
-          "años": [2020, 2021, 2022, 2023, 2024],
-          "caracteristicas": ["Motor 1.6L", "Transmisión manual/automática CVT", "Tracción delantera", "Subcompacto"]
+          "años": [
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "caracteristicas": [
+            "Motor 1.6L",
+            "Transmisión manual/automática CVT",
+            "Tracción delantera",
+            "Subcompacto"
+          ]
         }
       ],
-      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "categorias": [
+        "calefaccion-aire-acondicionado",
+        "carroceria-ensamblaje-lampara",
+        "combustible-aire",
+        "correa-transmision",
+        "direccion",
+        "electrico",
+        "electrico-bombilla-casquillo",
+        "electrico-conector",
+        "electrico-interruptor-rele",
+        "encendido",
+        "escapes-emisiones",
+        "freno-maza-rueda",
+        "interior",
+        "limpiaparabrisas",
+        "motor",
+        "rueda",
+        "sistema-enfriamiento",
+        "suspension",
+        "transmision-automatica",
+        "transmision-manual",
+        "tren-transmision"
+      ],
       "activa": true,
       "popular": false
     },
@@ -228,15 +947,60 @@
       "id": "350z",
       "nombre": "350Z",
       "slug": "350z",
-      "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009],
+      "años": [
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009
+      ],
       "generaciones": [
         {
           "nombre": "Primera Generación Z33 (2002-2009)",
-          "años": [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009],
-          "caracteristicas": ["Motor 3.5L V6", "Transmisión manual/automática 5-6 velocidades", "Tracción trasera", "Coupé deportivo"]
+          "años": [
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009
+          ],
+          "caracteristicas": [
+            "Motor 3.5L V6",
+            "Transmisión manual/automática 5-6 velocidades",
+            "Tracción trasera",
+            "Coupé deportivo"
+          ]
         }
       ],
-      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "categorias": [
+        "calefaccion-aire-acondicionado",
+        "carroceria-ensamblaje-lampara",
+        "combustible-aire",
+        "correa-transmision",
+        "direccion",
+        "electrico",
+        "electrico-bombilla-casquillo",
+        "electrico-conector",
+        "electrico-interruptor-rele",
+        "encendido",
+        "escapes-emisiones",
+        "freno-maza-rueda",
+        "interior",
+        "limpiaparabrisas",
+        "motor",
+        "rueda",
+        "sistema-enfriamiento",
+        "suspension",
+        "transmision-automatica",
+        "transmision-manual",
+        "tren-transmision"
+      ],
       "activa": true,
       "popular": false
     },
@@ -244,15 +1008,70 @@
       "id": "370z",
       "nombre": "370Z",
       "slug": "370z",
-      "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+      "años": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
       "generaciones": [
         {
           "nombre": "Primera Generación Z34 (2008-2020)",
-          "años": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
-          "caracteristicas": ["Motor 3.7L V6", "Transmisión manual/automática 6-7 velocidades", "Tracción trasera", "Coupé deportivo"]
+          "años": [
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020
+          ],
+          "caracteristicas": [
+            "Motor 3.7L V6",
+            "Transmisión manual/automática 6-7 velocidades",
+            "Tracción trasera",
+            "Coupé deportivo"
+          ]
         }
       ],
-      "categorias": ["calefaccion-aire-acondicionado", "carroceria-ensamblaje-lampara", "combustible-aire", "correa-transmision", "direccion", "electrico", "electrico-bombilla-casquillo", "electrico-conector", "electrico-interruptor-rele", "encendido", "escapes-emisiones", "freno-maza-rueda", "interior", "limpiaparabrisas", "motor", "rueda", "sistema-enfriamiento", "suspension", "transmision-automatica", "transmision-manual", "tren-transmision"],
+      "categorias": [
+        "calefaccion-aire-acondicionado",
+        "carroceria-ensamblaje-lampara",
+        "combustible-aire",
+        "correa-transmision",
+        "direccion",
+        "electrico",
+        "electrico-bombilla-casquillo",
+        "electrico-conector",
+        "electrico-interruptor-rele",
+        "encendido",
+        "escapes-emisiones",
+        "freno-maza-rueda",
+        "interior",
+        "limpiaparabrisas",
+        "motor",
+        "rueda",
+        "sistema-enfriamiento",
+        "suspension",
+        "transmision-automatica",
+        "transmision-manual",
+        "tren-transmision"
+      ],
       "activa": true,
       "popular": false
     }

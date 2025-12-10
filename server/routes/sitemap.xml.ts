@@ -60,27 +60,19 @@ export default defineEventHandler(async (event) => {
     urls.push(createUrlEntry('/', '1.0', 'daily')) // Homepage - máxima prioridad
     urls.push(createUrlEntry('/repuestos', '0.9', 'daily')) // Catálogo principal
     
-    // 2. URLs por marca (solo marcas populares y activas)
-    marcas.filter(marca => marca.activa).forEach(marca => {
+    // 2. URLs por marca (solo marcas con contenido real)
+    const marcasConContenido = ['toyota', 'nissan', 'chevrolet', 'bmw', 'hyundai', 'ford', 'volkswagen', 'honda']
+    marcas.filter(marca => marca.activa && marcasConContenido.includes(marca.slug)).forEach(marca => {
       const priority = marca.popular ? '0.8' : '0.6'
       urls.push(createUrlEntry(`/repuestos/${marca.slug}`, priority, 'weekly'))
     })
     
-    // 3. URLs de categorías (solo activas)
+    // 3. URLs de categorías (servicio de importación disponible)
     categorias.filter(categoria => categoria.activa).forEach(categoria => {
       urls.push(createUrlEntry(`/categoria/${categoria.slug}`, '0.7', 'weekly'))
     })
     
-    // 4. URLs de modelos populares para marcas top (solo con datos reales)
-    const marcasConModelosReales = marcasPopulares.slice(0, 5) // Top 5 marcas
-    marcasConModelosReales.forEach(marca => {
-      const modelosPopulares = getModelosPopularesPorMarca(marca.slug)
-      modelosPopulares.forEach((modelo: string) => {
-        urls.push(createUrlEntry(`/repuestos/${marca.slug}/${modelo}`, '0.7', 'weekly'))
-      })
-    })
-    
-    // 5. Función para obtener modelos populares por marca
+    // 4. Función para obtener modelos populares por marca
     const getModelosPopularesPorMarca = (marcaSlug: string): string[] => {
       const modelosPorMarca: { [key: string]: string[] } = {
         'toyota': ['corolla', 'camry', 'rav4', 'prius', 'hilux'],
@@ -96,6 +88,15 @@ export default defineEventHandler(async (event) => {
       }
       return modelosPorMarca[marcaSlug] || []
     }
+    
+    // 5. URLs de modelos populares para marcas top (solo con datos reales)
+    const marcasConModelosReales = marcasPopulares.slice(0, 5) // Top 5 marcas
+    marcasConModelosReales.forEach(marca => {
+      const modelosPopulares = getModelosPopularesPorMarca(marca.slug)
+      modelosPopulares.forEach((modelo: string) => {
+        urls.push(createUrlEntry(`/repuestos/${marca.slug}/${modelo}`, '0.7', 'weekly'))
+      })
+    })
     
     // 6. URLs de páginas de contacto y servicios
     urls.push(createUrlEntry('/contacto', '0.8', 'monthly'))

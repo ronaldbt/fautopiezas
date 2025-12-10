@@ -8,7 +8,7 @@ export interface QuoteItemInput {
   fotoPreview?: string | null
 }
 
-export interface VehicleInfo {
+export interface VehicleInfoCotizacion {
   marca: string | null
   modelo: string | null
   ano: number | null
@@ -20,7 +20,7 @@ export interface CreateQuoteInput {
   userEmail?: string | null
   userName?: string | null
   userPhone?: string | null
-  vehicle: VehicleInfo
+  vehicle: VehicleInfoCotizacion
   currency: 'CLP' | 'USD'
   condicionesPago?: string
   plazoEntrega?: string
